@@ -1,0 +1,10 @@
+# Public-site allowlist: keep work files and captions out of Git.
+*
+!.gitignore
+!.nojekyll
+!README.md
+!SKILL.md
+!index.html
+!sermons/
+!sermons/*.html
+!sermons/**/*.html
