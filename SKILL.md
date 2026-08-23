@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when outlining Crossroads Church sermons."
-version: 1.2.0
+version: 1.2.1
 author: Will
 license: MIT
 metadata:
@@ -91,6 +91,8 @@ Exclude countdowns, music, dead air, and unrelated announcements. Keep opening S
 ### 4. Build the chronological outline
 
 Read the complete transcript before drafting. Preserve the order in which the speaker develops the sermon.
+
+Use the pastor's verified first name, full name, or `Pastor <first name>` in reader-facing prose. Never refer to a pastor by surname alone. Prefer the first name in the chronological outline because it reads naturally; retain the full name where source identification or search metadata benefits from it. With multiple speakers sharing a first name, use full names as needed to prevent ambiguity.
 
 For each movement:
 
