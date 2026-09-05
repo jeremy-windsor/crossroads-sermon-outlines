@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A chronological study outline of Family Resemblance by Josh Wyatt at Crossroads Church, published July 27, 2026.">
+  <title>Family Resemblance — Josh Wyatt | Sermon Outline</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #1d252c;
+  --muted: #596772;
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+  --line: #d7ddd9;
+  --accent: #7a3426;
+  --accent-soft: #f5e8e2;
+  --scripture: #244f48;
+  --scripture-soft: #e4f0ed;
+  --max: 76rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+a { color: var(--accent); text-underline-offset: .16em; }
+a:hover, a:focus-visible { text-decoration-thickness: .14em; }
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: white; padding: .7rem 1rem; z-index: 10;
+}
+.skip-link:focus { left: .75rem; top: .75rem; }
+.site-nav, header, main, footer { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
+.site-nav { padding: 1rem 0 .25rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .95rem; }
+header { padding: 2.4rem 0 1.6rem; border-bottom: 1px solid var(--line); }
+.kicker { margin: 0 0 .3rem; color: var(--accent); font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.22; text-wrap: balance; }
+h1 { margin: 0; max-width: 18ch; font-size: clamp(2.35rem, 7vw, 4.9rem); letter-spacing: -.04em; }
+.subtitle { margin: .55rem 0 1.35rem; color: var(--muted); font: 1.2rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+.metadata { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem 1.25rem; margin: 1.5rem 0 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+.metadata div { min-width: 0; }
+.metadata dt { color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.metadata dd { margin: .1rem 0 0; overflow-wrap: anywhere; }
+main { padding: 2rem 0 4rem; }
+.notice { margin: 0 0 2rem; padding: 1rem 1.15rem; border-left: .3rem solid var(--accent); background: var(--accent-soft); }
+.notice p { margin: 0; }
+.video-block { margin: 0 0 2.5rem; }
+.video-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: .6rem; background: #111; box-shadow: 0 .4rem 1.4rem #0002; }
+.video-shell iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+figcaption { margin-top: .65rem; color: var(--muted); font: .93rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+.section-intro { max-width: 72ch; }
+.outline, .outline-children { list-style: none; margin: 0; padding: 0; }
+.outline > li { margin: 2.2rem 0 3rem; }
+.outline-node { scroll-margin-top: 1rem; }
+.outline > li > article { padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-radius: .65rem; background: var(--panel); box-shadow: 0 .25rem .9rem #2430290a; }
+.outline-children { margin-top: 1.2rem; padding-left: 1.1rem; border-left: .18rem solid var(--line); }
+.outline-children > li { margin: 1.3rem 0 1.6rem; }
+.outline-node h3, .outline-node h4, .outline-node h5, .outline-node h6 { margin: 0 0 .65rem; }
+.outline-node h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.outline-node h4 { font-size: 1.22rem; }
+.outline-node ul { margin: .55rem 0 0; padding-left: 1.35rem; }
+.outline-node li + li { margin-top: .28rem; }
+.timestamp {
+  display: inline-block; margin-right: .35rem; padding: .11rem .43rem; border-radius: .3rem;
+  background: var(--accent-soft); color: var(--accent); font: 750 .78em/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-decoration: none; white-space: nowrap;
+}
+.scripture-links { margin: .25rem 0 .65rem; font: .88rem/1.7 ui-sans-serif, system-ui, sans-serif; }
+.scripture-links > span { color: var(--muted); font-weight: 700; }
+.scripture-tag { display: inline-block; margin: .12rem .16rem .12rem 0; padding: .05rem .46rem; border-radius: 999px; background: var(--scripture-soft); color: var(--scripture); text-decoration: none; }
+#scripture-ledger { margin-top: 4rem; padding-top: 1rem; border-top: .22rem solid var(--ink); }
+.table-wrap { overflow-x: auto; margin-top: 1.1rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--panel); }
+table { width: 100%; min-width: 68rem; border-collapse: collapse; font: .88rem/1.45 ui-sans-serif, system-ui, sans-serif; }
+caption { padding: .85rem 1rem; text-align: left; color: var(--muted); }
+th, td { padding: .72rem .75rem; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
+thead th { border-top: 0; background: #eef1ef; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+tbody th { min-width: 11rem; color: var(--scripture); }
+tbody tr:target { outline: .2rem solid var(--accent); outline-offset: -.2rem; background: #fff9e8; }
+.reference-note { display: block; margin-top: .35rem; color: var(--muted); font-size: .8rem; font-weight: 400; }
+footer { padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font: .9rem/1.55 ui-sans-serif, system-ui, sans-serif; }
+footer p { margin: .25rem 0; }
+@media (max-width: 52rem) {
+  body { font-size: 1rem; }
+  .metadata { grid-template-columns: 1fr 1fr; }
+  .outline > li > article { padding: 1.05rem; }
+  .outline-children { padding-left: .7rem; }
+}
+@media (max-width: 34rem) {
+  .metadata { grid-template-columns: 1fr; }
+  .site-nav, header, main, footer { width: min(100% - 1.2rem, var(--max)); }
+}
+@media print {
+  @page { margin: .65in; }
+  body { background: white; color: black; font-size: 10.5pt; line-height: 1.42; }
+  .site-nav, .video-block { display: none; }
+  header, main, footer { width: 100%; }
+  header { padding-top: 0; }
+  h1 { font-size: 28pt; }
+  .notice, .outline > li > article { background: white; box-shadow: none; }
+  .outline > li > article { border: 1px solid #bbb; }
+  .outline > li, .outline-node, #scripture-ledger { break-inside: avoid; }
+  a { color: black; text-decoration: none; }
+  .timestamp, .scripture-tag { border: 1px solid #bbb; background: white; color: black; }
+  .table-wrap { overflow: visible; border: 0; }
+  table { min-width: 0; font-size: 7.4pt; }
+  th, td { padding: .35rem; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to outline</a>
+<nav class="site-nav" aria-label="Breadcrumb"><a href="../index.html">← Back to all outlines</a></nav>
+<header>
+  <p class="kicker">Chronological sermon outline</p>
+  <h1>Family Resemblance</h1>
+  <p class="subtitle">Josh Wyatt · Crossroads Church</p>
+  <dl class="metadata">
+    <div><dt>Speaker</dt><dd>Josh Wyatt</dd></div>
+    <div><dt>Published</dt><dd><time datetime="2026-07-27">July 27, 2026</time></dd></div>
+    <div><dt>Duration</dt><dd>48:50</dd></div>
+    <div><dt>Source</dt><dd><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8">YouTube sermon video</a></dd></div>
+    <div><dt>Transcript source</dt><dd>YouTube automatic captions (English original)</dd></div>
+    <div><dt>Verified</dt><dd><time datetime="2026-09-05">September 5, 2026</time></dd></div>
+  </dl>
+</header>
+<main id="main-content">
+  <aside class="notice" aria-label="Independent study disclaimer">
+    <p><strong>Independent-study disclaimer:</strong> This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.</p>
+  </aside>
+  <figure class="video-block">
+    <div class="video-shell"><iframe src="https://www.youtube.com/embed/f8QDIAy6Nh8" title="Family Resemblance by Josh Wyatt at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <figcaption>Original sermon: <a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8">Family Resemblance</a>. Timestamp links throughout open the relevant moment on YouTube.</figcaption>
+  </figure>
+  <section aria-labelledby="outline-heading">
+    <h2 id="outline-heading">Detailed chronological outline</h2>
+    <p class="section-intro">The sermon begins at 00:36 and continues through the closing prayer at 48:20. Josh presents Hebrews 13 as the family resemblance produced by the gospel, not an entrance fee for earning God&#x27;s favor. Because Jesus gives his people new hearts, the church is called to sustain brotherly love, welcome strangers, remember prisoners and the mistreated, honor marriage and sexual holiness, reject the love of money, imitate faithful leaders without idolizing them, submit to accountable shepherding, and bear Christ&#x27;s disgrace outside the camp. The sermon closes by locating every command in the unchanging Christ, inviting hearers to repent and trust the risen Shepherd, and praying for power to walk in his grace.</p>
+<ol class="outline">
+<li><article id="s1" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=36s" aria-label="Watch from 00:36">00:36</a> The gospel creates a family resemblance</h3>
+<ul>
+<li>Josh reframes biblical commands as the fruit of salvation: Christ does not merely improve rules but gives new hearts, and Hebrews 13 describes life among people who already belong to God&#x27;s unshakeable kingdom.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s1.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=36s" aria-label="Watch from 00:36">00:36</a> From an impossible rulebook to transformed desires</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-001" href="#ledger-SCR-001">Ezekiel 36:26-27</a> <a class="scripture-tag" data-scripture-id="SCR-002" href="#ledger-SCR-002">Hebrews 8:10</a></p>
+<ul>
+<li>Josh opens with a common objection to Christianity: its commands can look like an exhausting list of prohibitions and an impossible demand for perfection. His rapid examples include &quot;Don&#x27;t have sex outside of marriage,&quot; &quot;Don&#x27;t love money,&quot; &quot;Love your enemies,&quot; &quot;Love strangers,&quot; and &quot;Honor marriage.&quot;</li>
+<li>The gospel is not merely that Christ teaches better behavior; Christ gives new hearts so that forgiven sinners begin to love what he loves, finding joy and freedom in obedience.</li>
+<li>God does not simply hand saved people a kingdom handbook: &quot;He puts his spirit within them,&quot; gives them power, changes their desires, and enables a new life.</li>
+<li>Josh says, &quot;He writes his law on their hearts,&quot; so the order is grace and inward renewal before the commands that follow.</li>
+</ul>
+</article></li>
+<li><article id="s1.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=179s" aria-label="Watch from 02:59">02:59</a> Hear Hebrews 13 as a Father&#x27;s description of family life</h4>
+<ul>
+<li>Josh asks listeners not to picture a grumpy teacher with a clipboard when Hebrews 13 gives commands, but a loving Father who knows actions, thoughts, and motives.</li>
+<li>These commands are not entry fees for God&#x27;s family. They are values for children who already belong and already have their feet on the coffee table.</li>
+</ul>
+</article></li>
+<li><article id="s1.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=214s" aria-label="Watch from 03:34">03:34</a> Come down from the mountain into kingdom life</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-003" href="#ledger-SCR-003">Matthew 17:1-8</a> <a class="scripture-tag" data-scripture-id="SCR-004" href="#ledger-SCR-004">Hebrews 12:22-29</a></p>
+<ul>
+<li>Josh compares the arrangement of Hebrews 12–13 with &quot;the mountain of transfiguration in [Matthew] 17&quot;: Peter wanted to remain on the glorious mountain, but the disciples came down.</li>
+<li>Likewise, &quot;Hebrews 12 ended with all God&#x27;s people rejoicing together on Mount Zion,&quot; yet Scripture continues by showing what salvation joy produces on earth.</li>
+<li>The finale asks what life looks like inside God&#x27;s unshakeable kingdom while it is still present in the world and what the Spirit produces in people redeemed by Christ&#x27;s blood.</li>
+</ul>
+</article></li>
+<li><article id="s1.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=288s" aria-label="Watch from 04:48">04:48</a> The fruit is resemblance, not admission</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-005" href="#ledger-SCR-005">Hebrews 13:1</a></p>
+<ul>
+<li>Josh states the controlling distinction: the fruit under discussion is not an entry fee but &quot;the family resemblance.&quot;</li>
+<li>Hebrews 13:1 begins, &quot;Keep on loving one another as brothers and sisters.&quot; After thirteen weeks declaring that Jesus is better, Hebrews shows that those who follow him are being made better too.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s2" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=306s" aria-label="Watch from 05:06">05:06</a> Love the family and welcome the stranger</h3>
+<ul>
+<li>The Spirit preserves both Philadelphia, brotherly love within the church, and philoxenia, love for the stranger. Josh warns against forces that kill fellowship, illustrates the church&#x27;s historic hospitality, and turns the text into concrete life-group and table fellowship applications.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s2.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=306s" aria-label="Watch from 05:06">05:06</a> Protect Philadelphia from the enemies of love</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-006" href="#ledger-SCR-006">Philippians 2:1-11</a> <a class="scripture-tag" data-scripture-id="SCR-007" href="#ledger-SCR-007">Matthew 20:28; Mark 10:45</a> <a class="scripture-tag" data-scripture-id="SCR-008" href="#ledger-SCR-008">John 13:4-15</a> <a class="scripture-tag" data-scripture-id="SCR-009" href="#ledger-SCR-009">Luke 23:34</a> <a class="scripture-tag" data-scripture-id="SCR-010" href="#ledger-SCR-010">John 15:13</a> <a class="scripture-tag" data-scripture-id="SCR-011" href="#ledger-SCR-011">1 John 4:19</a></p>
+<ul>
+<li>Because believers must be told to keep loving, Josh reasons that congregational love can die and therefore must be protected.</li>
+<li>Pride resists washing feet, bitterness keeps a record of wrongs, and selfishness asks what others can provide; busyness, envy, gossip, favoritism, unresolved conflict, fear, materialism, bad teaching, and bad shepherding also threaten love.</li>
+<li>For an attitude adjustment, Josh tells Christians to &quot;go read Philippians 2&quot; repeatedly until Christ&#x27;s humility confronts them.</li>
+<li>Christ is the one who &quot;came to serve, not be served,&quot; &quot;washed dirty feet,&quot; &quot;prayed for their forgiveness while they mocked him,&quot; and &quot;laid down his life for his friends.&quot;</li>
+<li>With eyes on Jesus, love is not manufactured; believers &quot;love because he first loved us.&quot; The preservation of this love for two thousand years displays God&#x27;s power.</li>
+</ul>
+</article></li>
+<li><article id="s2.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=486s" aria-label="Watch from 08:06">08:06</a> Move from Philadelphia to philoxenia</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-012" href="#ledger-SCR-012">Hebrews 13:2</a></p>
+<ul>
+<li>Hebrews 13:2 says, &quot;Do not forget to show hospitality to strangers, for by so doing some people have shown hospitality to angels without knowing it.&quot;</li>
+<li>Josh explains the Greek wordplay: Philadelphia is love for brothers and sisters, while philoxenia is love for the xenos—the stranger or foreigner—and is the opposite of xenophobia.</li>
+<li>Gospel love starts in the church but burns warmly enough to reach the streets: instead of fearing or avoiding outsiders, believers open the door.</li>
+</ul>
+</article></li>
+<li><article id="s2.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=555s" aria-label="Watch from 09:15">09:15</a> Reject cliques without neglecting the body</h4>
+<ul>
+<li>Josh rejects an &quot;us four and no more&quot; church mentality and urges proactive new relationships rather than dependence only on old connections.</li>
+<li>The opposite error is caring for outsiders while overlooking the person drowning nearby inside the body; love formed by Christ works at both hospitality and congregational care, imperfectly but consistently.</li>
+<li>As an historical illustration, Josh cites Emperor Julian&#x27;s complaint that Christians&#x27; charity cared not only for their own poor but also for his people&#x27;s poor. Even an opponent noticed their love.</li>
+</ul>
+</article></li>
+<li><article id="s2.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=680s" aria-label="Watch from 11:20">11:20</a> Open homes and pursue life-group community</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-013" href="#ledger-SCR-013">Luke 19:5</a></p>
+<ul>
+<li>First-century Christian travelers depended on believers&#x27; homes. Josh notes that &quot;Jesus didn&#x27;t even have a home&quot; and recalls that Jesus told Zacchaeus, &quot;I&#x27;m coming to your house today.&quot;</li>
+<li>Josh and his wife recently housed a Christian who needed it, illustrating preparedness to meet needs rather than waiting for ideal circumstances.</li>
+<li>Because ministry in one another&#x27;s homes is powerful, Josh presses listeners to join life groups, asks existing leaders to seek people who need community, and says members need not wait for staff or an intake form before extending an invitation.</li>
+<li>He challenges mature members who are ready to lead, offering help from Josh and Mike to equip them for that ministry.</li>
+</ul>
+</article></li>
+<li><article id="s2.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=785s" aria-label="Watch from 13:05">13:05</a> Trade privacy for wise table fellowship</h4>
+<ul>
+<li>Some will never entertain angels because they refuse to host anyone; modern Christians prize privacy, while the early church used homes as tools for public ministry.</li>
+<li>Josh assigns concrete homework: before the end of August, ask someone at church, &quot;Do you have someone to share a meal with this week?&quot; If not, invite that person to the table and report what was learned.</li>
+<li>Hospitality should include discernment: involve a third party or meet publicly when appropriate, screen wisely, and account for the dynamics and safety of the home rather than inviting carelessly.</li>
+</ul>
+</article></li>
+<li><article id="s2.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=866s" aria-label="Watch from 14:26">14:26</a> The Mormon missionaries and Abraham&#x27;s unexpected guests</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-014" href="#ledger-SCR-014">Ephesians 2:8</a> <a class="scripture-tag" data-scripture-id="SCR-015" href="#ledger-SCR-015">Genesis 18</a></p>
+<ul>
+<li>Josh remembers welcoming two Mormon missionaries for water and Cheez-Its, listening to their presentation, discussing Jesus, and ending with the declaration that &quot;salvation is a gift from God&quot;; the family ministry moment remained memorable.</li>
+<li>Josh says, &quot;In Genesis 18, Moses gives the story of Abraham showing hospitality to Jesus Christ and two of his angels.&quot; Abraham welcomed them before recognizing who they were.</li>
+<li>Even if a stranger is not literally an angel, that person may become a messenger of blessing. Josh asks the church to pray about using its homes for kingdom ministry and hopes for more life groups, locations, and meeting times.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s3" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=982s" aria-label="Watch from 16:22">16:22</a> Remember prisoners and the mistreated</h3>
+<ul>
+<li>Hebrews calls the church to identify with suffering believers. Josh contrasts the state&#x27;s limited role with the church&#x27;s ministry of mercy and recounts early Christians who chose imprisonment alongside persecuted brothers and sisters.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s3.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=982s" aria-label="Watch from 16:22">16:22</a> Remember suffering as though it were your own</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-016" href="#ledger-SCR-016">Hebrews 13:3</a></p>
+<ul>
+<li>Hebrews 13:3 commands, &quot;Continue to remember those in prison as if you were together with them in prison, and those who are mistreated as if you yourselves were suffering.&quot;</li>
+<li>Josh explains that Roman prisoners could depend on friends for food and survival, so serving an imprisoned Christian in Christ&#x27;s name was urgent, costly care.</li>
+<li>Paying taxes supports a justice system, but the state cannot be the church: it cannot offer Christ&#x27;s love, care for a broken family, read Scripture with a prisoner, or pray for a child whose father was incarcerated.</li>
+<li>Christians therefore support justice while personally showing mercy and supporting gospel ministry inside prisons.</li>
+</ul>
+</article></li>
+<li><article id="s3.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1074s" aria-label="Watch from 17:54">17:54</a> Serving the least is serving the King</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-017" href="#ledger-SCR-017">Matthew 25:36-40</a></p>
+<ul>
+<li>Josh quotes Jesus: &quot;I needed clothes and you clothed me. I was sick and you looked after me. I was in prison and you came to visit me.&quot;</li>
+<li>The righteous ask when they fed, welcomed, clothed, or visited him, and the King replies, &quot;Whatever you did for one of the least of these brothers and sisters of mine, you did for me.&quot;</li>
+</ul>
+</article></li>
+<li><article id="s3.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1102s" aria-label="Watch from 18:22">18:22</a> A radical solidarity that leads into holy conviction</h4>
+<ul>
+<li>Josh recounts ancient Christians who protested the imprisonment of believers and, when protest failed, entered prison so they could sleep and eat beside them.</li>
+<li>This anti-cultural love holds together justice, generosity to the poor, and strong convictions about marriage and sexuality; compassion and holiness are not rival categories.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s4" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1147s" aria-label="Watch from 19:07">19:07</a> Honor marriage and bring sexuality under Christ&#x27;s lordship</h3>
+<ul>
+<li>Josh treats marriage as a gift that all believers must honor and sexual intimacy as good within its covenant. He confronts sexual sin within the church, warns of judgment, and shepherds ashamed strugglers toward the cleansing, power, and new identity available in the risen Christ.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s4.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1147s" aria-label="Watch from 19:07">19:07</a> Honor the covenant and keep its bed pure</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-018" href="#ledger-SCR-018">Hebrews 13:4</a></p>
+<ul>
+<li>Hebrews 13:4 says, &quot;Marriage should be honored by all, and the marriage bed kept pure, for God will judge the adulterer and all the sexually immoral.&quot;</li>
+<li>Josh distinguishes adultery—sexual activity outside one&#x27;s marriage—from porneia, sexual immorality that includes sexual activity outside marriage during singleness.</li>
+<li>The church&#x27;s generosity toward the poor and convictions about sex resist easy cultural or political categories; Josh says there is a left side, a right side, and the truth.</li>
+</ul>
+</article></li>
+<li><article id="s4.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1212s" aria-label="Watch from 20:12">20:12</a> Sex and money are gifts that make terrible gods</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-019" href="#ledger-SCR-019">Hebrews 13:5-6</a></p>
+<ul>
+<li>To complete the worldview he sees in the paragraph, Josh reads Hebrews 13:5–6: &quot;Keep your lives free from the love of money and be content with what you have&quot; because God will neither leave nor forsake his people; therefore, &quot;The Lord is my helper. I will not be afraid. What can human beings do to me?&quot;</li>
+<li>The gospel changes whom and how believers love, how they suffer, what they do with their bodies, and what they do with money, talents, and gifts.</li>
+<li>A Spirit-filled Christian cannot reserve Sunday for Jesus while claiming the body, sexuality, bank account, or future as private property: if Jesus is Lord, he is Lord of all.</li>
+</ul>
+</article></li>
+<li><article id="s4.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1279s" aria-label="Watch from 21:19">21:19</a> Everyone has a way to honor marriage</h4>
+<ul>
+<li>Married people honor marriage by keeping their promise; singles honor it by refusing marital privileges outside marriage; children honor their parents&#x27; covenant by respecting and celebrating it.</li>
+<li>Churches honor marriage by teaching truth, supporting struggling couples, confronting adultery, helping wounded spouses, and refusing to redefine what God established.</li>
+<li>Josh directs couples needing support to the church&#x27;s marriage and family page and the forthcoming Bind event for laughter, tears, prayer, encouragement, and mutual strengthening.</li>
+</ul>
+</article></li>
+<li><article id="s4.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1340s" aria-label="Watch from 22:20">22:20</a> Protect the Creator&#x27;s definition and the gospel picture</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-020" href="#ledger-SCR-020">Genesis 2:24; Matthew 19:4-6</a> <a class="scripture-tag" data-scripture-id="SCR-021" href="#ledger-SCR-021">Ephesians 5:22-33</a></p>
+<ul>
+<li>Marriage is God&#x27;s gift, will be attacked, and is worth protecting. Josh states its definition as &quot;one man, one woman, one flesh for life.&quot;</li>
+<li>Believers honor this design not from mere traditionalism but as sons and daughters of the one who made it.</li>
+<li>Josh explains the gospel picture: &quot;every husband who sacrificially loves his wife tells the story of Christ&quot; and &quot;every wife who gladly submits to her husband tells the story of the church.&quot;</li>
+<li>A kept covenant proclaims the goodness of the promise-keeping God; dishonoring marriage distorts the picture God intended to paint through it.</li>
+</ul>
+</article></li>
+<li><article id="s4.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1415s" aria-label="Watch from 23:35">23:35</a> Receive marital intimacy as a good gift</h4>
+<ul>
+<li>After humorously offering parents a moment to take young children for water, Josh says plainly that the marriage bed is good and sex is not dirty.</li>
+<li>Sexuality was created by God rather than Hollywood, the internet, or the sexual revolution.</li>
+<li>Within marriage, intimacy is to be received with joy, gratitude, tenderness, faithfulness, safety, love, and playfulness; husband and wife may enjoy the gift together.</li>
+</ul>
+</article></li>
+<li><article id="s4.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1509s" aria-label="Watch from 25:09">25:09</a> Christian discipleship is self-denial, not self-expression</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-022" href="#ledger-SCR-022">Matthew 16:24-26</a></p>
+<ul>
+<li>The sexual ethic is straightforward: intimacy belongs within marriage between a man and a woman; adultery, premarital sex, pornography, lust, using another for pleasure, and redefining sexuality against God&#x27;s design are sin.</li>
+<li>Josh quotes Jesus: &quot;Whoever wants to be my disciple must deny themselves, take up their cross and follow me,&quot; warning that gaining the world while forfeiting one&#x27;s soul is no gain.</li>
+<li>Christianity does not command people to discover and obey every inner desire; it calls everyone to bring every desire under Jesus Christ&#x27;s lordship.</li>
+</ul>
+</article></li>
+<li><article id="s4.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1562s" aria-label="Watch from 26:02">26:02</a> Let holiness confront the church first</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-023" href="#ledger-SCR-023">Matthew 7:3-5</a> <a class="scripture-tag" data-scripture-id="SCR-024" href="#ledger-SCR-024">Hebrews 13:4</a></p>
+<ul>
+<li>The Christian sexual ethic is not a weapon aimed first at outsiders. Josh asks the church to deal with &quot;the plank in our own eye&quot; before pointing outward.</li>
+<li>It confronts unmarried couples sleeping together, women and men using pornography, emotional affairs, private fantasies, selfish sexual use, and manipulative withholding of affection because all believers are called to holiness.</li>
+<li>Josh repeats the warning: &quot;God will judge the adulterer and all the sexually immoral.&quot; Culture, media, friends, churches, politicians, or courts may normalize sexual sin, but God will judge it.</li>
+</ul>
+</article></li>
+<li><article id="s4.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1631s" aria-label="Watch from 27:11">27:11</a> Refuse excuses and fight the liar</h4>
+<ul>
+<li>Josh describes judgment as both active within creation and future, saying he has watched adultery consume people and that brief pleasure is not worth its misery.</li>
+<li>Neither &quot;God knows my heart,&quot; professed love, nor cultural prevalence turns disobedience into holiness; each person will stand before God rather than before the crowd.</li>
+<li>He shepherds exhausted hearers who have promised &quot;never again&quot; and now feel ashamed: temptation promises freedom, pleasure, and life but leaves chains, shame, and death.</li>
+<li>Believers fight not because they are strong but because Jesus is alive; the Christ who conquered sin, death, and the grave lives in his people.</li>
+</ul>
+</article></li>
+<li><article id="s4.9" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1748s" aria-label="Watch from 29:08">29:08</a> Judgment is not the last word: Christ cleanses</h4>
+<ul>
+<li>God&#x27;s word offers healing, forgiveness, restoration, new starts, and power to change; Christ&#x27;s blood is sufficient for adulterers, pornography addicts, the abused, the ashamed, and all who come repentantly by faith.</li>
+<li>Jesus does not forgive sexual sinners only to leave them enslaved: he cleanses, purifies, and gives his Spirit. Heaven&#x27;s message is not merely &quot;try harder&quot; but God&#x27;s presence with his people.</li>
+<li>Correcting a billboard that advertised zero perfection and complete forgiveness, Josh insists that believers possess Christ&#x27;s perfect righteousness imputed to them and everything needed in the resurrected Christ.</li>
+</ul>
+</article></li>
+<li><article id="s4.10" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1838s" aria-label="Watch from 30:38">30:38</a> The worst sin or wound does not permanently define the believer</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-025" href="#ledger-SCR-025">1 Corinthians 6:11</a></p>
+<ul>
+<li>The gospel says believers are not permanently defined by the worst thing they have done or the worst thing done to them; there is healing in Jesus&#x27; name.</li>
+<li>Josh echoes Paul&#x27;s words: &quot;That&#x27;s what some of you were ... but you were washed, you were sanctified, you were justified in the name of the Lord Jesus Christ and by the Spirit of our God.&quot;</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s5" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1869s" aria-label="Watch from 31:09">31:09</a> Reject covetousness and rest in God&#x27;s presence</h3>
+<ul>
+<li>Josh defines covetousness as love of money, distinguishes money as a useful tool from money as a cruel master, and applies the text through personal questions, consistent tithing, church support, generosity, and confidence that God will never leave his people.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s5.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1869s" aria-label="Watch from 31:09">31:09</a> More possessions cannot produce enough</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-026" href="#ledger-SCR-026">Luke 12:15</a></p>
+<ul>
+<li>A millionaire&#x27;s answer that satisfaction requires one million more illustrates covetousness: it wants more regardless of need or use.</li>
+<li>Even in a wealthy society, people struggle to say, &quot;I have enough.&quot; Material things cannot satisfy the heart; only God can.</li>
+<li>Jesus warns, &quot;Watch out. Be on your guard against all kinds of greed. Life does not consist in an abundance of possessions.&quot;</li>
+</ul>
+</article></li>
+<li><article id="s5.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1922s" aria-label="Watch from 32:02">32:02</a> Money is a tool; loving it is slavery</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-027" href="#ledger-SCR-027">1 Timothy 6:10</a></p>
+<ul>
+<li>Against the world&#x27;s claims of ownership, Christianity says both money and body belong under God&#x27;s choice and authority.</li>
+<li>Paul says, &quot;For the love of money is a root of all kinds of evil.&quot; Josh stresses that the text does not call money itself evil.</li>
+<li>Money can feed, house, support missionaries, care for children, provide for families, and sustain a church; love of money instead promises security while producing anxiety, promises freedom while creating slavery, and promises significance while displaying what others have.</li>
+</ul>
+</article></li>
+<li><article id="s5.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1975s" aria-label="Watch from 32:55">32:55</a> Ask not how much you have, but how much it has you</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-028" href="#ledger-SCR-028">Psalm 24:1</a></p>
+<ul>
+<li>Poor people, rich people, and pastors can all love money. The diagnostic questions are whether money supplies identity or security, directs decisions, disturbs sleep, or makes teaching about generosity and tithing feel threatening.</li>
+<li>Josh explains his own practice from Psalm 24:1: &quot;The earth is the Lord&#x27;s and everything in it, the world and all who live in it.&quot; He tithes because everything already belongs to God.</li>
+</ul>
+</article></li>
+<li><article id="s5.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2026s" aria-label="Watch from 33:46">33:46</a> Give first fruits consistently and loosen the idol&#x27;s grip</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-029" href="#ledger-SCR-029">Matthew 6:33</a> <a class="scripture-tag" data-scripture-id="SCR-030" href="#ledger-SCR-030">Matthew 6:21</a></p>
+<ul>
+<li>Josh and Kristen give ten percent of all income to the church&#x27;s general offering so the church can rely on a consistent gift and plan responsibly; other offerings and benevolence are additional rather than deductions from the tithe.</li>
+<li>Josh quotes Jesus, &quot;Seek first the kingdom of God,&quot; and says his household answers, &quot;Yes, Lord,&quot; in all things.</li>
+<li>Because &quot;our treasure and our heart are connected,&quot; consistent tithing helps loosen money&#x27;s grip as a leading idol.</li>
+</ul>
+</article></li>
+<li><article id="s5.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2085s" aria-label="Watch from 34:45">34:45</a> Support an independent church because Christ made his people rich</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-031" href="#ledger-SCR-031">2 Corinthians 8:9</a></p>
+<ul>
+<li>Josh and Kristen give because they believe in Crossroads&#x27; gospel ministry. As an independent church it has no denominational subsidy or outside body to rescue it financially; its elders are local and raised up within the congregation.</li>
+<li>Their giving testifies that the gospel is destroying greed and growing generosity.</li>
+<li>Josh applies Christ&#x27;s grace personally: &quot;Jesus was rich and for my sake he became poor so that by his poverty I might become rich.&quot; He is rich because he has Jesus and therefore gives as one who already has more than he deserves.</li>
+</ul>
+</article></li>
+<li><article id="s5.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2139s" aria-label="Watch from 35:39">35:39</a> Contentment rests on the God who stays</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-032" href="#ledger-SCR-032">Hebrews 13:5</a></p>
+<ul>
+<li>The foundation of contentment is not having enough money but having a God who will never leave.</li>
+<li>Accounts, jobs, health, homes, economies, and relationships can change, but the Lord says, &quot;I will never leave you and I will never forsake you.&quot; This promise defeats covetousness.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s6" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2163s" aria-label="Watch from 36:03">36:03</a> Follow the unchanging Christ through accountable leaders</h3>
+<ul>
+<li>The closing movement anchors kingdom life in Jesus Christ&#x27;s immutability. Josh calls the church outside the camp, remembers faithful teachers, rejects pastor-centered dependence, describes Christ&#x27;s unchanged saving work, teaches reciprocal accountability between leaders and congregation, applies the benediction, summarizes the family resemblance, invites repentance, and prays.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s6.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2163s" aria-label="Watch from 36:03">36:03</a> An unshakeable kingdom is led by an unchanging Christ</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-033" href="#ledger-SCR-033">Hebrews 13:7-16</a></p>
+<ul>
+<li>Josh reads Hebrews 13:7–16, beginning, &quot;Remember your leaders who spoke the word of God to you,&quot; commanding imitation of their faith, and declaring that &quot;Jesus Christ is the same yesterday and today and forever.&quot;</li>
+<li>The passage warns, &quot;Do [not] be carried away by all kinds of strange teachings,&quot; because hearts are strengthened by grace rather than ceremonial food.</li>
+<li>Jesus suffered outside the gate to make the people holy by his blood, so believers are to go to him outside the camp, bear his disgrace, seek the coming city, offer praise, do good, and share: &quot;with such sacrifices God is pleased.&quot;</li>
+</ul>
+</article></li>
+<li><article id="s6.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2243s" aria-label="Watch from 37:23">37:23</a> Go to Jesus outside the camp, whatever it costs</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-034" href="#ledger-SCR-034">Hebrews 13:13</a></p>
+<ul>
+<li>Josh lingers over Hebrews 13:13: &quot;Let us go to him outside the camp.&quot;</li>
+<li>He applies the call to evangelistic sacrifice: if pointing someone to the Redeemer costs money, time, or convenience, give it; the cost is nothing beside what Jesus paid to bring his people home.</li>
+</ul>
+</article></li>
+<li><article id="s6.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2262s" aria-label="Watch from 37:42">37:42</a> Remember the people who first taught you God&#x27;s word</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-035" href="#ledger-SCR-035">Hebrews 13:7</a></p>
+<ul>
+<li>Josh pauses for ten seconds and asks everyone to remember the first person who taught them God&#x27;s word, then to thank God for that person.</li>
+<li>As their pastor, Josh hopes the church will see in his way of life a faith worth imitating; he wants not only his words but his life and conduct toward his family to point people to Christ.</li>
+</ul>
+</article></li>
+<li><article id="s6.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2324s" aria-label="Watch from 38:44">38:44</a> Do not build a life around any servant of God</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-036" href="#ledger-SCR-036">Hebrews 13:8</a> <a class="scripture-tag" data-scripture-id="SCR-037" href="#ledger-SCR-037">Ephesians 1:4-5</a></p>
+<ul>
+<li>Josh warns that people attach themselves to pastors in unhealthy ways and that troubled shepherds may thrive on the attention; some listeners have seen or suffered this abuse.</li>
+<li>His instruction is direct: &quot;Don&#x27;t depend on me. Depend on the Lord.&quot; Never build life around a servant of God; build on Jesus Christ and his unchanging truth.</li>
+<li>Josh repeats, &quot;Jesus Christ is the same yesterday, today, and forever.&quot; Before Bethlehem, the cross, Adam, or the stars, the Son had set his love on his people; the Father chose a people, and the Son willingly came to redeem them.</li>
+</ul>
+</article></li>
+<li><article id="s6.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2394s" aria-label="Watch from 39:54">39:54</a> The same Jesus still forgives, welcomes, convinces, and gives life</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-038" href="#ledger-SCR-038">John 21:9-19</a> <a class="scripture-tag" data-scripture-id="SCR-039" href="#ledger-SCR-039">Luke 23:39-43</a> <a class="scripture-tag" data-scripture-id="SCR-040" href="#ledger-SCR-040">John 20:24-29</a> <a class="scripture-tag" data-scripture-id="SCR-041" href="#ledger-SCR-041">John 11:43-44</a> <a class="scripture-tag" data-scripture-id="SCR-042" href="#ledger-SCR-042">John 6:37</a></p>
+<ul>
+<li>Kingdoms, presidents, elections, friends, churches, bodies, memories, and wealth change, but Jesus Christ remains the same forever.</li>
+<li>The Jesus who sat by the fire and &quot;forgave Peter for denying him still forgives today.&quot;</li>
+<li>The Jesus who told the dying thief he would be &quot;in paradise that day&quot; still welcomes sinners, even as Josh notes that the thief had no time for baptism or a polished doctrinal statement.</li>
+<li>The Jesus who appeared behind locked doors to &quot;doubting Thomas&quot; still turns doubt into belief.</li>
+<li>The Jesus who &quot;called Lazarus from the grave&quot; still gives life to the dead.</li>
+<li>His promise remains: &quot;All whom the Father gives me will come to me and whoever comes to me I will never drive away.&quot; Because Jesus does not change, neither do his promises.</li>
+</ul>
+</article></li>
+<li><article id="s6.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2467s" aria-label="Watch from 41:07">41:07</a> Submit to leaders who know they need prayer</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-043" href="#ledger-SCR-043">Hebrews 13:17-18</a></p>
+<ul>
+<li>Hebrews 13:17–18 says, &quot;Have confidence in your leaders and submit to their authority because they keep watch over you as those who must give an account,&quot; and asks the church, &quot;Pray for us.&quot;</li>
+<li>Josh sees the connection as a safeguard against authoritarianism: leaders worthy of confidence cherish prayer rather than celebrating power.</li>
+<li>A shepherd answers to God and needs the church&#x27;s prayers because the church is ordained to play the gospel&#x27;s song while every human leader remains flawed and vulnerable to deception.</li>
+</ul>
+</article></li>
+<li><article id="s6.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2549s" aria-label="Watch from 42:29">42:29</a> Handle leadership conflict biblically and assume the best</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-044" href="#ledger-SCR-044">Matthew 18:15-17</a></p>
+<ul>
+<li>Members who call Crossroads home should consent to its leadership except where leaders clearly violate Scripture, but a leader&#x27;s sin does not authorize an unbiblical response.</li>
+<li>Josh says to &quot;activate Matthew 18&quot;: go directly to the person, take a witness if needed, then bring the matter to the elders under Crossroads&#x27; application of the final step.</li>
+<li>If resolution remains impossible, leave without division or gossip. Give leaders the benefit of the doubt and assume the best about motives until evidence shows otherwise.</li>
+<li>Josh admits that he held ill will toward leaders for a decade and closes the counsel with the reminder that pastors are sheep too.</li>
+</ul>
+</article></li>
+<li><article id="s6.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2623s" aria-label="Watch from 43:43">43:43</a> Pray the Shepherd&#x27;s benediction over the shepherds</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-045" href="#ledger-SCR-045">Hebrews 13:20-21</a> <a class="scripture-tag" data-scripture-id="SCR-046" href="#ledger-SCR-046">Hebrews 13:21</a></p>
+<ul>
+<li>Josh offers Hebrews 13:20–21 as a prayer: &quot;May the God of peace, who through the blood of the eternal covenant brought back from the dead our Lord Jesus, that great shepherd of the sheep, equip you with everything good for doing his will.&quot;</li>
+<li>The benediction asks God to work in his people what pleases him through Jesus Christ and gives Christ glory forever.</li>
+<li>Flawed men can watch over souls because the great Shepherd equips his people. Josh assigns the church to find the staff and elder pages and pray, &quot;May the God of peace equip you with everything good for doing his will,&quot; over its leaders.</li>
+</ul>
+</article></li>
+<li><article id="s6.9" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2673s" aria-label="Watch from 44:33">44:33</a> The Hebrews finale displays what faith produces</h4>
+<ul>
+<li>After thirteen weeks seeing Jesus from every angle, the finale shows faith&#x27;s fruit: a church that trusts God, loves one another and strangers, honors marriage, resists love of money, prays for leaders, and is a joy to lead.</li>
+<li>The greatest gift the church can give Josh is neither a compliment, card, attendance, nor scheduled tithe, but to know Jesus, stop resisting his voice, trust him, and walk in his power.</li>
+<li>Josh anticipates the next week&#x27;s baptisms as fruit of members leading people to Jesus, praising God for the spiritual fire he sees in the body.</li>
+</ul>
+</article></li>
+<li><article id="s6.10" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2759s" aria-label="Watch from 45:59">45:59</a> Come home to the great Shepherd today</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-047" href="#ledger-SCR-047">Hebrews 3:7-8, 15</a> <a class="scripture-tag" data-scripture-id="SCR-048" href="#ledger-SCR-048">John 10:11</a> <a class="scripture-tag" data-scripture-id="SCR-049" href="#ledger-SCR-049">Matthew 26:28</a> <a class="scripture-tag" data-scripture-id="SCR-050" href="#ledger-SCR-050">John 6:37</a></p>
+<ul>
+<li>A shepherd&#x27;s greatest joy is &quot;carrying one of his sheep back home.&quot; Josh urges those delaying repentance: &quot;If you hear his voice today, surrender.&quot;</li>
+<li>He invites hearers to kneel or fall on their faces if needed and surrender the heart to Jesus, &quot;the great shepherd. He laid down his life for his sheep.&quot;</li>
+<li>Josh declares, &quot;His divine blood was poured out for the forgiveness of sins,&quot; God raised him from the dead, and &quot;he will receive every sinner who comes to him in faith.&quot;</li>
+<li>The invitation is to come, turn from sin, trust Christ, and walk in his power rather than leave without responding.</li>
+</ul>
+</article></li>
+<li><article id="s6.11" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2806s" aria-label="Watch from 46:46">46:46</a> Closing prayer: thank Christ for the cross and ask for power</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-051" href="#ledger-SCR-051">Colossians 1:16</a> <a class="scripture-tag" data-scripture-id="SCR-052" href="#ledger-SCR-052">Matthew 27:42</a> <a class="scripture-tag" data-scripture-id="SCR-053" href="#ledger-SCR-053">Hebrews 12:2</a></p>
+<ul>
+<li>Josh thanks the Father for Scripture, Hebrews, and the supremacy of Jesus from beginning to end.</li>
+<li>He thanks Jesus for &quot;humbling yourself, taking our flesh,&quot; living the life sinners could not live, dying the death they deserved, and taking their place.</li>
+<li>Addressing the crucified King, he prays, &quot;All things were made through you and for you,&quot; yet the creation mocked its maker.</li>
+<li>Josh recalls the mockery, &quot;You can save others. Why can&#x27;t you save yourself?&quot; and says Jesus stayed on the cross because he saw &quot;this joy&quot;—a redeemed family of faith called to trust, serve, love, and change the world.</li>
+<li>He asks the Lord for needed power, help to forgive others and themselves, and grace to walk faithfully; he closes by thanking God for the series, Jesus, and the cross, then prays in Jesus&#x27; name, &quot;Amen.&quot;</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+</ol>
+  </section>
+  <section id="scripture-ledger" aria-labelledby="ledger-heading">
+    <h2 id="ledger-heading">Complete Scripture reference table</h2>
+    <p class="section-intro">One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.</p>
+    <div class="table-wrap" role="region" aria-label="Scripture reference table" tabindex="0">
+      <table>
+        <caption>53 confirmed Scripture units, in sermon order</caption>
+        <thead><tr><th scope="col">Reference</th><th scope="col">Treatment</th><th scope="col">Timestamp</th><th scope="col">Spoken phrase</th><th scope="col">Outline section</th><th scope="col">YouTube</th><th scope="col">BibleGateway</th></tr></thead>
+        <tbody>
+<tr id="ledger-SCR-001" data-scripture-id="SCR-001">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ezekiel%2036%3A26-27&amp;version=NIV">Ezekiel 36:26-27</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=149s" aria-label="Watch from 02:29">02:29</a></td>
+  <td><q>He puts his Spirit within them ... and he changes their desires.</q></td>
+  <td><a href="#s1.1">From an impossible rulebook to transformed desires</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=149s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ezekiel%2036%3A26-27&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-002" data-scripture-id="SCR-002">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%208%3A10&amp;version=NIV">Hebrews 8:10</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=160s" aria-label="Watch from 02:40">02:40</a></td>
+  <td><q>He writes his law on their hearts.</q></td>
+  <td><a href="#s1.1">From an impossible rulebook to transformed desires</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=160s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%208%3A10&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-003" data-scripture-id="SCR-003">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2017%3A1-8&amp;version=NIV">Matthew 17:1-8</a><span class="reference-note">Caption check: Captions preserve only ‘in … 17’; the Transfiguration details confirm Matthew 17.</span></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=225s" aria-label="Watch from 03:45">03:45</a></td>
+  <td><q>the mountain of transfiguration in ... 17 ... Jesus&#x27; face shone like the sun ... Peter wanting to pitch some tents</q></td>
+  <td><a href="#s1.3">Come down from the mountain into kingdom life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=225s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2017%3A1-8&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-004" data-scripture-id="SCR-004">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22-29&amp;version=NIV">Hebrews 12:22-29</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=245s" aria-label="Watch from 04:05">04:05</a></td>
+  <td><q>Hebrews 12 ended with all God&#x27;s people rejoicing together on Mount Zion ... an unshakeable kingdom.</q></td>
+  <td><a href="#s1.3">Come down from the mountain into kingdom life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=245s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-005" data-scripture-id="SCR-005">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A1&amp;version=NIV">Hebrews 13:1</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=300s" aria-label="Watch from 05:00">05:00</a></td>
+  <td><q>Keep on loving one another as brothers and sisters.</q></td>
+  <td><a href="#s1.4">The fruit is resemblance, not admission</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=300s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A1&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-006" data-scripture-id="SCR-006">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A1-11&amp;version=NIV">Philippians 2:1-11</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=398s" aria-label="Watch from 06:38">06:38</a></td>
+  <td><q>if you need an attitude adjustment ... just go read Philippians 2</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=398s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A1-11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-007" data-scripture-id="SCR-007">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2020%3A28%3B%20Mark%2010%3A45&amp;version=NIV">Matthew 20:28; Mark 10:45</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=459s" aria-label="Watch from 07:39">07:39</a></td>
+  <td><q>the one who came to serve, not be served</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=459s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2020%3A28%3B%20Mark%2010%3A45&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-008" data-scripture-id="SCR-008">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2013%3A4-15&amp;version=NIV">John 13:4-15</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=463s" aria-label="Watch from 07:43">07:43</a></td>
+  <td><q>the one who washed dirty feet</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=463s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2013%3A4-15&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-009" data-scripture-id="SCR-009">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Luke%2023%3A34&amp;version=NIV">Luke 23:34</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=465s" aria-label="Watch from 07:45">07:45</a></td>
+  <td><q>the one who forgave his enemies and prayed for them as he hung miserably on the cross</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=465s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Luke%2023%3A34&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-010" data-scripture-id="SCR-010">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2015%3A13&amp;version=NIV">John 15:13</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=473s" aria-label="Watch from 07:53">07:53</a></td>
+  <td><q>the one who laid down his life for his friends</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=473s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2015%3A13&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-011" data-scripture-id="SCR-011">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=1%20John%204%3A19&amp;version=NIV">1 John 4:19</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=482s" aria-label="Watch from 08:02">08:02</a></td>
+  <td><q>people who love because he first loved us</q></td>
+  <td><a href="#s2.1">Protect Philadelphia from the enemies of love</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=482s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=1%20John%204%3A19&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-012" data-scripture-id="SCR-012">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A2&amp;version=NIV">Hebrews 13:2</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=488s" aria-label="Watch from 08:08">08:08</a></td>
+  <td><q>Do not forget to show hospitality to strangers ... some people have shown hospitality to angels without knowing it.</q></td>
+  <td><a href="#s2.2">Move from Philadelphia to philoxenia</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=488s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-013" data-scripture-id="SCR-013">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Luke%2019%3A5&amp;version=NIV">Luke 19:5</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=703s" aria-label="Watch from 11:43">11:43</a></td>
+  <td><q>he told Zacchaeus, &#x27;I&#x27;m coming to your house today.&#x27;</q></td>
+  <td><a href="#s2.4">Open homes and pursue life-group community</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=703s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Luke%2019%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-014" data-scripture-id="SCR-014">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ephesians%202%3A8&amp;version=NIV">Ephesians 2:8</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=909s" aria-label="Watch from 15:09">15:09</a></td>
+  <td><q>salvation is a gift from God</q></td>
+  <td><a href="#s2.6">The Mormon missionaries and Abraham&#x27;s unexpected guests</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=909s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ephesians%202%3A8&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-015" data-scripture-id="SCR-015">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Genesis%2018&amp;version=NIV">Genesis 18</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=917s" aria-label="Watch from 15:17">15:17</a></td>
+  <td><q>In Genesis 18 ... Abraham showing hospitality to Jesus Christ and two of his angels.</q></td>
+  <td><a href="#s2.6">The Mormon missionaries and Abraham&#x27;s unexpected guests</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=917s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Genesis%2018&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-016" data-scripture-id="SCR-016">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A3&amp;version=NIV">Hebrews 13:3</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=982s" aria-label="Watch from 16:22">16:22</a></td>
+  <td><q>Continue to remember those in prison as if you were together with them ... and those who are mistreated as if you yourselves were suffering.</q></td>
+  <td><a href="#s3.1">Remember suffering as though it were your own</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=982s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A3&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-017" data-scripture-id="SCR-017">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2025%3A36-40&amp;version=NIV">Matthew 25:36-40</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1074s" aria-label="Watch from 17:54">17:54</a></td>
+  <td><q>I was in prison and you came to visit me ... whatever you did for one of the least of these brothers and sisters of mine, you did for me.</q></td>
+  <td><a href="#s3.2">Serving the least is serving the King</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1074s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2025%3A36-40&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-018" data-scripture-id="SCR-018">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A4&amp;version=NIV">Hebrews 13:4</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1148s" aria-label="Watch from 19:08">19:08</a></td>
+  <td><q>Marriage should be honored by all, and the marriage bed kept pure, for God will judge the adulterer and all the sexually immoral.</q></td>
+  <td><a href="#s4.1">Honor the covenant and keep its bed pure</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1148s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-019" data-scripture-id="SCR-019">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A5-6&amp;version=NIV">Hebrews 13:5-6</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1212s" aria-label="Watch from 20:12">20:12</a></td>
+  <td><q>Keep your lives free from the love of money ... &#x27;Never will I leave you&#x27; ... &#x27;The Lord is my helper; I will not be afraid.&#x27;</q></td>
+  <td><a href="#s4.2">Sex and money are gifts that make terrible gods</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1212s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A5-6&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-020" data-scripture-id="SCR-020">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Genesis%202%3A24%3B%20Matthew%2019%3A4-6&amp;version=NIV">Genesis 2:24; Matthew 19:4-6</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1362s" aria-label="Watch from 22:42">22:42</a></td>
+  <td><q>Marriage is one man, one woman, one flesh for life.</q></td>
+  <td><a href="#s4.4">Protect the Creator&#x27;s definition and the gospel picture</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1362s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Genesis%202%3A24%3B%20Matthew%2019%3A4-6&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-021" data-scripture-id="SCR-021">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ephesians%205%3A22-33&amp;version=NIV">Ephesians 5:22-33</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1386s" aria-label="Watch from 23:06">23:06</a></td>
+  <td><q>Every husband who sacrificially loves his wife tells the story of Christ. Every wife who gladly submits to her husband tells the story of the church.</q></td>
+  <td><a href="#s4.4">Protect the Creator&#x27;s definition and the gospel picture</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1386s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ephesians%205%3A22-33&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-022" data-scripture-id="SCR-022">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2016%3A24-26&amp;version=NIV">Matthew 16:24-26</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1536s" aria-label="Watch from 25:36">25:36</a></td>
+  <td><q>Whoever wants to be my disciple must deny themselves, take up their cross and follow me ... gain the whole world, yet forfeit your soul?</q></td>
+  <td><a href="#s4.6">Christian discipleship is self-denial, not self-expression</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1536s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2016%3A24-26&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-023" data-scripture-id="SCR-023">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%207%3A3-5&amp;version=NIV">Matthew 7:3-5</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1575s" aria-label="Watch from 26:15">26:15</a></td>
+  <td><q>Why don&#x27;t we deal with the plank in our own eye?</q></td>
+  <td><a href="#s4.7">Let holiness confront the church first</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1575s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%207%3A3-5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-024" data-scripture-id="SCR-024">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A4&amp;version=NIV">Hebrews 13:4</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1608s" aria-label="Watch from 26:48">26:48</a></td>
+  <td><q>God will judge the adulterer and all the sexually immoral.</q></td>
+  <td><a href="#s4.7">Let holiness confront the church first</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1608s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-025" data-scripture-id="SCR-025">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%206%3A11&amp;version=NIV">1 Corinthians 6:11</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1850s" aria-label="Watch from 30:50">30:50</a></td>
+  <td><q>That&#x27;s what some of you were ... but you were washed ... sanctified ... justified in the name of the Lord Jesus Christ and by the Spirit of our God.</q></td>
+  <td><a href="#s4.10">The worst sin or wound does not permanently define the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1850s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%206%3A11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-026" data-scripture-id="SCR-026">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Luke%2012%3A15&amp;version=NIV">Luke 12:15</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1916s" aria-label="Watch from 31:56">31:56</a></td>
+  <td><q>Watch out. Be on your guard against all kinds of greed. Life does not consist in an abundance of possessions.</q></td>
+  <td><a href="#s5.1">More possessions cannot produce enough</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1916s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Luke%2012%3A15&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-027" data-scripture-id="SCR-027">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=1%20Timothy%206%3A10&amp;version=NIV">1 Timothy 6:10</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1938s" aria-label="Watch from 32:18">32:18</a></td>
+  <td><q>Paul says ... &#x27;the love of money is a root of all kinds of evil.&#x27;</q></td>
+  <td><a href="#s5.2">Money is a tool; loving it is slavery</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=1938s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=1%20Timothy%206%3A10&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-028" data-scripture-id="SCR-028">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Psalm%2024%3A1&amp;version=NIV">Psalm 24:1</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2021s" aria-label="Watch from 33:41">33:41</a></td>
+  <td><q>Psalm 24:1, &#x27;The earth is the Lord&#x27;s and everything in it, the world and all who live in it.&#x27;</q></td>
+  <td><a href="#s5.3">Ask not how much you have, but how much it has you</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2021s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Psalm%2024%3A1&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-029" data-scripture-id="SCR-029">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A33&amp;version=NIV">Matthew 6:33</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2071s" aria-label="Watch from 34:31">34:31</a></td>
+  <td><q>Jesus says, &#x27;Seek first the kingdom of God.&#x27;</q></td>
+  <td><a href="#s5.4">Give first fruits consistently and loosen the idol&#x27;s grip</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2071s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A33&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-030" data-scripture-id="SCR-030">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A21&amp;version=NIV">Matthew 6:21</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2077s" aria-label="Watch from 34:37">34:37</a></td>
+  <td><q>our treasure and our heart are connected</q></td>
+  <td><a href="#s5.4">Give first fruits consistently and loosen the idol&#x27;s grip</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2077s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A21&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-031" data-scripture-id="SCR-031">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=2%20Corinthians%208%3A9&amp;version=NIV">2 Corinthians 8:9</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2127s" aria-label="Watch from 35:27">35:27</a></td>
+  <td><q>Jesus was rich and for my sake he became poor so that by his poverty I might become rich.</q></td>
+  <td><a href="#s5.5">Support an independent church because Christ made his people rich</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2127s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=2%20Corinthians%208%3A9&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-032" data-scripture-id="SCR-032">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A5&amp;version=NIV">Hebrews 13:5</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2155s" aria-label="Watch from 35:55">35:55</a></td>
+  <td><q>I will never leave you and I will never forsake you.</q></td>
+  <td><a href="#s5.6">Contentment rests on the God who stays</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2155s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-033" data-scripture-id="SCR-033">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A7-16&amp;version=NIV">Hebrews 13:7-16</a><span class="reference-note">Caption check: Captions dropped ‘not’ from ‘Do not be carried away’ in verse 9; wording and context confirm the correction.</span></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2173s" aria-label="Watch from 36:13">36:13</a></td>
+  <td><q>Remember your leaders ... Jesus Christ is the same yesterday and today and forever ... let us then go to him outside the camp ... do good and share.</q></td>
+  <td><a href="#s6.1">An unshakeable kingdom is led by an unchanging Christ</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2173s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A7-16&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-034" data-scripture-id="SCR-034">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A13&amp;version=NIV">Hebrews 13:13</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2243s" aria-label="Watch from 37:23">37:23</a></td>
+  <td><q>Let us go to him outside the camp.</q></td>
+  <td><a href="#s6.2">Go to Jesus outside the camp, whatever it costs</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2243s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A13&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-035" data-scripture-id="SCR-035">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A7&amp;version=NIV">Hebrews 13:7</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2262s" aria-label="Watch from 37:42">37:42</a></td>
+  <td><q>think back to the first person who ever taught you the word of God ... thank God for them</q></td>
+  <td><a href="#s6.3">Remember the people who first taught you God&#x27;s word</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2262s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A7&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-036" data-scripture-id="SCR-036">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A8&amp;version=NIV">Hebrews 13:8</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2356s" aria-label="Watch from 39:16">39:16</a></td>
+  <td><q>Build your life on Jesus Christ. He never changes ... Jesus Christ is the same yesterday, today, and forever.</q></td>
+  <td><a href="#s6.4">Do not build a life around any servant of God</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2356s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A8&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-037" data-scripture-id="SCR-037">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ephesians%201%3A4-5&amp;version=NIV">Ephesians 1:4-5</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2369s" aria-label="Watch from 39:29">39:29</a></td>
+  <td><q>before Adam even took his first breath ... the Father chose a people to reconcile himself through his Son</q></td>
+  <td><a href="#s6.4">Do not build a life around any servant of God</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2369s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ephesians%201%3A4-5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-038" data-scripture-id="SCR-038">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2021%3A9-19&amp;version=NIV">John 21:9-19</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2416s" aria-label="Watch from 40:16">40:16</a></td>
+  <td><q>Jesus who sat next to the beach fire and forgave Peter for denying him still forgives today.</q></td>
+  <td><a href="#s6.5">The same Jesus still forgives, welcomes, convinces, and gives life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2416s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2021%3A9-19&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-039" data-scripture-id="SCR-039">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Luke%2023%3A39-43&amp;version=NIV">Luke 23:39-43</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2425s" aria-label="Watch from 40:25">40:25</a></td>
+  <td><q>Jesus who welcomed the thief on the cross ... got to see him in paradise that day.</q></td>
+  <td><a href="#s6.5">The same Jesus still forgives, welcomes, convinces, and gives life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2425s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Luke%2023%3A39-43&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-040" data-scripture-id="SCR-040">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2020%3A24-29&amp;version=NIV">John 20:24-29</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2440s" aria-label="Watch from 40:40">40:40</a></td>
+  <td><q>Jesus who appeared to that doubting Thomas ... still today turns doubt into belief.</q></td>
+  <td><a href="#s6.5">The same Jesus still forgives, welcomes, convinces, and gives life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2440s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2020%3A24-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-041" data-scripture-id="SCR-041">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2011%3A43-44&amp;version=NIV">John 11:43-44</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2451s" aria-label="Watch from 40:51">40:51</a></td>
+  <td><q>The Jesus who called Lazarus from the grave still gives life to the dead.</q></td>
+  <td><a href="#s6.5">The same Jesus still forgives, welcomes, convinces, and gives life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2451s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2011%3A43-44&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-042" data-scripture-id="SCR-042">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%206%3A37&amp;version=NIV">John 6:37</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2456s" aria-label="Watch from 40:56">40:56</a></td>
+  <td><q>All whom the Father gives me will come to me, and whoever comes to me I will never drive away.</q></td>
+  <td><a href="#s6.5">The same Jesus still forgives, welcomes, convinces, and gives life</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2456s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%206%3A37&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-043" data-scripture-id="SCR-043">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A17-18&amp;version=NIV">Hebrews 13:17-18</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2467s" aria-label="Watch from 41:07">41:07</a></td>
+  <td><q>Have confidence in your leaders and submit to their authority ... Pray for us.</q></td>
+  <td><a href="#s6.6">Submit to leaders who know they need prayer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2467s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A17-18&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-044" data-scripture-id="SCR-044">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2018%3A15-17&amp;version=NIV">Matthew 18:15-17</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2568s" aria-label="Watch from 42:48">42:48</a></td>
+  <td><q>activate Matthew 18 and go directly to that person ... take a witness ... bring it to the elders</q></td>
+  <td><a href="#s6.7">Handle leadership conflict biblically and assume the best</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2568s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2018%3A15-17&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-045" data-scripture-id="SCR-045">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A20-21&amp;version=NIV">Hebrews 13:20-21</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2623s" aria-label="Watch from 43:43">43:43</a></td>
+  <td><q>May the God of peace ... brought back from the dead our Lord Jesus, that great shepherd of the sheep, equip you with everything good for doing his will.</q></td>
+  <td><a href="#s6.8">Pray the Shepherd&#x27;s benediction over the shepherds</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2623s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A20-21&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-046" data-scripture-id="SCR-046">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A21&amp;version=NIV">Hebrews 13:21</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2666s" aria-label="Watch from 44:26">44:26</a></td>
+  <td><q>pray this over your leaders: &#x27;May the God of peace equip you with everything good for doing his will.&#x27;</q></td>
+  <td><a href="#s6.8">Pray the Shepherd&#x27;s benediction over the shepherds</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2666s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A21&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-047" data-scripture-id="SCR-047">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%203%3A7-8%2C%2015&amp;version=NIV">Hebrews 3:7-8, 15</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2776s" aria-label="Watch from 46:16">46:16</a></td>
+  <td><q>If you hear his voice today, surrender.</q></td>
+  <td><a href="#s6.10">Come home to the great Shepherd today</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2776s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%203%3A7-8%2C%2015&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-048" data-scripture-id="SCR-048">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%2010%3A11&amp;version=NIV">John 10:11</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2784s" aria-label="Watch from 46:24">46:24</a></td>
+  <td><q>the great shepherd ... laid down his life for his sheep</q></td>
+  <td><a href="#s6.10">Come home to the great Shepherd today</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2784s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%2010%3A11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-049" data-scripture-id="SCR-049">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2026%3A28&amp;version=NIV">Matthew 26:28</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2788s" aria-label="Watch from 46:28">46:28</a></td>
+  <td><q>His divine blood was poured out for the forgiveness of sins.</q></td>
+  <td><a href="#s6.10">Come home to the great Shepherd today</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2788s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2026%3A28&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-050" data-scripture-id="SCR-050">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%206%3A37&amp;version=NIV">John 6:37</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2794s" aria-label="Watch from 46:34">46:34</a></td>
+  <td><q>he will receive every sinner who comes to him in faith</q></td>
+  <td><a href="#s6.10">Come home to the great Shepherd today</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2794s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%206%3A37&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-051" data-scripture-id="SCR-051">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Colossians%201%3A16&amp;version=NIV">Colossians 1:16</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2843s" aria-label="Watch from 47:23">47:23</a></td>
+  <td><q>All things were made through you and for you.</q></td>
+  <td><a href="#s6.11">Closing prayer: thank Christ for the cross and ask for power</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2843s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Colossians%201%3A16&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-052" data-scripture-id="SCR-052">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%2027%3A42&amp;version=NIV">Matthew 27:42</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2852s" aria-label="Watch from 47:32">47:32</a></td>
+  <td><q>You can save others. Why can&#x27;t you save yourself?</q></td>
+  <td><a href="#s6.11">Closing prayer: thank Christ for the cross and ask for power</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2852s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%2027%3A42&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-053" data-scripture-id="SCR-053">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2864s" aria-label="Watch from 47:44">47:44</a></td>
+  <td><q>But you stayed because you saw the picture. You saw this joy ... a family of faith, a future redeemed.</q></td>
+  <td><a href="#s6.11">Closing prayer: thank Christ for the cross and ask for power</a></td>
+  <td><a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8&amp;t=2864s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Source: <a href="https://www.youtube.com/watch?v=f8QDIAy6Nh8">official Crossroads Church YouTube video</a>. Transcript basis: YouTube automatic captions (English original). Verified September 5, 2026.</p>
+  <p>This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text.</p>
+</footer>
+</body>
+</html>
