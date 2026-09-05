@@ -23,6 +23,7 @@ Each sermon is one self-contained HTML file. There is no site generator, content
 - [Start With Me — Josh Wyatt — August 24, 2026](sermons/2026-08-24-start-with-me.html)
 - [Inside Out — Josh Wyatt — August 16, 2026](sermons/2026-08-16-inside-out.html)
 - [Born Bent — Elijah Stanley — August 10, 2026](sermons/2026-08-10-born-bent.html)
+- [When Excuses Die — Josh Wyatt — August 3, 2026](sermons/2026-08-03-when-excuses-die.html)
 
 ## Repository layout
 
