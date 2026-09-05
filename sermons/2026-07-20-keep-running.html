@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A chronological study outline of Keep Running! by Josh Wyatt at Crossroads Church, published July 20, 2026.">
+  <title>Keep Running! — Josh Wyatt | Sermon Outline</title>
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #1d252c;
+  --muted: #596772;
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+  --line: #d7ddd9;
+  --accent: #7a3426;
+  --accent-soft: #f5e8e2;
+  --scripture: #244f48;
+  --scripture-soft: #e4f0ed;
+  --max: 76rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+a { color: var(--accent); text-underline-offset: .16em; }
+a:hover, a:focus-visible { text-decoration-thickness: .14em; }
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: white; padding: .7rem 1rem; z-index: 10;
+}
+.skip-link:focus { left: .75rem; top: .75rem; }
+.site-nav, header, main, footer { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
+.site-nav { padding: 1rem 0 .25rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .95rem; }
+header { padding: 2.4rem 0 1.6rem; border-bottom: 1px solid var(--line); }
+.kicker { margin: 0 0 .3rem; color: var(--accent); font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.22; text-wrap: balance; }
+h1 { margin: 0; max-width: 18ch; font-size: clamp(2.35rem, 7vw, 4.9rem); letter-spacing: -.04em; }
+.subtitle { margin: .55rem 0 1.35rem; color: var(--muted); font: 1.2rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+.metadata { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem 1.25rem; margin: 1.5rem 0 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+.metadata div { min-width: 0; }
+.metadata dt { color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.metadata dd { margin: .1rem 0 0; overflow-wrap: anywhere; }
+main { padding: 2rem 0 4rem; }
+.notice { margin: 0 0 2rem; padding: 1rem 1.15rem; border-left: .3rem solid var(--accent); background: var(--accent-soft); }
+.notice p { margin: 0; }
+.video-block { margin: 0 0 2.5rem; }
+.video-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: .6rem; background: #111; box-shadow: 0 .4rem 1.4rem #0002; }
+.video-shell iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+figcaption { margin-top: .65rem; color: var(--muted); font: .93rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+.section-intro { max-width: 72ch; }
+.outline, .outline-children { list-style: none; margin: 0; padding: 0; }
+.outline > li { margin: 2.2rem 0 3rem; }
+.outline-node { scroll-margin-top: 1rem; }
+.outline > li > article { padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-radius: .65rem; background: var(--panel); box-shadow: 0 .25rem .9rem #2430290a; }
+.outline-children { margin-top: 1.2rem; padding-left: 1.1rem; border-left: .18rem solid var(--line); }
+.outline-children > li { margin: 1.3rem 0 1.6rem; }
+.outline-node h3, .outline-node h4, .outline-node h5, .outline-node h6 { margin: 0 0 .65rem; }
+.outline-node h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.outline-node h4 { font-size: 1.22rem; }
+.outline-node ul { margin: .55rem 0 0; padding-left: 1.35rem; }
+.outline-node li + li { margin-top: .28rem; }
+.timestamp {
+  display: inline-block; margin-right: .35rem; padding: .11rem .43rem; border-radius: .3rem;
+  background: var(--accent-soft); color: var(--accent); font: 750 .78em/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-decoration: none; white-space: nowrap;
+}
+.scripture-links { margin: .25rem 0 .65rem; font: .88rem/1.7 ui-sans-serif, system-ui, sans-serif; }
+.scripture-links > span { color: var(--muted); font-weight: 700; }
+.scripture-tag { display: inline-block; margin: .12rem .16rem .12rem 0; padding: .05rem .46rem; border-radius: 999px; background: var(--scripture-soft); color: var(--scripture); text-decoration: none; }
+#scripture-ledger { margin-top: 4rem; padding-top: 1rem; border-top: .22rem solid var(--ink); }
+.table-wrap { overflow-x: auto; margin-top: 1.1rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--panel); }
+table { width: 100%; min-width: 68rem; border-collapse: collapse; font: .88rem/1.45 ui-sans-serif, system-ui, sans-serif; }
+caption { padding: .85rem 1rem; text-align: left; color: var(--muted); }
+th, td { padding: .72rem .75rem; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
+thead th { border-top: 0; background: #eef1ef; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+tbody th { min-width: 11rem; color: var(--scripture); }
+tbody tr:target { outline: .2rem solid var(--accent); outline-offset: -.2rem; background: #fff9e8; }
+.reference-note { display: block; margin-top: .35rem; color: var(--muted); font-size: .8rem; font-weight: 400; }
+footer { padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font: .9rem/1.55 ui-sans-serif, system-ui, sans-serif; }
+footer p { margin: .25rem 0; }
+@media (max-width: 52rem) {
+  body { font-size: 1rem; }
+  .metadata { grid-template-columns: 1fr 1fr; }
+  .outline > li > article { padding: 1.05rem; }
+  .outline-children { padding-left: .7rem; }
+}
+@media (max-width: 34rem) {
+  .metadata { grid-template-columns: 1fr; }
+  .site-nav, header, main, footer { width: min(100% - 1.2rem, var(--max)); }
+}
+@media print {
+  @page { margin: .65in; }
+  body { background: white; color: black; font-size: 10.5pt; line-height: 1.42; }
+  .site-nav, .video-block { display: none; }
+  header, main, footer { width: 100%; }
+  header { padding-top: 0; }
+  h1 { font-size: 28pt; }
+  .notice, .outline > li > article { background: white; box-shadow: none; }
+  .outline > li > article { border: 1px solid #bbb; }
+  .outline > li, .outline-node, #scripture-ledger { break-inside: avoid; }
+  a { color: black; text-decoration: none; }
+  .timestamp, .scripture-tag { border: 1px solid #bbb; background: white; color: black; }
+  .table-wrap { overflow: visible; border: 0; }
+  table { min-width: 0; font-size: 7.4pt; }
+  th, td { padding: .35rem; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to outline</a>
+<nav class="site-nav" aria-label="Breadcrumb"><a href="../index.html">← Back to all outlines</a></nav>
+<header>
+  <p class="kicker">Chronological sermon outline</p>
+  <h1>Keep Running!</h1>
+  <p class="subtitle">Josh Wyatt · Crossroads Church</p>
+  <dl class="metadata">
+    <div><dt>Speaker</dt><dd>Josh Wyatt</dd></div>
+    <div><dt>Published</dt><dd><time datetime="2026-07-20">July 20, 2026</time></dd></div>
+    <div><dt>Duration</dt><dd>47:40</dd></div>
+    <div><dt>Source</dt><dd><a href="https://www.youtube.com/watch?v=F43D7jaMCqs">YouTube sermon video</a></dd></div>
+    <div><dt>Transcript source</dt><dd>YouTube automatic captions (English original)</dd></div>
+    <div><dt>Verified</dt><dd><time datetime="2026-09-05">September 5, 2026</time></dd></div>
+  </dl>
+</header>
+<main id="main-content">
+  <aside class="notice" aria-label="Independent study disclaimer">
+    <p><strong>Independent-study disclaimer:</strong> This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.</p>
+  </aside>
+  <figure class="video-block">
+    <div class="video-shell"><iframe src="https://www.youtube.com/embed/F43D7jaMCqs" title="Keep Running! by Josh Wyatt at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <figcaption>Original sermon: <a href="https://www.youtube.com/watch?v=F43D7jaMCqs">Keep Running!</a>. Timestamp links throughout open the relevant moment on YouTube.</figcaption>
+  </figure>
+  <section aria-labelledby="outline-heading">
+    <h2 id="outline-heading">Detailed chronological outline</h2>
+    <p class="section-intro">The sermon begins at 00:36 and continues through the closing prayer at 47:31. Josh Wyatt presents Hebrews 12 as a word for weary Christians: the life of faith is an agonizing relay that must be run with eyes fixed on Jesus. The witnesses testify that God is faithful, unnecessary weights and entangling sin must be put away, and Christ’s cross and promised joy make endurance possible. Josh then distinguishes punishment, consequences, and a Father’s loving discipline; calls the church to pursue peace, holiness, grace, and mutual care; warns against bitterness and Esau’s short-sighted trade; and closes by contrasting Sinai with Zion. Believers can keep running because Jesus has crossed the finish line and is bringing them into an unshakeable kingdom.</p>
+<ol class="outline">
+<li><article id="s1" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=36s" aria-label="Watch from 00:36">00:36</a> The Christian relay asks whether weary believers can keep going</h3>
+<ul>
+<li>Josh moves from an opening family joke and the psychology of exhausted athletes to the original readers’ spiritual fatigue, the relay imagery joining Hebrews 11 and 12, and the opening command to run with endurance.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s1.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=36s" aria-label="Watch from 00:36">00:36</a> A bumper-video joke gives way to the endurance question</h4>
+<ul>
+<li>Josh jokes that his son Nolan will miss the Hebrews-series bumper more than the preaching, then turns immediately to the moment every endurance athlete faces: ‘Can I keep going?’</li>
+<li>When adrenaline and excitement fade into pain, the battle becomes mental. The athlete must reject the path of least resistance repeatedly even though continuing does not become easier.</li>
+</ul>
+</article></li>
+<li><article id="s1.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=131s" aria-label="Watch from 02:11">02:11</a> Hebrews arrived for believers already running out of gas</h4>
+<ul>
+<li>The first Jewish-Christian readers were not at the starting line. They had already suffered, sacrificed, and followed Christ for years, but spiritual and emotional weariness made some question whether Jesus was worth it.</li>
+<li>The letter answers their question—and every believer’s—with confidence: Jesus is worthy of everything, so the church can meet the next blow and keep going.</li>
+</ul>
+</article></li>
+<li><article id="s1.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=189s" aria-label="Watch from 03:09">03:09</a> Hebrews 11 passes the baton to Hebrews 12</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-001" href="#ledger-SCR-001">Hebrews 11:1-40</a> <a class="scripture-tag" data-scripture-id="SCR-002" href="#ledger-SCR-002">Hebrews 12:1-29</a></p>
+<ul>
+<li>Hebrews 11 displays people who finished by faith; Hebrews 12 passes the baton to those who follow. Noah, Abraham, Moses, Rahab, prophets, apostles, pastors, and teachers form a continuing Christian relay.</li>
+<li>The church is not called merely to cheer historic saints from the stands. ‘It’s our turn to run,’ and every believer belongs down on the track.</li>
+</ul>
+</article></li>
+<li><article id="s1.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=241s" aria-label="Watch from 04:01">04:01</a> Agōn names a race of agony, not ease</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-003" href="#ledger-SCR-003">Hebrews 12:1</a></p>
+<ul>
+<li>Josh explains that the Greek word translated ‘race’ is agōn, source of ‘agony,’ and illustrates it with an ancient pentathlon that ended in a brutal boxing match.</li>
+<li>The point is deliberately plain: the Christian life is hard. Conversion and baptism do not make all present struggles disappear, though Jesus will finally set all things right.</li>
+<li>Josh frames the gospel victory as Satan’s defeat: the Son was killed, raised, and proved the enemy’s cause lost.</li>
+</ul>
+</article></li>
+<li><article id="s1.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=329s" aria-label="Watch from 05:29">05:29</a> The Spirit coaches the race in five ways</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-004" href="#ledger-SCR-004">Hebrews 12:1-29</a></p>
+<ul>
+<li>Josh previews five lessons in Hebrews 12: how to run while weary, what slows the runner, how to understand suffering, how to become assistant coaches who strengthen others, and why every painful step will be worth it.</li>
+<li>Josh identifies Paul as the human writer through whom the Holy Spirit speaks as a track coach, while the chapter later moves from athletic coaching into the family room of a loving Father.</li>
+</ul>
+</article></li>
+<li><article id="s1.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=389s" aria-label="Watch from 06:29">06:29</a> Run the marked race with eyes fixed on Jesus</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-005" href="#ledger-SCR-005">Hebrews 12:1-3</a></p>
+<ul>
+<li>Josh reads Hebrews 12:1–3: surrounded by a great cloud of witnesses, believers must throw off hindrance and sin, run with perseverance, fix their eyes on Jesus, and consider his endurance so they do not lose heart.</li>
+<li>Jesus is the pioneer and perfecter who endured the cross for the joy ahead, scorned its shame, and sat at God’s right hand.</li>
+</ul>
+</article></li>
+<li><article id="s1.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=421s" aria-label="Watch from 07:01">07:01</a> The witnesses testify to God’s faithfulness; they are not spectators</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-006" href="#ledger-SCR-006">Hebrews 11:13, 32-40; 12:1a</a> <a class="scripture-tag" data-scripture-id="SCR-007" href="#ledger-SCR-007">Hebrews 11:24-29</a> <a class="scripture-tag" data-scripture-id="SCR-008" href="#ledger-SCR-008">Hebrews 11:7</a></p>
+<ul>
+<li>Some people of faith saw extraordinary earthly deliverance, while others died without earthly validation. The same faith and God can issue different marching orders, so earthly outcomes cannot be the runner’s fuel.</li>
+<li>Josh rejects the picture of Moses and Noah watching or betting on individual Christians from heaven. The word ‘witnesses’ points to testimony: their lives bear witness that God can see his people through.</li>
+<li>Moses’ rescue work and Noah’s ark become testimonies that God can use present believers and, far more, what God himself has made to save.</li>
+</ul>
+</article></li>
+<li><article id="s1.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=525s" aria-label="Watch from 08:45">08:45</a> Approval-seeking cannot sustain the race</h4>
+<ul>
+<li>The original readers were tempted to regain acceptance from the world they had left. Josh warns that a race fueled by applause ends when family, friends, or coworkers question Christian convictions; the race is sustained instead by confidence in God’s promises.</li>
+<li>He imagines his younger basketball self making a big shot: even if the crowd chanted his name, he would look for his father’s smile. The illustration points to pleasing Jesus rather than reading the room.</li>
+<li>Public approval comes and goes—people may praise churches during disaster and dismiss them when life feels stable—but Christ’s settled approval does not fluctuate.</li>
+</ul>
+</article></li>
+<li><article id="s1.9" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=618s" aria-label="Watch from 10:18">10:18</a> Run for the smile of Jesus</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-009" href="#ledger-SCR-009">Hebrews 12:2</a></p>
+<ul>
+<li>The one who called the believer is also waiting at the finish line. Josh therefore tells the church to fix its eyes on Jesus and run for his smile.</li>
+<li>This prepares the shift from studying experienced racers to examining the runner’s own unnecessary weight and entangling sin.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s2" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=660s" aria-label="Watch from 11:00">11:00</a> Throw off weights and execute the sin that entangles</h3>
+<ul>
+<li>Josh distinguishes morally neutral burdens from sin, applies the first category to busyness and prideful self-reliance, then uses marathon clothing and a pastoral story about pornography to demand decisive warfare rather than negotiated coexistence with sin.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s2.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=660s" aria-label="Watch from 11:00">11:00</a> Experienced runners and honest self-examination both matter</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-010" href="#ledger-SCR-010">Hebrews 12:1b</a></p>
+<ul>
+<li>The second half of Hebrews 12:1 requires more than studying veteran runners; it requires looking honestly at what the present runner carries.</li>
+<li>Josh distinguishes ‘weight that hinders’ from ‘sin that entangles.’ A weight need not be sinful; even a good activity can become harmful when imbalance makes it too heavy for faithful running.</li>
+<li>Josh makes the category personal: ‘What weight are you carrying that Jesus never asked you to carry?’</li>
+</ul>
+</article></li>
+<li><article id="s2.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=721s" aria-label="Watch from 12:01">12:01</a> Busyness can become an idol: stop it or share it</h4>
+<ul>
+<li>Constant activity becomes idolatrous when people cannot rest and begin using minds, bodies, and resources for self rather than God’s glory.</li>
+<li>Josh’s simple offloading tools are ‘Stop it’ or ‘Share it.’ Pride that will neither ask for help nor permit help keeps the runner unnecessarily weighted.</li>
+</ul>
+</article></li>
+<li><article id="s2.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=789s" aria-label="Watch from 13:09">13:09</a> Sin wraps around the legs and turns into chains</h4>
+<ul>
+<li>No sensible marathoner chooses jeans or other clothing that grows heavy and tangles around the legs. Josh uses that absurdity to picture tolerated sin.</li>
+<li>Sins accepted today become tomorrow’s chains. Scripture’s language is urgent because sin does not merely inconvenience the race; it can bring the runner down.</li>
+</ul>
+</article></li>
+<li><article id="s2.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=848s" aria-label="Watch from 14:08">14:08</a> Jesus commands radical amputation of sin’s supply lines</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-011" href="#ledger-SCR-011">Matthew 5:29-30</a></p>
+<ul>
+<li>Josh quotes Jesus’ commands to tear out an offending right eye and cut off an offending right hand. The body part is not the true problem; the violent image displays sin’s deadly seriousness.</li>
+<li>Anything continually feeding sin must die. The command is not to manage a safer dose but to remove the source.</li>
+</ul>
+</article></li>
+<li><article id="s2.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=865s" aria-label="Watch from 14:25">14:25</a> A pornography struggler defended devices that were destroying his marriage</h4>
+<ul>
+<li>Drawing on his own struggles and pastoral calling, Josh recounts advising a man with a pornography addiction to destroy the computer, router, and smartphone feeding it, buy a flip phone, and even change jobs if necessary.</li>
+<li>Each objection protected technology, work, or social media, but none protected the man’s marriage. Josh asks why anyone would defend what seeks to destroy.</li>
+<li>The extreme counsel matches extreme stakes: hell, divorce, a devastated spouse, children living with a lust-enslaved father, a hardened heart, and standing before Christ after preferring secret sin.</li>
+</ul>
+</article></li>
+<li><article id="s2.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=962s" aria-label="Watch from 16:02">16:02</a> Christian athletes practice mortification, not negotiation</h4>
+<ul>
+<li>‘We don’t negotiate with the sins that nailed Christ to the cross. We execute them.’ Josh calls Christians to kill, delete, cancel, remove, leave, or burn a bridge when it feeds lust, pride, greed, bitterness, or unbelief.</li>
+<li>Fewer comforts are better than refusing to lay aside sin and never finishing. Unchecked sin kills joy, marriage, home, witness, and usefulness; confession must come before the heart hardens.</li>
+<li>Josh adds Jesus’ warning that sin can cause someone else to stumble, widening the consequences beyond the runner.</li>
+</ul>
+</article></li>
+<li><article id="s2.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1061s" aria-label="Watch from 17:41">17:41</a> Christ died to free his people from sin’s grip</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-012" href="#ledger-SCR-012">Romans 6:6-7, 14</a></p>
+<ul>
+<li>Christ’s death does not merely forgive guilt; it frees people from sin’s mastery. Josh’s final instruction is to let go of what Christ came to remove.</li>
+<li>Great faith runners travel light rather than carrying the very burden their Savior removed.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s3" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1077s" aria-label="Watch from 17:57">17:57</a> Fix the whole gaze on Jesus, who endured the cross for joy</h3>
+<ul>
+<li>Josh develops the command to look away from competitors, conditions, and hurdles toward Jesus alone. The bronze serpent illustrates trusting sight; Jesus’ own faithful life and cross show both the cost and the joy ahead; and weary hearers are directly urged not to quit.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s3.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1077s" aria-label="Watch from 17:57">17:57</a> The command is a fixed gaze, not one item in a multitask</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-013" href="#ledger-SCR-013">Hebrews 12:1b-2a</a> <a class="scripture-tag" data-scripture-id="SCR-014" href="#ledger-SCR-014">Hebrews 12:2a</a></p>
+<ul>
+<li>Josh repeats the call to run the agōn with perseverance while fixing the eyes on Jesus, the pioneer and perfecter of faith.</li>
+<li>The biblical verb means looking away from everything else, not giving Jesus one glance among many. Josh says life, joy, and outpour flow from that gaze; the runner must stop inspecting another person’s strength, the track, the hurdles, or the surrounding crowd.</li>
+<li>Josh turns the text into a weekly diagnostic: ‘Where are your eyes?’ Whatever currently owns attention must yield to a renewed look at Jesus.</li>
+</ul>
+</article></li>
+<li><article id="s3.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1192s" aria-label="Watch from 19:52">19:52</a> Looking to Jesus both saves and sustains</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-015" href="#ledger-SCR-015">Numbers 21:4-9</a> <a class="scripture-tag" data-scripture-id="SCR-016" href="#ledger-SCR-016">John 3:14-15</a> <a class="scripture-tag" data-scripture-id="SCR-017" href="#ledger-SCR-017">Philippians 1:6</a></p>
+<ul>
+<li>The Israelites bitten by snakes looked at the lifted bronze serpent and were healed; Jesus used that wilderness event while speaking to Nicodemus.</li>
+<li>Josh says the sign also reminded the unbitten of God’s continuing healing presence. In the same way, trusting Jesus is both how salvation begins and how faith is sustained.</li>
+<li>The pioneer started this work in believers, and the perfecter will finish it.</li>
+</ul>
+</article></li>
+<li><article id="s3.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1250s" aria-label="Watch from 20:50">20:50</a> Jesus lived the faith he teaches</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-018" href="#ledger-SCR-018">Luke 5:16</a> <a class="scripture-tag" data-scripture-id="SCR-019" href="#ledger-SCR-019">Hebrews 11:1-40</a></p>
+<ul>
+<li>Jesus did not merely teach prayer; Josh points to his repeated withdrawal for prayer as evidence of a vibrant life of dependence.</li>
+<li>He endured more than every hero in Hebrews 11 and is therefore both the flawless example and the one who brings faith to completion.</li>
+</ul>
+</article></li>
+<li><article id="s3.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1273s" aria-label="Watch from 21:13">21:13</a> The perfecter endured opposition, shame, and the cross</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-020" href="#ledger-SCR-020">Hebrews 12:2b-3</a> <a class="scripture-tag" data-scripture-id="SCR-021" href="#ledger-SCR-021">Hebrews 12:2b-3</a></p>
+<ul>
+<li>Josh returns to Hebrews 12:2–3: for the joy set before him, Jesus endured the cross, scorned shame, took his seat at God’s right hand, and endured sinners’ opposition so his people would not grow weary.</li>
+<li>He tells listeners to remember this if they remember nothing else: Jesus endured betrayal, false charges, mockery, scourging, nails, suffocation, and the wrath sinners deserved.</li>
+</ul>
+</article></li>
+<li><article id="s3.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1313s" aria-label="Watch from 21:53">21:53</a> The forsaken cry shows judgment deeper than physical pain</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-022" href="#ledger-SCR-022">Psalm 22:1; Matthew 27:46; Mark 15:34</a></p>
+<ul>
+<li>Josh quotes Jesus’ cry, ‘My God, my God, why have you forsaken me?’ to stress that the cross involved divine judgment, not only bodily agony.</li>
+<li>Jesus drank the cup reserved for sinners. The nails did not overpower the Son of God; he willingly remained.</li>
+</ul>
+</article></li>
+<li><article id="s3.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1340s" aria-label="Watch from 22:20">22:20</a> Love and the joy ahead held Jesus there</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-023" href="#ledger-SCR-023">Acts 1:3, 9</a> <a class="scripture-tag" data-scripture-id="SCR-024" href="#ledger-SCR-024">Hebrews 2:10</a> <a class="scripture-tag" data-scripture-id="SCR-025" href="#ledger-SCR-025">Hebrews 12:2</a></p>
+<ul>
+<li>Josh names the joy of obeying and pleasing the Father, accomplishing redemption, rising from the grave, ascending, returning in glory, and bringing many sons and daughters to glory.</li>
+<li>Jesus looked beyond Friday to Sunday, beyond resurrection to ascension and return, beyond shame to the throne, and beyond the cross to the crown. That future victory enabled present endurance.</li>
+</ul>
+</article></li>
+<li><article id="s3.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1391s" aria-label="Watch from 23:11">23:11</a> The cross, resurrection, and return make endurance rational</h4>
+<ul>
+<li>Josh compresses the hope: Christ’s cross proves he is committed, his resurrection proves he is capable, and revelation of his return proves he is coming.</li>
+<li>A person who sees only present suffering will quit; a person fixed on the suffering servant—the crucified, risen, reigning, returning King—can bear today’s cross while awaiting tomorrow’s crown.</li>
+</ul>
+</article></li>
+<li><article id="s3.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1438s" aria-label="Watch from 23:58">23:58</a> A direct word to the person considering quitting</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-026" href="#ledger-SCR-026">Psalm 23:4</a> <a class="scripture-tag" data-scripture-id="SCR-027" href="#ledger-SCR-027">John 1:5</a> <a class="scripture-tag" data-scripture-id="SCR-028" href="#ledger-SCR-028">Philippians 1:21</a> <a class="scripture-tag" data-scripture-id="SCR-029" href="#ledger-SCR-029">Romans 14:8</a></p>
+<ul>
+<li>Josh pauses the exposition for someone who may be contemplating surrender: ‘Don’t quit. Jesus already won the race. Keep running.’ The next morning’s prayer can simply give the Lord one’s steps and ask for courage.</li>
+<li>He preaches Psalm 23’s confidence through the valley because God is present, then joins Paul’s claim that living is Christ and dying is gain with the assurance that life and death alike belong to Christ.</li>
+<li>Every breath and day can glorify and serve Christ. Even if faithfulness finally costs life, grace makes that life available to him.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s4" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1510s" aria-label="Watch from 25:10">25:10</a> Receive hardship as a loving Father’s discipline</h3>
+<ul>
+<li>Hebrews moves from the stadium into the family room. Josh reads the discipline passage, distinguishes a Father’s formative love from punishment and natural consequences, applies it through parenting and common failures, and grounds freedom from condemnation in Christ’s completed work.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s4.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1510s" aria-label="Watch from 25:10">25:10</a> Believers praise God’s presence but often resent his parenting</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-030" href="#ledger-SCR-030">Psalm 23:4</a></p>
+<ul>
+<li>Josh names a common hypocrisy: Christians want the Shepherd’s comfort while resisting the rod that confronts and corrects.</li>
+<li>The passage first humbles comfortable believers by noting that their struggle has not reached bloodshed and by comparing it with historic and present persecution.</li>
+</ul>
+</article></li>
+<li><article id="s4.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1548s" aria-label="Watch from 25:48">25:48</a> Most hearers have not resisted sin to the point of bloodshed</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-031" href="#ledger-SCR-031">Hebrews 12:4</a></p>
+<ul>
+<li>Josh quotes Hebrews 12:4 and contrasts ordinary trials with what he describes as roughly 380 million Christians living under persecution and thousands killed each year, including in Nigeria, Congo, and Egypt.</li>
+<li>The question ‘Have you bled for Christ?’ is meant to reset perspective when believers sweat small troubles.</li>
+</ul>
+</article></li>
+<li><article id="s4.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1584s" aria-label="Watch from 26:24">26:24</a> The Lord disciplines children he loves</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-032" href="#ledger-SCR-032">Hebrews 12:5-11</a> <a class="scripture-tag" data-scripture-id="SCR-033" href="#ledger-SCR-033">Proverbs 3:11-12</a></p>
+<ul>
+<li>Josh reads Hebrews 12:5–11: do not treat discipline lightly or lose heart; hardship can be received as discipline because God treats believers as children.</li>
+<li>Earthly parents discipline imperfectly for a short time, but God acts for his children’s good so they may share his holiness. Painful training later yields righteousness and peace.</li>
+<li>Josh identifies the embedded encouragement as Proverbs 3, whose appeal joins discipline directly to divine love.</li>
+</ul>
+</article></li>
+<li><article id="s4.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1636s" aria-label="Watch from 27:16">27:16</a> Forgetting the word produces discouragement</h4>
+<ul>
+<li>Josh notices the link between quitting and forgetting Scripture: a runner who forgets God’s word becomes discouraged and gives up.</li>
+<li>He urges healthy Bible habits and invites anyone needing a plan to ask Josh, an elder, or staff member rather than pretending to be a scholar or walking alone.</li>
+</ul>
+</article></li>
+<li><article id="s4.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1682s" aria-label="Watch from 28:02">28:02</a> Suffering needs more than a coach’s demand for another gear</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-034" href="#ledger-SCR-034">Hebrews 12:1-2</a> <a class="scripture-tag" data-scripture-id="SCR-035" href="#ledger-SCR-035">Hebrews 12:5</a></p>
+<ul>
+<li>At verse 5 the imagery moves from athletics to family. A weary athlete needs coaching, but a suffering child also needs a Father’s assurance of love.</li>
+<li>God is not merely developing performance so the believer can finish a race; he is raising sons and daughters to become like his Son.</li>
+<li>A coach may invest according to ability, but a good father remains concerned with the child as a person whether that child starts or sits on the bench.</li>
+</ul>
+</article></li>
+<li><article id="s4.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1781s" aria-label="Watch from 29:41">29:41</a> Discipline is formation, not an angry score-settling</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-036" href="#ledger-SCR-036">Hebrews 12:10-11</a></p>
+<ul>
+<li>Josh rejects the reflex that hears ‘discipline’ as an angry father repaying wrongdoing. Hebrews says God disciplines for good, shared holiness, righteousness, and peace.</li>
+<li>God is not settling a score with his children; he is shaping his home.</li>
+</ul>
+</article></li>
+<li><article id="s4.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1813s" aria-label="Watch from 30:13">30:13</a> Nolan’s request for grace illustrates loving consequences</h4>
+<ul>
+<li>If Nolan lies, ignoring it is not loving. Josh has taught his son to answer that discipline comes ‘because you love me,’ though Nolan sometimes asks his pastor-father, ‘Can I have grace?’</li>
+<li>A parent who avoids discipline merely to avoid tears abandons the child to sinful impulses and lets those impulses rule the home.</li>
+<li>Loving parents agree on consequences not because they enjoy pain but because wisdom sees where unchecked sin leads. A loving father may create limited pain to prevent destruction.</li>
+</ul>
+</article></li>
+<li><article id="s4.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1892s" aria-label="Watch from 31:32">31:32</a> The heavenly Father never mishandles the rod</h4>
+<ul>
+<li>Josh confesses that frustration, limited time, reluctance, emotion, and pride make his own discipline imperfect.</li>
+<li>God never loses control or disciplines in a temper. Every hardship he permits is measured by infinite wisdom, so hardship is not evidence that God has stopped loving his child.</li>
+<li>Satan wants sufferers to interpret pain as abandonment; Josh tells them not to buy that lie.</li>
+</ul>
+</article></li>
+<li><article id="s4.9" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1969s" aria-label="Watch from 32:49">32:49</a> Punishment is justice already satisfied for the believer</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-037" href="#ledger-SCR-037">Ephesians 2:1, 5</a> <a class="scripture-tag" data-scripture-id="SCR-038" href="#ledger-SCR-038">1 Peter 2:24</a> <a class="scripture-tag" data-scripture-id="SCR-039" href="#ledger-SCR-039">Isaiah 53:5</a> <a class="scripture-tag" data-scripture-id="SCR-040" href="#ledger-SCR-040">Romans 8:1</a> <a class="scripture-tag" data-scripture-id="SCR-041" href="#ledger-SCR-041">Romans 5:1</a></p>
+<ul>
+<li>Josh defines punishment as justice rendered. God does not overlook sin, but for those in Christ the required justice fell on Jesus rather than on them.</li>
+<li>He layers apostolic and prophetic claims: people dead in sin are made alive with Christ; Jesus bore sins and drank the cup of God’s wrath to the last drop so believers could receive blessing; Isaiah says the punishment bringing peace fell on him; Paul says there is now no condemnation; and believers have peace with God through Christ.</li>
+<li>Hardship is therefore not God getting even. Jesus paid it all. God may be bringing a wandering child back, but he is not making Christ’s finished payment again.</li>
+</ul>
+</article></li>
+<li><article id="s4.10" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2038s" aria-label="Watch from 33:58">33:58</a> Consequences are natural results, and sin can have victims</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-042" href="#ledger-SCR-042">Genesis 50:20</a></p>
+<ul>
+<li>A bicycle-race pileup pictures the reach of one person’s failure: sin leaves scars and can injure many people.</li>
+<li>Josh names ordinary consequences rather than divine payback: lies destroy trust, adultery destroys marriages, uncontrolled anger alienates a spouse, sex can produce pregnancy, work idolatry estranges children, and laziness can cost a job.</li>
+<li>Even consequences can become tools in the Father’s hands; Josh adapts Joseph’s words about intended evil to say that God turns attempted destruction toward sanctification.</li>
+</ul>
+</article></li>
+<li><article id="s4.11" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2131s" aria-label="Watch from 35:31">35:31</a> Discipline feels like weakness while God constructs strength</h4>
+<ul>
+<li>Weight training feels progressively weaker while muscle is being torn, yet the apparent destruction is construction. Josh uses this to explain formative suffering.</li>
+<li>God tears down self-strength to rebuild dependence on his strength, exposes idols to become the believer’s treasure, and removes false confidence so confidence can rest in him.</li>
+</ul>
+</article></li>
+<li><article id="s4.12" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2186s" aria-label="Watch from 36:26">36:26</a> Do not despise the discipline that ends in holiness</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-043" href="#ledger-SCR-043">Proverbs 3:11; Hebrews 12:5</a></p>
+<ul>
+<li>Josh returns to the command not to despise the Lord’s discipline. God is no longer the Christian’s enemy; even painful discipline expresses adoption and love.</li>
+<li>The immediate experience may not be pleasant, but the promised result is holiness.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s5" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2209s" aria-label="Watch from 36:49">36:49</a> Strengthen one another and refuse grace-starving roots</h3>
+<ul>
+<li>The chapter returns to team language: restore weak runners, pursue both peace and holiness, watch over one another, uproot bitterness, and learn from Esau not to exchange eternal inheritance for immediate relief.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s5.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2209s" aria-label="Watch from 36:49">36:49</a> Strengthen weak limbs and level the path toward healing</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-044" href="#ledger-SCR-044">Hebrews 12:12-13</a> <a class="scripture-tag" data-scripture-id="SCR-045" href="#ledger-SCR-045">Isaiah 35:3; Proverbs 4:26</a></p>
+<ul>
+<li>Josh reads the charge to strengthen feeble arms and weak knees and to make level paths so the lame are healed rather than disabled.</li>
+<li>He hears a team huddle and identifies Isaiah and Solomon behind the coaching language. The church should help weak runners regain the track, fix their eyes on Jesus, and keep moving because God is not finished with them.</li>
+</ul>
+</article></li>
+<li><article id="s5.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2238s" aria-label="Watch from 37:18">37:18</a> Pursue peace and holiness while guarding the whole team</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-046" href="#ledger-SCR-046">Hebrews 12:14-17</a></p>
+<ul>
+<li>Josh reads Hebrews 12:14–17: make every effort toward peace and holiness, see that no one falls short of grace, prevent a bitter root from defiling many, and do not imitate sexually immoral, godless Esau.</li>
+<li>Esau traded his inheritance for one meal and later could not undo the act even with tears.</li>
+</ul>
+</article></li>
+<li><article id="s5.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2271s" aria-label="Watch from 37:51">37:51</a> Peace and holiness must remain together</h4>
+<ul>
+<li>Running together requires coordination. The writer does not promise conflict-free life but commands an active pursuit of peace without compromise in holiness.</li>
+<li>Josh insists that peace severed from holiness and holiness severed from peace both miss the team’s goal.</li>
+</ul>
+</article></li>
+<li><article id="s5.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2303s" aria-label="Watch from 38:23">38:23</a> Grace does not fail, but people fail to depend on it</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-047" href="#ledger-SCR-047">Hebrews 12:15</a></p>
+<ul>
+<li>‘See to it’ makes every believer responsible to notice the condition of others. God’s grace itself never fails, but people can run toward self-made solutions rather than depend on it.</li>
+<li>Bitterness starts invisibly like a root underground, then produces bitter speech, broken relationships, and division throughout a church.</li>
+</ul>
+</article></li>
+<li><article id="s5.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2337s" aria-label="Watch from 38:57">38:57</a> Replace bitterness with Christ-shaped kindness and forgiveness</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-048" href="#ledger-SCR-048">Ephesians 4:31-32</a></p>
+<ul>
+<li>Josh quotes Paul’s command to remove bitterness, rage, anger, brawling, slander, and malice and instead become kind, compassionate, and forgiving.</li>
+<li>The pattern and power for forgiving one another is God’s forgiveness in Christ.</li>
+</ul>
+</article></li>
+<li><article id="s5.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2349s" aria-label="Watch from 39:09">39:09</a> Esau traded inheritance for a moment’s relief</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-049" href="#ledger-SCR-049">Genesis 25:29-34</a></p>
+<ul>
+<li>Josh directs hearers to Genesis 25 and stresses that Esau did not plan a grand renunciation; he was simply hungry and preferred immediate relief to lasting blessing.</li>
+<li>The warning becomes personal: do not trade tomorrow’s inheritance for today’s bowl of soup.</li>
+</ul>
+</article></li>
+<li><article id="s5.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2370s" aria-label="Watch from 39:30">39:30</a> Temptation waits for hunger, fatigue, loneliness, and imbalance</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-050" href="#ledger-SCR-050">Matthew 4:1-4; Luke 4:1-4</a></p>
+<ul>
+<li>Josh asks when Satan tempted Jesus and answers: when Jesus was hungry. The enemy’s playbook still waits for tiredness, loneliness, anger, discouragement, hurt, and imbalance.</li>
+<li>In that exposed moment temptation whispers, ‘Just this once’ and ‘You do you.’ The eternal cost makes immediate relief a terrible bargain.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s6" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2405s" aria-label="Watch from 40:05">40:05</a> From terrifying Sinai to joyful Zion and an unshakeable kingdom</h3>
+<ul>
+<li>After a brief prayer, Josh reads the chapter’s climax, contrasts the untouchable mountain of law with heavenly Zion reached through Jesus’ better blood, applies the promised shaking to every rival kingdom, and calls secure citizens to thankful, reverent worship and endurance.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s6.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2405s" aria-label="Watch from 40:05">40:05</a> Josh prays for eyes, ears, and hearts before the chapter’s climax</h4>
+<ul>
+<li>Moved by the closing passage, Josh pauses to thank the Father for redemption accomplished through Jesus for trusting sinners.</li>
+<li>He asks God to help people see, hear, absorb, and be changed by what God is doing in the world.</li>
+</ul>
+</article></li>
+<li><article id="s6.2" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2444s" aria-label="Watch from 40:44">40:44</a> Hebrews contrasts two mountains and warns hearers not to refuse God</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-051" href="#ledger-SCR-051">Hebrews 12:18-29</a></p>
+<ul>
+<li>Josh reads Hebrews 12:18–29. Sinai burns with fire, darkness, storm, trumpet, unbearable speech, threatened death, and Moses trembling in fear.</li>
+<li>Believers instead come to Mount Zion, the living God’s heavenly city, joyful angels, the church of the firstborn, God the Judge, perfected righteous spirits, Jesus the new-covenant mediator, and sprinkled blood speaking better than Abel’s.</li>
+<li>The passage warns against refusing the heavenly speaker, promises another shaking that removes created things, and commands thankful, reverent worship because the received kingdom cannot be shaken and God is a consuming fire.</li>
+</ul>
+</article></li>
+<li><article id="s6.3" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2568s" aria-label="Watch from 42:48">42:48</a> Jesus takes his people from a mountain of fear to a mountain of joy</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-052" href="#ledger-SCR-052">Exodus 19:10-25; 20:18-21; Hebrews 12:18-21</a></p>
+<ul>
+<li>Sinai declared God’s holiness while sinners remained at a distance before untouchable fire, darkness, thunder, and judgment.</li>
+<li>Because of Jesus, believers have come not to Sinai but to Zion, the heavenly Jerusalem, and an assembly of innumerable angels rejoicing before God.</li>
+</ul>
+</article></li>
+<li><article id="s6.4" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2604s" aria-label="Watch from 43:24">43:24</a> Christ’s blood speaks a better word than Abel’s</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-053" href="#ledger-SCR-053">Genesis 4:10; Hebrews 12:24</a></p>
+<ul>
+<li>Josh says Abel’s blood cried out for justice, while the mediator’s blood announces, ‘Paid in full.’</li>
+<li>The contrast makes Zion possible: Jesus’ covenant blood answers guilt with completed redemption rather than leaving sinners at a distance.</li>
+</ul>
+</article></li>
+<li><article id="s6.5" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2615s" aria-label="Watch from 43:35">43:35</a> Zion is the finish line, and every temporary rival will shake</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-054" href="#ledger-SCR-054">Hebrews 12:26-27</a></p>
+<ul>
+<li>The race ends neither in the grave, defeat, nor exhaustion but in God’s presence. Zion is home.</li>
+<li>Until then, the world will shake. Every human kingdom, economy, government, idol, and throne competing with Christ will collapse.</li>
+<li>God removes what is temporary until his eternal Son, gospel, church, and kingdom remain.</li>
+</ul>
+</article></li>
+<li><article id="s6.6" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2671s" aria-label="Watch from 44:31">44:31</a> Christians run from security, not uncertainty</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-055" href="#ledger-SCR-055">Hebrews 12:22-24, 28</a> <a class="scripture-tag" data-scripture-id="SCR-056" href="#ledger-SCR-056">Hebrews 12:2</a> <a class="scripture-tag" data-scripture-id="SCR-057" href="#ledger-SCR-057">Hebrews 12:10, 28-29</a></p>
+<ul>
+<li>Believers are not running in the hope that home might exist. The pioneer has crossed the line, and the perfecter is bringing every purchased saint home without losing one.</li>
+<li>Every promise will stand. Because the kingdom is already received and cannot be shaken, the fitting response is to fix the eyes on Jesus and run.</li>
+</ul>
+</article></li>
+<li><article id="s6.7" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2701s" aria-label="Watch from 45:01">45:01</a> The consuming fire fell on the Son and now prepares his people</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-058" href="#ledger-SCR-058">1 Corinthians 15:25</a> <a class="scripture-tag" data-scripture-id="SCR-059" href="#ledger-SCR-059">Revelation 21:4</a> <a class="scripture-tag" data-scripture-id="SCR-060" href="#ledger-SCR-060">Philippians 2:10-11</a></p>
+<ul>
+<li>Josh returns to ‘our God is a consuming fire.’ God’s holiness did not diminish at Zion; judgment fell on Christ, who stood where sinners deserved to stand.</li>
+<li>The holiness that would have consumed believers now prepares them. One day every rival will be consumed, every enemy put beneath Christ’s feet, every tear wiped away, and every knee and tongue acknowledge Jesus as Lord.</li>
+</ul>
+</article></li>
+<li><article id="s6.8" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2748s" aria-label="Watch from 45:48">45:48</a> Run like the kingdom is actually unshakeable</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-061" href="#ledger-SCR-061">Hebrews 12:28</a> <a class="scripture-tag" data-scripture-id="SCR-062" href="#ledger-SCR-062">Hebrews 12:2</a> <a class="scripture-tag" data-scripture-id="SCR-063" href="#ledger-SCR-063">Hebrews 12:22, 28-29</a></p>
+<ul>
+<li>Josh tells believers that receiving an unshakeable kingdom should change their manner of life: fix the eyes on Jesus, rejoice in Zion, run with confidence, and worship together.</li>
+<li>Reverence and joy meet in the confession that God is a consuming fire.</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+<li><article id="s7" class="outline-node depth-1">
+<h3><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2768s" aria-label="Watch from 46:08">46:08</a> Closing prayer: make the church’s walk an act of worship</h3>
+<ul>
+<li>Josh asks for worship deeper than singing: purified hearts, a fixed gaze, perfected faith, humility, surrendered lives, and one church moving together in God’s will.</li>
+</ul>
+<ol class="outline-children">
+<li><article id="s7.1" class="outline-node depth-2">
+<h4><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2768s" aria-label="Watch from 46:08">46:08</a> Purify, cleanse, refocus, and use us</h4>
+<p class="scripture-links"><span>Scripture:</span> <a class="scripture-tag" data-scripture-id="SCR-064" href="#ledger-SCR-064">Hebrews 12:2</a> <a class="scripture-tag" data-scripture-id="SCR-065" href="#ledger-SCR-065">Matthew 6:10</a></p>
+<ul>
+<li>Josh wants to worship with his voice until he is out of breath, but he also wants his walk to bring God praise.</li>
+<li>He asks for help so the whole church can move together: purify hearts, cleanse sin, take eyes off self and circumstances, and fix them on God.</li>
+<li>The prayer asks Jesus to perfect faith, remove prideful obstruction, restore first-hearing humility, receive every surrendered life, and use the church as he sees fit.</li>
+<li>Josh closes with Jesus’ prayer, ‘Your will be done on earth as it is in heaven,’ and says, ‘We love you. Amen.’</li>
+</ul>
+</article></li>
+</ol>
+</article></li>
+</ol>
+  </section>
+  <section id="scripture-ledger" aria-labelledby="ledger-heading">
+    <h2 id="ledger-heading">Complete Scripture reference table</h2>
+    <p class="section-intro">One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.</p>
+    <div class="table-wrap" role="region" aria-label="Scripture reference table" tabindex="0">
+      <table>
+        <caption>65 confirmed Scripture units, in sermon order</caption>
+        <thead><tr><th scope="col">Reference</th><th scope="col">Treatment</th><th scope="col">Timestamp</th><th scope="col">Spoken phrase</th><th scope="col">Outline section</th><th scope="col">YouTube</th><th scope="col">BibleGateway</th></tr></thead>
+        <tbody>
+<tr id="ledger-SCR-001" data-scripture-id="SCR-001">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A1-40&amp;version=NIV">Hebrews 11:1-40</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=189s" aria-label="Watch from 03:09">03:09</a></td>
+  <td><q>Hebrews 11 showed us the great men and women of the faith</q></td>
+  <td><a href="#s1.3">Hebrews 11 passes the baton to Hebrews 12</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=189s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A1-40&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-002" data-scripture-id="SCR-002">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-29&amp;version=NIV">Hebrews 12:1-29</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=195s" aria-label="Watch from 03:15">03:15</a></td>
+  <td><q>Hebrews 12 is when the baton is passed</q></td>
+  <td><a href="#s1.3">Hebrews 11 passes the baton to Hebrews 12</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=195s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-003" data-scripture-id="SCR-003">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1&amp;version=NIV">Hebrews 12:1</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=242s" aria-label="Watch from 04:02">04:02</a></td>
+  <td><q>one word used for race in Hebrews 12 is agon</q></td>
+  <td><a href="#s1.4">Agōn names a race of agony, not ease</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=242s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-004" data-scripture-id="SCR-004">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-29&amp;version=NIV">Hebrews 12:1-29</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=342s" aria-label="Watch from 05:42">05:42</a></td>
+  <td><q>throughout this chapter, the Holy Spirit ... becomes somewhat of a racing coach</q></td>
+  <td><a href="#s1.5">The Spirit coaches the race in five ways</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=342s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-005" data-scripture-id="SCR-005">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-3&amp;version=NIV">Hebrews 12:1-3</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=385s" aria-label="Watch from 06:25">06:25</a></td>
+  <td><q>Therefore, since we are surrounded by such a great cloud of witnesses</q></td>
+  <td><a href="#s1.6">Run the marked race with eyes fixed on Jesus</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=385s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-3&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-006" data-scripture-id="SCR-006">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A13%2C%2032-40%3B%2012%3A1a&amp;version=NIV">Hebrews 11:13, 32-40; 12:1a</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=421s" aria-label="Watch from 07:01">07:01</a></td>
+  <td><q>some witnesses ... saw God do these incredibly powerful things ... others died without receiving earthly validation</q></td>
+  <td><a href="#s1.7">The witnesses testify to God’s faithfulness; they are not spectators</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=421s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A13%2C%2032-40%3B%2012%3A1a&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-007" data-scripture-id="SCR-007">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A24-29&amp;version=NIV">Hebrews 11:24-29</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=492s" aria-label="Watch from 08:12">08:12</a></td>
+  <td><q>Moses ... lead his people out of captivity</q></td>
+  <td><a href="#s1.7">The witnesses testify to God’s faithfulness; they are not spectators</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=492s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A24-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-008" data-scripture-id="SCR-008">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A7&amp;version=NIV">Hebrews 11:7</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=505s" aria-label="Watch from 08:25">08:25</a></td>
+  <td><q>Noah leaves a testimony ... something built with human hands to save</q></td>
+  <td><a href="#s1.7">The witnesses testify to God’s faithfulness; they are not spectators</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=505s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A7&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-009" data-scripture-id="SCR-009">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=618s" aria-label="Watch from 10:18">10:18</a></td>
+  <td><q>That&#x27;s why we&#x27;re instructed to fix our eyes on Jesus</q></td>
+  <td><a href="#s1.9">Run for the smile of Jesus</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=618s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-010" data-scripture-id="SCR-010">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1b&amp;version=NIV">Hebrews 12:1b</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=660s" aria-label="Watch from 11:00">11:00</a></td>
+  <td><q>The second half of verse one ... lay aside the weights</q></td>
+  <td><a href="#s2.1">Experienced runners and honest self-examination both matter</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=660s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1b&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-011" data-scripture-id="SCR-011">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%205%3A29-30&amp;version=NIV">Matthew 5:29-30</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=848s" aria-label="Watch from 14:08">14:08</a></td>
+  <td><q>If your right eye causes you to sin, tear it out ... right hand ... cut it off</q></td>
+  <td><a href="#s2.4">Jesus commands radical amputation of sin’s supply lines</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=848s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%205%3A29-30&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-012" data-scripture-id="SCR-012">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Romans%206%3A6-7%2C%2014&amp;version=NIV">Romans 6:6-7, 14</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1061s" aria-label="Watch from 17:41">17:41</a></td>
+  <td><q>Christ did not die merely to forgive your sin. He died to free you from its grip</q></td>
+  <td><a href="#s2.7">Christ died to free his people from sin’s grip</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1061s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Romans%206%3A6-7%2C%2014&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-013" data-scripture-id="SCR-013">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1b-2a&amp;version=NIV">Hebrews 12:1b-2a</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1087s" aria-label="Watch from 18:07">18:07</a></td>
+  <td><q>Let us run with perseverance the race ... fixing our eyes on Jesus</q></td>
+  <td><a href="#s3.1">The command is a fixed gaze, not one item in a multitask</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1087s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1b-2a&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-014" data-scripture-id="SCR-014">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2a&amp;version=NIV">Hebrews 12:2a</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1099s" aria-label="Watch from 18:19">18:19</a></td>
+  <td><q>that word looking or fixing or gazing</q></td>
+  <td><a href="#s3.1">The command is a fixed gaze, not one item in a multitask</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1099s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2a&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-015" data-scripture-id="SCR-015">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Numbers%2021%3A4-9&amp;version=NIV">Numbers 21:4-9</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1205s" aria-label="Watch from 20:05">20:05</a></td>
+  <td><q>when the Jews were bitten by snakes ... they looked at the uplifted serpent</q></td>
+  <td><a href="#s3.2">Looking to Jesus both saves and sustains</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1205s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Numbers%2021%3A4-9&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-016" data-scripture-id="SCR-016">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%203%3A14-15&amp;version=NIV">John 3:14-15</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1225s" aria-label="Watch from 20:25">20:25</a></td>
+  <td><q>Jesus actually uses it talking to Nicodemus in John 3</q></td>
+  <td><a href="#s3.2">Looking to Jesus both saves and sustains</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1225s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%203%3A14-15&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-017" data-scripture-id="SCR-017">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Philippians%201%3A6&amp;version=NIV">Philippians 1:6</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1245s" aria-label="Watch from 20:45">20:45</a></td>
+  <td><q>Jesus is the one who started this process in us ... going to finish it</q></td>
+  <td><a href="#s3.2">Looking to Jesus both saves and sustains</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1245s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Philippians%201%3A6&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-018" data-scripture-id="SCR-018">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Luke%205%3A16&amp;version=NIV">Luke 5:16</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1250s" aria-label="Watch from 20:50">20:50</a></td>
+  <td><q>Jesus had a vibrant prayer life ... always pulling away alone to pray</q></td>
+  <td><a href="#s3.3">Jesus lived the faith he teaches</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1250s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Luke%205%3A16&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-019" data-scripture-id="SCR-019">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A1-40&amp;version=NIV">Hebrews 11:1-40</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1261s" aria-label="Watch from 21:01">21:01</a></td>
+  <td><q>the heroes that we&#x27;ve talked about in Hebrews chapter 11</q></td>
+  <td><a href="#s3.3">Jesus lived the faith he teaches</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1261s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2011%3A1-40&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-020" data-scripture-id="SCR-020">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2b-3&amp;version=NIV">Hebrews 12:2b-3</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1273s" aria-label="Watch from 21:13">21:13</a></td>
+  <td><q>For the joy set before him, he endured the cross</q></td>
+  <td><a href="#s3.4">The perfecter endured opposition, shame, and the cross</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1273s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2b-3&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-021" data-scripture-id="SCR-021">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2b-3&amp;version=NIV">Hebrews 12:2b-3</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1287s" aria-label="Watch from 21:27">21:27</a></td>
+  <td><q>Paul says that Jesus endured the cross</q></td>
+  <td><a href="#s3.4">The perfecter endured opposition, shame, and the cross</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1287s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2b-3&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-022" data-scripture-id="SCR-022">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Psalm%2022%3A1%3B%20Matthew%2027%3A46%3B%20Mark%2015%3A34&amp;version=NIV">Psalm 22:1; Matthew 27:46; Mark 15:34</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1313s" aria-label="Watch from 21:53">21:53</a></td>
+  <td><q>My God, my God, why have you forsaken me?</q></td>
+  <td><a href="#s3.5">The forsaken cry shows judgment deeper than physical pain</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1313s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Psalm%2022%3A1%3B%20Matthew%2027%3A46%3B%20Mark%2015%3A34&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-023" data-scripture-id="SCR-023">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Acts%201%3A3%2C%209&amp;version=NIV">Acts 1:3, 9</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1355s" aria-label="Watch from 22:35">22:35</a></td>
+  <td><q>the joy of being exalted 40 days later</q></td>
+  <td><a href="#s3.6">Love and the joy ahead held Jesus there</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1355s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Acts%201%3A3%2C%209&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-024" data-scripture-id="SCR-024">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%202%3A10&amp;version=NIV">Hebrews 2:10</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1359s" aria-label="Watch from 22:39">22:39</a></td>
+  <td><q>bringing many sons and daughters like you and me to glory</q></td>
+  <td><a href="#s3.6">Love and the joy ahead held Jesus there</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1359s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%202%3A10&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-025" data-scripture-id="SCR-025">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1364s" aria-label="Watch from 22:44">22:44</a></td>
+  <td><q>The joy set before him, he endured the cross</q></td>
+  <td><a href="#s3.6">Love and the joy ahead held Jesus there</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1364s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-026" data-scripture-id="SCR-026">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Psalm%2023%3A4&amp;version=NIV">Psalm 23:4</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1467s" aria-label="Watch from 24:27">24:27</a></td>
+  <td><q>Though I walk through the valley of the shadow of death, I will fear no evil</q></td>
+  <td><a href="#s3.8">A direct word to the person considering quitting</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1467s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Psalm%2023%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-027" data-scripture-id="SCR-027">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=John%201%3A5&amp;version=NIV">John 1:5</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1478s" aria-label="Watch from 24:38">24:38</a></td>
+  <td><q>no shadow that can overcome the light that has shined on us</q></td>
+  <td><a href="#s3.8">A direct word to the person considering quitting</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1478s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=John%201%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-028" data-scripture-id="SCR-028">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Philippians%201%3A21&amp;version=NIV">Philippians 1:21</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1481s" aria-label="Watch from 24:41">24:41</a></td>
+  <td><q>For me to live is Christ and to die is gain</q></td>
+  <td><a href="#s3.8">A direct word to the person considering quitting</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1481s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Philippians%201%3A21&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-029" data-scripture-id="SCR-029">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Romans%2014%3A8&amp;version=NIV">Romans 14:8</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1483s" aria-label="Watch from 24:43">24:43</a></td>
+  <td><q>If I live, I belong to Christ. If I die, I still belong to Christ.</q></td>
+  <td><a href="#s3.8">A direct word to the person considering quitting</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1483s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Romans%2014%3A8&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-030" data-scripture-id="SCR-030">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Psalm%2023%3A4&amp;version=NIV">Psalm 23:4</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1537s" aria-label="Watch from 25:37">25:37</a></td>
+  <td><q>we want our shepherd to comfort us ... resist him when he takes up the rod</q></td>
+  <td><a href="#s4.1">Believers praise God’s presence but often resent his parenting</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1537s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Psalm%2023%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-031" data-scripture-id="SCR-031">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A4&amp;version=NIV">Hebrews 12:4</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1548s" aria-label="Watch from 25:48">25:48</a></td>
+  <td><q>In your struggle against sin, you have not yet resisted to the point of shedding your blood</q></td>
+  <td><a href="#s4.2">Most hearers have not resisted sin to the point of bloodshed</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1548s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-032" data-scripture-id="SCR-032">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A5-11&amp;version=NIV">Hebrews 12:5-11</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1582s" aria-label="Watch from 26:22">26:22</a></td>
+  <td><q>Have you completely forgotten this word of encouragement that addresses you as children?</q></td>
+  <td><a href="#s4.3">The Lord disciplines children he loves</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1582s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A5-11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-033" data-scripture-id="SCR-033">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Proverbs%203%3A11-12&amp;version=NIV">Proverbs 3:11-12</a><span class="reference-note">Caption check: Josh says verse 11, while the wording read in Hebrews 12:5-6 draws from Proverbs 3:11-12.</span></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1636s" aria-label="Watch from 27:16">27:16</a></td>
+  <td><q>the quote there is from Proverbs 3 verse 11</q></td>
+  <td><a href="#s4.3">The Lord disciplines children he loves</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1636s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Proverbs%203%3A11-12&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-034" data-scripture-id="SCR-034">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-2&amp;version=NIV">Hebrews 12:1-2</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1682s" aria-label="Watch from 28:02">28:02</a></td>
+  <td><q>run with endurance, lay aside every weight, fix your eyes on Jesus</q></td>
+  <td><a href="#s4.5">Suffering needs more than a coach’s demand for another gear</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1682s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A1-2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-035" data-scripture-id="SCR-035">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A5&amp;version=NIV">Hebrews 12:5</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1711s" aria-label="Watch from 28:31">28:31</a></td>
+  <td><q>in verse 5, we leave the gymnasium ... in the family room</q></td>
+  <td><a href="#s4.5">Suffering needs more than a coach’s demand for another gear</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1711s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-036" data-scripture-id="SCR-036">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A10-11&amp;version=NIV">Hebrews 12:10-11</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1792s" aria-label="Watch from 29:52">29:52</a></td>
+  <td><q>In verse 10 God disciplines us for our good ... Verse 11 says it produces a harvest</q></td>
+  <td><a href="#s4.6">Discipline is formation, not an angry score-settling</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1792s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A10-11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-037" data-scripture-id="SCR-037">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ephesians%202%3A1%2C%205&amp;version=NIV">Ephesians 2:1, 5</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1976s" aria-label="Watch from 32:56">32:56</a></td>
+  <td><q>We were dead in our sins, yet God made us alive together with Christ</q></td>
+  <td><a href="#s4.9">Punishment is justice already satisfied for the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1976s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ephesians%202%3A1%2C%205&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-038" data-scripture-id="SCR-038">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=1%20Peter%202%3A24&amp;version=NIV">1 Peter 2:24</a><span class="reference-note">Caption check: Captions paraphrase Peter’s statement that Christ bore our sins in his body on the cross.</span></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1986s" aria-label="Watch from 33:06">33:06</a></td>
+  <td><q>Jesus bore the punishment of our sins ... That&#x27;s Peter preaching</q></td>
+  <td><a href="#s4.9">Punishment is justice already satisfied for the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1986s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=1%20Peter%202%3A24&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-039" data-scripture-id="SCR-039">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Isaiah%2053%3A5&amp;version=NIV">Isaiah 53:5</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1998s" aria-label="Watch from 33:18">33:18</a></td>
+  <td><q>The punishment that brought us peace was upon him</q></td>
+  <td><a href="#s4.9">Punishment is justice already satisfied for the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=1998s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Isaiah%2053%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-040" data-scripture-id="SCR-040">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Romans%208%3A1&amp;version=NIV">Romans 8:1</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2003s" aria-label="Watch from 33:23">33:23</a></td>
+  <td><q>There is now no condemnation for those who are in Christ Jesus</q></td>
+  <td><a href="#s4.9">Punishment is justice already satisfied for the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2003s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Romans%208%3A1&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-041" data-scripture-id="SCR-041">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Romans%205%3A1&amp;version=NIV">Romans 5:1</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2011s" aria-label="Watch from 33:31">33:31</a></td>
+  <td><q>through Christ, we have peace with God forever</q></td>
+  <td><a href="#s4.9">Punishment is justice already satisfied for the believer</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2011s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Romans%205%3A1&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-042" data-scripture-id="SCR-042">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Genesis%2050%3A20&amp;version=NIV">Genesis 50:20</a><span class="reference-note">Caption check: Josh adapts Joseph’s wording from human agents (‘you intended’) to ‘the devil.’</span></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2122s" aria-label="Watch from 35:22">35:22</a></td>
+  <td><q>what the devil meant for evil ... he uses it for good</q></td>
+  <td><a href="#s4.10">Consequences are natural results, and sin can have victims</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2122s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Genesis%2050%3A20&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-043" data-scripture-id="SCR-043">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Proverbs%203%3A11%3B%20Hebrews%2012%3A5&amp;version=NIV">Proverbs 3:11; Hebrews 12:5</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2188s" aria-label="Watch from 36:28">36:28</a></td>
+  <td><q>Don&#x27;t despise the Lord&#x27;s discipline</q></td>
+  <td><a href="#s4.12">Do not despise the discipline that ends in holiness</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2188s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Proverbs%203%3A11%3B%20Hebrews%2012%3A5&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-044" data-scripture-id="SCR-044">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A12-13&amp;version=NIV">Hebrews 12:12-13</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2209s" aria-label="Watch from 36:49">36:49</a></td>
+  <td><q>strengthen your feeble arms and weak knees ... Make level paths for your feet</q></td>
+  <td><a href="#s5.1">Strengthen weak limbs and level the path toward healing</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2209s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A12-13&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-045" data-scripture-id="SCR-045">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Isaiah%2035%3A3%3B%20Proverbs%204%3A26&amp;version=NIV">Isaiah 35:3; Proverbs 4:26</a><span class="reference-note">Caption check: Josh names Isaiah and King Solomon without stating the references; Hebrews 12:12-13 echoes these passages.</span></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2224s" aria-label="Watch from 37:04">37:04</a></td>
+  <td><q>great coaches leaning in here, like Isaiah and King Solomon</q></td>
+  <td><a href="#s5.1">Strengthen weak limbs and level the path toward healing</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2224s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Isaiah%2035%3A3%3B%20Proverbs%204%3A26&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-046" data-scripture-id="SCR-046">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A14-17&amp;version=NIV">Hebrews 12:14-17</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2236s" aria-label="Watch from 37:16">37:16</a></td>
+  <td><q>Make every effort to live in peace with everyone and to be holy</q></td>
+  <td><a href="#s5.2">Pursue peace and holiness while guarding the whole team</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2236s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A14-17&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-047" data-scripture-id="SCR-047">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A15&amp;version=NIV">Hebrews 12:15</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2303s" aria-label="Watch from 38:23">38:23</a></td>
+  <td><q>See to it that no one falls short of the grace of God</q></td>
+  <td><a href="#s5.4">Grace does not fail, but people fail to depend on it</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2303s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A15&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-048" data-scripture-id="SCR-048">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Ephesians%204%3A31-32&amp;version=NIV">Ephesians 4:31-32</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2337s" aria-label="Watch from 38:57">38:57</a></td>
+  <td><q>Get rid of all bitterness, rage, and anger ... forgiving each other</q></td>
+  <td><a href="#s5.5">Replace bitterness with Christ-shaped kindness and forgiveness</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2337s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Ephesians%204%3A31-32&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-049" data-scripture-id="SCR-049">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Genesis%2025%3A29-34&amp;version=NIV">Genesis 25:29-34</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2352s" aria-label="Watch from 39:12">39:12</a></td>
+  <td><q>you can get his story in Genesis 25 ... He was just hungry</q></td>
+  <td><a href="#s5.6">Esau traded inheritance for a moment’s relief</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2352s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Genesis%2025%3A29-34&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-050" data-scripture-id="SCR-050">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%204%3A1-4%3B%20Luke%204%3A1-4&amp;version=NIV">Matthew 4:1-4; Luke 4:1-4</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2370s" aria-label="Watch from 39:30">39:30</a></td>
+  <td><q>When did Satan tempt Jesus? When he was hungry</q></td>
+  <td><a href="#s5.7">Temptation waits for hunger, fatigue, loneliness, and imbalance</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2370s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%204%3A1-4%3B%20Luke%204%3A1-4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-051" data-scripture-id="SCR-051">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A18-29&amp;version=NIV">Hebrews 12:18-29</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2441s" aria-label="Watch from 40:41">40:41</a></td>
+  <td><q>You have not come to a mountain that can be touched and that is burning with fire</q></td>
+  <td><a href="#s6.2">Hebrews contrasts two mountains and warns hearers not to refuse God</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2441s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A18-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-052" data-scripture-id="SCR-052">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Exodus%2019%3A10-25%3B%2020%3A18-21%3B%20Hebrews%2012%3A18-21&amp;version=NIV">Exodus 19:10-25; 20:18-21; Hebrews 12:18-21</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2568s" aria-label="Watch from 42:48">42:48</a></td>
+  <td><q>He has taken us from one mountain to another ... Sinai was untouchable fire</q></td>
+  <td><a href="#s6.3">Jesus takes his people from a mountain of fear to a mountain of joy</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2568s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Exodus%2019%3A10-25%3B%2020%3A18-21%3B%20Hebrews%2012%3A18-21&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-053" data-scripture-id="SCR-053">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Genesis%204%3A10%3B%20Hebrews%2012%3A24&amp;version=NIV">Genesis 4:10; Hebrews 12:24</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2604s" aria-label="Watch from 43:24">43:24</a></td>
+  <td><q>Abel&#x27;s blood cried out for justice, but Christ&#x27;s blood cried out, Paid in full</q></td>
+  <td><a href="#s6.4">Christ’s blood speaks a better word than Abel’s</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2604s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Genesis%204%3A10%3B%20Hebrews%2012%3A24&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-054" data-scripture-id="SCR-054">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A26-27&amp;version=NIV">Hebrews 12:26-27</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2630s" aria-label="Watch from 43:50">43:50</a></td>
+  <td><q>This world will shake ... God promised it</q></td>
+  <td><a href="#s6.5">Zion is the finish line, and every temporary rival will shake</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2630s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A26-27&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-055" data-scripture-id="SCR-055">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22-24%2C%2028&amp;version=NIV">Hebrews 12:22-24, 28</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2671s" aria-label="Watch from 44:31">44:31</a></td>
+  <td><q>Christian, that&#x27;s your home ... you&#x27;re running because it&#x27;s unshakeable</q></td>
+  <td><a href="#s6.6">Christians run from security, not uncertainty</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2671s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22-24%2C%2028&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-056" data-scripture-id="SCR-056">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2678s" aria-label="Watch from 44:38">44:38</a></td>
+  <td><q>The pioneer crossed the finish line ... The perfecter is bringing his people home</q></td>
+  <td><a href="#s6.6">Christians run from security, not uncertainty</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2678s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-057" data-scripture-id="SCR-057">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A10%2C%2028-29&amp;version=NIV">Hebrews 12:10, 28-29</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2694s" aria-label="Watch from 44:54">44:54</a></td>
+  <td><q>since we have received an unshakeable kingdom ... our God is a consuming fire ... holiness that&#x27;s preparing us</q></td>
+  <td><a href="#s6.6">Christians run from security, not uncertainty</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2694s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A10%2C%2028-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-058" data-scripture-id="SCR-058">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A25&amp;version=NIV">1 Corinthians 15:25</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2735s" aria-label="Watch from 45:35">45:35</a></td>
+  <td><q>Every enemy beneath his feet</q></td>
+  <td><a href="#s6.7">The consuming fire fell on the Son and now prepares his people</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2735s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A25&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-059" data-scripture-id="SCR-059">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Revelation%2021%3A4&amp;version=NIV">Revelation 21:4</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2738s" aria-label="Watch from 45:38">45:38</a></td>
+  <td><q>every tear wiped away</q></td>
+  <td><a href="#s6.7">The consuming fire fell on the Son and now prepares his people</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2738s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Revelation%2021%3A4&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-060" data-scripture-id="SCR-060">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A10-11&amp;version=NIV">Philippians 2:10-11</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2741s" aria-label="Watch from 45:41">45:41</a></td>
+  <td><q>every knee bowed, every tongue confessing that Jesus Christ is Lord</q></td>
+  <td><a href="#s6.7">The consuming fire fell on the Son and now prepares his people</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2741s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A10-11&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-061" data-scripture-id="SCR-061">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A28&amp;version=NIV">Hebrews 12:28</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2748s" aria-label="Watch from 45:48">45:48</a></td>
+  <td><q>we have received an unshakeable kingdom ... run like it&#x27;s unshakeable</q></td>
+  <td><a href="#s6.8">Run like the kingdom is actually unshakeable</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2748s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A28&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-062" data-scripture-id="SCR-062">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2759s" aria-label="Watch from 45:59">45:59</a></td>
+  <td><q>fix your eyes on Jesus</q></td>
+  <td><a href="#s6.8">Run like the kingdom is actually unshakeable</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2759s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-063" data-scripture-id="SCR-063">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22%2C%2028-29&amp;version=NIV">Hebrews 12:22, 28-29</a></th>
+  <td>Exposited</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2762s" aria-label="Watch from 46:02">46:02</a></td>
+  <td><q>rejoice in Zion ... worship him together for our God is a consuming fire</q></td>
+  <td><a href="#s6.8">Run like the kingdom is actually unshakeable</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2762s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A22%2C%2028-29&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-064" data-scripture-id="SCR-064">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">Hebrews 12:2</a></th>
+  <td>Referenced</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2821s" aria-label="Watch from 47:01">47:01</a></td>
+  <td><q>fix them on you where they belong ... perfect our faith</q></td>
+  <td><a href="#s7.1">Purify, cleanse, refocus, and use us</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2821s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Hebrews%2012%3A2&amp;version=NIV">NIV</a></td>
+</tr>
+<tr id="ledger-SCR-065" data-scripture-id="SCR-065">
+  <th scope="row"><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A10&amp;version=NIV">Matthew 6:10</a></th>
+  <td>Read/quoted</td>
+  <td><a class="timestamp" href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2845s" aria-label="Watch from 47:25">47:25</a></td>
+  <td><q>Your will be done on Earth as it is in Heaven</q></td>
+  <td><a href="#s7.1">Purify, cleanse, refocus, and use us</a></td>
+  <td><a href="https://www.youtube.com/watch?v=F43D7jaMCqs&amp;t=2845s">Watch</a></td>
+  <td><a href="https://www.biblegateway.com/passage/?search=Matthew%206%3A10&amp;version=NIV">NIV</a></td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Source: <a href="https://www.youtube.com/watch?v=F43D7jaMCqs">official Crossroads Church YouTube video</a>. Transcript basis: YouTube automatic captions (English original). Verified September 5, 2026.</p>
+  <p>This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text.</p>
+</footer>
+</body>
+</html>
