@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when outlining Crossroads Church sermons."
-version: 1.3.1
+version: 1.3.2
 author: Will
 license: MIT
 metadata:
@@ -127,18 +127,26 @@ For every confirmed spoken unit, record:
 - short spoken quotation or identifying phrase;
 - exact outline section;
 - timestamped YouTube link;
-- BibleGateway NIV link;
+- BibleGateway link using the translation policy below;
 - a brief correction note only when captions materially misstated the reference.
 
 Use one ledger row per spoken unit or range, not one row per verse. A spoken range must still be represented as the full range.
 
-Use NIV links in this form with the reference URL-encoded:
+Use BibleGateway links with this translation policy:
+
+- default to `NIV` when the speaker does not explicitly identify a Bible version;
+- when the speaker explicitly names a version for a read or quoted unit—such as `ESV`, `KJV`, or `NKJV`—use that exact version in the row’s BibleGateway link and visible version label;
+- do not infer a version from wording alone;
+- when the speaker materially compares versions, preserve the comparison in the exact outline node and link each version-specific treatment accurately;
+- references and paraphrases without an explicit version remain `NIV`.
+
+Use this link form, substituting the required version code:
 
 ```text
 https://www.biblegateway.com/passage/?search=Psalm%2051%3A6&version=NIV
 ```
 
-Do not reproduce full NIV text. Confirm passages from spoken wording and context, not merely the description. For suspicious numerals or quotations, inspect the narrow caption window and spot-check audio when necessary. Omit any unresolved allusion.
+Do not reproduce full copyrighted Bible text. Confirm passages from spoken wording and context, not merely the description. For suspicious numerals, named translations, or quotations, inspect the narrow caption window and spot-check audio when necessary. Omit any unresolved allusion.
 
 The confirmed Scripture set in the outline and ledger must match exactly. Each ledger row must link to the exact outline node containing its spoken phrase, not merely a nearby parent or related section.
 
@@ -169,7 +177,7 @@ Before committing, verify mechanically:
 - HTML parses and required metadata exists;
 - timestamps are chronological and within video duration;
 - YouTube links use the correct video ID;
-- NIV links contain the correct encoded reference and `version=NIV`;
+- BibleGateway links contain the correct encoded reference and translation version: `NIV` by default, or the exact version explicitly named by the speaker;
 - outline and ledger contain the same confirmed Scripture set;
 - no unresolved allusion is presented as fact;
 - no transcript, media, secret, framework output, or unrelated private data is tracked;
@@ -178,7 +186,7 @@ Before committing, verify mechanically:
 
 Require a clean or run-owned working tree, pull with `git pull --ff-only`, inspect the diff, commit, and push `main`.
 
-A push is not proof. Fetch the live root index and sermon URL. Require HTTP 200 plus the expected title, video ID, NIV links, outline, and Scripture ledger before reporting success.
+A push is not proof. Fetch the live root index and sermon URL. Require HTTP 200 plus the expected title, video ID, correctly versioned BibleGateway links, outline, and Scripture ledger before reporting success.
 
 ## Error Handling
 
@@ -196,6 +204,6 @@ A push is not proof. Fetch the live root index and sermon URL. Require HTTP 200 
 - [ ] Every confirmed Scripture appears in both outline and ledger.
 - [ ] Ambiguous references verified or omitted.
 - [ ] One self-contained sermon HTML file and index entry created.
-- [ ] No transcript, media, full NIV text, outside commentary, or secrets tracked.
+- [ ] No transcript, media, full copyrighted Bible text, outside commentary, or secrets tracked.
 - [ ] Commit and remote HEAD match.
 - [ ] Live index and sermon page verified.
