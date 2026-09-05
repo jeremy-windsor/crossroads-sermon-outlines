@@ -26,6 +26,7 @@ Each sermon is one self-contained HTML file. There is no site generator, content
 - [When Excuses Die — Josh Wyatt — August 3, 2026](sermons/2026-08-03-when-excuses-die.html)
 - [Family Resemblance — Josh Wyatt — July 27, 2026](sermons/2026-07-27-family-resemblance.html)
 - [Keep Running! — Josh Wyatt — July 20, 2026](sermons/2026-07-20-keep-running.html)
+- [Walk By Faith — Josh Wyatt — July 13, 2026](sermons/2026-07-13-walk-by-faith.html)
 
 ## Repository layout
 
