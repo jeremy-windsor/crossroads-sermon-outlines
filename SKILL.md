@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when outlining Crossroads Church sermons."
-version: 1.2.1
+version: 1.3.1
 author: Will
 license: MIT
 metadata:
@@ -19,9 +19,16 @@ This is an outline, not a summary or transcript. Preserve the speaker's order, a
 
 ## Trigger and Input
 
-Use when Jeremy asks for a sermon outline or asks to add a sermon to the outline site.
+Use when Jeremy asks for a sermon outline, asks to add a sermon to the outline site, or requests the latest sermon(s) within a duration range.
 
-Require the direct YouTube sermon URL. Normal source and scope:
+Accept either:
+
+- a direct YouTube sermon URL; or
+- a relative selection request such as “the last four weekly sermons, 35–55 minutes” against the canonical channel.
+
+For a relative selection request, inspect the channel’s recent uploads, exclude shorts, livestreams, replays that are not sermons, unavailable videos, and items outside the requested duration, then take the newest qualifying `N` in channel order. Record the exact selected titles, video IDs, upload dates, and durations before outlining. Do not silently substitute an older item if a newer qualifying item fails caption verification; stop on that item and report the blocker.
+
+Normal source and scope:
 
 - `https://youtube.com/@thecrossroadschurch`
 - English sermon video
@@ -65,9 +72,11 @@ Report the exact problem and let Jeremy choose whether to wait, approve Whisper/
 
 ## Workflow
 
-### 1. Inspect the source
+### 1. Discover or inspect the source
 
-From the direct YouTube URL, record the canonical video ID and URL, channel, title, speaker when known, published date, duration, description, live status, and available caption tracks.
+For a relative selection request, enumerate enough recent canonical-channel uploads to prove the selected set is the newest qualifying set. Apply the requested duration bounds mechanically, preserve channel order, and reject non-sermon or live items before caption work.
+
+For each selected item or direct YouTube URL, record the canonical video ID and URL, channel, title, speaker when known, published date, duration, description, live status, and available caption tracks.
 
 Confirm it belongs to the expected channel unless Jeremy intentionally supplied another source. Treat the description as orientation only, never as transcript evidence.
 
@@ -131,13 +140,16 @@ https://www.biblegateway.com/passage/?search=Psalm%2051%3A6&version=NIV
 
 Do not reproduce full NIV text. Confirm passages from spoken wording and context, not merely the description. For suspicious numerals or quotations, inspect the narrow caption window and spot-check audio when necessary. Omit any unresolved allusion.
 
-The confirmed Scripture set in the outline and ledger must match exactly.
+The confirmed Scripture set in the outline and ledger must match exactly. Each ledger row must link to the exact outline node containing its spoken phrase, not merely a nearby parent or related section.
+
+After rendering, perform a second Scripture pass against the complete transcript. Search for canonical book names, chapter/verse language, inherited references, and distinctive biblical quotations, then inspect each candidate in context. This pass must catch references embedded in illustrations, closing claims, prayers, and transitions. Do not promote a casual biblical-sounding phrase to a citation without contextual evidence.
 
 ### 6. Build the sermon page
 
 Create `sermons/YYYY-MM-DD-sermon-slug.html` containing:
 
 - title, speaker, published date, duration, source URL, caption source, and verification date;
+- metadata wording that labels an upload date as `published`, never as a verified preaching date unless the sermon date is independently established;
 - embedded original YouTube video with source-link fallback;
 - chronological hierarchical outline with timestamp links;
 - complete Scripture ledger;
