@@ -27,6 +27,7 @@ Each sermon is one self-contained HTML file. There is no site generator, content
 - [Family Resemblance — Josh Wyatt — July 27, 2026](sermons/2026-07-27-family-resemblance.html)
 - [Keep Running! — Josh Wyatt — July 20, 2026](sermons/2026-07-20-keep-running.html)
 - [Walk By Faith — Josh Wyatt — July 13, 2026](sermons/2026-07-13-walk-by-faith.html)
+- [Worship in the Waiting — Elijah Stanley — July 6, 2026](sermons/2026-07-06-worship-in-the-waiting.html)
 
 ## Repository layout
 
