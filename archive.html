@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse sermon outlines by year and month.">
+  <meta name="color-scheme" content="light dark">
+  <title>Archive | Crossroads Sermon Outlines</title>
+  <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
+try {
+  const savedTheme = localStorage.getItem('crossroads-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    document.documentElement.dataset.theme = savedTheme;
+  }
+} catch (_) { /* Storage can be unavailable; the system palette remains readable. */ }
+</script>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="site-name">Crossroads / Sermon Outlines</a>
+    <div class="nav-links"><a href="index.html">Latest outlines</a> <a href="archive.html" aria-current="page">Archive</a></div>
+    <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
+  </nav>
+  <header><p class="kicker">All outlines</p><h1>Sermon archive</h1><p class="lede">Browse by year, then follow the messages in order.</p></header>
+  <main id="main-content" tabindex="-1"><ul class="year-list"><li><a href="archive/2026.html">2026</a><span>9 outlines</span></li></ul></main>
+  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a> <a href="https://github.com/jeremy-windsor/crossroads-sermon-outlines">Source repository</a></nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p></footer>
+  <script>(() => {
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-toggle');
+  const reset = document.querySelector('.theme-reset');
+  const system = window.matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : system.matches;
+  const sync = () => {
+    toggle.setAttribute('aria-pressed', String(isDark()));
+    reset.hidden = !root.dataset.theme;
+  };
+  toggle.hidden = false;
+  toggle.addEventListener('click', () => {
+    root.dataset.theme = isDark() ? 'light' : 'dark';
+    try { localStorage.setItem('crossroads-theme', root.dataset.theme); } catch (_) {}
+    sync();
+  });
+  reset.addEventListener('click', () => {
+    delete root.dataset.theme;
+    try { localStorage.removeItem('crossroads-theme'); } catch (_) {}
+    sync();
+    toggle.focus();
+  });
+  system.addEventListener('change', sync);
+  sync();
+})();
+</script>
+</body>
+</html>

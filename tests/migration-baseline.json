@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "82467aea107ab7e6b51970cc5da64f827d096f87",
+  "normalization": "HTML unescape; straight apostrophe to curly apostrophe; collapse whitespace; strip",
+  "speaker_named_units": {
+    "2026-07-20-keep-running": {
+      "SCR-010": {
+        "reference": "Hebrews 12:1b",
+        "version": "ESV",
+        "anchor_node_id": "s2.1",
+        "evidence": "Josh explicitly cites the ESV wording"
+      }
+    }
+  },
+  "sources": {
+    "index.html": "8100a37e6ba75ebe7824375db22e739060214a80ed1fe7f18e3c32890fa1b2b9",
+    "sermons/2026-07-06-worship-in-the-waiting.html": "4f55c00d2821fb09cf2bcee1793d8ed6392314aaeb08efe9e5d754ebc1cde680",
+    "sermons/2026-07-13-walk-by-faith.html": "340eab5104d8efa817671ec7a06f9b247e2c61204f05f6024a64645f74dace42",
+    "sermons/2026-07-20-keep-running.html": "17e19ba24e7a3c509f20dd4ef8ef55a6aa019c14a3e35811e04d396dc3ba8ace",
+    "sermons/2026-07-27-family-resemblance.html": "e17fa1a817d21c04f2637b8f674f0a5d83b3d4f220eb95ae49893d36bce08684",
+    "sermons/2026-08-03-when-excuses-die.html": "e5b742bb79bf2ff64713424a22f590f514973903216b5632aecd787956f7eb8e",
+    "sermons/2026-08-10-born-bent.html": "98dff3eb1ff1ce642b5083871c0498507dd6244383e28bda4954a8838f64a5dc",
+    "sermons/2026-08-16-inside-out.html": "17f8474cc8264ad2f4a77afbe28bd054e8058f0fb30238b1dfb853fec16403a9",
+    "sermons/2026-08-24-start-with-me.html": "e4056c7792dbc7be317e98b6ee17bfd2fee81b1efc79b48205e6aaf6be150661",
+    "sermons/2026-08-31-crushed-joy.html": "5bd41e265fbb70db5851557e729aae2c25b11f7a9d7ffff74cdce030982ef21f"
+  },
+  "records": {
+    "2026-07-06-worship-in-the-waiting": "517d017560bb0cf06bd96532021075aa06318b2fcd034c04aada8f0fb8711774",
+    "2026-07-13-walk-by-faith": "816febf13a81db96b019a7a940c755f7aad7ef627b20659b4db7616e6ad7e77d",
+    "2026-07-20-keep-running": "5de6ed4002f4c8b5c9ccffa1b90ed3e898a83fcb20022bb50443f110afd1f5b5",
+    "2026-07-27-family-resemblance": "7aff1d3008934a60f787d89452612a56349e82558545c268add992602379d3c9",
+    "2026-08-03-when-excuses-die": "40373105d648f331835379f4480237c2cb48fe4e97331359ac1439f8cdd57cf8",
+    "2026-08-10-born-bent": "e781f0374527f384adc9701f986401f187fb57cb31baad86f4dace418e713ef4",
+    "2026-08-16-inside-out": "44fe73f2c70463d51bff2fc74ba2b2a7e4fded5131b1a7f530f70f5cd59c7e49",
+    "2026-08-24-start-with-me": "c98f9686abf190f9843f1d23e452eb84d2da2713131adf3f501e162fc1f09838",
+    "2026-08-31-crushed-joy": "195c554530123f89b10ac7e29571b09c65653cfa1f0d45240f282c94f5109af6"
+  }
+}

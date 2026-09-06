@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when outlining Crossroads Church sermons."
-version: 1.3.2
+version: 2.0.0
 author: Will
 license: MIT
 metadata:
@@ -45,18 +45,34 @@ GitHub: https://github.com/jeremy-windsor/crossroads-sermon-outlines
 Pages: https://jeremy-windsor.github.io/crossroads-sermon-outlines/
 ```
 
-The public repository stays small:
+One public skill remains at root `SKILL.md`. The parent syncs it to the active Hermes skill after review; the workflow is public documentation.
 
 ```text
-index.html
-README.md
-SKILL.md
-.nojekyll
-.gitignore
-sermons/YYYY-MM-DD-sermon-slug.html
+content/sermons/YYYY/*.json       canonical content
+site/content.py                  content-only JSON writer
+site/schema.py                   executable schema
+site/render.py / templates.py    renderer
+site/assets/site.css             shared stylesheet source
+site/assets/theme*.js            inline theme script sources
+site/publish.py                  publisher for committed main
+index.html / archive.html        generated library navigation
+archive/YYYY.html                generated month groups
+sermons/YYYY-MM-DD-slug.html      generated sermon pages
+assets/site.css                  deterministic stylesheet copy
+tests/                           durable validation and live verifier
 ```
 
-Each sermon is one self-contained HTML file with inline CSS. Do not add a site generator, application framework, database, JSON content store, transcript archive, or separate asset tree. Root `SKILL.md` mirrors this skill.
+Three independently runnable phases have structural write boundaries:
+
+| Phase | Reads | Writes only |
+| --- | --- | --- |
+| Content | Captions, private work, approved records | `content/sermons/YYYY/*.json` |
+| Render | `content/` and `site/` | Generated HTML surfaces and `assets/site.css` |
+| Publish | Committed files, Git, live HTTP | Git publication refs; no content or page edits |
+
+Use CPython 3.13.5 at `/usr/bin/python3`, not `~/venv`. Build code has no external dependencies. `requirements-test.txt` pins extraction and test dependencies. Run `make verify` for the complete default gate and `make browser` for Chromium checks where local sockets are permitted. The restricted-environment rendered checks use the pinned test-only Node executable described in README; there is no frontend framework or site server runtime.
+
+Do not add a database, authentication, search, a transcript archive, copied media, or external frontend dependencies. Extend the allowlist-style `.gitignore` before adding intended source trees. Temporary tests and screenshots belong in ignored `.test-artifacts/`; leave existing `.work/` and queued batch state untouched.
 
 ## Hard Stops
 
@@ -134,8 +150,8 @@ Use one ledger row per spoken unit or range, not one row per verse. A spoken ran
 
 Use BibleGateway links with this translation policy:
 
-- default to `NIV` when the speaker does not explicitly identify a Bible version;
-- when the speaker explicitly names a version for a read or quoted unit—such as `ESV`, `KJV`, or `NKJV`—use that exact version in the row’s BibleGateway link and visible version label;
+- default to `NIV` with `version_source: default` when the speaker does not explicitly identify a Bible version;
+- when the speaker explicitly names a version for a passage/ledger unit—such as `ESV`, `KJV`, `NKJV`, or NIV itself—use that exact version in the row’s BibleGateway link and visible version label, and record `version_source: speaker-named`; this applies regardless of whether treatment is `read/quoted`, `exposited`, or `referenced`;
 - do not infer a version from wording alone;
 - when the speaker materially compares versions, preserve the comparison in the exact outline node and link each version-specific treatment accurately;
 - references and paraphrases without an explicit version remain `NIV`.
@@ -148,45 +164,46 @@ https://www.biblegateway.com/passage/?search=Psalm%2051%3A6&version=NIV
 
 Do not reproduce full copyrighted Bible text. Confirm passages from spoken wording and context, not merely the description. For suspicious numerals, named translations, or quotations, inspect the narrow caption window and spot-check audio when necessary. Omit any unresolved allusion.
 
-The confirmed Scripture set in the outline and ledger must match exactly. Each ledger row must link to the exact outline node containing its spoken phrase, not merely a nearby parent or related section.
+Each outline node carries a `scripture_mentions` set of ledger IDs. A ledger row represents one spoken unit and has exactly one `anchor_node_id`, the exact node containing its spoken phrase. Multiple nodes may mention the same row; do not collapse those mentions into the canonical anchor. The union of mention IDs and ledger IDs must match. Keep IDs stable, including legacy `OUT-01-06`, `s1.1`, bare-digit `1.1`, and `ledger-SCR-003` anchors.
 
 After rendering, perform a second Scripture pass against the complete transcript. Search for canonical book names, chapter/verse language, inherited references, and distinctive biblical quotations, then inspect each candidate in context. This pass must catch references embedded in illustrations, closing claims, prayers, and transitions. Do not promote a casual biblical-sounding phrase to a citation without contextual evidence.
 
-### 6. Build the sermon page
+### 6. Finish the content phase
 
-Create `sermons/YYYY-MM-DD-sermon-slug.html` containing:
+Write a JSON record through `site/content.py` with:
 
-- title, speaker, published date, duration, source URL, caption source, and verification date;
-- metadata wording that labels an upload date as `published`, never as a verified preaching date unless the sermon date is independently established;
-- embedded original YouTube video with source-link fallback;
-- chronological hierarchical outline with timestamp links;
-- complete Scripture ledger;
-- source attribution and independent-study disclaimer;
-- readable mobile-friendly inline CSS.
+- title, free-text speaker (including multiple speakers), published date, duration string and seconds, canonical video ID/URL, caption source, and verification date;
+- upload dates labeled `published`; do not claim a preaching date without independent evidence;
+- verified sermon start/end, `card_summary`, and the distinct `section_intro` that describes boundaries and exclusions;
+- chronological movements with verbatim node IDs, timestamp seconds, headings, ordered bullets, Scripture mention sets, and children up to depth 3;
+- every Scripture ledger row, its canonical anchor, translation version and required `version_source`, encoded reference, and correction/reference note where needed;
+- disclaimer, source attribution, figcaption, and footer prose using plain text segments; source links use the schema’s `source_link` kind.
 
-Do not include church logos, copied artwork, full transcripts, mirrored media, generated questions, outside commentary, or uncertain Scripture claims.
+`site/schema.py` is the executable record contract. There is no HTML, CSS, or site path in a record. Do not hand-author page navigation. Validate stdin with `/usr/bin/python3 site/content.py --check < record.json`; write with `/usr/bin/python3 site/content.py < record.json`. Only the content tree may change in this phase.
 
-Update `index.html` with title, speaker, date, and a relative link. Keep newest entries first. Use project-relative paths such as `sermons/slug.html`; root-absolute paths break GitHub project sites.
+`version_source` is exactly `default` or `speaker-named`. The schema requires NIV for `default`, and requires `speaker-named` for every non-NIV version. Explicitly named NIV also uses `speaker-named`. A named version applies to its corresponding passage/ledger unit, including units classified `exposited`, and is never inferred from similar wording. Preserve Keep Running’s Hebrews 12:1b row as ESV, `speaker-named`, and `exposited`; its published `s2.1` node supplies the explicit attribution. Other baseline NIV rows remain `default` because their published units do not explicitly name NIV. Provenance belongs to the content audit and is not displayed by the renderer. Curly apostrophes are the site typography convention; preserve all prose and identifiers.
 
-Sync the active skill to root `SKILL.md` when it changes.
+### 7. Render and validate
 
-### 7. Validate and publish
+Run `make render`. The renderer reads only records and site sources, escapes prose, builds latest-eight and archive navigation, adds previous/next and month-return links, preserves all anchors, and copies `site/assets/site.css` verbatim to `assets/site.css`. All generated files are tracked. Links are plain project-relative paths, including the stylesheet URL, with no query-string hash.
 
-Before committing, verify mechanically:
+The shared stylesheet provides light/dark tokens, system-default/no-JS styling, mobile ledger cards with explicit table/row/rowheader/cell roles and data labels, visible focus and target indicators, and a forced-light print layout. Small inline scripts restore a saved theme before CSS loads and enable a keyboard-operable toggle plus system reset. Do not embed presentation in records or write generated pages during content work.
 
-- HTML parses and required metadata exists;
-- timestamps are chronological and within video duration;
-- YouTube links use the correct video ID;
-- BibleGateway links contain the correct encoded reference and translation version: `NIV` by default, or the exact version explicitly named by the speaker;
-- outline and ledger contain the same confirmed Scripture set;
-- no unresolved allusion is presented as fact;
-- no transcript, media, secret, framework output, or unrelated private data is tracked;
-- index links to the exact sermon file;
-- repository `SKILL.md` matches the active skill.
+Run `make verify` before committing. The suite checks schema, HTML, relative links, anchors, ordered timestamps, source IDs, translation links, many-to-one Scripture relationships, phase write boundaries, deterministic output, and rendered desktop/mobile/light/dark behavior. Run `make browser` where Chromium and local HTTP sockets are available, including no-JS and keyboard navigation, theme persistence, print, responsive ledger semantics, and anchor highlighting. Keep screenshots ignored. Report any environment limitation honestly.
 
-Require a clean or run-owned working tree, pull with `git pull --ff-only`, inspect the diff, commit, and push `main`.
+Migration tests always use immutable baseline `82467aea107ab7e6b51970cc5da64f827d096f87`. Never use mutable `HEAD` or rewrite/summarize migrated content to make parity pass. The nine baseline records include 488 nodes, 482 rows, 962 NIV links and 2 ESV links; Inside Out retains 111 mentions over 37 rows and its original card summary. Both summaries, correction notes, metadata, prose, timestamps, versions, and all existing IDs must survive normalized comparison. The manifest is transparently regenerated with `site/migrate.py --manifest`. That tool is a migration tool, not the normal content writer for later sermons.
 
-A push is not proof. Fetch the live root index and sermon URL. Require HTTP 200 plus the expected title, video ID, correctly versioned BibleGateway links, outline, and Scripture ledger before reporting success.
+Inspect `git status --ignored --short`, `git diff --check`, and the exact staged path list. Prove all intended content/site/tests/assets/archive files are tracked, and no caption, transcript, media, secret, `.work/`, screenshot, or unrelated file is staged. Do not change or sync anything outside the authorized worktree.
+
+### 8. Publish and verify
+
+Publication remains GitHub Pages from `main` at the repository root with `.nojekyll`. Finish the content and render phases before publication. Follow the request’s branch/review limits; a feature-branch implementation request does not authorize pushing or merging `main`.
+
+When publication is authorized and reviewed changes are already committed on a clean `main`, run `/usr/bin/python3 site/publish.py --check`, then `/usr/bin/python3 site/publish.py --push`. The publisher does not edit, stage, commit, re-render, or repair content. It performs a normal push, fetches `origin/main`, and requires matching local/remote commits. Failures return to the owning content or render phase before a separately verified commit.
+
+A push is not proof. `/usr/bin/python3 tests/verify_live.py --all` fetches the root, archive index, every archive year, every sermon, and shared CSS. Require HTTP 200 and byte equality with every local tracked file, then parsed title/video/count/version/anchor/timestamp/navigation assertions. The verifier retries propagation for a bounded interval and never replaces local content with live bytes. Report success only after the authorized publication is actually verified.
+
+Rollback uses a reviewed `git revert` plus a normal push to restore prior tracked bytes; do not test rollback on the live site. No Actions pipeline, Pages source change, secrets, or tokens are part of this architecture.
 
 ## Error Handling
 
@@ -203,7 +220,10 @@ A push is not proof. Fetch the live root index and sermon URL. Require HTTP 200 
 - [ ] Detailed chronological outline completed.
 - [ ] Every confirmed Scripture appears in both outline and ledger.
 - [ ] Ambiguous references verified or omitted.
-- [ ] One self-contained sermon HTML file and index entry created.
+- [ ] Validated JSON record, generated sermon, archives, homepage, and shared assets complete.
+- [ ] Full suite, immutable migration parity, deterministic render check, and rendered-page checks pass.
+- [ ] Content/render/publish write boundaries respected; ignored and tracked paths inspected.
 - [ ] No transcript, media, full copyrighted Bible text, outside commentary, or secrets tracked.
 - [ ] Commit and remote HEAD match.
-- [ ] Live index and sermon page verified.
+- [ ] Every generated live surface returns HTTP 200 and equals local tracked bytes.
+- [ ] Root public SKILL.md updated; parent handles active Hermes sync after review.
