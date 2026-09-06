@@ -54,7 +54,7 @@ def rich(parts, record):
 
 
 def layout(title, description, prefix, header, body, scripts, footer=None, current=None):
-    navigation = " ".join(link(prefix + path, label, ' aria-current="page"' if current == path else "") for path, label in (("index.html", "Latest outlines"), ("topics.html", "Topics"), ("archive.html", "Timeline")))
+    navigation = " ".join(link(prefix + path, label, ' aria-current="page"' if current == path else "") for path, label in (("index.html", "Home"), ("topics.html", "Topics"), ("archive.html", "Timeline")))
     if footer is None:
         footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church on YouTube")} {link(REPOSITORY, "Source repository")}</nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p>'
     return f'''<!doctype html>
@@ -159,7 +159,7 @@ def home(records, topics, scripts):
     header = '<p class="kicker">Independent study resource</p><h1>Crossroads<br>Sermon Outlines</h1><p class="lede">Faithful chronological outlines for reviewing sermons after listening—complete with timestamps, teaching structure, and every confirmed Scripture reference.</p>'
     by_slug = {record["slug"]: record for record in records}
     topic_cards = "\n".join(topic_card(topic, by_slug, heading=3) for topic in topics)
-    body = f'''<section aria-labelledby="published-heading"><div class="section-heading"><h2 id="published-heading">Latest outlines</h2>{link('archive.html', 'Browse the timeline →')}</div>{sermon_grid(records[:LATEST], topics)}</section>
+    body = f'''<section aria-labelledby="published-heading"><div class="section-heading"><h2 id="published-heading">Sermon outlines</h2>{link('archive.html', 'Browse the timeline →')}</div>{sermon_grid(records[:LATEST], topics)}</section>
 <section class="home-topics" aria-labelledby="topics-heading"><div class="section-heading"><h2 id="topics-heading">Topics</h2>{link('topics.html', 'All topics →')}</div><div class="topic-grid">{topic_cards}</div></section>
 <ul class="features" aria-label="What each outline contains">
 <li><strong>In order</strong>The message follows the speaker’s actual sequence.</li>

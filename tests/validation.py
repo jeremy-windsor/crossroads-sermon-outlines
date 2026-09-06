@@ -58,7 +58,7 @@ def validate_surfaces(surfaces, records, topics=None):
         prefix = '../' if '/' in path else ''
         assert [x['href'] for x in soup.select('link[rel="stylesheet"]')] == [prefix + 'assets/site.css']
         assert soup.head.script and str(soup.head).index('<script>') < str(soup.head).index('rel="stylesheet"')
-        assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Latest outlines', 'Topics', 'Timeline']
+        assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Home', 'Topics', 'Timeline']
         assert not soup.select('.sermon-card .summary')
         listing_images = soup.select('.topic-card .topic-plate img, .sermon-card .card-plate img')
         assert [image['loading'] for image in listing_images] == ['eager'] * min(2, len(listing_images)) + ['lazy'] * max(0, len(listing_images) - 2)
