@@ -19,6 +19,7 @@ PROJECT = '/crossroads-sermon-outlines/'
 SERMON = 'sermons/2026-08-16-inside-out.html'
 SURFACES = [
     ('home', 'index.html'),
+    ('search', 'search.html'),
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
     ('topics', 'topics.html'),
@@ -40,7 +41,8 @@ def local_site():
                 self.send_error(404)
                 return
             self.send_response(200)
-            self.send_header('Content-Type', 'text/css; charset=utf-8' if relative.endswith('.css') else 'text/html; charset=utf-8')
+            content_type = 'text/css; charset=utf-8' if relative.endswith('.css') else ('application/json; charset=utf-8' if relative.endswith('.json') else 'text/html; charset=utf-8')
+            self.send_header('Content-Type', content_type)
             self.end_headers()
             self.wfile.write(surfaces[relative])
 
@@ -201,7 +203,7 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
         page.get_by_role('link', name='When Excuses Die', exact=True).click()
         assert page.url.endswith('sermons/2026-08-03-when-excuses-die.html')
         page.goto(local_site)
-        page.get_by_role('link', name='Browse the timeline').click()
+        page.get_by_role('link', name='Timeline', exact=True).click()
         page.locator('.year-list .year-link').click()
         page.get_by_role('link', name='July', exact=True).click()
         assert page.url.endswith('#2026-07')
@@ -217,23 +219,35 @@ def test_art_plate_and_watch_link_hit_targets(browser, local_site):
     with context_for(browser, viewport={'width': 1280, 'height': 900}) as context:
         page = context.new_page()
         page.goto(local_site)
-        card = page.locator('.sermon-card').first
-        plate = card.locator('.card-plate')
+        card = page.locator('.topic-card').first
+        plate = card.locator('.topic-plate')
         plate_box = plate.bounding_box()
         plate_target = page.evaluate('''point => {
           const target = document.elementFromPoint(point.x, point.y);
           return target.closest('a')?.getAttribute('href');
         }''', {'x': plate_box['x'] + plate_box['width'] / 2, 'y': plate_box['y'] + plate_box['height'] / 2})
-        assert plate_target == 'sermons/2026-08-31-crushed-joy.html'
-        watch = card.locator('.card-watch a')
-        watch.scroll_into_view_if_needed()
-        watch_box = watch.bounding_box()
-        assert 0 <= watch_box['y'] + watch_box['height'] / 2 < page.viewport_size['height']
-        watch_target = page.evaluate('''point => {
-          const target = document.elementFromPoint(point.x, point.y);
-          return target.closest('a')?.getAttribute('href');
-        }''', {'x': watch_box['x'] + watch_box['width'] / 2, 'y': watch_box['y'] + watch_box['height'] / 2})
-        assert watch_target == 'https://www.youtube.com/watch?v=wI99rPQIKyY'
+        assert plate_target == 'topics/renew-me.html'
+
+
+@pytest.mark.parametrize('width', [1280, 375])
+def test_search_results_are_safe_responsive_and_deep_linked(browser, local_site, width):
+    with context_for(browser, viewport={'width': width, 'height': 812}) as context:
+        page = context.new_page()
+        page.goto(local_site + 'search.html?q=Psalm%2051%3A10')
+        expect(page.locator('#search-status')).to_contain_text('result')
+        scripture = page.locator('#search-results a[href*="#ledger-"]').first
+        expect(scripture).to_be_visible()
+        assert scripture.get_attribute('href').startswith('sermons/')
+        assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), overflow_details(page)
+        page.goto(local_site + 'search.html?q=Hebrews%2012')
+        expect(page.locator('#search-results a[href*="#ledger-"]').first).to_be_visible()
+        page.goto(local_site + 'search.html?q=version%20of%20the%20truth')
+        expect(page.locator('.result-excerpt').first).to_contain_text('version of the truth')
+        assert page.locator('.result-excerpt').first.locator('xpath=..').locator('a').get_attribute('href').endswith('#s1')
+        page.goto(local_site + 'search.html?q=%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E')
+        expect(page.locator('#search-status')).to_have_text('0 results')
+        assert page.locator('#search-results img').count() == 0
+        assert page.locator('text=<img src=x onerror=alert(1)>').count() == 0
 
 
 def test_keyboard_numeric_anchor_print_and_large_text(browser, local_site):

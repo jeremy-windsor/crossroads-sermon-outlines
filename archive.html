@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse sermon outlines by year and month.">
+  <meta name="description" content="Browse Crossroads sermons by year and month.">
   <meta name="color-scheme" content="light dark">
-  <title>Timeline | Crossroads Sermon Outlines</title>
+  <title>Timeline | Crossroads Sermons</title>
   <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
 try {
   const savedTheme = localStorage.getItem('crossroads-theme');
@@ -19,13 +19,18 @@ try {
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html" class="site-name">Crossroads / Sermon Outlines</a>
-    <div class="nav-links"><a href="index.html">Home</a> <a href="topics.html">Topics</a> <a href="archive.html" aria-current="page">Timeline</a></div>
+    <a href="index.html" class="site-name">Crossroads Sermons</a>
+    <div class="nav-links"><a href="index.html">Topics</a> <a href="archive.html" aria-current="page">Timeline</a></div>
+    <form class="site-search" role="search" action="search.html" method="get">
+      <label class="visually-hidden" for="site-search-query">Search sermons</label>
+      <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
+      <button type="submit">Search</button>
+    </form>
     <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
   </nav>
-  <header><p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find the message you heard.</p></header>
-  <main id="main-content" tabindex="-1"><ul class="year-list"><li><p class="year-head"><a href="archive/2026.html" class="year-link">2026</a><span>9 outlines</span></p><nav class="month-strip" aria-label="Months with outlines in 2026"><span aria-hidden="true">Jan</span><span aria-hidden="true">Feb</span><span aria-hidden="true">Mar</span><span aria-hidden="true">Apr</span><span aria-hidden="true">May</span><span aria-hidden="true">Jun</span><a href="archive/2026.html#2026-07" aria-label="July 2026">Jul</a><a href="archive/2026.html#2026-08" aria-label="August 2026">Aug</a><span aria-hidden="true">Sep</span><span aria-hidden="true">Oct</span><span aria-hidden="true">Nov</span><span aria-hidden="true">Dec</span></nav></li></ul></main>
-  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a> <a href="https://github.com/jeremy-windsor/crossroads-sermon-outlines">Source repository</a></nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p></footer>
+  <header><p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find a message.</p></header>
+  <main id="main-content" tabindex="-1"><ul class="year-list"><li><p class="year-head"><a href="archive/2026.html" class="year-link">2026</a><span>9 sermons</span></p><nav class="month-strip" aria-label="Months with sermons in 2026"><span aria-hidden="true">Jan</span><span aria-hidden="true">Feb</span><span aria-hidden="true">Mar</span><span aria-hidden="true">Apr</span><span aria-hidden="true">May</span><span aria-hidden="true">Jun</span><a href="archive/2026.html#2026-07" aria-label="July 2026">Jul</a><a href="archive/2026.html#2026-08" aria-label="August 2026">Aug</a><span aria-hidden="true">Sep</span><span aria-hidden="true">Oct</span><span aria-hidden="true">Nov</span><span aria-hidden="true">Dec</span></nav></li></ul></main>
+  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a></nav></footer>
   <script>(() => {
   const root = document.documentElement;
   const toggle = document.querySelector('.theme-toggle');

@@ -21,7 +21,7 @@ PATHS = migrate.baseline_paths()
 
 
 def normalized(tag):
-    return migrate.normalize(tag.get_text(" ", strip=True))
+    return migrate.normalize(tag.get_text(" ", strip=True)) if tag else None
 
 
 def snapshot(page):
@@ -62,26 +62,18 @@ def assert_parity(path):
     old = migrate.git_bytes(path)
     new = (ROOT / path).read_bytes()
     before, after = snapshot(old), snapshot(new)
-    for field in before:
-        if field == "metadata":
-            assert after[field][:len(before[field])] == before[field], f"{path}: changed legacy metadata prefix"
-            assert len(after[field]) == len(before[field]) + 1, f"{path}: unexpected metadata change"
-            slug = Path(path).stem
-            membership = {
-                member['slug']: (topic, part, len(topic['members']))
-                for topic in render.topics()
-                for part, member in enumerate(topic['members'], start=1)
-            }
-            topic, part, total = membership[slug]
-            assert after[field][-1] == (
-                'Topic', f"{topic['name']} · Part {part} of {total}", [],
-                [f"../topics/{topic['id']}.html"],
-            ), f"{path}: unexpected appended topic metadata"
-        else:
-            assert after[field] == before[field], f"{path}: changed {field}"
-    old_ids = {tag["id"] for tag in BeautifulSoup(old, "html.parser").select("[id]")}
-    new_ids = {tag["id"] for tag in BeautifulSoup(new, "html.parser").select("[id]")}
-    assert old_ids <= new_ids, f"{path}: lost anchors {old_ids - new_ids}"
+    # Public chrome and process copy may change; canonical sermon content, source
+    # video, outline nodes, and Scripture rows remain byte-derived from the baseline.
+    for field in ("h1", "subtitle", "nodes", "rows", "iframe"):
+        assert after[field] == before[field], f"{path}: changed {field}"
+    before_metadata = {label: (value, times, links) for label, value, times, links in before['metadata']}
+    after_metadata = {label: (value, times, links) for label, value, times, links in after['metadata']}
+    for label in ('Speaker', 'Published', 'Duration'):
+        assert after_metadata[label] == before_metadata[label], f"{path}: changed {label} metadata"
+    assert after_metadata['Watch'][2] == before_metadata['Source'][2], f"{path}: changed source video"
+    old_ids = {node['id'] for node in before['nodes']} | {row[0] for row in before['rows']}
+    new_ids = {node['id'] for node in after['nodes']} | {row[0] for row in after['rows']}
+    assert old_ids == new_ids, f"{path}: changed sermon anchors"
     return before
 
 

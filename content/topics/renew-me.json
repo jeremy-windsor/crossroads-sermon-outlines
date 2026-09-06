@@ -1,7 +1,17 @@
 {
   "id": "renew-me",
   "name": "Renew Me",
-  "name_source": "artwork",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The sermon thumbnail artwork identifies the series as Renew Me."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy confirmed Renew Me as the primary topic for these sermons."
+    }
+  ],
   "scripture_spine": "Psalm 51",
   "description": "David’s psalm of repentance, opened a few verses at a time.",
   "note": "Topic name follows the cropped sermon artwork and editorial direction; it is not confirmed official channel metadata. The messages describe a six-week series; five are in this archive.",

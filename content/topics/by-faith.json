@@ -1,10 +1,16 @@
 {
   "id": "by-faith",
   "name": "By Faith",
-  "name_source": "artwork",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The sermon thumbnail artwork identifies the series as By Faith."
+    }
+  ],
   "scripture_spine": "Hebrews 11–13",
-  "description": "Crossroads’ Hebrews series ran thirteen weeks. These four messages close it out, walking Hebrews 11–13 from the hall of faith, through the long race, to the marks of a gospel-shaped family.",
-  "note": "Topic name taken from the sermon artwork. Earlier messages in the thirteen-week Hebrews series are not in this archive.",
+  "description": "Four sermons through Hebrews 11–13 on worship, walking by faith, endurance, and the family resemblance formed by the gospel.",
+  "note": "The sermon artwork names the topic By Faith. The archived set contains the four messages listed here.",
   "anchor": null,
   "members": [
     {

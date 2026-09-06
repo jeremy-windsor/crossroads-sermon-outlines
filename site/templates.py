@@ -6,10 +6,8 @@ from html import escape
 
 from schema import flatten, timestamp
 
-LATEST = 6
 CHURCH = "https://youtube.com/@thecrossroadschurch"
-REPOSITORY = "https://github.com/jeremy-windsor/crossroads-sermon-outlines"
-LABELS = ("Reference", "Treatment", "Timestamp", "Spoken phrase", "Outline section", "YouTube", "BibleGateway")
+LABELS = ("Reference", "Treatment", "Timestamp", "Spoken phrase", "Overview section", "YouTube", "BibleGateway")
 MONTHS = ("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 MONTH_ABBREVIATIONS = ("", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
@@ -33,30 +31,29 @@ def link(href, label, attributes=""):
 
 def watch(record, seconds, badge=True):
     url = record["video_url"] + f"&t={seconds}s"
-    return link(url, timestamp(seconds) if badge else "Watch", f' class="timestamp" aria-label="Watch from {timestamp(seconds)}"' if badge else "")
+    attributes = f' class="timestamp" aria-label="Watch from {timestamp(seconds)}"' if badge else ""
+    return link(url, timestamp(seconds) if badge else "Watch", attributes)
 
 
 def scripture_url(row):
     return f'https://www.biblegateway.com/passage/?search={row["reference_query"]}&version={row["version"]}'
 
 
-def rich(parts, record):
-    result = ""
-    for part in parts:
-        value = e(part["text"])
-        if part["kind"] == "strong":
-            value = f"<strong>{value}</strong>"
-        elif part["kind"] == "source_link":
-            value = link(record["video_url"], part["text"])
-        # Keep punctuation next to its preceding link/strong segment.
-        result += (" " if result and not part["text"].startswith((".", ",", ";", ":")) else "") + value
-    return result
+def search_form(prefix):
+    return f'''<form class="site-search" role="search" action="{e(prefix)}search.html" method="get">
+      <label class="visually-hidden" for="site-search-query">Search sermons</label>
+      <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
+      <button type="submit">Search</button>
+    </form>'''
 
 
-def layout(title, description, prefix, header, body, scripts, footer=None, current=None):
-    navigation = " ".join(link(prefix + path, label, ' aria-current="page"' if current == path else "") for path, label in (("index.html", "Home"), ("topics.html", "Topics"), ("archive.html", "Timeline")))
-    if footer is None:
-        footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church on YouTube")} {link(REPOSITORY, "Source repository")}</nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p>'
+def layout(title, description, prefix, header, body, scripts, current=None, extra_script=""):
+    navigation = " ".join(
+        link(prefix + path, label, ' aria-current="page"' if current == path else "")
+        for path, label in (("index.html", "Topics"), ("archive.html", "Timeline"))
+    )
+    footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church on YouTube")}</nav>'
+    search_script = f"\n  {extra_script}" if extra_script else ""
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -71,14 +68,15 @@ def layout(title, description, prefix, header, body, scripts, footer=None, curre
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
-    {link(prefix + "index.html", "Crossroads / Sermon Outlines", ' class="site-name"')}
+    {link(prefix + "index.html", "Crossroads Sermons", ' class="site-name"')}
     <div class="nav-links">{navigation}</div>
+    {search_form(prefix)}
     <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
   </nav>
   <header>{header}</header>
   <main id="main-content" tabindex="-1">{body}</main>
   <footer>{footer}</footer>
-  <script>{scripts[1]}</script>
+  <script>{scripts[1]}</script>{search_script}
 </body>
 </html>
 '''
@@ -141,31 +139,39 @@ def topic_period(topic, by_slug):
     return f"{MONTHS[first.month]} {first.year}–{MONTHS[last.month]} {last.year}"
 
 
+def topic_destination(topic, prefix=""):
+    if len(topic["members"]) == 1:
+        return prefix + "sermons/" + topic["members"][0]["slug"] + ".html"
+    return prefix + "topics/" + topic["id"] + ".html"
+
+
 def topic_card(topic, by_slug, prefix="", heading=2, eager=False):
     anchor = topic_anchor(topic, by_slug)
     count = len(topic["members"])
+    destination = topic_destination(topic, prefix)
+    link_label = "View sermon →" if count == 1 else "View topic →"
     return f'''<article class="topic-card" data-topic="{e(topic['id'])}">
   {plate(anchor, "topic-plate", eager)}
   <div class="topic-copy">
-    <h{heading} class="topic-title">{link(prefix + 'topics/' + topic['id'] + '.html', topic['name'])}</h{heading}>
-    <p class="topic-meta">{e(topic['scripture_spine'])} · {count} {"outline" if count == 1 else "outlines"} · {e(topic_period(topic, by_slug))}</p>
+    <h{heading} class="topic-title">{link(destination, topic['name'])}</h{heading}>
+    <p class="topic-meta">{e(topic['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(topic_period(topic, by_slug))}</p>
     <p class="topic-description">{e(topic['description'])}</p>
-    <p class="topic-link">{link(prefix + 'topics/' + topic['id'] + '.html', 'View the topic →')}</p>
+    <p class="topic-link">{link(destination, link_label)}</p>
   </div>
 </article>'''
 
 
-def home(records, topics, scripts):
-    header = '<p class="kicker">Independent study resource</p><h1>Crossroads<br>Sermon Outlines</h1><p class="lede">Faithful chronological outlines for reviewing sermons after listening—complete with timestamps, teaching structure, and every confirmed Scripture reference.</p>'
+def topic_listing(records, topics, prefix=""):
     by_slug = {record["slug"]: record for record in records}
-    topic_cards = "\n".join(topic_card(topic, by_slug, heading=3) for topic in topics)
-    body = f'''<section aria-labelledby="published-heading"><div class="section-heading"><h2 id="published-heading">Sermon outlines</h2>{link('archive.html', 'Browse the timeline →')}</div>{sermon_grid(records[:LATEST], topics)}</section>
-<section class="home-topics" aria-labelledby="topics-heading"><div class="section-heading"><h2 id="topics-heading">Topics</h2>{link('topics.html', 'All topics →')}</div><div class="topic-grid">{topic_cards}</div></section>
-<ul class="features" aria-label="What each outline contains">
-<li><strong>In order</strong>The message follows the speaker’s actual sequence.</li>
-<li><strong>Timestamped</strong>Every major movement links to the original sermon.</li>
-<li><strong>Scripture-audited</strong>Confirmed passages include context, treatment, source time, and a BibleGateway link.</li></ul>'''
-    return layout("Crossroads Sermon Outlines", "Faithful chronological sermon outlines, timestamps, and Scripture references from Crossroads Church.", "", header, body, scripts, current="index.html")
+    return '<div class="topic-list">' + "\n".join(
+        topic_card(topic, by_slug, prefix, eager=index < 2) for index, topic in enumerate(topics)
+    ) + "</div>"
+
+
+def home(records, topics, scripts):
+    header = '<p class="kicker">Topics</p><h1>Crossroads Sermons</h1><p class="lede">Browse sermons by topic, or use the Timeline to find a message by date.</p>'
+    body = f'<section aria-labelledby="topics-heading"><h2 id="topics-heading" class="visually-hidden">Sermon topics</h2>{topic_listing(records, topics)}</section>'
+    return layout("Crossroads Sermons", "Browse Crossroads sermons by topic, date, speaker, or Scripture reference.", "", header, body, scripts, current="index.html")
 
 
 def archive(records, scripts):
@@ -181,10 +187,11 @@ def archive(records, scripts):
                 months.append(link(f"archive/{year}.html#{year}-{month:02d}", MONTH_ABBREVIATIONS[month], f' aria-label="{MONTHS[month]} {e(year)}"'))
             else:
                 months.append(f'<span aria-hidden="true">{MONTH_ABBREVIATIONS[month]}</span>')
-        month_strip = f'<nav class="month-strip" aria-label="Months with outlines in {e(year)}">{"".join(months)}</nav>'
-        entries.append(f'<li><p class="year-head">{link("archive/" + year + ".html", year, " class=\"year-link\"")}<span>{len(items)} outlines</span></p>{month_strip}</li>')
+        month_strip = f'<nav class="month-strip" aria-label="Months with sermons in {e(year)}">{"".join(months)}</nav>'
+        year_link = link("archive/" + year + ".html", year, ' class="year-link"')
+        entries.append(f'<li><p class="year-head">{year_link}<span>{len(items)} sermons</span></p>{month_strip}</li>')
     body = '<ul class="year-list">' + "".join(entries) + "</ul>"
-    return layout("Timeline | Crossroads Sermon Outlines", "Browse sermon outlines by year and month.", "", '<p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find the message you heard.</p>', body, scripts, current="archive.html")
+    return layout("Timeline | Crossroads Sermons", "Browse Crossroads sermons by year and month.", "", '<p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find a message.</p>', body, scripts, current="archive.html")
 
 
 def year_archive(year, records, topics, scripts):
@@ -198,19 +205,13 @@ def year_archive(year, records, topics, scripts):
         eager_count = max(0, min(2 - seen, len(items)))
         body += f'<section class="month-section" id="{e(month)}" aria-labelledby="month-{e(month)}"><h2 id="month-{e(month)}">{MONTHS[int(month[-2:])]} {e(year)}</h2>{sermon_grid(items, topics, "../", eager_count=eager_count)}</section>'
         seen += len(items)
-    return layout(f"{year} Timeline | Crossroads Sermon Outlines", f"All {year} sermon outlines, grouped by month, newest first.", "../", f'<p class="kicker">{link("../archive.html", "Timeline")}</p><h1>{e(year)} outlines</h1><p class="lede">{len(records)} messages for listening, review, and Bible study.</p>', body, scripts, current="archive.html")
+    header = f'<p class="kicker">{link("../archive.html", "Timeline")}</p><h1>{e(year)} sermons</h1><p class="lede">{len(records)} messages, newest first.</p>'
+    return layout(f"{year} Timeline | Crossroads Sermons", f"Crossroads sermons published in {year}, grouped by month.", "../", header, body, scripts, current="archive.html")
 
 
 def topic_index(records, topics, scripts):
-    by_slug = {record["slug"]: record for record in records}
-    grouped = {member["slug"] for topic in topics for member in topic["members"]}
-    standalone = [record for record in records if record["slug"] not in grouped]
-    topic_entries = "\n".join(topic_card(topic, by_slug, eager=index < 2) for index, topic in enumerate(topics))
-    body = f'<div class="topic-list">{topic_entries}</div>'
-    if standalone:
-        body += f'<section class="standalone" aria-labelledby="standalone-heading"><h2 id="standalone-heading">Standalone messages</h2>{sermon_grid(standalone, topics, eager_count=max(0, 2 - len(topics)))}</section>'
-    header = '<p class="kicker">Topics</p><h1>Sermon topics</h1><p class="lede">Follow a sermon series in teaching order, or browse messages that stand on their own.</p>'
-    return layout("Topics | Crossroads Sermon Outlines", "Browse sermon outlines by topic and study grouping.", "", header, body, scripts, current="topics.html")
+    header = '<p class="kicker">Topics</p><h1>Sermon topics</h1><p class="lede">Browse series and standalone messages.</p>'
+    return layout("Topics | Crossroads Sermons", "Browse Crossroads sermons by topic.", "", header, topic_listing(records, topics), scripts, current="index.html")
 
 
 def topic_page(topic, by_slug, topics, scripts):
@@ -218,15 +219,26 @@ def topic_page(topic, by_slug, topics, scripts):
     anchor = topic_anchor(topic, by_slug)
     count = len(members)
     header = f'''<div data-topic="{e(topic['id'])}">
-<p class="kicker">{link("../topics.html", "Topics")}</p>
+<p class="kicker">{link("../index.html", "Topics")}</p>
 {plate(anchor, "topic-lead", True)}
 <h1>{e(topic['name'])}</h1>
-<p class="subtitle">{e(topic['scripture_spine'])} · {count} {"outline" if count == 1 else "outlines"} · {e(topic_period(topic, by_slug))}</p>
+<p class="subtitle">{e(topic['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(topic_period(topic, by_slug))}</p>
 <p class="lede">{e(topic['description'])}</p>
-<p class="topic-note"><strong>About this topic:</strong> {e(topic['note'])}</p>
 </div>'''
-    body = f'<section aria-labelledby="topic-messages-heading"><h2 id="topic-messages-heading">Messages in this topic</h2>{sermon_grid(members, topics, "../", current_topic=topic["id"])}</section>'
-    return layout(f"{topic['name']} | Crossroads Sermon Outlines", topic["description"], "../", header, body, scripts, current="topics.html")
+    body = f'<section aria-labelledby="topic-messages-heading"><h2 id="topic-messages-heading">Sermons in this topic</h2>{sermon_grid(members, topics, "../", current_topic=topic["id"])}</section>'
+    return layout(f"{topic['name']} | Crossroads Sermons", topic["description"], "../", header, body, scripts, current="index.html")
+
+
+def search(scripts, search_script):
+    header = '<p class="kicker">Search</p><h1>Search sermons</h1><p class="lede">Search titles, speakers, topics, Overview text, and Scripture references.</p>'
+    body = '''<section class="search-page" aria-labelledby="search-results-heading">
+<h2 id="search-results-heading">Results</h2>
+<p class="search-help">Try a title, speaker, phrase, or reference such as “Psalm 51:10” or “Hebrews 12.”</p>
+<noscript><p class="search-status">Search requires JavaScript. Browse by topic or use the Timeline instead.</p></noscript>
+<p id="search-status" class="search-status" role="status" aria-live="polite">Enter a search above.</p>
+<ol id="search-results" class="search-results" aria-label="Search results"></ol>
+</section>'''
+    return layout("Search | Crossroads Sermons", "Search Crossroads sermons, Overview text, and Scripture references.", "", header, body, scripts, extra_script=f"<script>{search_script}</script>")
 
 
 def neighbors(record, previous, following):
@@ -260,19 +272,26 @@ def sermon(record, previous, following, scripts, topics=()):
         values = [e(row['treatment'].capitalize()), watch(record, row['time']), f'<q>{e(row["phrase"])}</q>', link('#' + row['anchor_node_id'], nodes[row['anchor_node_id']]['heading']), watch(record, row['time'], False), link(url, row['version'])]
         cells = "".join(f'<td role="cell" data-label="{label}">{value}</td>' for label, value in zip(LABELS[1:], values))
         ledger.append(f'<tr role="row" id="ledger-{e(row["id"])}" data-scripture-id="{e(row["id"])}"><th role="rowheader" scope="row" data-label="Reference">{link(url, row["reference"])}{note}</th>{cells}</tr>')
-    metadata = [("Speaker", e(record['speaker'])), ("Published", time_element(record['published'])), ("Duration", e(record['duration'])), ("Source", link(record['video_url'], 'YouTube sermon video')), ("Transcript source", e(record['caption_source'])), ("Verified", time_element(record['verified']))]
+
+    metadata = [
+        ("Speaker", e(record['speaker'])),
+        ("Published", time_element(record['published'])),
+        ("Duration", e(record['duration'])),
+        ("Watch", link(record['video_url'], 'YouTube sermon')),
+    ]
     topic_info = topic_membership(topics).get(record["slug"])
+    topic_name = "Sermon"
     if topic_info:
         topic, part, total = topic_info
+        topic_name = topic["name"]
         topic_value = link("../topics/" + topic["id"] + ".html", topic["name"]) + f" · Part {part} of {total}"
         metadata.append(("Topic", topic_value))
-    header = f'<p class="kicker">{e(record["kicker"])}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
-    body = f'''<aside class="notice" aria-label="Independent study disclaimer"><p>{e(record['disclaimer'])}</p></aside>
-<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Chronological outline')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
-<figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>{rich(record['figcaption'], record)}</figcaption></figure>
-<section aria-labelledby="outline-heading"><h2 id="outline-heading">{e(record['outline_heading'])}</h2><p class="section-intro">{e(record['section_intro'])}</p>{outline(record['movements'])}</section>
-<section id="scripture-ledger" class="scripture-ledger" aria-labelledby="ledger-heading"><h2 id="ledger-heading">{e(record['ledger_heading'])}</h2><p class="ledger-intro">{e(record['ledger_intro'])}</p>
-<div class="table-wrap"><table role="table" aria-label="Scripture ledger"><caption>{e(record['ledger_caption'])}</caption><thead role="rowgroup"><tr role="row">{''.join(f'<th scope="col" role="columnheader">{label}</th>' for label in LABELS)}</tr></thead><tbody role="rowgroup">{''.join(ledger)}</tbody></table></div></section>
+    header = f'<p class="kicker">{e(topic_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
+    body = f'''<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Overview')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
+<figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>{link(record['video_url'], 'Watch on YouTube')}</figcaption></figure>
+<section aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>
+<section id="scripture-ledger" class="scripture-ledger" aria-labelledby="ledger-heading"><h2 id="ledger-heading">Scripture ledger</h2>
+<div class="table-wrap"><table role="table" aria-label="Scripture ledger"><caption>Scripture references in sermon order</caption><thead role="rowgroup"><tr role="row">{''.join(f'<th scope="col" role="columnheader">{label}</th>' for label in LABELS)}</tr></thead><tbody role="rowgroup">{''.join(ledger)}</tbody></table></div></section>
 {neighbors(record, previous, following)}'''
-    footer = "".join(f'<p>{rich(p, record)}</p>' for p in record['footer_paragraphs'])
-    return layout(record['page_title'], record['description'], "../", header, body, scripts, footer)
+    description = f"{record['title']} by {record['speaker']}, with a timestamped Overview and Scripture references."
+    return layout(f"{record['title']} | Crossroads Sermons", description, "../", header, body, scripts)

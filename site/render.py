@@ -2,15 +2,17 @@
 """Deterministic branch-root build. Reads content/site; writes only public output."""
 
 import argparse
+import json
 from pathlib import Path
 import re
 import sys
 
-from schema import SLUG, TOPIC_ID, loads, loads_topic, validate_topics
+from schema import SLUG, TOPIC_ID, flatten, loads, loads_topic, validate_topics
 import templates
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = re.compile(rf"(?:index\.html|archive\.html|archive/\d{{4}}\.html|topics\.html|topics/{TOPIC_ID}\.html|sermons/{SLUG}\.html|assets/site\.css)")
+PUBLIC = re.compile(rf"(?:index\.html|search\.html|search-index\.json|archive\.html|archive/\d{{4}}\.html|topics\.html|topics/{TOPIC_ID}\.html|sermons/{SLUG}\.html|assets/site\.css)")
+PUBLIC_PATTERNS = ("index.html", "search.html", "search-index.json", "archive.html", "archive/*.html", "topics.html", "topics/*.html", "sermons/*.html", "assets/site.css")
 
 
 def read_source(root, relative):
@@ -51,13 +53,59 @@ def topics(root=ROOT, sermon_records=None):
     )
 
 
+def search_index(sermon_records, topic_records):
+    """Index only meaningful reader-visible sermon content with stable anchors."""
+    membership = templates.topic_membership(topic_records)
+    documents = []
+    for record in sermon_records:
+        topic, _, _ = membership[record["slug"]]
+        common = [record["title"], record["speaker"], record["published"], templates.date_label(record["published"]), topic["name"]]
+        sermon_url = f"sermons/{record['slug']}.html"
+        context = f"{record['speaker']} · {templates.date_label(record['published'])} · {topic['name']}"
+        documents.append({
+            "kind": "sermon",
+            "title": record["title"],
+            "context": context,
+            "excerpt": f"{topic['name']} · {record['speaker']} · {templates.date_label(record['published'])}",
+            "url": sermon_url,
+            "terms": "\n".join(common),
+        })
+        nodes = {node["id"]: node for node in flatten(record["movements"])}
+        for node in nodes.values():
+            documents.append({
+                "kind": "overview",
+                "title": f"{node['heading']} — {record['title']}",
+                "context": context,
+                "excerpt": node["bullets"][0],
+                "excerpts": node["bullets"],
+                "url": sermon_url + "#" + node["id"],
+                "terms": "\n".join(common + [node["heading"], *node["bullets"]]),
+            })
+        for row in record["ledger"]:
+            node = nodes[row["anchor_node_id"]]
+            documents.append({
+                "kind": "scripture",
+                "title": f"{row['reference']} — {record['title']}",
+                "context": f"Scripture ledger · {node['heading']} · {context}",
+                "excerpt": row["phrase"],
+                "reference": row["reference"],
+                "url": sermon_url + "#ledger-" + row["id"],
+                "terms": "\n".join(common + [row["reference"], row["phrase"], row["treatment"], node["heading"]]),
+            })
+    return {"version": 1, "documents": documents}
+
+
 def build(root=ROOT):
     """Pure output plan: no public files read, created, or modified."""
     data = records(root)
     topic_data = topics(root, data)
     scripts = tuple(read_source(root, "site/assets/" + name) for name in ("theme-init.js", "theme.js"))
+    search_script = read_source(root, "site/assets/search.js")
+    index_bytes = (json.dumps(search_index(data, topic_data), ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
     output = {
         "index.html": templates.home(data, topic_data, scripts),
+        "search.html": templates.search(scripts, search_script),
+        "search-index.json": index_bytes,
         "archive.html": templates.archive(data, scripts),
         "topics.html": templates.topic_index(data, topic_data, scripts),
         "assets/site.css": read_source(root, "site/assets/site.css"),
@@ -71,7 +119,7 @@ def build(root=ROOT):
         previous = data[i + 1] if i + 1 < len(data) else None
         following = data[i - 1] if i else None
         output[f"sermons/{record['slug']}.html"] = templates.sermon(record, previous, following, scripts, topic_data)
-    return {path: value.encode('utf-8') for path, value in sorted(output.items())}
+    return {path: value.encode('utf-8') if isinstance(value, str) else value for path, value in sorted(output.items())}
 
 
 def public_path(root, relative):
@@ -82,7 +130,7 @@ def public_path(root, relative):
 
 
 def existing_public(root):
-    return {path.relative_to(root).as_posix() for pattern in ("index.html", "archive.html", "archive/*.html", "topics.html", "topics/*.html", "sermons/*.html", "assets/site.css") for path in root.glob(pattern)}
+    return {path.relative_to(root).as_posix() for pattern in PUBLIC_PATTERNS for path in root.glob(pattern)}
 
 
 def check(root, output):

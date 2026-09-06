@@ -90,6 +90,7 @@ def rgb(value):
 
 @pytest.mark.parametrize('name,path', [
     ('home', 'index.html'),
+    ('search', 'search.html'),
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
     ('topics', 'topics.html'),
@@ -141,6 +142,7 @@ def test_equivalent_target_and_print_layout():
 @pytest.mark.parametrize('width', [375, 414])
 @pytest.mark.parametrize('path', [
     'index.html',
+    'search.html',
     'archive.html',
     'archive/2026.html',
     'topics.html',

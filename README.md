@@ -1,4 +1,4 @@
-# Crossroads Sermon Outlines
+# Crossroads Sermons
 
 A small public library of faithful chronological sermon outlines for review and Bible study after listening.
 
@@ -15,9 +15,9 @@ A small public library of faithful chronological sermon outlines for review and 
 
 A sermon page is published only when the source video has a complete usable English YouTube caption track. The captions are checked for full-sermon coverage, then used to build and audit the outline. If captions are missing or incomplete, publication stops rather than silently substituting a machine transcription.
 
-Sermon content lives in validated JSON records. Explicit topic metadata lives separately in `content/topics/*.json`; membership and teaching order are authored there, never inferred from dates, titles, or generated tags. A deterministic Python renderer produces the homepage, Timeline, Topics, sermon pages, and shared stylesheet. GitHub Pages continues to serve the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
+Sermon content lives in validated JSON records. Explicit primary-topic metadata lives separately in `content/topics/*.json`; every sermon must be assigned exactly once. Topic or series alignment is recorded from spoken captions, YouTube title/description, thumbnail artwork, or Jeremy’s direction—never inferred from theology or generated tags. A sermon without a confirmed series receives a one-member standalone topic. A deterministic Python renderer produces the homepage, Timeline, topic and sermon pages, static search index, and shared stylesheet. GitHub Pages serves the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
 
-The homepage shows the latest six outlines plus current topics. The [Timeline](archive.html) links to years and active months, and [2026](archive/2026.html) groups every current outline by month. [Topics](topics.html) groups sermon series in explicit study order and provides a standalone-message bucket for records with no topic. Each sermon links to its topic when assigned, its previous and next chronological message, and its month. Light/dark follows the system by default; the accessible toggle saves a local preference, and “Use system theme” clears it. Pages remain readable without JavaScript, and printing always uses the light palette.
+The homepage is the topic index, sorted by each topic’s newest sermon. Multi-sermon topics open one ordered topic page; one-sermon topics link directly to the sermon while their valid topic pages remain generated. The [Timeline](archive.html) links to years and active months, and [2026](archive/2026.html) groups every current sermon by month. A persistent search form opens [static search](search.html) over titles, speakers, dates, topic names, all Overview headings and bullets, Scripture references, and ledger phrases. Results deep-link to the exact Overview node or Scripture-ledger row when available. Browsing works without JavaScript; only search requires it. Light/dark follows the system by default, the accessible toggle saves a local preference, and printing uses the light palette.
 
 ## Published outlines
 
@@ -34,7 +34,7 @@ The homepage shows the latest six outlines plus current topics. The [Timeline](a
 ## Repository layout
 
 ```text
-SKILL.md                       content acquisition and outline workflow only
+SKILL.md                       content acquisition, outline, and primary-topic workflow
 content/sermons/YYYY/*.json     canonical sermon records
 content/topics/*.json           explicit topic membership and ordering
 site/content.py                content writer (JSON on stdin)
@@ -44,8 +44,11 @@ site/render.py                 deterministic renderer and --check
 site/templates.py              escaped HTML templates
 site/assets/site.css           stylesheet source of truth
 site/assets/theme*.js          scripts inlined by the renderer
+site/assets/search.js          safe static-search script inlined on search.html
 site/publish.py                publication of already-committed main
-index.html                     generated latest 6 and topic overview
+index.html                     generated topics-only homepage
+search.html                    generated static search interface
+search-index.json              generated deterministic full-text/Scripture index
 archive.html                   generated Timeline year/month directory
 archive/YYYY.html              generated Timeline month groups
 topics.html                    generated Topics directory
@@ -55,7 +58,7 @@ assets/site.css                generated verbatim stylesheet copy
 tests/                         schema, parity, links, phases, rendering, live checks
 ```
 
-`SKILL.md` governs only source acquisition, caption and transcript verification, chronological overview and outline creation, Scripture-ledger audit, and validated canonical sermon records. Site construction—including templates, styling, navigation, topic metadata, rendering, and publication—is controlled separately. The root file remains the single public skill; the parent syncs it to the active Hermes skill after review. Reader-facing pages contain no AI labels.
+`SKILL.md` governs source acquisition, caption verification, chronological Overview creation, Scripture-ledger audit, validated canonical sermon records, and evidence-backed primary-topic assignment. It may write sermon and topic JSON, but it does not change templates, styling, navigation, rendering, or publication. The root file remains the single public skill; the parent syncs it to the active Hermes skill after review.
 
 ## Build and verification
 
@@ -69,7 +72,7 @@ make verify
 make browser
 ```
 
-`make verify` runs the complete default suite (including in-process rendered-page checks), migration parity, deterministic `--check`, and `git diff --check`. Tests disable unrelated pytest plugins and put temporary evidence under ignored `.test-artifacts/`. The additional `make browser` gate exercises real Chromium at 1280px and 375px, both palettes, no-JS navigation, stored theme restoration, keyboard focus, print, and responsive ledger anchors. It requires local sockets; it cannot run inside a sandbox that forbids Chromium IPC and loopback HTTP. The in-process checks resolve media conditions, render the actual HTML/CSS with WeasyPrint, and execute the actual scripts with Node. They do not replace a browser accessibility-tree audit.
+`make verify` runs the complete default suite (including in-process rendered-page checks), migration parity, deterministic `--check`, and `git diff --check`. Tests disable unrelated pytest plugins and put temporary evidence under ignored `.test-artifacts/`. The additional `make browser` gate exercises real Chromium at 1280px and 375px, both palettes, no-JS navigation, static search and direct anchors, stored theme restoration, keyboard focus, print, and responsive ledger/search layouts. It requires local sockets and Chromium IPC. The in-process checks resolve media conditions, render the actual HTML/CSS with WeasyPrint, and execute the theme scripts with Node.
 
 For one content record, validate or write through the content boundary:
 
@@ -102,8 +105,9 @@ The immutable source contains **488 nodes, 482 ledger rows, and 964 BibleGateway
 
 | Phase | Reads | Writes |
 | --- | --- | --- |
-| Content | Caption evidence, approved records | Only `content/sermons/YYYY/*.json` through `site/content.py` |
-| Site structure | Approved topic metadata and site sources | `content/topics/*.json` and `site/` |
+| Content | Caption evidence, approved sermon records | `content/sermons/YYYY/*.json` through `site/content.py` |
+| Topic alignment | Spoken/channel/artwork/Jeremy evidence | `content/topics/*.json` |
+| Site structure | Approved content and site sources | `site/` |
 | Render | Only `content/` and `site/` | Only generated HTML and `assets/site.css` |
 | Publish | Committed files, Git, live HTTP | Git publication refs; no edits to content or pages |
 
@@ -124,4 +128,4 @@ Deployment stays branch-root from `main`; no Pages reconfiguration or Actions bu
 
 ## Boundaries
 
-This repository does not publish full transcripts, video/audio copies, or full copyrighted Bible text. It does not add generated study questions, outside doctrinal commentary, or uncertain Scripture allusions. Each page links to the original sermon and labels itself as an unofficial independent study resource.
+This repository does not publish full transcripts, video/audio copies, or full copyrighted Bible text. It does not add generated study questions, outside doctrinal commentary, uncertain Scripture allusions, or topic tags inferred from theology. Each sermon page retains the embedded video, direct Watch link, timestamped Overview, and Scripture ledger.

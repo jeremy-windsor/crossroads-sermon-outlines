@@ -108,7 +108,8 @@ def test_all_topics_validate_with_explicit_membership():
 
 @pytest.mark.parametrize('field,value', [
     ('id', 'Not A Slug'),
-    ('name_source', 'model_inferred'),
+    ('type', 'collection'),
+    ('provenance', []),
     ('members', []),
     ('anchor', '2026-01-01-missing'),
     ('description', '<b>markup</b>'),
@@ -140,3 +141,23 @@ def test_topic_rejects_duplicate_member_and_duplicate_id(topic):
     second['id'] = first['id']
     with pytest.raises(InvalidRecord, match='Duplicate topic ID'):
         validate_topics([first, second], render.records())
+
+
+def test_topics_require_every_sermon_exactly_once():
+    topics = deepcopy(render.topics())
+    missing = topics[0]['members'].pop()['slug']
+    with pytest.raises(InvalidRecord, match='exactly one primary topic.*' + missing):
+        validate_topics(topics, render.records())
+
+
+def test_topic_provenance_and_standalone_shape_are_closed(topic):
+    topic['provenance'][0]['source'] = 'theological_inference'
+    with pytest.raises(InvalidRecord, match='provenance source'):
+        validate_topic(topic)
+    topic = deepcopy(render.topics()[0])
+    topic['type'] = 'standalone'
+    with pytest.raises(InvalidRecord, match='exactly one sermon'):
+        validate_topic(topic)
+    topic['members'] = topic['members'][:1]
+    topic['anchor'] = None
+    validate_topic(topic)

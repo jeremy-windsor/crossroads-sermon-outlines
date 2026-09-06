@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="All 2026 sermon outlines, grouped by month, newest first.">
+  <meta name="description" content="Crossroads sermons published in 2026, grouped by month.">
   <meta name="color-scheme" content="light dark">
-  <title>2026 Timeline | Crossroads Sermon Outlines</title>
+  <title>2026 Timeline | Crossroads Sermons</title>
   <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
 try {
   const savedTheme = localStorage.getItem('crossroads-theme');
@@ -19,11 +19,16 @@ try {
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
-    <a href="../index.html" class="site-name">Crossroads / Sermon Outlines</a>
-    <div class="nav-links"><a href="../index.html">Home</a> <a href="../topics.html">Topics</a> <a href="../archive.html" aria-current="page">Timeline</a></div>
+    <a href="../index.html" class="site-name">Crossroads Sermons</a>
+    <div class="nav-links"><a href="../index.html">Topics</a> <a href="../archive.html" aria-current="page">Timeline</a></div>
+    <form class="site-search" role="search" action="../search.html" method="get">
+      <label class="visually-hidden" for="site-search-query">Search sermons</label>
+      <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
+      <button type="submit">Search</button>
+    </form>
     <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
   </nav>
-  <header><p class="kicker"><a href="../archive.html">Timeline</a></p><h1>2026 outlines</h1><p class="lede">9 messages for listening, review, and Bible study.</p></header>
+  <header><p class="kicker"><a href="../archive.html">Timeline</a></p><h1>2026 sermons</h1><p class="lede">9 messages, newest first.</p></header>
   <main id="main-content" tabindex="-1"><nav class="month-nav" aria-label="Months in 2026"><a href="#2026-08">August</a> <a href="#2026-07">July</a></nav><section class="month-section" id="2026-08" aria-labelledby="month-2026-08"><h2 id="month-2026-08">August 2026</h2><div class="sermon-grid"><article class="sermon-card" data-sermon="2026-08-31-crushed-joy" data-topic="renew-me">
   <div class="card-plate"><img src="https://i.ytimg.com/vi/wI99rPQIKyY/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
   <p class="card-topic"><a href="../topics/renew-me.html">Renew Me</a> · 5 of 5</p>
@@ -86,7 +91,7 @@ try {
   <p class="card-meta"><time datetime="2026-07-06">July 6, 2026</time> <span aria-hidden="true">·</span> <span>Elijah Stanley</span> <span aria-hidden="true">·</span> <span>45:20</span></p>
   <p class="card-watch"><a href="https://www.youtube.com/watch?v=HS0wXY7CEDo" aria-label="Watch Worship in the Waiting on YouTube">Watch <span aria-hidden="true">↗</span></a></p>
 </article></div></section></main>
-  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a> <a href="https://github.com/jeremy-windsor/crossroads-sermon-outlines">Source repository</a></nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p></footer>
+  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a></nav></footer>
   <script>(() => {
   const root = document.documentElement;
   const toggle = document.querySelector('.theme-toggle');

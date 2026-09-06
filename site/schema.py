@@ -12,9 +12,11 @@ NODE_ID = r"[A-Za-z0-9][A-Za-z0-9_.-]*"
 RECORD_KEYS = set("schema_version slug title speaker published duration duration_seconds video_id video_url caption_source verified sermon_start sermon_end card_summary section_intro page_title description subtitle kicker disclaimer figcaption footer_paragraphs outline_heading ledger_heading ledger_intro ledger_caption movements ledger".split())
 NODE_KEYS = set("id start heading scripture_mentions bullets children".split())
 ROW_KEYS = set("id reference reference_query treatment time phrase anchor_node_id version version_source reference_note".split())
-TOPIC_KEYS = set("id name name_source scripture_spine description note anchor members".split())
+TOPIC_KEYS = set("id name type provenance scripture_spine description note anchor members".split())
 TOPIC_MEMBER_KEYS = {"slug", "scripture"}
-TOPIC_NAME_SOURCES = {"church_stated", "published_title", "artwork"}
+TOPIC_PROVENANCE_KEYS = {"source", "detail"}
+TOPIC_TYPES = {"series", "standalone"}
+TOPIC_SOURCES = {"spoken_intro", "captions", "youtube_title", "youtube_description", "thumbnail_artwork", "jeremy_direction"}
 RESERVED_IDS = {"main-content", "outline-heading", "scripture-ledger", "ledger-heading", "page-title"}
 
 
@@ -152,10 +154,15 @@ def validate(record):
 def validate_topic(topic):
     require(isinstance(topic, dict) and set(topic) == TOPIC_KEYS, "Unexpected or missing topic fields")
     plain_values(topic)
-    for key in ("id", "name", "name_source", "scripture_spine", "description", "note"):
+    for key in ("id", "name", "type", "scripture_spine", "description", "note"):
         text(topic[key], key)
     require(bool(re.fullmatch(TOPIC_ID, topic["id"])), "Invalid topic ID")
-    require(topic["name_source"] in TOPIC_NAME_SOURCES, "Unsupported topic name provenance")
+    require(topic["type"] in TOPIC_TYPES, "Unsupported topic type")
+    require(isinstance(topic["provenance"], list) and bool(topic["provenance"]), "Topic provenance is required")
+    for evidence in topic["provenance"]:
+        require(isinstance(evidence, dict) and set(evidence) == TOPIC_PROVENANCE_KEYS, "Unexpected or missing topic provenance fields")
+        require(evidence["source"] in TOPIC_SOURCES, "Unsupported topic provenance source")
+        text(evidence["detail"], "topic provenance detail")
     require(isinstance(topic["members"], list) and bool(topic["members"]), "Topic must have members")
     member_slugs = []
     for member in topic["members"]:
@@ -167,6 +174,7 @@ def validate_topic(topic):
         member_slugs.append(member["slug"])
     require(topic["anchor"] is None or isinstance(topic["anchor"], str), "Invalid topic anchor")
     require(topic["anchor"] is None or topic["anchor"] in member_slugs, "Topic anchor must be a member")
+    require(topic["type"] != "standalone" or len(member_slugs) == 1, "Standalone topic must have exactly one sermon")
     return topic
 
 
@@ -185,6 +193,8 @@ def validate_topics(topics, records):
             require(slug in record_slugs, "Dangling topic member slug")
             require(slug not in membership, "Sermon belongs to more than one topic")
             membership.add(slug)
+    missing = record_slugs - membership
+    require(not missing, "Every sermon must belong to exactly one primary topic; missing: " + ", ".join(sorted(missing)))
     return topics
 
 
