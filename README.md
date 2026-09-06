@@ -15,9 +15,9 @@ A small public library of faithful chronological sermon outlines for review and 
 
 A sermon page is published only when the source video has a complete usable English YouTube caption track. The captions are checked for full-sermon coverage, then used to build and audit the outline. If captions are missing or incomplete, publication stops rather than silently substituting a machine transcription.
 
-Sermon content lives in validated JSON records. A deterministic Python renderer produces the homepage, archives, sermon pages, and shared stylesheet. GitHub Pages continues to serve the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
+Sermon content lives in validated JSON records. Explicit topic metadata lives separately in `content/topics/*.json`; membership and teaching order are authored there, never inferred from dates, titles, or generated tags. A deterministic Python renderer produces the homepage, Timeline, Topics, sermon pages, and shared stylesheet. GitHub Pages continues to serve the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
 
-The homepage shows the latest eight outlines. The [archive](archive.html) links to years, and [2026](archive/2026.html) groups every current outline by month. Each sermon links to its previous and next message and back to its month. Light/dark follows the system by default; the accessible toggle saves a local preference, and “Use system theme” clears it. Pages remain readable without JavaScript, and printing always uses the light palette.
+The homepage shows the latest six outlines plus current topics. The [Timeline](archive.html) links to years and active months, and [2026](archive/2026.html) groups every current outline by month. [Topics](topics.html) groups sermon series in explicit study order and provides a standalone-message bucket for records with no topic. Each sermon links to its topic when assigned, its previous and next chronological message, and its month. Light/dark follows the system by default; the accessible toggle saves a local preference, and “Use system theme” clears it. Pages remain readable without JavaScript, and printing always uses the light palette.
 
 ## Published outlines
 
@@ -34,8 +34,9 @@ The homepage shows the latest eight outlines. The [archive](archive.html) links 
 ## Repository layout
 
 ```text
-SKILL.md                       public workflow documentation
+SKILL.md                       content acquisition and outline workflow only
 content/sermons/YYYY/*.json     canonical sermon records
+content/topics/*.json           explicit topic membership and ordering
 site/content.py                content writer (JSON on stdin)
 site/schema.py                 executable record schema
 site/migrate.py                immutable baseline extraction
@@ -44,15 +45,17 @@ site/templates.py              escaped HTML templates
 site/assets/site.css           stylesheet source of truth
 site/assets/theme*.js          scripts inlined by the renderer
 site/publish.py                publication of already-committed main
-index.html                     generated latest 8
-archive.html                   generated year directory
-archive/YYYY.html              generated month groups
+index.html                     generated latest 6 and topic overview
+archive.html                   generated Timeline year/month directory
+archive/YYYY.html              generated Timeline month groups
+topics.html                    generated Topics directory
+topics/topic-id.html           generated topic detail and ordered messages
 sermons/YYYY-MM-DD-slug.html    generated; existing URLs/IDs preserved
 assets/site.css                generated verbatim stylesheet copy
 tests/                         schema, parity, links, phases, rendering, live checks
 ```
 
-`SKILL.md` documents the repeatable agent workflow used to produce and verify the pages. It is the single public skill; the parent syncs it to the active Hermes skill after review. Workflow documentation remains public. Reader-facing pages contain no AI labels.
+`SKILL.md` governs only source acquisition, caption and transcript verification, chronological overview and outline creation, Scripture-ledger audit, and validated canonical sermon records. Site construction—including templates, styling, navigation, topic metadata, rendering, and publication—is controlled separately. The root file remains the single public skill; the parent syncs it to the active Hermes skill after review. Reader-facing pages contain no AI labels.
 
 ## Build and verification
 
@@ -100,6 +103,7 @@ The immutable source contains **488 nodes, 482 ledger rows, and 964 BibleGateway
 | Phase | Reads | Writes |
 | --- | --- | --- |
 | Content | Caption evidence, approved records | Only `content/sermons/YYYY/*.json` through `site/content.py` |
+| Site structure | Approved topic metadata and site sources | `content/topics/*.json` and `site/` |
 | Render | Only `content/` and `site/` | Only generated HTML and `assets/site.css` |
 | Publish | Committed files, Git, live HTTP | Git publication refs; no edits to content or pages |
 

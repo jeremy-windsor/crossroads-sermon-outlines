@@ -5,6 +5,7 @@ test viewport. Node executes the unchanged theme scripts against a small DOM/sto
 harness. Chromium's accessibility tree and first paint remain a separate browser gate.
 """
 
+import base64
 import json
 import logging
 from pathlib import Path
@@ -16,10 +17,20 @@ import fitz
 import pytest
 import tinycss2
 from weasyprint import CSS, HTML
+from weasyprint.urls import URLFetcherResponse
 
 import render
 
 logging.getLogger('weasyprint').setLevel(logging.ERROR)
+
+TRANSPARENT_PNG = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M/wHwAF/gL+Xf8WAAAAAElFTkSuQmCC')
+
+
+def offline_fetcher(url):
+    """Keep external artwork from introducing sockets into rendered checks."""
+    if url.startswith('https://i.ytimg.com/vi/') and url.endswith('/maxresdefault.jpg'):
+        return URLFetcherResponse(url, body=TRANSPARENT_PNG, headers={'Content-Type': 'image/png'})
+    raise AssertionError(f'Unexpected external fetch: {url}')
 
 
 def resolved_css(width, theme, medium='screen'):
@@ -62,7 +73,7 @@ def rendered(path, width, theme, medium='screen', target=None, font_scale=1):
         soup.find(id=target)['data-render-target'] = ''
         css = css.replace(':target', '[data-render-target]')
     css += f'\n@page {{size: {width}px 6000px; margin: 0;}}'
-    return HTML(string=str(soup), media_type=medium).render(stylesheets=[CSS(string=css)])
+    return HTML(string=str(soup), media_type=medium, url_fetcher=offline_fetcher).render(stylesheets=[CSS(string=css)])
 
 
 def boxes(document, selector):
@@ -77,7 +88,14 @@ def rgb(value):
     return tuple(round(c * 255) for c in value.coordinates[:3])
 
 
-@pytest.mark.parametrize('name,path', [('home', 'index.html'), ('archive', 'archive/2026.html'), ('sermon', 'sermons/2026-08-16-inside-out.html')])
+@pytest.mark.parametrize('name,path', [
+    ('home', 'index.html'),
+    ('timeline', 'archive.html'),
+    ('year', 'archive/2026.html'),
+    ('topics', 'topics.html'),
+    ('topic', 'topics/renew-me.html'),
+    ('sermon', 'sermons/2026-08-16-inside-out.html'),
+])
 @pytest.mark.parametrize('width', [1280, 375])
 @pytest.mark.parametrize('theme', ['light', 'dark'])
 def test_equivalent_rendered_surfaces(name, path, width, theme):
@@ -114,10 +132,22 @@ def test_equivalent_target_and_print_layout():
     assert not boxes(printed, lambda b: has_class(b, 'video-block'))
     assert boxes(printed, lambda b: b.element_tag == 'thead')
     assert all(b.style['break_inside'] == 'avoid' for b in boxes(printed, lambda b: has_class(b, 'outline-node')))
+    printed_topic = rendered('topics/renew-me.html', 1280, 'dark', 'print')
+    assert not boxes(printed_topic, lambda b: has_class(b, 'card-plate') or has_class(b, 'topic-lead'))
+    printed_timeline = rendered('archive.html', 1280, 'dark', 'print')
+    assert not boxes(printed_timeline, lambda b: has_class(b, 'month-strip'))
 
 
 @pytest.mark.parametrize('width', [375, 414])
-@pytest.mark.parametrize('path', ['sermons/2026-08-24-start-with-me.html', 'sermons/2026-07-06-worship-in-the-waiting.html'])
+@pytest.mark.parametrize('path', [
+    'index.html',
+    'archive.html',
+    'archive/2026.html',
+    'topics.html',
+    'topics/renew-me.html',
+    'sermons/2026-08-24-start-with-me.html',
+    'sermons/2026-07-06-worship-in-the-waiting.html',
+])
 def test_equivalent_large_text_reflows(width, path):
     doc = rendered(path, width, 'dark', font_scale=2)
     overflow = []

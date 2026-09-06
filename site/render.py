@@ -6,11 +6,11 @@ from pathlib import Path
 import re
 import sys
 
-from schema import SLUG, loads
+from schema import SLUG, TOPIC_ID, loads, loads_topic, validate_topics
 import templates
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = re.compile(rf"(?:index\.html|archive\.html|archive/\d{{4}}\.html|sermons/{SLUG}\.html|assets/site\.css)")
+PUBLIC = re.compile(rf"(?:index\.html|archive\.html|archive/\d{{4}}\.html|topics\.html|topics/{TOPIC_ID}\.html|sermons/{SLUG}\.html|assets/site\.css)")
 
 
 def read_source(root, relative):
@@ -33,21 +33,44 @@ def records(root=ROOT):
     return sorted(result, key=lambda r: (r['published'], r['slug']), reverse=True)
 
 
+def topics(root=ROOT, sermon_records=None):
+    sermon_records = records(root) if sermon_records is None else sermon_records
+    result = []
+    for path in sorted((root / "content" / "topics").glob("*.json")):
+        topic = loads_topic(read_source(root, path.relative_to(root)))
+        expected = f"content/topics/{topic['id']}.json"
+        if path.relative_to(root).as_posix() != expected:
+            raise ValueError(f"Topic path mismatch: {path}")
+        result.append(topic)
+    validate_topics(result, sermon_records)
+    by_slug = {record["slug"]: record for record in sermon_records}
+    return sorted(
+        result,
+        key=lambda topic: (max(by_slug[member["slug"]]["published"] for member in topic["members"]), topic["id"]),
+        reverse=True,
+    )
+
+
 def build(root=ROOT):
     """Pure output plan: no public files read, created, or modified."""
     data = records(root)
+    topic_data = topics(root, data)
     scripts = tuple(read_source(root, "site/assets/" + name) for name in ("theme-init.js", "theme.js"))
     output = {
-        "index.html": templates.home(data, scripts),
+        "index.html": templates.home(data, topic_data, scripts),
         "archive.html": templates.archive(data, scripts),
+        "topics.html": templates.topic_index(data, topic_data, scripts),
         "assets/site.css": read_source(root, "site/assets/site.css"),
     }
     for year in sorted({record['published'][:4] for record in data}):
-        output[f"archive/{year}.html"] = templates.year_archive(year, [r for r in data if r['published'][:4] == year], scripts)
+        output[f"archive/{year}.html"] = templates.year_archive(year, [r for r in data if r['published'][:4] == year], topic_data, scripts)
+    by_slug = {record["slug"]: record for record in data}
+    for topic in topic_data:
+        output[f"topics/{topic['id']}.html"] = templates.topic_page(topic, by_slug, topic_data, scripts)
     for i, record in enumerate(data):
         previous = data[i + 1] if i + 1 < len(data) else None
         following = data[i - 1] if i else None
-        output[f"sermons/{record['slug']}.html"] = templates.sermon(record, previous, following, scripts)
+        output[f"sermons/{record['slug']}.html"] = templates.sermon(record, previous, following, scripts, topic_data)
     return {path: value.encode('utf-8') for path, value in sorted(output.items())}
 
 
@@ -59,7 +82,7 @@ def public_path(root, relative):
 
 
 def existing_public(root):
-    return {path.relative_to(root).as_posix() for pattern in ("index.html", "archive.html", "archive/*.html", "sermons/*.html", "assets/site.css") for path in root.glob(pattern)}
+    return {path.relative_to(root).as_posix() for pattern in ("index.html", "archive.html", "archive/*.html", "topics.html", "topics/*.html", "sermons/*.html", "assets/site.css") for path in root.glob(pattern)}
 
 
 def check(root, output):

@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse sermon outlines by year and month.">
+  <meta name="description" content="Browse sermon outlines by topic and study grouping.">
   <meta name="color-scheme" content="light dark">
-  <title>Timeline | Crossroads Sermon Outlines</title>
+  <title>Topics | Crossroads Sermon Outlines</title>
   <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
 try {
   const savedTheme = localStorage.getItem('crossroads-theme');
@@ -20,11 +20,28 @@ try {
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html" class="site-name">Crossroads / Sermon Outlines</a>
-    <div class="nav-links"><a href="index.html">Latest outlines</a> <a href="topics.html">Topics</a> <a href="archive.html" aria-current="page">Timeline</a></div>
+    <div class="nav-links"><a href="index.html">Latest outlines</a> <a href="topics.html" aria-current="page">Topics</a> <a href="archive.html">Timeline</a></div>
     <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
   </nav>
-  <header><p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find the message you heard.</p></header>
-  <main id="main-content" tabindex="-1"><ul class="year-list"><li><p class="year-head"><a href="archive/2026.html" class="year-link">2026</a><span>9 outlines</span></p><nav class="month-strip" aria-label="Months with outlines in 2026"><span aria-hidden="true">Jan</span><span aria-hidden="true">Feb</span><span aria-hidden="true">Mar</span><span aria-hidden="true">Apr</span><span aria-hidden="true">May</span><span aria-hidden="true">Jun</span><a href="archive/2026.html#2026-07" aria-label="July 2026">Jul</a><a href="archive/2026.html#2026-08" aria-label="August 2026">Aug</a><span aria-hidden="true">Sep</span><span aria-hidden="true">Oct</span><span aria-hidden="true">Nov</span><span aria-hidden="true">Dec</span></nav></li></ul></main>
+  <header><p class="kicker">Topics</p><h1>Sermon topics</h1><p class="lede">Follow a sermon series in teaching order, or browse messages that stand on their own.</p></header>
+  <main id="main-content" tabindex="-1"><div class="topic-list"><article class="topic-card" data-topic="renew-me">
+  <div class="topic-plate"><img src="https://i.ytimg.com/vi/dDcRPypYToc/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <div class="topic-copy">
+    <h2 class="topic-title"><a href="topics/renew-me.html">Renew Me</a></h2>
+    <p class="topic-meta">Psalm 51 · 5 outlines · August 2026</p>
+    <p class="topic-description">David’s psalm of repentance, opened a few verses at a time.</p>
+    <p class="topic-link"><a href="topics/renew-me.html">View the topic →</a></p>
+  </div>
+</article>
+<article class="topic-card" data-topic="by-faith">
+  <div class="topic-plate"><img src="https://i.ytimg.com/vi/HS0wXY7CEDo/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <div class="topic-copy">
+    <h2 class="topic-title"><a href="topics/by-faith.html">By Faith</a></h2>
+    <p class="topic-meta">Hebrews 11–13 · 4 outlines · July 2026</p>
+    <p class="topic-description">Crossroads’ Hebrews series ran thirteen weeks. These four messages close it out, walking Hebrews 11–13 from the hall of faith, through the long race, to the marks of a gospel-shaped family.</p>
+    <p class="topic-link"><a href="topics/by-faith.html">View the topic →</a></p>
+  </div>
+</article></div></main>
   <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a> <a href="https://github.com/jeremy-windsor/crossroads-sermon-outlines">Source repository</a></nav><p>This is an unofficial, independent study resource. Sermon content belongs to the original church and speaker. Scripture links open BibleGateway; NIV is the default unless the speaker names another translation.</p></footer>
   <script>(() => {
   const root = document.documentElement;

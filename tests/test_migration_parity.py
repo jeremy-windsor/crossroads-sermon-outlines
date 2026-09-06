@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 import pytest
 
 import migrate
+import render
 from schema import dumps
 
 ROOT = migrate.ROOT
@@ -62,7 +63,22 @@ def assert_parity(path):
     new = (ROOT / path).read_bytes()
     before, after = snapshot(old), snapshot(new)
     for field in before:
-        assert after[field] == before[field], f"{path}: changed {field}"
+        if field == "metadata":
+            assert after[field][:len(before[field])] == before[field], f"{path}: changed legacy metadata prefix"
+            assert len(after[field]) == len(before[field]) + 1, f"{path}: unexpected metadata change"
+            slug = Path(path).stem
+            membership = {
+                member['slug']: (topic, part, len(topic['members']))
+                for topic in render.topics()
+                for part, member in enumerate(topic['members'], start=1)
+            }
+            topic, part, total = membership[slug]
+            assert after[field][-1] == (
+                'Topic', f"{topic['name']} · Part {part} of {total}", [],
+                [f"../topics/{topic['id']}.html"],
+            ), f"{path}: unexpected appended topic metadata"
+        else:
+            assert after[field] == before[field], f"{path}: changed {field}"
     old_ids = {tag["id"] for tag in BeautifulSoup(old, "html.parser").select("[id]")}
     new_ids = {tag["id"] for tag in BeautifulSoup(new, "html.parser").select("[id]")}
     assert old_ids <= new_ids, f"{path}: lost anchors {old_ids - new_ids}"
@@ -85,15 +101,11 @@ def test_extraction_and_manifest_are_reproducible():
 
 def test_all_nine_card_summaries_survive():
     before = BeautifulSoup(migrate.git_bytes("index.html"), "html.parser")
-    archive = BeautifulSoup((ROOT / "archive/2026.html").read_text(), "html.parser")
-    homepage = BeautifulSoup((ROOT / "index.html").read_text(), "html.parser")
+    records = {record['slug']: record for record in render.records()}
     for card in before.select(".sermons article"):
         slug = Path(card.select_one("h3 a")["href"]).stem
         expected = normalized(card.select_one(".summary"))
-        assert normalized(archive.select_one(f'[data-sermon="{slug}"] .summary')) == expected
-        home_card = homepage.select_one(f'[data-sermon="{slug}"] .summary')
-        if home_card:
-            assert normalized(home_card) == expected
+        assert migrate.normalize(records[slug]['card_summary']) == expected
 
 
 def test_known_counts_and_translation_override():

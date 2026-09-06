@@ -3,6 +3,7 @@ import io
 from pathlib import Path
 import shutil
 
+from bs4 import BeautifulSoup
 import pytest
 import tinycss2
 
@@ -17,6 +18,7 @@ def test_determinism_and_tracked_output():
     assert first == second
     assert render.check(render.ROOT, first) == []
     assert first['assets/site.css'] == (render.ROOT / 'site/assets/site.css').read_bytes()
+    assert {'topics.html', 'topics/by-faith.html', 'topics/renew-me.html'} <= set(first)
 
 
 def test_all_generated_surfaces():
@@ -73,10 +75,16 @@ def test_check_catches_drift_missing_and_extra_pages(tmp_path):
     assert len(render.check(tmp_path, outputs)) == 3
 
 
-@pytest.mark.parametrize('path', ['content/x.json', 'site/assets/site.css', '../index.html', '/index.html', '.work/private', 'assets/extra.css'])
+@pytest.mark.parametrize('path', ['content/x.json', 'site/assets/site.css', '../index.html', '/index.html', '.work/private', 'assets/extra.css', 'topics/not valid.html', 'topics/nested/page.html', 'series/old-name.html'])
 def test_renderer_rejects_unowned_writes(tmp_path, path):
     with pytest.raises(ValueError):
         render.write(tmp_path, {path: b'x'})
+
+
+def test_renderer_allows_owned_topic_outputs(tmp_path):
+    outputs = {'topics.html': b'index', 'topics/example.html': b'detail'}
+    render.write(tmp_path, outputs)
+    assert render.check(tmp_path, outputs) == []
 
 
 def test_symlinks_cannot_escape_phase_boundaries(tmp_path):
@@ -108,6 +116,29 @@ def test_renderer_escapes_speakers_and_supports_depth_three():
     assert 'Steve Coots &amp; Students' in result and '<h5>' in result
 
 
+def test_topic_pages_follow_authored_order_and_support_standalone_messages():
+    records = render.records()
+    topics = deepcopy(render.topics())
+    by_slug = {record['slug']: record for record in records}
+    topics[0]['members'].reverse()
+    detail = BeautifulSoup(templates.topic_page(topics[0], by_slug, topics, ('', '')), 'html.parser')
+    assert [card['data-sermon'] for card in detail.select('.sermon-card')] == [member['slug'] for member in topics[0]['members']]
+
+    standalone_slug = topics[0]['members'].pop()['slug']
+    index = BeautifulSoup(templates.topic_index(records, topics, ('', '')), 'html.parser')
+    assert [card['data-sermon'] for card in index.select('.standalone .sermon-card')] == [standalone_slug]
+
+
+def test_topic_templates_escape_reader_facing_content():
+    records = render.records()
+    topic = deepcopy(render.topics()[0])
+    topic['name'] = 'Renew & “Restore”'
+    topic['description'] = 'Repentance & renewal.'
+    page = templates.topic_page(topic, {record['slug']: record for record in records}, [topic], ('', ''))
+    assert 'Renew &amp; “Restore”' in page
+    assert 'Repentance &amp; renewal.' in page
+
+
 def test_no_css_id_selectors_and_no_css_parse_errors():
     css = (render.ROOT / 'site/assets/site.css').read_text()
 
@@ -121,6 +152,19 @@ def test_no_css_id_selectors_and_no_css_parse_errors():
     inspect(tinycss2.parse_stylesheet(css, skip_comments=True, skip_whitespace=True))
 
 
+def test_study_table_css_keeps_static_plate_treatment():
+    css = (render.ROOT / 'site/assets/site.css').read_text()
+    assert 'box-shadow: inset 0 0 0 1px var(--plate-ring)' in css
+    assert '.card-title { margin: 0; font-size: 1.25rem;' in css
+    assert css.count('[data-topic="by-faith"]') == 3
+    assert css.count('[data-topic="renew-me"]') == 3
+    assert 'gradient' not in css
+    declarations = []
+    for match in __import__('re').finditer(r'\{([^{}]*)\}', css):
+        declarations.extend(tinycss2.parse_declaration_list(match.group(1), skip_comments=True, skip_whitespace=True))
+    assert not {item.lower_name for item in declarations if item.type == 'declaration'} & {'animation', 'transition', 'transform'}
+
+
 def test_future_year_and_neighbor_boundaries(tmp_path):
     (tmp_path / 'site').mkdir()
     shutil.copytree(render.ROOT / 'site/assets', tmp_path / 'site/assets')
@@ -131,4 +175,5 @@ def test_future_year_and_neighbor_boundaries(tmp_path):
         write_record(tmp_path, record)
     outputs = render.build(tmp_path)
     assert 'archive/2025.html' in outputs and 'archive/2027.html' in outputs
-    validate_surfaces(outputs, render.records(tmp_path))
+    records = render.records(tmp_path)
+    validate_surfaces(outputs, records, render.topics(tmp_path, records))

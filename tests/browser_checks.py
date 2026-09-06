@@ -4,6 +4,7 @@ The default suite uses in-process rendered checks in restricted environments.
 Temporary evidence is ignored under .test-artifacts/.
 """
 
+import base64
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import threading
@@ -16,7 +17,15 @@ from verify_live import verify
 
 PROJECT = '/crossroads-sermon-outlines/'
 SERMON = 'sermons/2026-08-16-inside-out.html'
-SURFACES = [('home', 'index.html'), ('archive', 'archive/2026.html'), ('sermon', SERMON)]
+SURFACES = [
+    ('home', 'index.html'),
+    ('timeline', 'archive.html'),
+    ('year', 'archive/2026.html'),
+    ('topics', 'topics.html'),
+    ('topic', 'topics/renew-me.html'),
+    ('sermon', SERMON),
+]
+TRANSPARENT_PNG = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M/wHwAF/gL+Xf8WAAAAAElFTkSuQmCC')
 
 
 @pytest.fixture(scope='module')
@@ -58,6 +67,7 @@ def browser():
 def context_for(browser, **options):
     context = browser.new_context(reduced_motion='reduce', **options)
     context.route('https://www.youtube.com/**', lambda route: route.abort())
+    context.route('https://i.ytimg.com/**', lambda route: route.fulfill(body=TRANSPARENT_PNG, content_type='image/png'))
     return context
 
 
@@ -185,8 +195,14 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
         page.goto(local_site)
         assert not page.locator('.theme-toggle').is_visible()
         assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
-        page.get_by_role('link', name='Browse the archive').click()
-        page.locator('.year-list a').click()
+        page.get_by_role('link', name='Topics', exact=True).click()
+        page.get_by_role('link', name='Renew Me', exact=True).click()
+        assert page.url.endswith('topics/renew-me.html')
+        page.get_by_role('link', name='When Excuses Die', exact=True).click()
+        assert page.url.endswith('sermons/2026-08-03-when-excuses-die.html')
+        page.goto(local_site)
+        page.get_by_role('link', name='Browse the timeline').click()
+        page.locator('.year-list .year-link').click()
         page.get_by_role('link', name='July', exact=True).click()
         assert page.url.endswith('#2026-07')
         page.get_by_role('link', name='Keep Running!', exact=True).click()
@@ -195,6 +211,29 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
         assert page.get_by_role('table', name='Scripture ledger').is_visible()
         page.locator('.month-return').click()
         assert page.url.endswith('archive/2026.html#2026-07')
+
+
+def test_art_plate_and_watch_link_hit_targets(browser, local_site):
+    with context_for(browser, viewport={'width': 1280, 'height': 900}) as context:
+        page = context.new_page()
+        page.goto(local_site)
+        card = page.locator('.sermon-card').first
+        plate = card.locator('.card-plate')
+        plate_box = plate.bounding_box()
+        plate_target = page.evaluate('''point => {
+          const target = document.elementFromPoint(point.x, point.y);
+          return target.closest('a')?.getAttribute('href');
+        }''', {'x': plate_box['x'] + plate_box['width'] / 2, 'y': plate_box['y'] + plate_box['height'] / 2})
+        assert plate_target == 'sermons/2026-08-31-crushed-joy.html'
+        watch = card.locator('.card-watch a')
+        watch.scroll_into_view_if_needed()
+        watch_box = watch.bounding_box()
+        assert 0 <= watch_box['y'] + watch_box['height'] / 2 < page.viewport_size['height']
+        watch_target = page.evaluate('''point => {
+          const target = document.elementFromPoint(point.x, point.y);
+          return target.closest('a')?.getAttribute('href');
+        }''', {'x': watch_box['x'] + watch_box['width'] / 2, 'y': watch_box['y'] + watch_box['height'] / 2})
+        assert watch_target == 'https://www.youtube.com/watch?v=wI99rPQIKyY'
 
 
 def test_keyboard_numeric_anchor_print_and_large_text(browser, local_site):

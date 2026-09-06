@@ -11,12 +11,17 @@
 !archive.html
 !archive/
 !archive/*.html
+!topics.html
+!topics/
+!topics/*.html
 !assets/
 !assets/site.css
 !content/
 !content/sermons/
 !content/sermons/*/
 !content/sermons/*/*.json
+!content/topics/
+!content/topics/*.json
 !site/
 !site/*.py
 !site/assets/

@@ -4,12 +4,17 @@ import json
 import pytest
 
 import render
-from schema import InvalidRecord, flatten, loads, validate
+from schema import InvalidRecord, flatten, loads, validate, validate_topic, validate_topics
 
 
 @pytest.fixture
 def record():
     return deepcopy(render.records()[0])
+
+
+@pytest.fixture
+def topic():
+    return deepcopy(render.topics()[0])
 
 
 def test_all_records_validate_and_keep_distinct_summaries():
@@ -93,3 +98,45 @@ def test_depth_three_and_free_text_speaker(record):
     child['children'] = [dict(child, id='too-deep', children=[])]
     with pytest.raises(InvalidRecord, match='depth'):
         validate(record)
+
+
+def test_all_topics_validate_with_explicit_membership():
+    topics = render.topics()
+    assert [topic['id'] for topic in topics] == ['renew-me', 'by-faith']
+    validate_topics(topics, render.records())
+
+
+@pytest.mark.parametrize('field,value', [
+    ('id', 'Not A Slug'),
+    ('name_source', 'model_inferred'),
+    ('members', []),
+    ('anchor', '2026-01-01-missing'),
+    ('description', '<b>markup</b>'),
+])
+def test_invalid_topic_fields(topic, field, value):
+    topic[field] = value
+    with pytest.raises(InvalidRecord):
+        validate_topic(topic)
+
+
+def test_topics_reject_duplicate_and_dangling_membership(topic):
+    records = render.records()
+    duplicate_member = deepcopy(topic)
+    duplicate_member['id'] = 'duplicate-topic'
+    with pytest.raises(InvalidRecord, match='more than one topic'):
+        validate_topics([topic, duplicate_member], records)
+    duplicate_member = deepcopy(topic)
+    duplicate_member['members'][0]['slug'] = '2026-01-01-not-a-record'
+    duplicate_member['anchor'] = duplicate_member['members'][0]['slug']
+    with pytest.raises(InvalidRecord, match='Dangling'):
+        validate_topics([duplicate_member], records)
+
+
+def test_topic_rejects_duplicate_member_and_duplicate_id(topic):
+    topic['members'].append(deepcopy(topic['members'][0]))
+    with pytest.raises(InvalidRecord, match='Duplicate topic member'):
+        validate_topic(topic)
+    first, second = deepcopy(render.topics()[0]), deepcopy(render.topics()[1])
+    second['id'] = first['id']
+    with pytest.raises(InvalidRecord, match='Duplicate topic ID'):
+        validate_topics([first, second], render.records())

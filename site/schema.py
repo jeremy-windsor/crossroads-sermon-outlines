@@ -7,10 +7,14 @@ from urllib.parse import unquote_plus
 
 SCHEMA_VERSION = 1
 SLUG = r"\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*"
+TOPIC_ID = r"[a-z0-9]+(?:-[a-z0-9]+)*"
 NODE_ID = r"[A-Za-z0-9][A-Za-z0-9_.-]*"
 RECORD_KEYS = set("schema_version slug title speaker published duration duration_seconds video_id video_url caption_source verified sermon_start sermon_end card_summary section_intro page_title description subtitle kicker disclaimer figcaption footer_paragraphs outline_heading ledger_heading ledger_intro ledger_caption movements ledger".split())
 NODE_KEYS = set("id start heading scripture_mentions bullets children".split())
 ROW_KEYS = set("id reference reference_query treatment time phrase anchor_node_id version version_source reference_note".split())
+TOPIC_KEYS = set("id name name_source scripture_spine description note anchor members".split())
+TOPIC_MEMBER_KEYS = {"slug", "scripture"}
+TOPIC_NAME_SOURCES = {"church_stated", "published_title", "artwork"}
 RESERVED_IDS = {"main-content", "outline-heading", "scripture-ledger", "ledger-heading", "page-title"}
 
 
@@ -43,7 +47,7 @@ def flatten(nodes):
 def plain_values(value):
     """Reject presentation markup, CSS, and project paths anywhere in content."""
     if isinstance(value, str):
-        require(not re.search(r"[<>{}]|style\s*=|(?:^|[\s/])(?:site|assets|sermons|archive|content)/|(?:index|archive)\.html|\b(?:color|background|display|font-size|margin|padding)\s*:\s*[^;]+;", value, re.I), "Content must be prose/data, without HTML, CSS, or site paths")
+        require(not re.search(r"[<>{}]|style\s*=|(?:^|[\s/])(?:site|assets|sermons|archive|topics|content)/|(?:index|archive|topics)\.html|\b(?:color|background|display|font-size|margin|padding)\s*:\s*[^;]+;", value, re.I), "Content must be prose/data, without HTML, CSS, or site paths")
     elif isinstance(value, dict):
         for key, item in value.items():
             plain_values(key)
@@ -145,14 +149,61 @@ def validate(record):
     return record
 
 
-def loads(source):
+def validate_topic(topic):
+    require(isinstance(topic, dict) and set(topic) == TOPIC_KEYS, "Unexpected or missing topic fields")
+    plain_values(topic)
+    for key in ("id", "name", "name_source", "scripture_spine", "description", "note"):
+        text(topic[key], key)
+    require(bool(re.fullmatch(TOPIC_ID, topic["id"])), "Invalid topic ID")
+    require(topic["name_source"] in TOPIC_NAME_SOURCES, "Unsupported topic name provenance")
+    require(isinstance(topic["members"], list) and bool(topic["members"]), "Topic must have members")
+    member_slugs = []
+    for member in topic["members"]:
+        require(isinstance(member, dict) and set(member) == TOPIC_MEMBER_KEYS, "Unexpected or missing topic member fields")
+        text(member["slug"], "member slug")
+        text(member["scripture"], "member scripture")
+        require(bool(re.fullmatch(SLUG, member["slug"])), "Invalid topic member slug")
+        require(member["slug"] not in member_slugs, "Duplicate topic member")
+        member_slugs.append(member["slug"])
+    require(topic["anchor"] is None or isinstance(topic["anchor"], str), "Invalid topic anchor")
+    require(topic["anchor"] is None or topic["anchor"] in member_slugs, "Topic anchor must be a member")
+    return topic
+
+
+def validate_topics(topics, records):
+    """Validate cross-file topic identity and explicit sermon membership."""
+    require(isinstance(topics, list), "Topics must be a list")
+    record_slugs = {record["slug"] for record in records}
+    topic_ids = set()
+    membership = set()
+    for topic in topics:
+        validate_topic(topic)
+        require(topic["id"] not in topic_ids, "Duplicate topic ID")
+        topic_ids.add(topic["id"])
+        for member in topic["members"]:
+            slug = member["slug"]
+            require(slug in record_slugs, "Dangling topic member slug")
+            require(slug not in membership, "Sermon belongs to more than one topic")
+            membership.add(slug)
+    return topics
+
+
+def json_object(source):
     def unique_keys(pairs):
         result = {}
         for key, value in pairs:
             require(key not in result, f"Duplicate JSON key: {key}")
             result[key] = value
         return result
-    return validate(json.loads(source, object_pairs_hook=unique_keys))
+    return json.loads(source, object_pairs_hook=unique_keys)
+
+
+def loads(source):
+    return validate(json_object(source))
+
+
+def loads_topic(source):
+    return validate_topic(json_object(source))
 
 
 def dumps(record):

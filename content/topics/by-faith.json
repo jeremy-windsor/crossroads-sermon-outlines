@@ -1,0 +1,27 @@
+{
+  "id": "by-faith",
+  "name": "By Faith",
+  "name_source": "artwork",
+  "scripture_spine": "Hebrews 11–13",
+  "description": "Crossroads’ Hebrews series ran thirteen weeks. These four messages close it out, walking Hebrews 11–13 from the hall of faith, through the long race, to the marks of a gospel-shaped family.",
+  "note": "Topic name taken from the sermon artwork. Earlier messages in the thirteen-week Hebrews series are not in this archive.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-07-06-worship-in-the-waiting",
+      "scripture": "Hebrews 11:1–7"
+    },
+    {
+      "slug": "2026-07-13-walk-by-faith",
+      "scripture": "Hebrews 11"
+    },
+    {
+      "slug": "2026-07-20-keep-running",
+      "scripture": "Hebrews 12"
+    },
+    {
+      "slug": "2026-07-27-family-resemblance",
+      "scripture": "Hebrews 13"
+    }
+  ]
+}
