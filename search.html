@@ -49,7 +49,8 @@ try {
     toggle.setAttribute('aria-label', label);
     toggle.setAttribute('title', label);
     for (const icon of icons) {
-      icon.hidden = icon.dataset.themeIcon !== target;
+      // SVG elements do not reflect the `hidden` IDL property, so set the attribute.
+      icon.toggleAttribute('hidden', icon.dataset.themeIcon !== target);
     }
   };
   const apply = choice => {

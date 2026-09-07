@@ -77,6 +77,24 @@ def background(page):
     return page.evaluate('getComputedStyle(document.body).backgroundColor')
 
 
+def toggle_geometry(page):
+    """One icon paints, inside the button box. Stacked icons once overflowed it."""
+    return page.evaluate("""() => {
+      const button = document.querySelector('.theme-toggle');
+      const box = button.getBoundingClientRect();
+      const painted = [...button.querySelectorAll('svg')]
+        .filter(icon => getComputedStyle(icon).display !== 'none');
+      const fits = painted.every(icon => {
+        const rect = icon.getBoundingClientRect();
+        return rect.top >= box.top - .5 && rect.bottom <= box.bottom + .5
+          && rect.left >= box.left - .5 && rect.right <= box.right + .5;
+      });
+      return {painted: painted.map(icon => icon.dataset.themeIcon), fits,
+        width: Math.round(box.width), height: Math.round(box.height),
+        border: getComputedStyle(button).borderTopWidth};
+    }""")
+
+
 def overflow_details(page):
     """Include text bounds: nowrap text may escape an otherwise narrow grid item."""
     return page.evaluate('''() => {
@@ -118,6 +136,8 @@ def test_rendered_viewports(browser, local_site, name, path, device, width, heig
         assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
         target_theme = 'light' if theme == 'dark' else 'dark'
         assert page.locator('.theme-toggle').get_attribute('aria-label') == f'Switch to {target_theme} theme'
+        geometry = toggle_geometry(page)
+        assert geometry == {'painted': [target_theme], 'fits': True, 'width': 44, 'height': 44, 'border': '0px'}
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         if name == 'sermon':
             assert page.get_by_role('table', name='Scripture ledger').count() == 1
@@ -148,8 +168,10 @@ def test_theme_toggle_persistence_system_default_and_early_script(browser, local
         toggle = page.get_by_role('button', name=f'Switch to {override} theme')
         assert toggle.is_visible()
         assert page.evaluate('document.documentElement.dataset.theme') is None
+        assert toggle_geometry(page)['painted'] == [override]
         toggle.click()
         assert page.evaluate('document.documentElement.dataset.theme') == override
+        assert toggle_geometry(page)['painted'] == [system]
         assert page.evaluate('localStorage.getItem("crossroads-theme")') == override
         page.goto(local_site + 'archive/2026.html')
         assert page.evaluate('document.documentElement.dataset.theme') == override

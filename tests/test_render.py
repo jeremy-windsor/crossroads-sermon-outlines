@@ -218,8 +218,11 @@ def test_search_focus_ring_and_compact_theme_toggle_css():
     assert '.site-search { display: flex; flex: 0 1 29rem; width: min(29rem, 100%);' in css
     assert '.site-search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px;' in css
     assert '.site-search input:focus-visible, .site-search button:focus-visible { outline: none; }' in css
+    # Borderless at rest with a full 44px hit target; the box only appears on hover.
     assert '.theme-toggle { display: inline-grid; place-items: center;' in css
-    assert 'width: 2.25rem; height: 2.25rem; min-height: 2.25rem;' in css
+    assert 'width: 44px; height: 44px; padding: 0; border: 0;' in css
+    assert 'color: var(--muted); background: none; }' in css
+    assert '.theme-toggle:hover { color: var(--ink); background: var(--table-head); }' in css
 
 
 def test_future_year_and_neighbor_boundaries(tmp_path):

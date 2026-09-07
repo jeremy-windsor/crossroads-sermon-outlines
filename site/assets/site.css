@@ -101,8 +101,11 @@ button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accen
 .site-search button { border-left: 0; border-radius: 0 .3rem .3rem 0; }
 .site-search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: .3rem; }
 .site-search input:focus-visible, .site-search button:focus-visible { outline: none; }
-.theme-toggle { display: inline-grid; place-items: center; flex: 0 0 auto; width: 2.25rem; height: 2.25rem; min-height: 2.25rem; padding: .4rem; }
-.theme-toggle svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* A quiet icon button: no resting border, so it reads as a utility beside the
+   search field rather than a second boxed control. One icon shows at a time. */
+.theme-toggle { display: inline-grid; place-items: center; flex: 0 0 auto; width: 44px; height: 44px; padding: 0; border: 0; border-radius: .4rem; color: var(--muted); background: none; }
+.theme-toggle:hover { color: var(--ink); background: var(--table-head); }
+.theme-toggle svg { display: block; width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 header { padding: 3.5rem 0 2.25rem; border-bottom: 1px solid var(--line); }
 .kicker { margin: 0 0 .8rem; color: var(--accent); font: 750 .8125rem/1.5 var(--sans); letter-spacing: .1em; text-transform: uppercase; }
 h1, h2, h3, h4, h5 { line-height: 1.22; text-wrap: balance; overflow-wrap: anywhere; }

@@ -171,7 +171,11 @@ for (const dark of [false, true]) {
     for (const blocked of [false, true]) {
       const root = {dataset: {}};
       const listeners = {};
-      const icons = ['light', 'dark'].map(choice => ({dataset:{themeIcon:choice},hidden:false}));
+      // Model SVGElement: `hidden` is an inert expando there, so only the
+      // attribute decides what CSS paints. A property-only mock hid a real bug.
+      const icons = ['light', 'dark'].map(choice => ({dataset:{themeIcon:choice},hidden:false,attrs:{},
+        toggleAttribute(k,on){if(on)this.attrs[k]='';else delete this.attrs[k];return on;},
+        hasAttribute(k){return k in this.attrs;}}));
       const toggle = {hidden:true,attrs:{},querySelectorAll(){return icons;},
         addEventListener(k,fn){this[k]=fn;},setAttribute(k,v){this.attrs[k]=v;}};
       let value = saved;
@@ -185,7 +189,7 @@ for (const dark of [false, true]) {
       const initial = !blocked && ['light','dark'].includes(saved) ? saved : (dark ? 'dark' : 'light');
       const target = initial === 'dark' ? 'light' : 'dark';
       assert.equal(toggle.attrs['aria-label'],`Switch to ${target} theme`);
-      assert.deepEqual(icons.map(icon => icon.hidden), ['light','dark'].map(choice => choice !== target));
+      assert.deepEqual(icons.map(icon => icon.hasAttribute('hidden')), ['light','dark'].map(choice => choice !== target));
       toggle.click();
       assert.equal(root.dataset.theme,target);
       assert.equal(toggle.attrs['aria-label'],`Switch to ${initial} theme`);
