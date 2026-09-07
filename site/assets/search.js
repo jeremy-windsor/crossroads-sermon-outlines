@@ -74,6 +74,6 @@
     })
     .then(index => show(index.documents))
     .catch(() => {
-      status.textContent = 'Search is temporarily unavailable. Browse by topic or use the Timeline.';
+      status.textContent = 'Search is temporarily unavailable. Browse by series or use the Timeline.';
     });
 })();

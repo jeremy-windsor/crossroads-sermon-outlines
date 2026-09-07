@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search Crossroads sermons, Overview text, and Scripture references.">
+  <meta name="description" content="Search Crossroads sermons, series, Overview text, and Scripture references.">
   <meta name="color-scheme" content="light dark">
   <title>Search | Crossroads Sermons</title>
   <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
@@ -20,7 +20,7 @@ try {
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html" class="site-name">Crossroads Sermons</a>
-    <div class="nav-links"><a href="index.html">Topics</a> <a href="archive.html">Timeline</a></div>
+    <div class="nav-links"><a href="index.html">Series</a> <a href="archive.html">Timeline</a></div>
     <form class="site-search" role="search" action="search.html" method="get">
       <label class="visually-hidden" for="site-search-query">Search sermons</label>
       <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
@@ -28,11 +28,11 @@ try {
     </form>
     <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
   </nav>
-  <header><p class="kicker">Search</p><h1>Search sermons</h1><p class="lede">Search titles, speakers, topics, Overview text, and Scripture references.</p></header>
+  <header><p class="kicker">Search</p><h1>Search sermons</h1><p class="lede">Search titles, speakers, series, Overview text, and Scripture references.</p></header>
   <main id="main-content" tabindex="-1"><section class="search-page" aria-labelledby="search-results-heading">
 <h2 id="search-results-heading">Results</h2>
 <p class="search-help">Try a title, speaker, phrase, or reference such as “Psalm 51:10” or “Hebrews 12.”</p>
-<noscript><p class="search-status">Search requires JavaScript. Browse by topic or use the Timeline instead.</p></noscript>
+<noscript><p class="search-status">Search requires JavaScript. Browse by series or use the Timeline instead.</p></noscript>
 <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a search above.</p>
 <ol id="search-results" class="search-results" aria-label="Search results"></ol>
 </section></main>
@@ -139,7 +139,7 @@ try {
     })
     .then(index => show(index.documents))
     .catch(() => {
-      status.textContent = 'Search is temporarily unavailable. Browse by topic or use the Timeline.';
+      status.textContent = 'Search is temporarily unavailable. Browse by series or use the Timeline.';
     });
 })();
 </script>

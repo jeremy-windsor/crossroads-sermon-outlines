@@ -65,7 +65,7 @@ def validate_surfaces(surfaces, records, topics=None):
         prefix = '../' if '/' in path else ''
         assert [x['href'] for x in soup.select('link[rel="stylesheet"]')] == [prefix + 'assets/site.css']
         assert soup.head.script and str(soup.head).index('<script>') < str(soup.head).index('rel="stylesheet"')
-        assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Topics', 'Timeline']
+        assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Series', 'Timeline']
         search = soup.select_one('form.site-search[role="search"]')
         assert search and search['method'] == 'get' and search['action'] == prefix + 'search.html'
         assert search.select_one('input[name="q"][type="search"]') and search.select_one('button[type="submit"]')
@@ -154,7 +154,7 @@ def validate_surfaces(surfaces, records, topics=None):
         assert not page.select('.notice, .ledger-intro')
         assert page.figcaption.get_text(' ', strip=True) == 'Watch on YouTube'
         labels = [item.dt.get_text(strip=True) for item in page.select('.metadata > div')]
-        assert labels == ['Speaker', 'Published', 'Duration', 'Watch', 'Topic']
+        assert labels == ['Speaker', 'Published', 'Duration', 'Watch', 'Series']
         nodes = list(flatten(record['movements']))
         assert [n['id'] for n in page.select('.outline-node')] == [n['id'] for n in nodes]
         assert len(page.select('tbody tr')) == len(record['ledger'])
@@ -180,7 +180,7 @@ def validate_surfaces(surfaces, records, topics=None):
         assert (following['href'] if following else None) == (records[i - 1]['slug'] + '.html' if i else None)
         assert page.select_one('.month-return')['href'] == '../archive/' + record['published'][:4] + '.html#' + record['published'][:7]
         topic, part, total = topic_by_slug[record['slug']]
-        topic_row = [item for item in page.select('.metadata > div') if item.dt.get_text(strip=True) == 'Topic'][0]
+        topic_row = [item for item in page.select('.metadata > div') if item.dt.get_text(strip=True) == 'Series'][0]
         assert topic_row.a['href'] == f"../topics/{topic['id']}.html"
         assert topic_row.dd.get_text(" ", strip=True) == f"{topic['name']} · Part {part} of {total}"
 
