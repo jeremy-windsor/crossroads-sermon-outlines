@@ -3,12 +3,13 @@ import io
 import json
 from pathlib import Path
 import shutil
+import subprocess
 
 from bs4 import BeautifulSoup
 import pytest
 import tinycss2
 
-from content import write_record
+from content import write_record, write_series
 import render
 import templates
 from validation import validate_surfaces
@@ -19,7 +20,7 @@ def test_determinism_and_tracked_output():
     assert first == second
     assert render.check(render.ROOT, first) == []
     assert first['assets/site.css'] == (render.ROOT / 'site/assets/site.css').read_bytes()
-    assert {'search.html', 'search-index.json', 'topics.html', 'topics/by-faith.html', 'topics/renew-me.html'} <= set(first)
+    assert {'search.html', 'search-index.json', 'series.html', 'series/by-faith.html', 'series/renew-me.html'} <= set(first)
 
 
 def test_all_generated_surfaces():
@@ -76,14 +77,14 @@ def test_check_catches_drift_missing_and_extra_pages(tmp_path):
     assert len(render.check(tmp_path, outputs)) == 3
 
 
-@pytest.mark.parametrize('path', ['content/x.json', 'site/assets/site.css', '../index.html', '/index.html', '.work/private', 'assets/extra.css', 'topics/not valid.html', 'topics/nested/page.html', 'series/old-name.html'])
+@pytest.mark.parametrize('path', ['content/x.json', 'site/assets/site.css', '../index.html', '/index.html', '.work/private', 'assets/extra.css', 'series/not valid.html', 'series/nested/page.html'])
 def test_renderer_rejects_unowned_writes(tmp_path, path):
     with pytest.raises(ValueError):
         render.write(tmp_path, {path: b'x'})
 
 
-def test_renderer_allows_owned_topic_outputs(tmp_path):
-    outputs = {'topics.html': b'index', 'topics/example.html': b'detail', 'search.html': b'search', 'search-index.json': b'{}'}
+def test_renderer_allows_owned_series_outputs(tmp_path):
+    outputs = {'series.html': b'index', 'series/example.html': b'detail', 'search.html': b'search', 'search-index.json': b'{}'}
     render.write(tmp_path, outputs)
     assert render.check(tmp_path, outputs) == []
 
@@ -117,53 +118,60 @@ def test_renderer_escapes_speakers_and_supports_depth_three():
     assert 'Steve Coots &amp; Students' in result and '<h5>' in result
 
 
-def test_topic_pages_follow_authored_order():
+def test_series_pages_follow_authored_order():
     records = render.records()
-    topics = deepcopy(render.topics())
+    series_records = deepcopy(render.series_records())
     by_slug = {record['slug']: record for record in records}
-    topics[0]['members'].reverse()
-    detail = BeautifulSoup(templates.topic_page(topics[0], by_slug, topics, ('', '')), 'html.parser')
-    assert [card['data-sermon'] for card in detail.select('.sermon-card')] == [member['slug'] for member in topics[0]['members']]
+    series_records[0]['members'].reverse()
+    detail = BeautifulSoup(templates.series_page(series_records[0], by_slug, series_records, ('', '')), 'html.parser')
+    assert [card['data-sermon'] for card in detail.select('.sermon-card')] == [member['slug'] for member in series_records[0]['members']]
 
 
-def test_topic_templates_escape_reader_facing_content():
+def test_series_templates_escape_reader_facing_content():
     records = render.records()
-    topic = deepcopy(render.topics()[0])
-    topic['name'] = 'Renew & “Restore”'
-    topic['description'] = 'Repentance & renewal.'
-    page = templates.topic_page(topic, {record['slug']: record for record in records}, [topic], ('', ''))
+    series = deepcopy(render.series_records()[0])
+    series['name'] = 'Renew & “Restore”'
+    series['description'] = 'Repentance & renewal.'
+    page = templates.series_page(series, {record['slug']: record for record in records}, [series], ('', ''))
     assert 'Renew &amp; “Restore”' in page
     assert 'Repentance &amp; renewal.' in page
 
 
-def test_single_member_topic_card_links_directly_but_detail_remains_supported():
+def test_routing_uses_record_type_instead_of_member_count():
     records = render.records()
-    topic = deepcopy(render.topics()[0])
-    topic['type'] = 'standalone'
-    topic['members'] = topic['members'][:1]
-    topic['anchor'] = None
+    series = deepcopy(render.series_records()[0])
+    series['members'] = series['members'][:1]
+    series['anchor'] = None
     by_slug = {record['slug']: record for record in records}
-    card = BeautifulSoup(templates.topic_card(topic, by_slug), 'html.parser')
-    expected = f"sermons/{topic['members'][0]['slug']}.html"
-    assert card.select_one('.topic-title a')['href'] == expected
-    assert card.select_one('.topic-link a')['href'] == expected
-    assert '1 sermon' in card.select_one('.topic-meta').get_text(' ', strip=True)
-    detail = BeautifulSoup(templates.topic_page(topic, by_slug, [topic], ('', '')), 'html.parser')
-    assert detail.select_one('.sermon-card')['data-sermon'] == topic['members'][0]['slug']
+    card = BeautifulSoup(templates.series_card(series, by_slug), 'html.parser')
+    assert card.select_one('.series-title a')['href'] == f"series/{series['id']}.html"
+    assert card.select_one('.series-link a').get_text(' ', strip=True) == 'View series →'
+
+    series['type'] = 'standalone'
+    card = BeautifulSoup(templates.series_card(series, by_slug), 'html.parser')
+    expected = f"sermons/{series['members'][0]['slug']}.html"
+    assert card.select_one('.series-title a')['href'] == expected
+    assert card.select_one('.series-link a')['href'] == expected
+    assert '1 sermon' in card.select_one('.series-meta').get_text(' ', strip=True)
+    detail = BeautifulSoup(templates.series_page(series, by_slug, [series], ('', '')), 'html.parser')
+    assert detail.select_one('.sermon-card')['data-sermon'] == series['members'][0]['slug']
+    sermon = BeautifulSoup(templates.sermon(by_slug[series['members'][0]['slug']], None, None, ('', ''), [series]), 'html.parser')
+    assert not [row for row in sermon.select('.metadata > div') if row.dt.get_text(strip=True) == 'Series']
+    assert sermon.select_one('.kicker').get_text(strip=True) == 'Sermon'
 
 
 def test_search_index_covers_visible_content_and_exact_anchors():
-    records, topics = render.records(), render.topics()
-    index = render.search_index(records, topics)
+    records, series_records = render.records(), render.series_records()
+    index = render.search_index(records, series_records)
     documents = index['documents']
     assert len(documents) == len(records) + sum(len(list(render.flatten(record['movements']))) + len(record['ledger']) for record in records)
     by_url = {document['url']: document for document in documents}
-    membership = templates.topic_membership(topics)
+    membership = templates.series_membership(series_records)
     for record in records:
         base = f"sermons/{record['slug']}.html"
         sermon_document = by_url[base]
-        topic = membership[record['slug']][0]
-        for value in (record['title'], record['speaker'], record['published'], topic['name']):
+        series = membership[record['slug']][0]
+        for value in (record['title'], record['speaker'], record['published'], series['name']):
             assert value in sermon_document['terms']
         for node in render.flatten(record['movements']):
             document = by_url[base + '#' + node['id']]
@@ -196,13 +204,22 @@ def test_study_table_css_keeps_static_plate_treatment():
     css = (render.ROOT / 'site/assets/site.css').read_text()
     assert 'box-shadow: inset 0 0 0 1px var(--plate-ring)' in css
     assert '.card-title { margin: 0; font-size: 1.25rem;' in css
-    assert css.count('[data-topic="by-faith"]') == 3
-    assert css.count('[data-topic="renew-me"]') == 3
+    assert css.count('[data-series="by-faith"]') == 3
+    assert css.count('[data-series="renew-me"]') == 3
     assert 'gradient' not in css
     declarations = []
     for match in __import__('re').finditer(r'\{([^{}]*)\}', css):
         declarations.extend(tinycss2.parse_declaration_list(match.group(1), skip_comments=True, skip_whitespace=True))
     assert not {item.lower_name for item in declarations if item.type == 'declaration'} & {'animation', 'transition', 'transform'}
+
+
+def test_search_focus_ring_and_compact_theme_selector_css():
+    css = (render.ROOT / 'site/assets/site.css').read_text()
+    assert '.site-search:focus-within { outline: 3px solid var(--focus); outline-offset: 3px;' in css
+    assert '.site-search input:focus-visible, .site-search button:focus-visible { outline: none; }' in css
+    assert '.theme-selector { display: inline-flex;' in css
+    assert '.theme-selector button { min-height: 36px;' in css
+    assert '.theme-selector button[aria-pressed="true"]' in css
 
 
 def test_future_year_and_neighbor_boundaries(tmp_path):
@@ -215,14 +232,37 @@ def test_future_year_and_neighbor_boundaries(tmp_path):
         record['slug'] = published + '-example'
         write_record(tmp_path, record)
         slugs.append(record['slug'])
-    topic = deepcopy(render.topics()[0])
-    topic.update(id='future-series', name='Future Series', type='series', anchor=None)
-    topic['provenance'] = [{'source': 'jeremy_direction', 'detail': 'Test fixture topic.'}]
-    topic['members'] = [{'slug': slug, 'scripture': 'Example'} for slug in slugs]
-    topic_dir = tmp_path / 'content' / 'topics'
-    topic_dir.mkdir()
-    (topic_dir / 'future-series.json').write_text(json.dumps(topic), encoding='utf-8')
+    series = deepcopy(render.series_records()[0])
+    series.update(id='future-series', name='Future Series', type='series', anchor=None)
+    series['provenance'] = [{'source': 'jeremy_direction', 'detail': 'Test fixture series.'}]
+    series['members'] = [
+        {'slug': slug, 'scripture': 'Example', 'provenance': [{'source': 'jeremy_direction', 'detail': f'Jeremy assigned {slug} to Future Series.'}]}
+        for slug in slugs
+    ]
+    series_dir = tmp_path / 'content' / 'series'
+    series_dir.mkdir()
+    (series_dir / 'future-series.json').write_text(json.dumps(series), encoding='utf-8')
     outputs = render.build(tmp_path)
     assert 'archive/2025.html' in outputs and 'archive/2027.html' in outputs
     records = render.records(tmp_path)
-    validate_surfaces(outputs, records, render.topics(tmp_path, records))
+    validate_surfaces(outputs, records, render.series_records(tmp_path, records))
+
+
+def test_series_content_writer_checks_candidate_and_full_collection(tmp_path):
+    shutil.copytree(render.ROOT / 'content', tmp_path / 'content')
+    candidate = deepcopy(render.series_records()[0])
+    target = tmp_path / 'content' / 'series' / f"{candidate['id']}.json"
+    before = target.read_bytes()
+    candidate['members'].append(deepcopy(render.series_records()[1]['members'][0]))
+    with pytest.raises(ValueError, match='more than one series record'):
+        write_series(tmp_path, candidate)
+    assert target.read_bytes() == before
+    assert write_series(tmp_path, render.series_records()[0]) == target
+
+
+def test_series_cli_check_path():
+    result = subprocess.run(
+        ['/usr/bin/python3', 'site/content.py', '--series', '--check'], cwd=render.ROOT,
+        input=json.dumps(render.series_records()[0]), text=True, capture_output=True, check=True,
+    )
+    assert result.stdout == 'Valid series: renew-me\n'

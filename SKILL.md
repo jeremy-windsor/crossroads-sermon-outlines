@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when acquiring, verifying, and outlining Crossroads Church sermons as canonical content records."
-version: 2.2.0
+version: 2.3.0
 author: Will
 license: MIT
 metadata:
@@ -30,7 +30,7 @@ For a relative request, inspect the channel’s recent uploads, exclude Shorts, 
 
 Normal source and scope:
 
-- `https://youtube.com/@thecrossroadschurch`
+- `https://www.youtube.com/@thecrossroadschurch`
 - an English sermon video
 - roughly 30–60 minutes
 - complete usable original-English YouTube captions
@@ -57,7 +57,7 @@ For a relative selection request, enumerate enough recent canonical-channel uplo
 
 For every selected item or direct URL, record the canonical video ID and URL, channel, title, speaker when known, published date, duration, description, live status, and available caption tracks. Confirm that the video belongs to the expected channel unless Jeremy intentionally supplied another source. Treat the description as orientation only, never as transcript evidence. Label the upload date as `published`; do not claim a preaching date without independent evidence.
 
-Confirm the sermon title separately from its topic or series name. Use the published YouTube title when it clearly names the message; check the spoken introduction, description, and thumbnail artwork when the upload title is generic, abbreviated, or series-only. Do not silently turn a series name into the sermon title or invent a sermon title from the outline. Resolve conflicting evidence with Jeremy before writing the record.
+Confirm the sermon title separately from its series name. Use the published YouTube title when it clearly names the message; check the spoken introduction, description, and thumbnail artwork when the upload title is generic, abbreviated, or series-only. Do not silently turn a series name into the sermon title or invent a sermon title from the outline. Resolve conflicting evidence with Jeremy before writing the record.
 
 ### 2. Require complete captions
 
@@ -131,18 +131,18 @@ Each outline node carries a unique `scripture_mentions` set of ledger IDs. Each 
 
 After drafting, perform a second Scripture pass against the complete transcript. Search for canonical book names, chapter-and-verse language, inherited references, and distinctive biblical quotations, then inspect each candidate in context. Include references in illustrations, closing claims, prayers, and transitions. Do not promote a casual biblical-sounding phrase without contextual evidence.
 
-### 6. Confirm exactly one primary topic
+### 6. Confirm exactly one primary series assignment
 
-Assign every sermon to exactly one primary topic. Confirm topic or series alignment from explicit evidence only:
+Assign every sermon to exactly one primary series record. Confirm both the series identity and each sermon’s membership from explicit evidence only:
 
 - the spoken introduction or complete captions;
 - the YouTube title or description;
 - the sermon thumbnail artwork; or
 - direct direction from Jeremy.
 
-Record the evidence and its source in the topic record’s `provenance` list. Never invent generic topical tags from the sermon’s theology, Scripture passage, or outline language.
+Record evidence for the series name in the record’s top-level `provenance` list. Record separate evidence for each sermon’s membership in that member’s `provenance` list; proof of a series name does not automatically prove that every sermon belongs to it. Never invent generic groupings from a sermon’s theology, Scripture passage, or outline language.
 
-When the evidence identifies a series, attach the sermon to the existing confirmed series topic or create a confirmed `series` topic. When no series is identified, create a one-member `standalone` topic rather than leaving the sermon unassigned. Preserve authored series order in `members`; do not infer that order from filenames or publication dates. Topic records live in `content/topics/*.json`, and the topic ID must match the filename.
+When the evidence identifies a series, attach the sermon to the existing confirmed series record or create a confirmed `series` record. When no broader series is identified, create a one-member `standalone` series record rather than leaving the sermon unassigned. Preserve authored series order in `members`; do not infer that order from filenames or publication dates. Series records live in `content/series/*.json`, and the series ID must match the filename.
 
 ### 7. Write and validate the canonical records
 
@@ -161,17 +161,29 @@ Validate candidate JSON with:
 /usr/bin/python3 site/content.py --check < record.json
 ```
 
+Validate a series candidate and its complete membership collection with:
+
+```bash
+/usr/bin/python3 site/content.py --series --check < series.json
+```
+
 Write an approved record through the same boundary:
 
 ```bash
 /usr/bin/python3 site/content.py < record.json
 ```
 
-The content phase may write the validated sermon record under `content/sermons/YYYY/*.json` and write or update its explicit assignment under `content/topics/*.json`. Never change existing approved sermon prose merely to satisfy presentation needs. Validate the full collection so every sermon is assigned once and only once, with no duplicate, missing, or dangling topic membership.
+Write an approved series record through its validated boundary:
+
+```bash
+/usr/bin/python3 site/content.py --series < series.json
+```
+
+The content phase may write the validated sermon record under `content/sermons/YYYY/*.json` and write or update its explicit assignment under `content/series/*.json`. Never change existing approved sermon prose merely to satisfy presentation needs. Validate the full collection so every sermon is assigned once and only once, with no duplicate, missing, or dangling series membership.
 
 ## Handoff boundary
 
-Site construction and visual design are controlled separately. After content and topic validation, hand the records to the existing site project; this skill does not change templates, styling, navigation, or rendering.
+Site construction and visual design are controlled separately. After content and series validation, hand the records to the existing site project; this skill does not change templates, styling, navigation, or rendering.
 
 ## Completion checklist
 
@@ -182,6 +194,6 @@ Site construction and visual design are controlled separately. After content and
 - [ ] Every confirmed Scripture unit appears in both the outline and ledger.
 - [ ] Ambiguous references and translation claims are verified or omitted.
 - [ ] Canonical JSON passes the executable closed schema with all relationships intact.
-- [ ] Topic/series alignment is supported by recorded spoken, channel, artwork, or Jeremy evidence.
-- [ ] Every sermon belongs to exactly one primary topic; standalone sermons use one-member standalone topics.
+- [ ] Series identity and each sermon’s membership are supported by recorded spoken, channel, artwork, or Jeremy evidence.
+- [ ] Every sermon belongs to exactly one primary series; standalone sermons use one-member standalone series.
 - [ ] No generic theological tags, full transcript, copied media, full copyrighted Bible text, outside commentary, or site presentation change is included.

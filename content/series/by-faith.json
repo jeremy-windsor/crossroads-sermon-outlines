@@ -1,0 +1,151 @@
+{
+  "id": "by-faith",
+  "name": "By Faith",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "thumbnail_artwork",
+      "detail": "All thirteen inspected sermon thumbnails display the By Faith series artwork; the immediately preceding channel upload, The Verdict Is In, uses different artwork."
+    },
+    {
+      "source": "captions",
+      "detail": "The captions connect the messages week by week through Hebrews: We See Jesus identifies Preeminent as the launch, The New and Living Way counts nine weeks, and Family Resemblance closes as the finale after thirteen weeks."
+    }
+  ],
+  "scripture_spine": "Hebrews 1–13",
+  "description": "Thirteen sermons through Hebrews 1–13 on Christ’s supremacy, priesthood, new covenant, persevering faith, and the gospel-shaped life of the church.",
+  "note": "The channel sequence begins with Preeminent immediately after the differently branded The Verdict Is In and ends with Family Resemblance, whose captions identify it as the finale after thirteen weeks.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-05-04-preeminent",
+      "scripture": "Hebrews 1",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Preeminent thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-11-we-see-jesus",
+      "scripture": "Hebrews 2",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected We See Jesus thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-17-enter-his-rest",
+      "scripture": "Hebrews 3:1–4:11",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Enter His Rest thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-27-our-great-high-priest",
+      "scripture": "Hebrews 4:12–5:10",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Our Great High Priest thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-01-too-old-for-milk",
+      "scripture": "Hebrews 5:11–6:12",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Too Old for Milk thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-08-anchored-heavenward",
+      "scripture": "Hebrews 6:13–7:28",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Anchored Heavenward thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-15-the-way-in",
+      "scripture": "Hebrews 8:1–9:15",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected The Way In thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-22-tetelestai",
+      "scripture": "Hebrews 9:16–10:18",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Tetelestai thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-29-the-new-and-living-way",
+      "scripture": "Hebrews 10:19–39",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected The New and Living Way thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-06-worship-in-the-waiting",
+      "scripture": "Hebrews 11:1–7",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Worship in the Waiting thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-13-walk-by-faith",
+      "scripture": "Hebrews 11",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Walk By Faith thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-20-keep-running",
+      "scripture": "Hebrews 12",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Keep Running! thumbnail uses the By Faith series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-27-family-resemblance",
+      "scripture": "Hebrews 13",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Family Resemblance thumbnail uses the By Faith series artwork."
+        }
+      ]
+    }
+  ]
+}

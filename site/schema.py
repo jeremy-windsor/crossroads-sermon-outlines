@@ -7,16 +7,16 @@ from urllib.parse import unquote_plus
 
 SCHEMA_VERSION = 1
 SLUG = r"\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*"
-TOPIC_ID = r"[a-z0-9]+(?:-[a-z0-9]+)*"
+SERIES_ID = r"[a-z0-9]+(?:-[a-z0-9]+)*"
 NODE_ID = r"[A-Za-z0-9][A-Za-z0-9_.-]*"
 RECORD_KEYS = set("schema_version slug title speaker published duration duration_seconds video_id video_url caption_source verified sermon_start sermon_end card_summary section_intro page_title description subtitle kicker disclaimer figcaption footer_paragraphs outline_heading ledger_heading ledger_intro ledger_caption movements ledger".split())
 NODE_KEYS = set("id start heading scripture_mentions bullets children".split())
 ROW_KEYS = set("id reference reference_query treatment time phrase anchor_node_id version version_source reference_note".split())
-TOPIC_KEYS = set("id name type provenance scripture_spine description note anchor members".split())
-TOPIC_MEMBER_KEYS = {"slug", "scripture"}
-TOPIC_PROVENANCE_KEYS = {"source", "detail"}
-TOPIC_TYPES = {"series", "standalone"}
-TOPIC_SOURCES = {"spoken_intro", "captions", "youtube_title", "youtube_description", "thumbnail_artwork", "jeremy_direction"}
+SERIES_KEYS = set("id name type provenance scripture_spine description note anchor members".split())
+SERIES_MEMBER_KEYS = {"slug", "scripture", "provenance"}
+SERIES_PROVENANCE_KEYS = {"source", "detail"}
+SERIES_TYPES = {"series", "standalone"}
+SERIES_SOURCES = {"spoken_intro", "captions", "youtube_title", "youtube_description", "thumbnail_artwork", "jeremy_direction"}
 RESERVED_IDS = {"main-content", "outline-heading", "scripture-ledger", "ledger-heading", "page-title"}
 
 
@@ -49,7 +49,7 @@ def flatten(nodes):
 def plain_values(value):
     """Reject presentation markup, CSS, and project paths anywhere in content."""
     if isinstance(value, str):
-        require(not re.search(r"[<>{}]|style\s*=|(?:^|[\s/])(?:site|assets|sermons|archive|topics|content)/|(?:index|archive|topics)\.html|\b(?:color|background|display|font-size|margin|padding)\s*:\s*[^;]+;", value, re.I), "Content must be prose/data, without HTML, CSS, or site paths")
+        require(not re.search(r"[<>{}]|style\s*=|(?:^|[\s/])(?:site|assets|sermons|archive|series|content)/|(?:index|archive|series)\.html|\b(?:color|background|display|font-size|margin|padding)\s*:\s*[^;]+;", value, re.I), "Content must be prose/data, without HTML, CSS, or site paths")
     elif isinstance(value, dict):
         for key, item in value.items():
             plain_values(key)
@@ -151,51 +151,56 @@ def validate(record):
     return record
 
 
-def validate_topic(topic):
-    require(isinstance(topic, dict) and set(topic) == TOPIC_KEYS, "Unexpected or missing topic fields")
-    plain_values(topic)
+def validate_provenance(provenance, label):
+    require(isinstance(provenance, list) and bool(provenance), f"{label} provenance is required")
+    for evidence in provenance:
+        require(isinstance(evidence, dict) and set(evidence) == SERIES_PROVENANCE_KEYS, f"Unexpected or missing {label} provenance fields")
+        require(evidence["source"] in SERIES_SOURCES, f"Unsupported {label} provenance source")
+        text(evidence["detail"], f"{label} provenance detail")
+
+
+def validate_series(series):
+    require(isinstance(series, dict) and set(series) == SERIES_KEYS, "Unexpected or missing series fields")
+    plain_values(series)
     for key in ("id", "name", "type", "scripture_spine", "description", "note"):
-        text(topic[key], key)
-    require(bool(re.fullmatch(TOPIC_ID, topic["id"])), "Invalid topic ID")
-    require(topic["type"] in TOPIC_TYPES, "Unsupported topic type")
-    require(isinstance(topic["provenance"], list) and bool(topic["provenance"]), "Topic provenance is required")
-    for evidence in topic["provenance"]:
-        require(isinstance(evidence, dict) and set(evidence) == TOPIC_PROVENANCE_KEYS, "Unexpected or missing topic provenance fields")
-        require(evidence["source"] in TOPIC_SOURCES, "Unsupported topic provenance source")
-        text(evidence["detail"], "topic provenance detail")
-    require(isinstance(topic["members"], list) and bool(topic["members"]), "Topic must have members")
+        text(series[key], key)
+    require(bool(re.fullmatch(SERIES_ID, series["id"])), "Invalid series ID")
+    require(series["type"] in SERIES_TYPES, "Unsupported series record type")
+    validate_provenance(series["provenance"], "series identity")
+    require(isinstance(series["members"], list) and bool(series["members"]), "Series record must have members")
     member_slugs = []
-    for member in topic["members"]:
-        require(isinstance(member, dict) and set(member) == TOPIC_MEMBER_KEYS, "Unexpected or missing topic member fields")
+    for member in series["members"]:
+        require(isinstance(member, dict) and set(member) == SERIES_MEMBER_KEYS, "Unexpected or missing series member fields")
         text(member["slug"], "member slug")
         text(member["scripture"], "member scripture")
-        require(bool(re.fullmatch(SLUG, member["slug"])), "Invalid topic member slug")
-        require(member["slug"] not in member_slugs, "Duplicate topic member")
+        validate_provenance(member["provenance"], "series member")
+        require(bool(re.fullmatch(SLUG, member["slug"])), "Invalid series member slug")
+        require(member["slug"] not in member_slugs, "Duplicate series member")
         member_slugs.append(member["slug"])
-    require(topic["anchor"] is None or isinstance(topic["anchor"], str), "Invalid topic anchor")
-    require(topic["anchor"] is None or topic["anchor"] in member_slugs, "Topic anchor must be a member")
-    require(topic["type"] != "standalone" or len(member_slugs) == 1, "Standalone topic must have exactly one sermon")
-    return topic
+    require(series["anchor"] is None or isinstance(series["anchor"], str), "Invalid series anchor")
+    require(series["anchor"] is None or series["anchor"] in member_slugs, "Series anchor must be a member")
+    require(series["type"] != "standalone" or len(member_slugs) == 1, "Standalone record must have exactly one sermon")
+    return series
 
 
-def validate_topics(topics, records):
-    """Validate cross-file topic identity and explicit sermon membership."""
-    require(isinstance(topics, list), "Topics must be a list")
+def validate_series_collection(series_records, records):
+    """Validate cross-file series identity and explicit sermon membership."""
+    require(isinstance(series_records, list), "Series records must be a list")
     record_slugs = {record["slug"] for record in records}
-    topic_ids = set()
+    series_ids = set()
     membership = set()
-    for topic in topics:
-        validate_topic(topic)
-        require(topic["id"] not in topic_ids, "Duplicate topic ID")
-        topic_ids.add(topic["id"])
-        for member in topic["members"]:
+    for series in series_records:
+        validate_series(series)
+        require(series["id"] not in series_ids, "Duplicate series ID")
+        series_ids.add(series["id"])
+        for member in series["members"]:
             slug = member["slug"]
-            require(slug in record_slugs, "Dangling topic member slug")
-            require(slug not in membership, "Sermon belongs to more than one topic")
+            require(slug in record_slugs, "Dangling series member slug")
+            require(slug not in membership, "Sermon belongs to more than one series record")
             membership.add(slug)
     missing = record_slugs - membership
-    require(not missing, "Every sermon must belong to exactly one primary topic; missing: " + ", ".join(sorted(missing)))
-    return topics
+    require(not missing, "Every sermon must belong to exactly one series record; missing: " + ", ".join(sorted(missing)))
+    return series_records
 
 
 def json_object(source):
@@ -212,9 +217,13 @@ def loads(source):
     return validate(json_object(source))
 
 
-def loads_topic(source):
-    return validate_topic(json_object(source))
+def loads_series(source):
+    return validate_series(json_object(source))
 
 
 def dumps(record):
     return json.dumps(validate(record), ensure_ascii=False, indent=2) + "\n"
+
+
+def dumps_series(series):
+    return json.dumps(validate_series(series), ensure_ascii=False, indent=2) + "\n"

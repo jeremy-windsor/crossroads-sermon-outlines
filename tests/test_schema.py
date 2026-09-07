@@ -4,7 +4,7 @@ import json
 import pytest
 
 import render
-from schema import InvalidRecord, flatten, loads, validate, validate_topic, validate_topics
+from schema import InvalidRecord, flatten, loads, validate, validate_series, validate_series_collection
 
 
 @pytest.fixture
@@ -13,8 +13,8 @@ def record():
 
 
 @pytest.fixture
-def topic():
-    return deepcopy(render.topics()[0])
+def series():
+    return deepcopy(render.series_records()[0])
 
 
 def test_all_records_validate_and_keep_distinct_summaries():
@@ -100,10 +100,10 @@ def test_depth_three_and_free_text_speaker(record):
         validate(record)
 
 
-def test_all_topics_validate_with_explicit_membership():
-    topics = render.topics()
-    assert [topic['id'] for topic in topics] == ['renew-me', 'by-faith']
-    validate_topics(topics, render.records())
+def test_all_series_records_validate_with_explicit_membership():
+    series_records = render.series_records()
+    assert [series['id'] for series in series_records] == ['renew-me', 'by-faith']
+    validate_series_collection(series_records, render.records())
 
 
 @pytest.mark.parametrize('field,value', [
@@ -114,50 +114,56 @@ def test_all_topics_validate_with_explicit_membership():
     ('anchor', '2026-01-01-missing'),
     ('description', '<b>markup</b>'),
 ])
-def test_invalid_topic_fields(topic, field, value):
-    topic[field] = value
+def test_invalid_series_fields(series, field, value):
+    series[field] = value
     with pytest.raises(InvalidRecord):
-        validate_topic(topic)
+        validate_series(series)
 
 
-def test_topics_reject_duplicate_and_dangling_membership(topic):
+def test_series_records_reject_duplicate_and_dangling_membership(series):
     records = render.records()
-    duplicate_member = deepcopy(topic)
-    duplicate_member['id'] = 'duplicate-topic'
-    with pytest.raises(InvalidRecord, match='more than one topic'):
-        validate_topics([topic, duplicate_member], records)
-    duplicate_member = deepcopy(topic)
+    duplicate_member = deepcopy(series)
+    duplicate_member['id'] = 'duplicate-series'
+    with pytest.raises(InvalidRecord, match='more than one series'):
+        validate_series_collection([series, duplicate_member], records)
+    duplicate_member = deepcopy(series)
     duplicate_member['members'][0]['slug'] = '2026-01-01-not-a-record'
     duplicate_member['anchor'] = duplicate_member['members'][0]['slug']
     with pytest.raises(InvalidRecord, match='Dangling'):
-        validate_topics([duplicate_member], records)
+        validate_series_collection([duplicate_member], records)
 
 
-def test_topic_rejects_duplicate_member_and_duplicate_id(topic):
-    topic['members'].append(deepcopy(topic['members'][0]))
-    with pytest.raises(InvalidRecord, match='Duplicate topic member'):
-        validate_topic(topic)
-    first, second = deepcopy(render.topics()[0]), deepcopy(render.topics()[1])
+def test_series_rejects_duplicate_member_and_duplicate_id(series):
+    series['members'].append(deepcopy(series['members'][0]))
+    with pytest.raises(InvalidRecord, match='Duplicate series member'):
+        validate_series(series)
+    first, second = deepcopy(render.series_records()[0]), deepcopy(render.series_records()[1])
     second['id'] = first['id']
-    with pytest.raises(InvalidRecord, match='Duplicate topic ID'):
-        validate_topics([first, second], render.records())
+    with pytest.raises(InvalidRecord, match='Duplicate series ID'):
+        validate_series_collection([first, second], render.records())
 
 
-def test_topics_require_every_sermon_exactly_once():
-    topics = deepcopy(render.topics())
-    missing = topics[0]['members'].pop()['slug']
-    with pytest.raises(InvalidRecord, match='exactly one primary topic.*' + missing):
-        validate_topics(topics, render.records())
+def test_series_records_require_every_sermon_exactly_once():
+    series_records = deepcopy(render.series_records())
+    missing = series_records[0]['members'].pop()['slug']
+    with pytest.raises(InvalidRecord, match='exactly one series record.*' + missing):
+        validate_series_collection(series_records, render.records())
 
 
-def test_topic_provenance_and_standalone_shape_are_closed(topic):
-    topic['provenance'][0]['source'] = 'theological_inference'
+def test_series_and_member_provenance_and_standalone_shape_are_closed(series):
+    series['provenance'][0]['source'] = 'theological_inference'
     with pytest.raises(InvalidRecord, match='provenance source'):
-        validate_topic(topic)
-    topic = deepcopy(render.topics()[0])
-    topic['type'] = 'standalone'
+        validate_series(series)
+    series = deepcopy(render.series_records()[0])
+    series['type'] = 'standalone'
     with pytest.raises(InvalidRecord, match='exactly one sermon'):
-        validate_topic(topic)
-    topic['members'] = topic['members'][:1]
-    topic['anchor'] = None
-    validate_topic(topic)
+        validate_series(series)
+    series['members'] = series['members'][:1]
+    series['anchor'] = None
+    validate_series(series)
+    series['members'][0]['provenance'] = []
+    with pytest.raises(InvalidRecord, match='series member provenance is required'):
+        validate_series(series)
+    series['members'][0]['provenance'] = [{'source': 'theological_inference', 'detail': 'Not allowed.'}]
+    with pytest.raises(InvalidRecord, match='series member provenance source'):
+        validate_series(series)

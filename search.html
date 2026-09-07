@@ -26,7 +26,7 @@ try {
       <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
       <button type="submit">Search</button>
     </form>
-    <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
+    <div class="theme-selector" role="group" aria-label="Theme" hidden><button type="button" data-theme-choice="light" aria-pressed="false">Light</button><button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button><button type="button" data-theme-choice="system" aria-pressed="false">System</button></div>
   </nav>
   <header><p class="kicker">Search</p><h1>Search sermons</h1><p class="lede">Search titles, speakers, series, Overview text, and Scripture references.</p></header>
   <main id="main-content" tabindex="-1"><section class="search-page" aria-labelledby="search-results-heading">
@@ -36,29 +36,43 @@ try {
 <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a search above.</p>
 <ol id="search-results" class="search-results" aria-label="Search results"></ol>
 </section></main>
-  <footer><nav aria-label="Related links"><a href="https://youtube.com/@thecrossroadschurch">Crossroads Church on YouTube</a></nav></footer>
+  <footer><nav aria-label="Related links"><a href="https://thecrossroads.church" target="_blank" rel="noopener noreferrer">Crossroads Church</a> <a href="https://www.youtube.com/@thecrossroadschurch" target="_blank" rel="noopener noreferrer">Crossroads Church on YouTube</a></nav></footer>
   <script>(() => {
   const root = document.documentElement;
-  const toggle = document.querySelector('.theme-toggle');
-  const reset = document.querySelector('.theme-reset');
+  const selector = document.querySelector('.theme-selector');
+  const controls = Array.from(selector.querySelectorAll('[data-theme-choice]'));
   const system = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : system.matches;
+  const selected = () => root.dataset.theme || 'system';
   const sync = () => {
-    toggle.setAttribute('aria-pressed', String(isDark()));
-    reset.hidden = !root.dataset.theme;
+    const choice = selected();
+    for (const control of controls) {
+      control.setAttribute('aria-pressed', String(control.dataset.themeChoice === choice));
+    }
   };
-  toggle.hidden = false;
-  toggle.addEventListener('click', () => {
-    root.dataset.theme = isDark() ? 'light' : 'dark';
-    try { localStorage.setItem('crossroads-theme', root.dataset.theme); } catch (_) {}
+  const apply = choice => {
+    if (choice === 'system') {
+      delete root.dataset.theme;
+      try { localStorage.removeItem('crossroads-theme'); } catch (_) {}
+    } else {
+      root.dataset.theme = choice;
+      try { localStorage.setItem('crossroads-theme', choice); } catch (_) {}
+    }
     sync();
-  });
-  reset.addEventListener('click', () => {
-    delete root.dataset.theme;
-    try { localStorage.removeItem('crossroads-theme'); } catch (_) {}
-    sync();
-    toggle.focus();
-  });
+  };
+  selector.hidden = false;
+  for (const control of controls) {
+    control.addEventListener('click', () => apply(control.dataset.themeChoice));
+    control.addEventListener('keydown', event => {
+      const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+      if (!keys.includes(event.key)) return;
+      event.preventDefault();
+      const current = controls.indexOf(control);
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? controls.length - 1
+        : (current + (event.key === 'ArrowRight' ? 1 : -1) + controls.length) % controls.length;
+      controls[next].focus();
+      apply(controls[next].dataset.themeChoice);
+    });
+  }
   system.addEventListener('change', sync);
   sync();
 })();

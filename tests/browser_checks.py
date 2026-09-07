@@ -22,8 +22,8 @@ SURFACES = [
     ('search', 'search.html'),
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
-    ('topics', 'topics.html'),
-    ('topic', 'topics/renew-me.html'),
+    ('series', 'series.html'),
+    ('series', 'series/renew-me.html'),
     ('sermon', SERMON),
 ]
 TRANSPARENT_PNG = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M/wHwAF/gL+Xf8WAAAAAElFTkSuQmCC')
@@ -116,7 +116,7 @@ def test_rendered_viewports(browser, local_site, name, path, device, width, heig
         page.goto(local_site + path)
         assert not errors
         assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
-        assert page.locator('.theme-toggle').get_attribute('aria-pressed') == str(theme == 'dark').lower()
+        assert page.locator('[data-theme-choice="system"]').get_attribute('aria-pressed') == 'true'
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         if name == 'sermon':
             assert page.get_by_role('table', name='Scripture ledger').count() == 1
@@ -139,20 +139,25 @@ def test_rendered_viewports(browser, local_site, name, path, device, width, heig
 
 
 @pytest.mark.parametrize('system', ['light', 'dark'])
-def test_theme_override_persistence_reset_and_early_script(browser, local_site, system):
+def test_theme_selector_persistence_system_and_early_script(browser, local_site, system):
     with context_for(browser, color_scheme=system) as context:
         page = context.new_page()
         page.goto(local_site)
-        toggle = page.get_by_role('button', name='Dark theme', exact=True)
-        toggle.focus()
-        page.keyboard.press('Space')
+        selector = page.get_by_role('group', name='Theme')
+        assert selector.is_visible()
+        light = page.get_by_role('button', name='Light', exact=True)
+        dark = page.get_by_role('button', name='Dark', exact=True)
+        system_button = page.get_by_role('button', name='System', exact=True)
+        assert [light.get_attribute('aria-pressed'), dark.get_attribute('aria-pressed'), system_button.get_attribute('aria-pressed')] == ['false', 'false', 'true']
+
         override = 'dark' if system == 'light' else 'light'
+        page.get_by_role('button', name=override.title(), exact=True).click()
         assert page.evaluate('document.documentElement.dataset.theme') == override
         assert page.evaluate('localStorage.getItem("crossroads-theme")') == override
         page.goto(local_site + 'archive/2026.html')
         assert page.evaluate('document.documentElement.dataset.theme') == override
         page.reload()
-        assert page.get_by_role('button', name='Dark theme', exact=True).get_attribute('aria-pressed') == str(override == 'dark').lower()
+        assert page.get_by_role('button', name=override.title(), exact=True).get_attribute('aria-pressed') == 'true'
         # Remove the control script: only the early head script can restore the theme.
         early_only = render.build()['index.html'].decode()
         second_script = early_only.rfind('<script>')
@@ -163,12 +168,12 @@ def test_theme_override_persistence_reset_and_early_script(browser, local_site, 
         assert background(page) == ('rgb(20, 29, 25)' if override == 'dark' else 'rgb(250, 250, 246)')
         context.unroute(local_site + 'index.html')
         page.goto(local_site)
-        page.get_by_role('button', name='Use system theme').click()
+        page.get_by_role('button', name='System', exact=True).click()
         assert page.evaluate('localStorage.getItem("crossroads-theme")') is None
         assert page.evaluate('document.documentElement.dataset.theme') is None
+        assert system_button.get_attribute('aria-pressed') == 'true'
         # Emulation completion does not guarantee media-query change dispatch has
-        # run. Observe real events, then use retrying CSS/ARIA assertions; never
-        # dispatch synthetic events or invoke the application's handler ourselves.
+        # run. Observe real events, then use retrying CSS/ARIA assertions.
         page.evaluate('''() => {
           window.observedThemeMedia = matchMedia('(prefers-color-scheme: dark)');
           window.observedThemeChanges = [];
@@ -177,17 +182,24 @@ def test_theme_override_persistence_reset_and_early_script(browser, local_site, 
           });
         }''')
         for count, theme in enumerate((override, system), start=1):
-            dark = theme == 'dark'
+            dark_mode = theme == 'dark'
             page.emulate_media(color_scheme=theme)
             page.wait_for_function('''expected => {
               const changes = window.observedThemeChanges;
               return changes.length === expected.count && changes.at(-1).matches === expected.dark
                 && changes.at(-1).trusted && window.observedThemeMedia.matches === expected.dark;
-            }''', arg={'count': count, 'dark': dark})
-            expect(toggle).to_have_attribute('aria-pressed', str(dark).lower())
-            expect(page.locator('body')).to_have_css('background-color', 'rgb(20, 29, 25)' if dark else 'rgb(250, 250, 246)')
+            }''', arg={'count': count, 'dark': dark_mode})
+            expect(page.locator('body')).to_have_css('background-color', 'rgb(20, 29, 25)' if dark_mode else 'rgb(250, 250, 246)')
+            assert system_button.get_attribute('aria-pressed') == 'true'
             assert page.evaluate('document.documentElement.dataset.theme') is None
             assert page.evaluate('localStorage.getItem("crossroads-theme")') is None
+
+        system_button.focus()
+        page.keyboard.press('ArrowRight')
+        assert light.get_attribute('aria-pressed') == 'true'
+        assert light.evaluate('(element) => element === document.activeElement')
+        page.keyboard.press('ArrowLeft')
+        assert system_button.get_attribute('aria-pressed') == 'true'
 
 
 @pytest.mark.parametrize('theme', ['light', 'dark'])
@@ -195,11 +207,11 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
     with context_for(browser, java_script_enabled=False, color_scheme=theme, viewport={'width': 375, 'height': 812}) as context:
         page = context.new_page()
         page.goto(local_site)
-        assert not page.locator('.theme-toggle').is_visible()
+        assert not page.locator('.theme-selector').is_visible()
         assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
         page.get_by_role('link', name='Series', exact=True).click()
         page.get_by_role('link', name='Renew Me', exact=True).click()
-        assert page.url.endswith('topics/renew-me.html')
+        assert page.url.endswith('series/renew-me.html')
         page.get_by_role('link', name='When Excuses Die', exact=True).click()
         assert page.url.endswith('sermons/2026-08-03-when-excuses-die.html')
         page.goto(local_site)
@@ -219,14 +231,30 @@ def test_art_plate_and_watch_link_hit_targets(browser, local_site):
     with context_for(browser, viewport={'width': 1280, 'height': 900}) as context:
         page = context.new_page()
         page.goto(local_site)
-        card = page.locator('.topic-card').first
-        plate = card.locator('.topic-plate')
+        card = page.locator('.series-card').first
+        plate = card.locator('.series-plate')
         plate_box = plate.bounding_box()
         plate_target = page.evaluate('''point => {
           const target = document.elementFromPoint(point.x, point.y);
           return target.closest('a')?.getAttribute('href');
         }''', {'x': plate_box['x'] + plate_box['width'] / 2, 'y': plate_box['y'] + plate_box['height'] / 2})
-        assert plate_target == 'topics/renew-me.html'
+        assert plate_target == 'series/renew-me.html'
+
+
+def test_search_control_has_one_clean_focus_ring(browser, local_site):
+    with context_for(browser, viewport={'width': 1280, 'height': 900}) as context:
+        page = context.new_page()
+        page.goto(local_site)
+        search = page.locator('.site-search')
+        input_box = search.locator('input')
+        button = search.locator('button')
+        input_box.focus()
+        assert search.evaluate('(element) => getComputedStyle(element).outlineStyle') == 'solid'
+        assert input_box.evaluate('(element) => getComputedStyle(element).outlineStyle') == 'none'
+        input_bounds, button_bounds = input_box.bounding_box(), button.bounding_box()
+        assert abs(input_bounds['y'] - button_bounds['y']) < 1
+        assert abs(input_bounds['height'] - button_bounds['height']) < 1
+        assert abs(input_bounds['x'] + input_bounds['width'] - button_bounds['x']) < 1
 
 
 @pytest.mark.parametrize('width', [1280, 375])
@@ -259,7 +287,7 @@ def test_keyboard_numeric_anchor_print_and_large_text(browser, local_site):
         assert page.locator('.skip-link').bounding_box()['x'] >= 0
         page.keyboard.press('Enter')
         assert page.locator('main').evaluate('(el) => el === document.activeElement')
-        for selector in ('.timestamp', '.scripture-tag', '.month-return', '.theme-toggle'):
+        for selector in ('.timestamp', '.scripture-tag', '.month-return', '[data-theme-choice="dark"]'):
             element = page.locator(selector).first
             element.focus()
             assert element.evaluate('(el) => getComputedStyle(el).outlineStyle') == 'solid'
@@ -292,7 +320,7 @@ def test_unavailable_storage_keeps_theme_usable(browser, local_site):
         context.add_init_script('Object.defineProperty(window, "localStorage", { get() { throw new Error("unavailable"); } });')
         page = context.new_page()
         page.goto(local_site)
-        page.get_by_role('button', name='Dark theme', exact=True).click()
+        page.get_by_role('button', name='Light', exact=True).click()
         assert background(page) == 'rgb(250, 250, 246)'
 
 

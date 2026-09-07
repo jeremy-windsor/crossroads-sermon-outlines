@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse Crossroads sermons by year and month.">
+  <meta name="description" content="Browse Crossroads sermons by series.">
   <meta name="color-scheme" content="light dark">
-  <title>Timeline | Crossroads Sermons</title>
+  <title>Series | Crossroads Sermons</title>
   <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
 try {
   const savedTheme = localStorage.getItem('crossroads-theme');
@@ -20,7 +20,7 @@ try {
   <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html" class="site-name">Crossroads Sermons</a>
-    <div class="nav-links"><a href="index.html">Series</a> <a href="archive.html" aria-current="page">Timeline</a></div>
+    <div class="nav-links"><a href="index.html" aria-current="page">Series</a> <a href="archive.html">Timeline</a></div>
     <form class="site-search" role="search" action="search.html" method="get">
       <label class="visually-hidden" for="site-search-query">Search sermons</label>
       <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
@@ -28,8 +28,25 @@ try {
     </form>
     <div class="theme-selector" role="group" aria-label="Theme" hidden><button type="button" data-theme-choice="light" aria-pressed="false">Light</button><button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button><button type="button" data-theme-choice="system" aria-pressed="false">System</button></div>
   </nav>
-  <header><p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find a message.</p></header>
-  <main id="main-content" tabindex="-1"><ul class="year-list"><li><p class="year-head"><a href="archive/2026.html" class="year-link">2026</a><span>18 sermons</span></p><nav class="month-strip" aria-label="Months with sermons in 2026"><span aria-hidden="true">Jan</span><span aria-hidden="true">Feb</span><span aria-hidden="true">Mar</span><span aria-hidden="true">Apr</span><a href="archive/2026.html#2026-05" aria-label="May 2026">May</a><a href="archive/2026.html#2026-06" aria-label="June 2026">Jun</a><a href="archive/2026.html#2026-07" aria-label="July 2026">Jul</a><a href="archive/2026.html#2026-08" aria-label="August 2026">Aug</a><span aria-hidden="true">Sep</span><span aria-hidden="true">Oct</span><span aria-hidden="true">Nov</span><span aria-hidden="true">Dec</span></nav></li></ul></main>
+  <header><p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Browse sermon series and standalone messages.</p></header>
+  <main id="main-content" tabindex="-1"><div class="series-list"><article class="series-card" data-series="renew-me">
+  <div class="series-plate"><img src="https://i.ytimg.com/vi/dDcRPypYToc/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <div class="series-copy">
+    <h2 class="series-title"><a href="series/renew-me.html">Renew Me</a></h2>
+    <p class="series-meta">Psalm 51 · 5 sermons · August 2026</p>
+    <p class="series-description">David’s psalm of repentance, opened a few verses at a time.</p>
+    <p class="series-link"><a href="series/renew-me.html">View series →</a></p>
+  </div>
+</article>
+<article class="series-card" data-series="by-faith">
+  <div class="series-plate"><img src="https://i.ytimg.com/vi/8S53C5iLzLo/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <div class="series-copy">
+    <h2 class="series-title"><a href="series/by-faith.html">By Faith</a></h2>
+    <p class="series-meta">Hebrews 1–13 · 13 sermons · May–July 2026</p>
+    <p class="series-description">Thirteen sermons through Hebrews 1–13 on Christ’s supremacy, priesthood, new covenant, persevering faith, and the gospel-shaped life of the church.</p>
+    <p class="series-link"><a href="series/by-faith.html">View series →</a></p>
+  </div>
+</article></div></main>
   <footer><nav aria-label="Related links"><a href="https://thecrossroads.church" target="_blank" rel="noopener noreferrer">Crossroads Church</a> <a href="https://www.youtube.com/@thecrossroadschurch" target="_blank" rel="noopener noreferrer">Crossroads Church on YouTube</a></nav></footer>
   <script>(() => {
   const root = document.documentElement;

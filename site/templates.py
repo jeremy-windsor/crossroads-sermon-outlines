@@ -6,7 +6,9 @@ from html import escape
 
 from schema import flatten, timestamp
 
-CHURCH = "https://youtube.com/@thecrossroadschurch"
+CHURCH = "https://thecrossroads.church"
+CHANNEL = "https://www.youtube.com/@thecrossroadschurch"
+EXTERNAL = ' target="_blank" rel="noopener noreferrer"'
 LABELS = ("Reference", "Treatment", "Timestamp", "Spoken phrase", "Overview section", "YouTube", "BibleGateway")
 MONTHS = ("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 MONTH_ABBREVIATIONS = ("", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
@@ -52,7 +54,7 @@ def layout(title, description, prefix, header, body, scripts, current=None, extr
         link(prefix + path, label, ' aria-current="page"' if current == path else "")
         for path, label in (("index.html", "Series"), ("archive.html", "Timeline"))
     )
-    footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church on YouTube")}</nav>'
+    footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church", EXTERNAL)} {link(CHANNEL, "Crossroads Church on YouTube", EXTERNAL)}</nav>'
     search_script = f"\n  {extra_script}" if extra_script else ""
     return f'''<!doctype html>
 <html lang="en">
@@ -71,7 +73,7 @@ def layout(title, description, prefix, header, body, scripts, current=None, extr
     {link(prefix + "index.html", "Crossroads Sermons", ' class="site-name"')}
     <div class="nav-links">{navigation}</div>
     {search_form(prefix)}
-    <div class="theme-controls"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button><button class="theme-reset" type="button" hidden>Use system theme</button></div>
+    <div class="theme-selector" role="group" aria-label="Theme" hidden><button type="button" data-theme-choice="light" aria-pressed="false">Light</button><button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button><button type="button" data-theme-choice="system" aria-pressed="false">System</button></div>
   </nav>
   <header>{header}</header>
   <main id="main-content" tabindex="-1">{body}</main>
@@ -82,12 +84,12 @@ def layout(title, description, prefix, header, body, scripts, current=None, extr
 '''
 
 
-def topic_membership(topics):
+def series_membership(series_records):
     result = {}
-    for topic in topics:
-        total = len(topic["members"])
-        for part, member in enumerate(topic["members"], start=1):
-            result[member["slug"]] = (topic, part, total)
+    for series in series_records:
+        total = len(series["members"])
+        for part, member in enumerate(series["members"], start=1):
+            result[member["slug"]] = (series, part, total)
     return result
 
 
@@ -99,38 +101,41 @@ def plate(record, class_name, eager=False):
     return f'<div class="{e(class_name)}"><img src="{e(source)}" alt="" width="1280" height="720" loading="{loading}" decoding="async"></div>'
 
 
-def sermon_card(record, topics, prefix="", heading=3, eager=False, current_topic=None):
-    info = topic_membership(topics).get(record["slug"])
-    topic_line = ""
-    topic_attribute = ""
+def sermon_card(record, series_records, prefix="", heading=3, eager=False, current_series=None):
+    info = series_membership(series_records).get(record["slug"])
+    series_line = ""
+    series_attribute = ""
     if info:
-        topic, part, total = info
-        topic_attribute = f' data-topic="{e(topic["id"])}"'
-        label = e(topic["name"]) if current_topic == topic["id"] else link(prefix + "topics/" + topic["id"] + ".html", topic["name"])
-        topic_line = f'<p class="card-topic">{label} · {part} of {total}</p>'
+        series, part, total = info
+        series_attribute = f' data-series="{e(series["id"])}"'
+        if series["type"] == "standalone":
+            series_line = '<p class="card-series">Standalone</p>'
+        else:
+            label = e(series["name"]) if current_series == series["id"] else link(prefix + "series/" + series["id"] + ".html", series["name"])
+            series_line = f'<p class="card-series">{label} · {part} of {total}</p>'
     title_href = prefix + "sermons/" + record["slug"] + ".html"
     watch_link = f'<a href="{e(record["video_url"])}" aria-label="Watch {e(record["title"])} on YouTube">Watch <span aria-hidden="true">↗</span></a>'
-    return f'''<article class="sermon-card" data-sermon="{e(record['slug'])}"{topic_attribute}>
+    return f'''<article class="sermon-card" data-sermon="{e(record['slug'])}"{series_attribute}>
   {plate(record, "card-plate", eager)}
-  {topic_line}
+  {series_line}
   <h{heading} class="card-title">{link(title_href, record['title'])}</h{heading}>
   <p class="card-meta">{time_element(record['published'])} <span aria-hidden="true">·</span> <span>{e(record['speaker'])}</span> <span aria-hidden="true">·</span> <span>{e(record['duration'])}</span></p>
   <p class="card-watch">{watch_link}</p>
 </article>'''
 
 
-def sermon_grid(records, topics, prefix="", heading=3, eager_count=2, current_topic=None):
-    entries = [sermon_card(record, topics, prefix, heading, index < eager_count, current_topic) for index, record in enumerate(records)]
+def sermon_grid(records, series_records, prefix="", heading=3, eager_count=2, current_series=None):
+    entries = [sermon_card(record, series_records, prefix, heading, index < eager_count, current_series) for index, record in enumerate(records)]
     return '<div class="sermon-grid">' + "\n".join(entries) + "</div>"
 
 
-def topic_anchor(topic, by_slug):
-    slug = topic["anchor"] or topic["members"][0]["slug"]
+def series_anchor(series, by_slug):
+    slug = series["anchor"] or series["members"][0]["slug"]
     return by_slug[slug]
 
 
-def topic_period(topic, by_slug):
-    dates = sorted(date.fromisoformat(by_slug[member["slug"]]["published"]) for member in topic["members"])
+def series_period(series, by_slug):
+    dates = sorted(date.fromisoformat(by_slug[member["slug"]]["published"]) for member in series["members"])
     first, last = dates[0], dates[-1]
     if (first.year, first.month) == (last.year, last.month):
         return f"{MONTHS[first.month]} {first.year}"
@@ -139,38 +144,38 @@ def topic_period(topic, by_slug):
     return f"{MONTHS[first.month]} {first.year}–{MONTHS[last.month]} {last.year}"
 
 
-def topic_destination(topic, prefix=""):
-    if len(topic["members"]) == 1:
-        return prefix + "sermons/" + topic["members"][0]["slug"] + ".html"
-    return prefix + "topics/" + topic["id"] + ".html"
+def series_destination(series, prefix=""):
+    if series["type"] == "standalone":
+        return prefix + "sermons/" + series["members"][0]["slug"] + ".html"
+    return prefix + "series/" + series["id"] + ".html"
 
 
-def topic_card(topic, by_slug, prefix="", heading=2, eager=False):
-    anchor = topic_anchor(topic, by_slug)
-    count = len(topic["members"])
-    destination = topic_destination(topic, prefix)
-    link_label = "View sermon →" if count == 1 else "View series →"
-    return f'''<article class="topic-card" data-topic="{e(topic['id'])}">
-  {plate(anchor, "topic-plate", eager)}
-  <div class="topic-copy">
-    <h{heading} class="topic-title">{link(destination, topic['name'])}</h{heading}>
-    <p class="topic-meta">{e(topic['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(topic_period(topic, by_slug))}</p>
-    <p class="topic-description">{e(topic['description'])}</p>
-    <p class="topic-link">{link(destination, link_label)}</p>
+def series_card(series, by_slug, prefix="", heading=2, eager=False):
+    anchor = series_anchor(series, by_slug)
+    count = len(series["members"])
+    destination = series_destination(series, prefix)
+    link_label = "View sermon →" if series["type"] == "standalone" else "View series →"
+    return f'''<article class="series-card" data-series="{e(series['id'])}">
+  {plate(anchor, "series-plate", eager)}
+  <div class="series-copy">
+    <h{heading} class="series-title">{link(destination, series['name'])}</h{heading}>
+    <p class="series-meta">{e(series['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(series_period(series, by_slug))}</p>
+    <p class="series-description">{e(series['description'])}</p>
+    <p class="series-link">{link(destination, link_label)}</p>
   </div>
 </article>'''
 
 
-def topic_listing(records, topics, prefix=""):
+def series_listing(records, series_records, prefix=""):
     by_slug = {record["slug"]: record for record in records}
-    return '<div class="topic-list">' + "\n".join(
-        topic_card(topic, by_slug, prefix, eager=index < 2) for index, topic in enumerate(topics)
+    return '<div class="series-list">' + "\n".join(
+        series_card(series, by_slug, prefix, eager=index < 2) for index, series in enumerate(series_records)
     ) + "</div>"
 
 
-def home(records, topics, scripts):
+def home(records, series_records, scripts):
     header = '<p class="kicker">Series</p><h1>Crossroads Sermons</h1><p class="lede">Browse sermons by series, or use the Timeline to find a message by date.</p>'
-    body = f'<section aria-labelledby="topics-heading"><h2 id="topics-heading" class="visually-hidden">Sermon series</h2>{topic_listing(records, topics)}</section>'
+    body = f'<section aria-labelledby="series-heading"><h2 id="series-heading" class="visually-hidden">Sermon series</h2>{series_listing(records, series_records)}</section>'
     return layout("Crossroads Sermons", "Browse Crossroads sermons by series, date, speaker, or Scripture reference.", "", header, body, scripts, current="index.html")
 
 
@@ -194,7 +199,7 @@ def archive(records, scripts):
     return layout("Timeline | Crossroads Sermons", "Browse Crossroads sermons by year and month.", "", '<p class="kicker">Timeline</p><h1>Sermon timeline</h1><p class="lede">Browse by year and month to find a message.</p>', body, scripts, current="archive.html")
 
 
-def year_archive(year, records, topics, scripts):
+def year_archive(year, records, series_records, scripts):
     months = defaultdict(list)
     for record in records:
         months[record["published"][:7]].append(record)
@@ -203,30 +208,31 @@ def year_archive(year, records, topics, scripts):
     seen = 0
     for month, items in sorted(months.items(), reverse=True):
         eager_count = max(0, min(2 - seen, len(items)))
-        body += f'<section class="month-section" id="{e(month)}" aria-labelledby="month-{e(month)}"><h2 id="month-{e(month)}">{MONTHS[int(month[-2:])]} {e(year)}</h2>{sermon_grid(items, topics, "../", eager_count=eager_count)}</section>'
+        body += f'<section class="month-section" id="{e(month)}" aria-labelledby="month-{e(month)}"><h2 id="month-{e(month)}">{MONTHS[int(month[-2:])]} {e(year)}</h2>{sermon_grid(items, series_records, "../", eager_count=eager_count)}</section>'
         seen += len(items)
     header = f'<p class="kicker">{link("../archive.html", "Timeline")}</p><h1>{e(year)} sermons</h1><p class="lede">{len(records)} messages, newest first.</p>'
     return layout(f"{year} Timeline | Crossroads Sermons", f"Crossroads sermons published in {year}, grouped by month.", "../", header, body, scripts, current="archive.html")
 
 
-def topic_index(records, topics, scripts):
+def series_index(records, series_records, scripts):
     header = '<p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Browse sermon series and standalone messages.</p>'
-    return layout("Series | Crossroads Sermons", "Browse Crossroads sermons by series.", "", header, topic_listing(records, topics), scripts, current="index.html")
+    return layout("Series | Crossroads Sermons", "Browse Crossroads sermons by series.", "", header, series_listing(records, series_records), scripts, current="index.html")
 
 
-def topic_page(topic, by_slug, topics, scripts):
-    members = [by_slug[member["slug"]] for member in topic["members"]]
-    anchor = topic_anchor(topic, by_slug)
+def series_page(series, by_slug, series_records, scripts):
+    members = [by_slug[member["slug"]] for member in series["members"]]
+    anchor = series_anchor(series, by_slug)
     count = len(members)
-    header = f'''<div data-topic="{e(topic['id'])}">
+    header = f'''<div data-series="{e(series['id'])}">
 <p class="kicker">{link("../index.html", "Series")}</p>
-{plate(anchor, "topic-lead", True)}
-<h1>{e(topic['name'])}</h1>
-<p class="subtitle">{e(topic['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(topic_period(topic, by_slug))}</p>
-<p class="lede">{e(topic['description'])}</p>
+{plate(anchor, "series-lead", True)}
+<h1>{e(series['name'])}</h1>
+<p class="subtitle">{e(series['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(series_period(series, by_slug))}</p>
+<p class="lede">{e(series['description'])}</p>
 </div>'''
-    body = f'<section aria-labelledby="topic-messages-heading"><h2 id="topic-messages-heading">Sermons in this series</h2>{sermon_grid(members, topics, "../", current_topic=topic["id"])}</section>'
-    return layout(f"{topic['name']} | Crossroads Sermons", topic["description"], "../", header, body, scripts, current="index.html")
+    section_heading = "Standalone sermon" if series["type"] == "standalone" else "Sermons in this series"
+    body = f'<section aria-labelledby="series-messages-heading"><h2 id="series-messages-heading">{section_heading}</h2>{sermon_grid(members, series_records, "../", current_series=series["id"])}</section>'
+    return layout(f"{series['name']} | Crossroads Sermons", series["description"], "../", header, body, scripts, current="index.html")
 
 
 def search(scripts, search_script):
@@ -251,7 +257,7 @@ def neighbors(record, previous, following):
     return '<nav class="sermon-navigation" aria-label="Sermon navigation">' + " ".join(links) + "</nav>"
 
 
-def sermon(record, previous, following, scripts, topics=()):
+def sermon(record, previous, following, scripts, series_records=()):
     rows = {row["id"]: row for row in record["ledger"]}
     nodes = {node["id"]: node for node in flatten(record["movements"])}
 
@@ -279,14 +285,14 @@ def sermon(record, previous, following, scripts, topics=()):
         ("Duration", e(record['duration'])),
         ("Watch", link(record['video_url'], 'YouTube sermon')),
     ]
-    topic_info = topic_membership(topics).get(record["slug"])
-    topic_name = "Sermon"
-    if topic_info:
-        topic, part, total = topic_info
-        topic_name = topic["name"]
-        topic_value = link("../topics/" + topic["id"] + ".html", topic["name"]) + f" · Part {part} of {total}"
-        metadata.append(("Series", topic_value))
-    header = f'<p class="kicker">{e(topic_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
+    series_info = series_membership(series_records).get(record["slug"])
+    series_name = "Sermon"
+    if series_info and series_info[0]["type"] == "series":
+        series, part, total = series_info
+        series_name = series["name"]
+        series_value = link("../series/" + series["id"] + ".html", series["name"]) + f" · Part {part} of {total}"
+        metadata.append(("Series", series_value))
+    header = f'<p class="kicker">{e(series_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
     body = f'''<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Overview')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
 <figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>{link(record['video_url'], 'Watch on YouTube')}</figcaption></figure>
 <section aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>

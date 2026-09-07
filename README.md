@@ -15,9 +15,9 @@ A small public library of faithful chronological sermon outlines for review and 
 
 A sermon page is published only when the source video has a complete usable English YouTube caption track. The captions are checked for full-sermon coverage, then used to build and audit the outline. If captions are missing or incomplete, publication stops rather than silently substituting a machine transcription.
 
-Sermon content lives in validated JSON records. Explicit primary-topic metadata lives separately in `content/topics/*.json`; every sermon must be assigned exactly once. Topic or series alignment is recorded from spoken captions, YouTube title/description, thumbnail artwork, or Jeremy’s direction—never inferred from theology or generated tags. A sermon without a confirmed series receives a one-member standalone topic. A deterministic Python renderer produces the homepage, Timeline, topic and sermon pages, static search index, and shared stylesheet. GitHub Pages serves the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
+Sermon content lives in validated JSON records. Explicit primary-series metadata lives separately in `content/series/*.json`; every sermon must be assigned exactly once. Series identity and each sermon’s membership are recorded from spoken captions, YouTube title/description, thumbnail artwork, or Jeremy’s direction—never inferred from theology or generated tags. A sermon without a confirmed broader series receives a one-member standalone series record. A deterministic Python renderer produces the homepage, Timeline, series and sermon pages, static search index, and shared stylesheet. GitHub Pages serves the tracked repository-root files from `main` with `.nojekyll`; there is no frontend framework, database, authentication, or application server.
 
-The homepage is the topic index, sorted by each topic’s newest sermon. Multi-sermon topics open one ordered topic page; one-sermon topics link directly to the sermon while their valid topic pages remain generated. The [Timeline](archive.html) links to years and active months, and [2026](archive/2026.html) groups every current sermon by month. A persistent search form opens [static search](search.html) over titles, speakers, dates, topic names, all Overview headings and bullets, Scripture references, and ledger phrases. Results deep-link to the exact Overview node or Scripture-ledger row when available. Browsing works without JavaScript; only search requires it. Light/dark follows the system by default, the accessible toggle saves a local preference, and printing uses the light palette.
+The homepage is the series index, sorted by each series’s newest sermon. Confirmed series open one ordered series page; standalone records link directly to their sermon while their valid series pages remain generated. The [Timeline](archive.html) links to years and active months, and [2026](archive/2026.html) groups every current sermon by month. A persistent search form opens [static search](search.html) over titles, speakers, dates, series names, all Overview headings and bullets, Scripture references, and ledger phrases. Results deep-link to the exact Overview node or Scripture-ledger row when available. Browsing works without JavaScript; only search requires it. Theme follows the system by default, and the compact Light/Dark/System selector can save an explicit preference. Printing uses the light palette.
 
 ## Published outlines
 
@@ -30,13 +30,22 @@ The homepage is the topic index, sorted by each topic’s newest sermon. Multi-s
 - [Keep Running! — Josh Wyatt — July 20, 2026](sermons/2026-07-20-keep-running.html)
 - [Walk By Faith — Josh Wyatt — July 13, 2026](sermons/2026-07-13-walk-by-faith.html)
 - [Worship in the Waiting — Elijah Stanley — July 6, 2026](sermons/2026-07-06-worship-in-the-waiting.html)
+- [The New and Living Way — Josh Wyatt — June 29, 2026](sermons/2026-06-29-the-new-and-living-way.html)
+- [Tetelestai — Josh Wyatt — June 22, 2026](sermons/2026-06-22-tetelestai.html)
+- [The Way In — Josh Wyatt — June 15, 2026](sermons/2026-06-15-the-way-in.html)
+- [Anchored Heavenward — Josh Wyatt — June 8, 2026](sermons/2026-06-08-anchored-heavenward.html)
+- [Too Old for Milk — Josh Wyatt — June 1, 2026](sermons/2026-06-01-too-old-for-milk.html)
+- [Our Great High Priest — Steve Coots, Caleb Bromley & Levi Cuevas — May 27, 2026](sermons/2026-05-27-our-great-high-priest.html)
+- [Enter His Rest — Josh Wyatt — May 17, 2026](sermons/2026-05-17-enter-his-rest.html)
+- [We See Jesus — Josh Wyatt — May 11, 2026](sermons/2026-05-11-we-see-jesus.html)
+- [Preeminent — Josh Wyatt — May 4, 2026](sermons/2026-05-04-preeminent.html)
 
 ## Repository layout
 
 ```text
-SKILL.md                       content acquisition, outline, and primary-topic workflow
+SKILL.md                       content acquisition, outline, and primary-series workflow
 content/sermons/YYYY/*.json     canonical sermon records
-content/topics/*.json           explicit topic membership and ordering
+content/series/*.json           explicit series membership and ordering
 site/content.py                content writer (JSON on stdin)
 site/schema.py                 executable record schema
 site/migrate.py                immutable baseline extraction
@@ -46,19 +55,19 @@ site/assets/site.css           stylesheet source of truth
 site/assets/theme*.js          scripts inlined by the renderer
 site/assets/search.js          safe static-search script inlined on search.html
 site/publish.py                publication of already-committed main
-index.html                     generated topics-only homepage
+index.html                     generated series-only homepage
 search.html                    generated static search interface
 search-index.json              generated deterministic full-text/Scripture index
 archive.html                   generated Timeline year/month directory
 archive/YYYY.html              generated Timeline month groups
-topics.html                    generated Topics directory
-topics/topic-id.html           generated topic detail and ordered messages
+series.html                    generated Series directory
+series/series-id.html           generated series detail and ordered messages
 sermons/YYYY-MM-DD-slug.html    generated; existing URLs/IDs preserved
 assets/site.css                generated verbatim stylesheet copy
 tests/                         schema, parity, links, phases, rendering, live checks
 ```
 
-`SKILL.md` governs source acquisition, caption verification, chronological Overview creation, Scripture-ledger audit, validated canonical sermon records, and evidence-backed primary-topic assignment. It may write sermon and topic JSON, but it does not change templates, styling, navigation, rendering, or publication. The root file remains the single public skill; the parent syncs it to the active Hermes skill after review.
+`SKILL.md` governs source acquisition, caption verification, chronological Overview creation, Scripture-ledger audit, validated canonical sermon records, and evidence-backed primary-series assignment. It may write sermon and series JSON, but it does not change templates, styling, navigation, rendering, or publication. The root file remains the single public skill; the parent syncs it to the active Hermes skill after review.
 
 ## Build and verification
 
@@ -106,7 +115,7 @@ The immutable source contains **488 nodes, 482 ledger rows, and 964 BibleGateway
 | Phase | Reads | Writes |
 | --- | --- | --- |
 | Content | Caption evidence, approved sermon records | `content/sermons/YYYY/*.json` through `site/content.py` |
-| Topic alignment | Spoken/channel/artwork/Jeremy evidence | `content/topics/*.json` |
+| Series alignment | Spoken/channel/artwork/Jeremy evidence | `content/series/*.json` |
 | Site structure | Approved content and site sources | `site/` |
 | Render | Only `content/` and `site/` | Only generated HTML and `assets/site.css` |
 | Publish | Committed files, Git, live HTTP | Git publication refs; no edits to content or pages |
@@ -128,4 +137,4 @@ Deployment stays branch-root from `main`; no Pages reconfiguration or Actions bu
 
 ## Boundaries
 
-This repository does not publish full transcripts, video/audio copies, or full copyrighted Bible text. It does not add generated study questions, outside doctrinal commentary, uncertain Scripture allusions, or topic tags inferred from theology. Each sermon page retains the embedded video, direct Watch link, timestamped Overview, and Scripture ledger.
+This repository does not publish full transcripts, video/audio copies, or full copyrighted Bible text. It does not add generated study questions, outside doctrinal commentary, uncertain Scripture allusions, or series tags inferred from theology. Each sermon page retains the embedded video, direct Watch link, timestamped Overview, and Scripture ledger.

@@ -7,12 +7,12 @@ from pathlib import Path
 import re
 import sys
 
-from schema import SLUG, TOPIC_ID, flatten, loads, loads_topic, validate_topics
+from schema import SERIES_ID, SLUG, flatten, loads, loads_series, validate_series_collection
 import templates
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = re.compile(rf"(?:index\.html|search\.html|search-index\.json|archive\.html|archive/\d{{4}}\.html|topics\.html|topics/{TOPIC_ID}\.html|sermons/{SLUG}\.html|assets/site\.css)")
-PUBLIC_PATTERNS = ("index.html", "search.html", "search-index.json", "archive.html", "archive/*.html", "topics.html", "topics/*.html", "sermons/*.html", "assets/site.css")
+PUBLIC = re.compile(rf"(?:index\.html|search\.html|search-index\.json|archive\.html|archive/\d{{4}}\.html|series\.html|series/{SERIES_ID}\.html|sermons/{SLUG}\.html|assets/site\.css)")
+PUBLIC_PATTERNS = ("index.html", "search.html", "search-index.json", "archive.html", "archive/*.html", "series.html", "series/*.html", "sermons/*.html", "assets/site.css")
 
 
 def read_source(root, relative):
@@ -35,38 +35,38 @@ def records(root=ROOT):
     return sorted(result, key=lambda r: (r['published'], r['slug']), reverse=True)
 
 
-def topics(root=ROOT, sermon_records=None):
+def series_records(root=ROOT, sermon_records=None):
     sermon_records = records(root) if sermon_records is None else sermon_records
     result = []
-    for path in sorted((root / "content" / "topics").glob("*.json")):
-        topic = loads_topic(read_source(root, path.relative_to(root)))
-        expected = f"content/topics/{topic['id']}.json"
+    for path in sorted((root / "content" / "series").glob("*.json")):
+        series = loads_series(read_source(root, path.relative_to(root)))
+        expected = f"content/series/{series['id']}.json"
         if path.relative_to(root).as_posix() != expected:
-            raise ValueError(f"Topic path mismatch: {path}")
-        result.append(topic)
-    validate_topics(result, sermon_records)
+            raise ValueError(f"Series path mismatch: {path}")
+        result.append(series)
+    validate_series_collection(result, sermon_records)
     by_slug = {record["slug"]: record for record in sermon_records}
     return sorted(
         result,
-        key=lambda topic: (max(by_slug[member["slug"]]["published"] for member in topic["members"]), topic["id"]),
+        key=lambda series: (max(by_slug[member["slug"]]["published"] for member in series["members"]), series["id"]),
         reverse=True,
     )
 
 
-def search_index(sermon_records, topic_records):
+def search_index(sermon_records, series_records):
     """Index only meaningful reader-visible sermon content with stable anchors."""
-    membership = templates.topic_membership(topic_records)
+    membership = templates.series_membership(series_records)
     documents = []
     for record in sermon_records:
-        topic, _, _ = membership[record["slug"]]
-        common = [record["title"], record["speaker"], record["published"], templates.date_label(record["published"]), topic["name"]]
+        series, _, _ = membership[record["slug"]]
+        common = [record["title"], record["speaker"], record["published"], templates.date_label(record["published"]), series["name"]]
         sermon_url = f"sermons/{record['slug']}.html"
-        context = f"{record['speaker']} · {templates.date_label(record['published'])} · {topic['name']}"
+        context = f"{record['speaker']} · {templates.date_label(record['published'])} · {series['name']}"
         documents.append({
             "kind": "sermon",
             "title": record["title"],
             "context": context,
-            "excerpt": f"{topic['name']} · {record['speaker']} · {templates.date_label(record['published'])}",
+            "excerpt": f"{series['name']} · {record['speaker']} · {templates.date_label(record['published'])}",
             "url": sermon_url,
             "terms": "\n".join(common),
         })
@@ -98,27 +98,27 @@ def search_index(sermon_records, topic_records):
 def build(root=ROOT):
     """Pure output plan: no public files read, created, or modified."""
     data = records(root)
-    topic_data = topics(root, data)
+    series_data = series_records(root, data)
     scripts = tuple(read_source(root, "site/assets/" + name) for name in ("theme-init.js", "theme.js"))
     search_script = read_source(root, "site/assets/search.js")
-    index_bytes = (json.dumps(search_index(data, topic_data), ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    index_bytes = (json.dumps(search_index(data, series_data), ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
     output = {
-        "index.html": templates.home(data, topic_data, scripts),
+        "index.html": templates.home(data, series_data, scripts),
         "search.html": templates.search(scripts, search_script),
         "search-index.json": index_bytes,
         "archive.html": templates.archive(data, scripts),
-        "topics.html": templates.topic_index(data, topic_data, scripts),
+        "series.html": templates.series_index(data, series_data, scripts),
         "assets/site.css": read_source(root, "site/assets/site.css"),
     }
     for year in sorted({record['published'][:4] for record in data}):
-        output[f"archive/{year}.html"] = templates.year_archive(year, [r for r in data if r['published'][:4] == year], topic_data, scripts)
+        output[f"archive/{year}.html"] = templates.year_archive(year, [r for r in data if r['published'][:4] == year], series_data, scripts)
     by_slug = {record["slug"]: record for record in data}
-    for topic in topic_data:
-        output[f"topics/{topic['id']}.html"] = templates.topic_page(topic, by_slug, topic_data, scripts)
+    for series in series_data:
+        output[f"series/{series['id']}.html"] = templates.series_page(series, by_slug, series_data, scripts)
     for i, record in enumerate(data):
         previous = data[i + 1] if i + 1 < len(data) else None
         following = data[i - 1] if i else None
-        output[f"sermons/{record['slug']}.html"] = templates.sermon(record, previous, following, scripts, topic_data)
+        output[f"sermons/{record['slug']}.html"] = templates.sermon(record, previous, following, scripts, series_data)
     return {path: value.encode('utf-8') if isinstance(value, str) else value for path, value in sorted(output.items())}
 
 

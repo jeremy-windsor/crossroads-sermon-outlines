@@ -9,7 +9,7 @@ from urllib.parse import unquote, urlsplit, parse_qs
 from bs4 import BeautifulSoup
 
 from schema import flatten, timestamp
-from templates import scripture_url, topic_membership
+from templates import CHANNEL, CHURCH, scripture_url, series_membership
 
 
 class StrictHTML(HTMLParser):
@@ -28,12 +28,12 @@ class StrictHTML(HTMLParser):
         assert self.stack and self.stack.pop() == tag, f"Misnested closing tag: {tag}"
 
 
-def validate_surfaces(surfaces, records, topics=None):
-    if topics is None:
+def validate_surfaces(surfaces, records, series_records=None):
+    if series_records is None:
         import render
-        topics = render.topics(sermon_records=records)
+        series_records = render.series_records(sermon_records=records)
     by_slug = {record['slug']: record for record in records}
-    topic_by_slug = topic_membership(topics)
+    series_by_slug = series_membership(series_records)
     pages = {}
     forbidden = (
         'independent study', 'independent-study', 'not a transcript', 'not an official',
@@ -66,11 +66,16 @@ def validate_surfaces(surfaces, records, topics=None):
         assert [x['href'] for x in soup.select('link[rel="stylesheet"]')] == [prefix + 'assets/site.css']
         assert soup.head.script and str(soup.head).index('<script>') < str(soup.head).index('rel="stylesheet"')
         assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Series', 'Timeline']
+        selector = soup.select_one('.theme-selector[role="group"][aria-label="Theme"][hidden]')
+        assert selector is not None
+        assert [(button.get_text(strip=True), button['data-theme-choice'], button['aria-pressed']) for button in selector.select('button[type="button"]')] == [
+            ('Light', 'light', 'false'), ('Dark', 'dark', 'false'), ('System', 'system', 'false'),
+        ]
         search = soup.select_one('form.site-search[role="search"]')
         assert search and search['method'] == 'get' and search['action'] == prefix + 'search.html'
         assert search.select_one('input[name="q"][type="search"]') and search.select_one('button[type="submit"]')
         assert not soup.select('.sermon-card .summary')
-        listing_images = soup.select('.topic-card .topic-plate img, .sermon-card .card-plate img')
+        listing_images = soup.select('.series-card .series-plate img, .sermon-card .card-plate img')
         assert [image['loading'] for image in listing_images] == ['eager'] * min(2, len(listing_images)) + ['lazy'] * max(0, len(listing_images) - 2)
         for card in soup.select('.sermon-card'):
             record = by_slug[card['data-sermon']]
@@ -83,6 +88,12 @@ def validate_surfaces(surfaces, records, topics=None):
             assert card.select_one('.card-title').get_text(" ", strip=True) == record['title']
             assert card.select_one('.card-meta time')['datetime'] == record['published']
             assert record['speaker'] in card.select_one('.card-meta').get_text(" ", strip=True)
+        footer_links = soup.select('footer nav[aria-label="Related links"] a')
+        assert [(item.get_text(' ', strip=True), item['href']) for item in footer_links] == [
+            ('Crossroads Church', CHURCH), ('Crossroads Church on YouTube', CHANNEL),
+        ]
+        assert all(item.get('target') == '_blank' and set(item.get('rel', [])) == {'noopener', 'noreferrer'} for item in footer_links)
+        assert all(item['href'] == CHANNEL for item in soup.select('a[href*="youtube.com/@"]'))
         pages[path] = soup
 
     assert set(pages) == {path for path in surfaces if path.endswith('.html')}
@@ -101,8 +112,8 @@ def validate_surfaces(surfaces, records, topics=None):
 
     home = pages['index.html']
     assert not home.select('.sermon-card, .features')
-    assert [x['data-topic'] for x in home.select('.topic-list .topic-card')] == [topic['id'] for topic in topics]
-    latest_dates = [max(by_slug[member['slug']]['published'] for member in topic['members']) for topic in topics]
+    assert [x['data-series'] for x in home.select('.series-list .series-card')] == [series['id'] for series in series_records]
+    latest_dates = [max(by_slug[member['slug']]['published'] for member in series['members']) for series in series_records]
     assert latest_dates == sorted(latest_dates, reverse=True)
     assert home.h1.get_text(' ', strip=True) == 'Crossroads Sermons'
 
@@ -123,26 +134,26 @@ def validate_surfaces(surfaces, records, topics=None):
         for section in page.select('.month-section'):
             assert all(x['data-sermon'].startswith(section['id']) for x in section.select('.sermon-card'))
 
-    topic_index = pages['topics.html']
-    assert [card['data-topic'] for card in topic_index.select('.topic-list .topic-card')] == [topic['id'] for topic in topics]
-    for listing in (home, topic_index):
-        for topic in topics:
-            card = listing.select_one(f'.topic-card[data-topic="{topic["id"]}"]')
-            destination = (f"sermons/{topic['members'][0]['slug']}.html" if len(topic['members']) == 1 else f"topics/{topic['id']}.html")
-            assert card.select_one('.topic-title a')['href'] == destination
-            assert 'sermon' in card.select_one('.topic-meta').get_text(' ', strip=True)
-            assert 'outline' not in card.select_one('.topic-meta').get_text(' ', strip=True).lower()
-    for topic in topics:
-        anchor_slug = topic['anchor'] or topic['members'][0]['slug']
+    series_index = pages['series.html']
+    assert [card['data-series'] for card in series_index.select('.series-list .series-card')] == [series['id'] for series in series_records]
+    for listing in (home, series_index):
+        for series in series_records:
+            card = listing.select_one(f'.series-card[data-series="{series["id"]}"]')
+            destination = (f"sermons/{series['members'][0]['slug']}.html" if series['type'] == 'standalone' else f"series/{series['id']}.html")
+            assert card.select_one('.series-title a')['href'] == destination
+            assert 'sermon' in card.select_one('.series-meta').get_text(' ', strip=True)
+            assert 'outline' not in card.select_one('.series-meta').get_text(' ', strip=True).lower()
+    for series in series_records:
+        anchor_slug = series['anchor'] or series['members'][0]['slug']
         anchor = by_slug[anchor_slug]
-        index_card = topic_index.select_one(f'.topic-card[data-topic="{topic["id"]}"]')
+        index_card = series_index.select_one(f'.series-card[data-series="{series["id"]}"]')
         assert index_card.select_one('img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
-        page = pages[f"topics/{topic['id']}.html"]
-        assert page.select_one('.topic-lead img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
-        assert [card['data-sermon'] for card in page.select('.sermon-card')] == [member['slug'] for member in topic['members']]
-        assert not page.select('.topic-note')
-        assert topic['note'] not in page.get_text(' ', strip=True)
-        assert not page.select('.card-topic a')
+        page = pages[f"series/{series['id']}.html"]
+        assert page.select_one('.series-lead img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
+        assert [card['data-sermon'] for card in page.select('.sermon-card')] == [member['slug'] for member in series['members']]
+        assert not page.select('.series-note')
+        assert series['note'] not in page.get_text(' ', strip=True)
+        assert not page.select('.card-series a')
 
     for i, record in enumerate(records):
         page = pages[f"sermons/{record['slug']}.html"]
@@ -179,10 +190,15 @@ def validate_surfaces(surfaces, records, topics=None):
         assert (prev['href'] if prev else None) == (records[i + 1]['slug'] + '.html' if i + 1 < len(records) else None)
         assert (following['href'] if following else None) == (records[i - 1]['slug'] + '.html' if i else None)
         assert page.select_one('.month-return')['href'] == '../archive/' + record['published'][:4] + '.html#' + record['published'][:7]
-        topic, part, total = topic_by_slug[record['slug']]
-        topic_row = [item for item in page.select('.metadata > div') if item.dt.get_text(strip=True) == 'Series'][0]
-        assert topic_row.a['href'] == f"../topics/{topic['id']}.html"
-        assert topic_row.dd.get_text(" ", strip=True) == f"{topic['name']} · Part {part} of {total}"
+        series, part, total = series_by_slug[record['slug']]
+        series_rows = [item for item in page.select('.metadata > div') if item.dt.get_text(strip=True) == 'Series']
+        if series['type'] == 'standalone':
+            assert not series_rows
+            assert page.select_one('.kicker').get_text(' ', strip=True) == 'Sermon'
+        else:
+            assert len(series_rows) == 1
+            assert series_rows[0].a['href'] == f"../series/{series['id']}.html"
+            assert series_rows[0].dd.get_text(" ", strip=True) == f"{series['name']} · Part {part} of {total}"
 
     search_page = pages['search.html']
     assert search_page.select_one('#search-status[role="status"][aria-live="polite"]')

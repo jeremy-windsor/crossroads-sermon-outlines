@@ -93,8 +93,8 @@ def rgb(value):
     ('search', 'search.html'),
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
-    ('topics', 'topics.html'),
-    ('topic', 'topics/renew-me.html'),
+    ('series', 'series.html'),
+    ('series', 'series/renew-me.html'),
     ('sermon', 'sermons/2026-08-16-inside-out.html'),
 ])
 @pytest.mark.parametrize('width', [1280, 375])
@@ -104,7 +104,7 @@ def test_equivalent_rendered_surfaces(name, path, width, theme):
     body = boxes(doc, lambda b: b.element_tag == 'body')[0]
     assert rgb(body.style['background_color']) == ((20, 29, 25) if theme == 'dark' else (250, 250, 246))
     assert body.width <= width
-    assert not boxes(doc, lambda b: has_class(b, 'theme-toggle'))  # no-JS fallback
+    assert not boxes(doc, lambda b: has_class(b, 'theme-selector'))  # no-JS fallback
     # Actual layout boxes, rather than just stylesheet-string assertions.
     for box in boxes(doc, lambda b: b.element_tag in ('main', 'header', 'table') or has_class(b, 'sermon-card')):
         assert box.width <= width + 1
@@ -133,8 +133,8 @@ def test_equivalent_target_and_print_layout():
     assert not boxes(printed, lambda b: has_class(b, 'video-block'))
     assert boxes(printed, lambda b: b.element_tag == 'thead')
     assert all(b.style['break_inside'] == 'avoid' for b in boxes(printed, lambda b: has_class(b, 'outline-node')))
-    printed_topic = rendered('topics/renew-me.html', 1280, 'dark', 'print')
-    assert not boxes(printed_topic, lambda b: has_class(b, 'card-plate') or has_class(b, 'topic-lead'))
+    printed_series = rendered('series/renew-me.html', 1280, 'dark', 'print')
+    assert not boxes(printed_series, lambda b: has_class(b, 'card-plate') or has_class(b, 'series-lead'))
     printed_timeline = rendered('archive.html', 1280, 'dark', 'print')
     assert not boxes(printed_timeline, lambda b: has_class(b, 'month-strip'))
 
@@ -145,8 +145,8 @@ def test_equivalent_target_and_print_layout():
     'search.html',
     'archive.html',
     'archive/2026.html',
-    'topics.html',
-    'topics/renew-me.html',
+    'series.html',
+    'series/renew-me.html',
     'sermons/2026-08-24-start-with-me.html',
     'sermons/2026-07-06-worship-in-the-waiting.html',
 ])
@@ -171,37 +171,42 @@ for (const dark of [false, true]) {
     for (const blocked of [false, true]) {
       const root = {dataset: {}};
       const listeners = {};
-      const button = () => ({hidden:true, attrs:{}, addEventListener(k, fn){this[k] = fn;}, setAttribute(k,v){this.attrs[k]=v;}, focus(){this.focused=true;}});
-      const toggle = button(), reset = button();
+      const buttons = ['light', 'dark', 'system'].map(choice => ({dataset:{themeChoice:choice},attrs:{},
+        addEventListener(k,fn){this[k]=fn;},setAttribute(k,v){this.attrs[k]=v;},focus(){this.focused=true;}}));
+      const selector = {hidden:true,querySelectorAll(){return buttons;}};
       let value = saved;
       const storage = {getItem(){if(blocked)throw Error();return value;},setItem(k,v){if(blocked)throw Error();value=v;},removeItem(){if(blocked)throw Error();value=null;}};
       const system = {matches:dark,addEventListener(k,fn){listeners[k]=fn;}};
-      const context = vm.createContext({localStorage:storage,document:{documentElement:root,querySelector(s){return s === '.theme-toggle' ? toggle : reset;}},window:{matchMedia(){return system;}}});
+      const context = vm.createContext({localStorage:storage,document:{documentElement:root,querySelector(){return selector;}},window:{matchMedia(){return system;}}});
       vm.runInContext(early,context);
-      const effective = !blocked && ['light','dark'].includes(saved) ? saved : (dark ? 'dark':'light');
       assert.equal(root.dataset.theme, !blocked && ['light','dark'].includes(saved) ? saved : undefined);
       vm.runInContext(control,context);
-      assert.equal(toggle.hidden,false);
-      assert.equal(toggle.attrs['aria-pressed'],String(effective==='dark'));
-      toggle.click();
-      const override = effective==='dark' ? 'light':'dark';
-      assert.equal(root.dataset.theme,override);
-      assert.equal(toggle.attrs['aria-pressed'],String(override==='dark'));
-      if(!blocked)assert.equal(value,override);
-      assert.equal(reset.hidden,false);
-      reset.click();
+      assert.equal(selector.hidden,false);
+      const initial = !blocked && ['light','dark'].includes(saved) ? saved : 'system';
+      assert.deepEqual(buttons.map(button => button.attrs['aria-pressed']), ['light','dark','system'].map(choice => String(choice===initial)));
+      buttons[0].click();
+      assert.equal(root.dataset.theme,'light');
+      assert.equal(buttons[0].attrs['aria-pressed'],'true');
+      if(!blocked)assert.equal(value,'light');
+      buttons[1].click();
+      assert.equal(root.dataset.theme,'dark');
+      assert.equal(buttons[1].attrs['aria-pressed'],'true');
+      if(!blocked)assert.equal(value,'dark');
+      buttons[2].click();
       assert.equal(root.dataset.theme,undefined);
-      assert.equal(reset.hidden,true);
-      assert.equal(reset.focused,undefined);
-      assert.equal(toggle.focused,true);
+      assert.equal(buttons[2].attrs['aria-pressed'],'true');
+      if(!blocked)assert.equal(value,null);
       system.matches = !dark;
       listeners.change();
-      assert.equal(toggle.attrs['aria-pressed'],String(!dark));
+      assert.equal(buttons[2].attrs['aria-pressed'],'true');
+      buttons[2].keydown({key:'ArrowRight',preventDefault(){this.prevented=true;}});
+      assert.equal(buttons[0].focused,true);
+      assert.equal(root.dataset.theme,'light');
     }
   }
 }
-process.stdout.write('Theme scripts: 16 system/storage scenarios passed\n');
+process.stdout.write('Theme selector: 16 system/storage scenarios passed\n');
 '''
     scripts = [(render.ROOT / 'site/assets' / name).read_text() for name in ('theme-init.js', 'theme.js')]
     result = subprocess.run(['/usr/bin/node', '-e', harness], input=json.dumps(scripts), text=True, capture_output=True, check=True)
-    assert result.stdout == 'Theme scripts: 16 system/storage scenarios passed\n'
+    assert result.stdout == 'Theme selector: 16 system/storage scenarios passed\n'
