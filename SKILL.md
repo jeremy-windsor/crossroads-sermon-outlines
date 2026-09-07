@@ -1,7 +1,7 @@
 ---
 name: crossroads-sermon-outline
 description: "Use when acquiring, verifying, and outlining Crossroads Church sermons as canonical content records."
-version: 2.3.0
+version: 2.3.1
 author: Will
 license: MIT
 metadata:
@@ -52,6 +52,13 @@ Report exactly what failed. Let Jeremy choose whether to wait, approve Whisper o
 ## Content workflow
 
 ### 1. Discover and verify the source
+
+Classify the request before collecting evidence:
+
+- For inventory questions—such as the next or previous video, title, date, duration, speaker, channel order, or adjacent series—use a discovery-only fast path. Pull the channel once with `yt-dlp --flat-playlist`, then batch-fetch detailed metadata only for the relevant adjacent candidates. Check existing thumbnail URLs for explicit series branding. Do not download captions, build contact sheets, create helper scripts, or run content validation unless the requested fact remains ambiguous.
+- For an outline or canonical-record request, continue through the complete caption and content workflow below.
+
+Use inline commands for one-off discovery. If temporary files are genuinely required, keep them in one task-specific temporary directory and delete that directory before reporting completion. Never create a Python helper file for a simple inventory lookup.
 
 For a relative selection request, enumerate enough recent canonical-channel uploads to prove the selected set is the newest qualifying set. Apply requested duration bounds mechanically, preserve channel order, and reject non-sermon, live, unavailable, or out-of-range items before caption work.
 
