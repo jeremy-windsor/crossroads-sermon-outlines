@@ -213,13 +213,13 @@ def test_study_table_css_keeps_static_plate_treatment():
     assert not {item.lower_name for item in declarations if item.type == 'declaration'} & {'animation', 'transition', 'transform'}
 
 
-def test_search_focus_ring_and_compact_theme_selector_css():
+def test_search_focus_ring_and_compact_theme_toggle_css():
     css = (render.ROOT / 'site/assets/site.css').read_text()
-    assert '.site-search:focus-within { outline: 3px solid var(--focus); outline-offset: 3px;' in css
+    assert '.site-search { display: flex; flex: 0 1 29rem; width: min(29rem, 100%);' in css
+    assert '.site-search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px;' in css
     assert '.site-search input:focus-visible, .site-search button:focus-visible { outline: none; }' in css
-    assert '.theme-selector { display: inline-flex;' in css
-    assert '.theme-selector button { min-height: 36px;' in css
-    assert '.theme-selector button[aria-pressed="true"]' in css
+    assert '.theme-toggle { display: inline-grid; place-items: center;' in css
+    assert 'width: 2.25rem; height: 2.25rem; min-height: 2.25rem;' in css
 
 
 def test_future_year_and_neighbor_boundaries(tmp_path):

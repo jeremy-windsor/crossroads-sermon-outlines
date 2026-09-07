@@ -104,7 +104,7 @@ def test_equivalent_rendered_surfaces(name, path, width, theme):
     body = boxes(doc, lambda b: b.element_tag == 'body')[0]
     assert rgb(body.style['background_color']) == ((20, 29, 25) if theme == 'dark' else (250, 250, 246))
     assert body.width <= width
-    assert not boxes(doc, lambda b: has_class(b, 'theme-selector'))  # no-JS fallback
+    assert not boxes(doc, lambda b: has_class(b, 'theme-toggle'))  # no-JS fallback
     # Actual layout boxes, rather than just stylesheet-string assertions.
     for box in boxes(doc, lambda b: b.element_tag in ('main', 'header', 'table') or has_class(b, 'sermon-card')):
         assert box.width <= width + 1
@@ -171,42 +171,30 @@ for (const dark of [false, true]) {
     for (const blocked of [false, true]) {
       const root = {dataset: {}};
       const listeners = {};
-      const buttons = ['light', 'dark', 'system'].map(choice => ({dataset:{themeChoice:choice},attrs:{},
-        addEventListener(k,fn){this[k]=fn;},setAttribute(k,v){this.attrs[k]=v;},focus(){this.focused=true;}}));
-      const selector = {hidden:true,querySelectorAll(){return buttons;}};
+      const icons = ['light', 'dark'].map(choice => ({dataset:{themeIcon:choice},hidden:false}));
+      const toggle = {hidden:true,attrs:{},querySelectorAll(){return icons;},
+        addEventListener(k,fn){this[k]=fn;},setAttribute(k,v){this.attrs[k]=v;}};
       let value = saved;
       const storage = {getItem(){if(blocked)throw Error();return value;},setItem(k,v){if(blocked)throw Error();value=v;},removeItem(){if(blocked)throw Error();value=null;}};
       const system = {matches:dark,addEventListener(k,fn){listeners[k]=fn;}};
-      const context = vm.createContext({localStorage:storage,document:{documentElement:root,querySelector(){return selector;}},window:{matchMedia(){return system;}}});
+      const context = vm.createContext({localStorage:storage,document:{documentElement:root,querySelector(){return toggle;}},window:{matchMedia(){return system;}}});
       vm.runInContext(early,context);
       assert.equal(root.dataset.theme, !blocked && ['light','dark'].includes(saved) ? saved : undefined);
       vm.runInContext(control,context);
-      assert.equal(selector.hidden,false);
-      const initial = !blocked && ['light','dark'].includes(saved) ? saved : 'system';
-      assert.deepEqual(buttons.map(button => button.attrs['aria-pressed']), ['light','dark','system'].map(choice => String(choice===initial)));
-      buttons[0].click();
-      assert.equal(root.dataset.theme,'light');
-      assert.equal(buttons[0].attrs['aria-pressed'],'true');
-      if(!blocked)assert.equal(value,'light');
-      buttons[1].click();
-      assert.equal(root.dataset.theme,'dark');
-      assert.equal(buttons[1].attrs['aria-pressed'],'true');
-      if(!blocked)assert.equal(value,'dark');
-      buttons[2].click();
-      assert.equal(root.dataset.theme,undefined);
-      assert.equal(buttons[2].attrs['aria-pressed'],'true');
-      if(!blocked)assert.equal(value,null);
-      system.matches = !dark;
-      listeners.change();
-      assert.equal(buttons[2].attrs['aria-pressed'],'true');
-      buttons[2].keydown({key:'ArrowRight',preventDefault(){this.prevented=true;}});
-      assert.equal(buttons[0].focused,true);
-      assert.equal(root.dataset.theme,'light');
+      assert.equal(toggle.hidden,false);
+      const initial = !blocked && ['light','dark'].includes(saved) ? saved : (dark ? 'dark' : 'light');
+      const target = initial === 'dark' ? 'light' : 'dark';
+      assert.equal(toggle.attrs['aria-label'],`Switch to ${target} theme`);
+      assert.deepEqual(icons.map(icon => icon.hidden), ['light','dark'].map(choice => choice !== target));
+      toggle.click();
+      assert.equal(root.dataset.theme,target);
+      assert.equal(toggle.attrs['aria-label'],`Switch to ${initial} theme`);
+      if(!blocked)assert.equal(value,target);
     }
   }
 }
-process.stdout.write('Theme selector: 16 system/storage scenarios passed\n');
+process.stdout.write('Theme toggle: 16 system/storage scenarios passed\n');
 '''
     scripts = [(render.ROOT / 'site/assets' / name).read_text() for name in ('theme-init.js', 'theme.js')]
     result = subprocess.run(['/usr/bin/node', '-e', harness], input=json.dumps(scripts), text=True, capture_output=True, check=True)
-    assert result.stdout == 'Theme selector: 16 system/storage scenarios passed\n'
+    assert result.stdout == 'Theme toggle: 16 system/storage scenarios passed\n'

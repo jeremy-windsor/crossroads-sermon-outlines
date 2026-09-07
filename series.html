@@ -26,7 +26,7 @@ try {
       <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
       <button type="submit">Search</button>
     </form>
-    <div class="theme-selector" role="group" aria-label="Theme" hidden><button type="button" data-theme-choice="light" aria-pressed="false">Light</button><button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button><button type="button" data-theme-choice="system" aria-pressed="false">System</button></div>
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme" hidden><svg data-theme-icon="light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg data-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
   </nav>
   <header><p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Browse sermon series and standalone messages.</p></header>
   <main id="main-content" tabindex="-1"><div class="series-list"><article class="series-card" data-series="renew-me">
@@ -50,40 +50,26 @@ try {
   <footer><nav aria-label="Related links"><a href="https://thecrossroads.church" target="_blank" rel="noopener noreferrer">Crossroads Church</a> <a href="https://www.youtube.com/@thecrossroadschurch" target="_blank" rel="noopener noreferrer">Crossroads Church on YouTube</a></nav></footer>
   <script>(() => {
   const root = document.documentElement;
-  const selector = document.querySelector('.theme-selector');
-  const controls = Array.from(selector.querySelectorAll('[data-theme-choice]'));
+  const toggle = document.querySelector('.theme-toggle');
+  const icons = Array.from(toggle.querySelectorAll('[data-theme-icon]'));
   const system = window.matchMedia('(prefers-color-scheme: dark)');
-  const selected = () => root.dataset.theme || 'system';
+  const current = () => root.dataset.theme || (system.matches ? 'dark' : 'light');
   const sync = () => {
-    const choice = selected();
-    for (const control of controls) {
-      control.setAttribute('aria-pressed', String(control.dataset.themeChoice === choice));
+    const target = current() === 'dark' ? 'light' : 'dark';
+    const label = `Switch to ${target} theme`;
+    toggle.setAttribute('aria-label', label);
+    toggle.setAttribute('title', label);
+    for (const icon of icons) {
+      icon.hidden = icon.dataset.themeIcon !== target;
     }
   };
   const apply = choice => {
-    if (choice === 'system') {
-      delete root.dataset.theme;
-      try { localStorage.removeItem('crossroads-theme'); } catch (_) {}
-    } else {
-      root.dataset.theme = choice;
-      try { localStorage.setItem('crossroads-theme', choice); } catch (_) {}
-    }
+    root.dataset.theme = choice;
+    try { localStorage.setItem('crossroads-theme', choice); } catch (_) {}
     sync();
   };
-  selector.hidden = false;
-  for (const control of controls) {
-    control.addEventListener('click', () => apply(control.dataset.themeChoice));
-    control.addEventListener('keydown', event => {
-      const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
-      if (!keys.includes(event.key)) return;
-      event.preventDefault();
-      const current = controls.indexOf(control);
-      const next = event.key === 'Home' ? 0 : event.key === 'End' ? controls.length - 1
-        : (current + (event.key === 'ArrowRight' ? 1 : -1) + controls.length) % controls.length;
-      controls[next].focus();
-      apply(controls[next].dataset.themeChoice);
-    });
-  }
+  toggle.hidden = false;
+  toggle.addEventListener('click', () => apply(current() === 'dark' ? 'light' : 'dark'));
   system.addEventListener('change', sync);
   sync();
 })();

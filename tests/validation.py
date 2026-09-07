@@ -66,11 +66,9 @@ def validate_surfaces(surfaces, records, series_records=None):
         assert [x['href'] for x in soup.select('link[rel="stylesheet"]')] == [prefix + 'assets/site.css']
         assert soup.head.script and str(soup.head).index('<script>') < str(soup.head).index('rel="stylesheet"')
         assert [a.get_text(" ", strip=True) for a in soup.select('.nav-links a')] == ['Series', 'Timeline']
-        selector = soup.select_one('.theme-selector[role="group"][aria-label="Theme"][hidden]')
-        assert selector is not None
-        assert [(button.get_text(strip=True), button['data-theme-choice'], button['aria-pressed']) for button in selector.select('button[type="button"]')] == [
-            ('Light', 'light', 'false'), ('Dark', 'dark', 'false'), ('System', 'system', 'false'),
-        ]
+        toggle = soup.select_one('button.theme-toggle[type="button"][aria-label="Toggle color theme"][hidden]')
+        assert toggle is not None
+        assert [icon['data-theme-icon'] for icon in toggle.select('svg[data-theme-icon][aria-hidden="true"]')] == ['light', 'dark']
         search = soup.select_one('form.site-search[role="search"]')
         assert search and search['method'] == 'get' and search['action'] == prefix + 'search.html'
         assert search.select_one('input[name="q"][type="search"]') and search.select_one('button[type="submit"]')

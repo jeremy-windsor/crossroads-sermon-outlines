@@ -73,7 +73,7 @@ def layout(title, description, prefix, header, body, scripts, current=None, extr
     {link(prefix + "index.html", "Crossroads Sermons", ' class="site-name"')}
     <div class="nav-links">{navigation}</div>
     {search_form(prefix)}
-    <div class="theme-selector" role="group" aria-label="Theme" hidden><button type="button" data-theme-choice="light" aria-pressed="false">Light</button><button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button><button type="button" data-theme-choice="system" aria-pressed="false">System</button></div>
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme" hidden><svg data-theme-icon="light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg data-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
   </nav>
   <header>{header}</header>
   <main id="main-content" tabindex="-1">{body}</main>
