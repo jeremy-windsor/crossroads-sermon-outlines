@@ -1,0 +1,79 @@
+{
+  "id": "born-again",
+  "name": "Born Again",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "spoken_intro",
+      "detail": "Josh opens Look and Live by naming the series goal as examining whether you are truly born again, later flags born again as the series title, and on April 27 says today marks the end of a three-week series titled Born Again."
+    },
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The inspected thumbnails for Look and Live, He Loved First, and The Verdict Is In display BORN AGAIN / JOHN 3 series branding."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy confirmed Born Again as Look and Live, He Loved First, and The Verdict Is In, and said to skip the 3-minute video between them."
+    }
+  ],
+  "scripture_spine": "John 3",
+  "description": "Nicodemus and new birth in John 3, opened across three weeks.",
+  "note": "Josh names this as a three-week series through John 3. Week one is new birth, week two is John 3:16 and initiating love, week three is the already-rendered verdict in John 3:19-21.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-04-13-look-and-live",
+      "scripture": "John 3:1-15",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh states the series goal as evaluating whether you are truly born again, reads John 3:1-15, and treats born again / from above as the series title."
+        },
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Look and Live thumbnail uses the Born Again / John 3 series artwork."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed Look and Live as week one of Born Again."
+        }
+      ]
+    },
+    {
+      "slug": "2026-04-20-he-loved-first",
+      "scripture": "John 3:16",
+      "provenance": [
+        {
+          "source": "captions",
+          "detail": "Look and Live announces next week will trace the initiating love of God; He Loved First opens with a recitation of John 3:16 and spends the message on that verse."
+        },
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected He Loved First thumbnail uses the Born Again / John 3 series artwork."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed He Loved First as week two of Born Again."
+        }
+      ]
+    },
+    {
+      "slug": "2026-04-27-the-verdict-is-in",
+      "scripture": "John 3:19-21",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says today marks the end of a three-week series titled Born Again and reads John 3:19-21 as the already-rendered verdict."
+        },
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected The Verdict Is In thumbnail uses the Born Again / John 3 series artwork."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed The Verdict Is In as week three of Born Again."
+        }
+      ]
+    }
+  ]
+}
