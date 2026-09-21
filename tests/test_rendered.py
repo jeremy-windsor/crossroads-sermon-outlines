@@ -94,7 +94,7 @@ def rgb(value):
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
     ('series', 'series.html'),
-    ('series', 'series/renew-me.html'),
+    ('series', 'series/renew-in-me.html'),
     ('sermon', 'sermons/2026-08-16-inside-out.html'),
 ])
 @pytest.mark.parametrize('width', [1280, 375])
@@ -102,7 +102,7 @@ def rgb(value):
 def test_equivalent_rendered_surfaces(name, path, width, theme):
     doc = rendered(path, width, theme)
     body = boxes(doc, lambda b: b.element_tag == 'body')[0]
-    assert rgb(body.style['background_color']) == ((20, 29, 25) if theme == 'dark' else (250, 250, 246))
+    assert rgb(body.style['background_color']) == ((10, 10, 10) if theme == 'dark' else (255, 255, 255))
     assert body.width <= width
     assert not boxes(doc, lambda b: has_class(b, 'theme-toggle'))  # no-JS fallback
     # Actual layout boxes, rather than just stylesheet-string assertions.
@@ -124,7 +124,7 @@ def test_equivalent_target_and_print_layout():
     path = 'sermons/2026-08-24-start-with-me.html'
     doc = rendered(path, 375, 'dark', target='ledger-SCR-003')
     target = boxes(doc, lambda b: b.element.get('id') == 'ledger-SCR-003')[0]
-    assert rgb(target.style['background_color']) == (66, 61, 37)
+    assert rgb(target.style['background_color']) == (58, 52, 32)
     assert target.style['outline_style'] == 'solid'
     printed = rendered(path, 1280, 'dark', 'print')
     body = boxes(printed, lambda b: b.element_tag == 'body')[0]
@@ -133,7 +133,7 @@ def test_equivalent_target_and_print_layout():
     assert not boxes(printed, lambda b: has_class(b, 'video-block'))
     assert boxes(printed, lambda b: b.element_tag == 'thead')
     assert all(b.style['break_inside'] == 'avoid' for b in boxes(printed, lambda b: has_class(b, 'outline-node')))
-    printed_series = rendered('series/renew-me.html', 1280, 'dark', 'print')
+    printed_series = rendered('series/renew-in-me.html', 1280, 'dark', 'print')
     assert not boxes(printed_series, lambda b: has_class(b, 'card-plate') or has_class(b, 'series-lead'))
     printed_timeline = rendered('archive.html', 1280, 'dark', 'print')
     assert not boxes(printed_timeline, lambda b: has_class(b, 'month-strip'))
@@ -146,7 +146,7 @@ def test_equivalent_target_and_print_layout():
     'archive.html',
     'archive/2026.html',
     'series.html',
-    'series/renew-me.html',
+    'series/renew-in-me.html',
     'sermons/2026-08-24-start-with-me.html',
     'sermons/2026-07-06-worship-in-the-waiting.html',
 ])

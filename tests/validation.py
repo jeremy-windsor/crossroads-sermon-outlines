@@ -110,9 +110,16 @@ def validate_surfaces(surfaces, records, series_records=None):
 
     home = pages['index.html']
     assert not home.select('.sermon-card, .features')
-    assert [x['data-series'] for x in home.select('.series-list .series-card')] == [series['id'] for series in series_records]
-    latest_dates = [max(by_slug[member['slug']]['published'] for member in series['members']) for series in series_records]
-    assert latest_dates == sorted(latest_dates, reverse=True)
+    grouped_series = [series for series in series_records if series['type'] != 'standalone'] + [
+        series for series in series_records if series['type'] == 'standalone'
+    ]
+    assert [x['data-series'] for x in home.select('.series-list .series-card')] == [series['id'] for series in grouped_series]
+    for series_type in ('series', 'standalone'):
+        latest_dates = [
+            max(by_slug[member['slug']]['published'] for member in series['members'])
+            for series in series_records if series['type'] == series_type
+        ]
+        assert latest_dates == sorted(latest_dates, reverse=True)
     assert home.h1.get_text(' ', strip=True) == 'Crossroads Sermons'
 
     years = sorted({r['published'][:4] for r in records}, reverse=True)
@@ -133,7 +140,7 @@ def validate_surfaces(surfaces, records, series_records=None):
             assert all(x['data-sermon'].startswith(section['id']) for x in section.select('.sermon-card'))
 
     series_index = pages['series.html']
-    assert [card['data-series'] for card in series_index.select('.series-list .series-card')] == [series['id'] for series in series_records]
+    assert [card['data-series'] for card in series_index.select('.series-list .series-card')] == [series['id'] for series in grouped_series]
     for listing in (home, series_index):
         for series in series_records:
             card = listing.select_one(f'.series-card[data-series="{series["id"]}"]')
@@ -163,7 +170,11 @@ def validate_surfaces(surfaces, records, series_records=None):
         assert not page.select('.notice, .ledger-intro')
         assert page.figcaption.get_text(' ', strip=True) == 'Watch on YouTube'
         labels = [item.dt.get_text(strip=True) for item in page.select('.metadata > div')]
-        assert labels == ['Speaker', 'Published', 'Duration', 'Watch', 'Series']
+        expected_labels = ['Speaker', 'Published', 'Duration', 'Watch']
+        series, part, total = series_by_slug[record['slug']]
+        if series['type'] != 'standalone':
+            expected_labels.append('Series')
+        assert labels == expected_labels
         nodes = list(flatten(record['movements']))
         assert [n['id'] for n in page.select('.outline-node')] == [n['id'] for n in nodes]
         assert len(page.select('tbody tr')) == len(record['ledger'])

@@ -1,5 +1,5 @@
 {
-  "id": "renew-me",
+  "id": "renew-in-me",
   "name": "Renew In Me",
   "type": "series",
   "provenance": [
@@ -9,11 +9,11 @@
     },
     {
       "source": "thumbnail_artwork",
-      "detail": "The inspected thumbnail artwork identifies the series as Renew Me."
+      "detail": "The inspected thumbnail artwork uses the Psalm 51 series branding."
     },
     {
       "source": "jeremy_direction",
-      "detail": "Jeremy confirmed Renew Me as the series identity for these sermons."
+      "detail": "Jeremy set the series name and membership to the church playlist Renew In Me."
     },
     {
       "source": "captions",
@@ -22,7 +22,7 @@
   ],
   "scripture_spine": "Psalm 51",
   "description": "David’s psalm of repentance, opened a few verses at a time.",
-  "note": "Playlist title is Renew In Me. Thumbnail artwork says Renew Me. Playlist wins. Six sermons through Psalm 51, complete in this archive.",
+  "note": "Church playlist Renew In Me establishes the title and six-sermon membership through Psalm 51; the series is complete in this archive.",
   "anchor": null,
   "members": [
     {
@@ -31,11 +31,11 @@
       "provenance": [
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected When Excuses Die thumbnail uses the Renew Me series artwork."
+          "detail": "The inspected When Excuses Die thumbnail uses the Psalm 51 series artwork."
         },
         {
           "source": "jeremy_direction",
-          "detail": "Jeremy confirmed When Excuses Die as a Renew Me series member."
+          "detail": "Jeremy confirmed When Excuses Die as a Renew In Me series member."
         }
       ]
     },
@@ -45,11 +45,11 @@
       "provenance": [
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected Born Bent thumbnail uses the Renew Me series artwork."
+          "detail": "The inspected Born Bent thumbnail uses the Psalm 51 series artwork."
         },
         {
           "source": "jeremy_direction",
-          "detail": "Jeremy confirmed Born Bent as a Renew Me series member."
+          "detail": "Jeremy confirmed Born Bent as a Renew In Me series member."
         }
       ]
     },
@@ -59,11 +59,11 @@
       "provenance": [
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected Inside Out thumbnail uses the Renew Me series artwork."
+          "detail": "The inspected Inside Out thumbnail uses the Psalm 51 series artwork."
         },
         {
           "source": "jeremy_direction",
-          "detail": "Jeremy confirmed Inside Out as a Renew Me series member."
+          "detail": "Jeremy confirmed Inside Out as a Renew In Me series member."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "provenance": [
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected Start With Me thumbnail uses the Renew Me series artwork."
+          "detail": "The inspected Start With Me thumbnail uses the Psalm 51 series artwork."
         },
         {
           "source": "jeremy_direction",
-          "detail": "Jeremy confirmed Start With Me as a Renew Me series member."
+          "detail": "Jeremy confirmed Start With Me as a Renew In Me series member."
         }
       ]
     },
@@ -87,11 +87,11 @@
       "provenance": [
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected Crushed Joy thumbnail uses the Renew Me series artwork."
+          "detail": "The inspected Crushed Joy thumbnail uses the Psalm 51 series artwork."
         },
         {
           "source": "jeremy_direction",
-          "detail": "Jeremy confirmed Crushed Joy as a Renew Me series member."
+          "detail": "Jeremy confirmed Crushed Joy as a Renew In Me series member."
         }
       ]
     },
@@ -105,7 +105,7 @@
         },
         {
           "source": "thumbnail_artwork",
-          "detail": "The inspected Renew US thumbnail uses the cropped Renew Me / Psalm 51 series artwork."
+          "detail": "The inspected Renew US thumbnail uses the cropped Psalm 51 series artwork."
         }
       ]
     }

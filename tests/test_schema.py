@@ -102,7 +102,11 @@ def test_depth_three_and_free_text_speaker(record):
 
 def test_all_series_records_validate_with_explicit_membership():
     series_records = render.series_records()
-    assert [series['id'] for series in series_records] == ['renew-me', 'by-faith']
+    assert [series['id'] for series in series_records] == [
+        'king-for-all', 'renew-in-me', 'by-faith', 'born-again', 'he-is-risen',
+        'broken-preparing-for-easter', 'forging-faith', 'ezekiel-a-new-heart',
+        'glory-on-the-move', 'believe-the-one',
+    ]
     validate_series_collection(series_records, render.records())
 
 
@@ -145,7 +149,8 @@ def test_series_rejects_duplicate_member_and_duplicate_id(series):
 
 def test_series_records_require_every_sermon_exactly_once():
     series_records = deepcopy(render.series_records())
-    missing = series_records[0]['members'].pop()['slug']
+    multi = next(series for series in series_records if len(series['members']) > 1)
+    missing = multi['members'].pop()['slug']
     with pytest.raises(InvalidRecord, match='exactly one series record.*' + missing):
         validate_series_collection(series_records, render.records())
 
@@ -154,7 +159,7 @@ def test_series_and_member_provenance_and_standalone_shape_are_closed(series):
     series['provenance'][0]['source'] = 'theological_inference'
     with pytest.raises(InvalidRecord, match='provenance source'):
         validate_series(series)
-    series = deepcopy(render.series_records()[0])
+    series = deepcopy(next(item for item in render.series_records() if len(item['members']) > 1))
     series['type'] = 'standalone'
     with pytest.raises(InvalidRecord, match='exactly one sermon'):
         validate_series(series)

@@ -20,7 +20,7 @@ def test_determinism_and_tracked_output():
     assert first == second
     assert render.check(render.ROOT, first) == []
     assert first['assets/site.css'] == (render.ROOT / 'site/assets/site.css').read_bytes()
-    assert {'search.html', 'search-index.json', 'series.html', 'series/by-faith.html', 'series/renew-me.html'} <= set(first)
+    assert {'search.html', 'search-index.json', 'series.html', 'series/by-faith.html', 'series/renew-in-me.html'} <= set(first)
 
 
 def test_all_generated_surfaces():
@@ -205,7 +205,7 @@ def test_study_table_css_keeps_static_plate_treatment():
     assert 'box-shadow: inset 0 0 0 1px var(--plate-ring)' in css
     assert '.card-title { margin: 0; font-size: 1.25rem;' in css
     assert css.count('[data-series="by-faith"]') == 3
-    assert css.count('[data-series="renew-me"]') == 3
+    assert css.count('[data-series="renew-in-me"]') == 3
     assert 'gradient' not in css
     declarations = []
     for match in __import__('re').finditer(r'\{([^{}]*)\}', css):
@@ -264,8 +264,9 @@ def test_series_content_writer_checks_candidate_and_full_collection(tmp_path):
 
 
 def test_series_cli_check_path():
+    series = next(item for item in render.series_records() if item['id'] == 'renew-in-me')
     result = subprocess.run(
         ['/usr/bin/python3', 'site/content.py', '--series', '--check'], cwd=render.ROOT,
-        input=json.dumps(render.series_records()[0]), text=True, capture_output=True, check=True,
+        input=json.dumps(series), text=True, capture_output=True, check=True,
     )
-    assert result.stdout == 'Valid series: renew-me\n'
+    assert result.stdout == 'Valid series: renew-in-me\n'

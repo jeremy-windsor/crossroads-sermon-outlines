@@ -47,7 +47,7 @@
     --plate-ring-hover: rgb(255 255 255 / 32%);
   }
   :root:not([data-theme]) [data-series="by-faith"] { --series-ink: #D6BC96; }
-  :root:not([data-theme]) [data-series="renew-me"] { --series-ink: #DAA461; }
+  :root:not([data-theme]) [data-series="renew-in-me"] { --series-ink: #DAA461; }
 }
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] {
@@ -73,9 +73,9 @@
 /* Series accents are a restrained art-derived rule and dot. New series safely
    fall back to --scripture until an accessible light/dark pair is added. */
 [data-series="by-faith"] { --series-ink: #53402B; }
-[data-series="renew-me"] { --series-ink: #8A5A22; }
+[data-series="renew-in-me"] { --series-ink: #8A5A22; }
 :root[data-theme="dark"] [data-series="by-faith"] { --series-ink: #D6BC96; }
-:root[data-theme="dark"] [data-series="renew-me"] { --series-ink: #DAA461; }
+:root[data-theme="dark"] [data-series="renew-in-me"] { --series-ink: #DAA461; }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 1rem; }

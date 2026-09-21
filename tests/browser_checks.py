@@ -23,7 +23,7 @@ SURFACES = [
     ('timeline', 'archive.html'),
     ('year', 'archive/2026.html'),
     ('series', 'series.html'),
-    ('series', 'series/renew-me.html'),
+    ('series', 'series/renew-in-me.html'),
     ('sermon', SERMON),
 ]
 TRANSPARENT_PNG = base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M/wHwAF/gL+Xf8WAAAAAElFTkSuQmCC')
@@ -133,7 +133,7 @@ def test_rendered_viewports(browser, local_site, name, path, device, width, heig
         page.on('pageerror', lambda error: errors.append(str(error)))
         page.goto(local_site + path)
         assert not errors
-        assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
+        assert background(page) == ('rgb(10, 10, 10)' if theme == 'dark' else 'rgb(255, 255, 255)')
         target_theme = 'light' if theme == 'dark' else 'dark'
         assert page.locator('.theme-toggle').get_attribute('aria-label') == f'Switch to {target_theme} theme'
         geometry = toggle_geometry(page)
@@ -184,7 +184,7 @@ def test_theme_toggle_persistence_system_default_and_early_script(browser, local
         context.route(local_site + 'index.html', lambda route: route.fulfill(body=early_only, content_type='text/html'))
         page.goto(local_site + 'index.html')
         assert page.evaluate('document.documentElement.dataset.theme') == override
-        assert background(page) == ('rgb(20, 29, 25)' if override == 'dark' else 'rgb(250, 250, 246)')
+        assert background(page) == ('rgb(10, 10, 10)' if override == 'dark' else 'rgb(255, 255, 255)')
         context.unroute(local_site + 'index.html')
         page.evaluate('localStorage.removeItem("crossroads-theme")')
         page.goto(local_site)
@@ -199,10 +199,10 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
         page = context.new_page()
         page.goto(local_site)
         assert not page.locator('.theme-toggle').is_visible()
-        assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
+        assert background(page) == ('rgb(10, 10, 10)' if theme == 'dark' else 'rgb(255, 255, 255)')
         page.get_by_role('link', name='Series', exact=True).click()
         page.get_by_role('link', name='Renew In Me', exact=True).click()
-        assert page.url.endswith('series/renew-me.html')
+        assert page.url.endswith('series/renew-in-me.html')
         page.get_by_role('link', name='When Excuses Die', exact=True).click()
         assert page.url.endswith('sermons/2026-08-03-when-excuses-die.html')
         page.goto(local_site)
@@ -229,7 +229,7 @@ def test_art_plate_and_watch_link_hit_targets(browser, local_site):
           const target = document.elementFromPoint(point.x, point.y);
           return target.closest('a')?.getAttribute('href');
         }''', {'x': plate_box['x'] + plate_box['width'] / 2, 'y': plate_box['y'] + plate_box['height'] / 2})
-        assert plate_target == 'series/renew-me.html'
+        assert plate_target == 'series/king-for-all.html'
 
 
 def test_search_control_has_one_clean_focus_ring(browser, local_site):
@@ -315,7 +315,7 @@ def test_unavailable_storage_keeps_theme_usable(browser, local_site):
         page = context.new_page()
         page.goto(local_site)
         page.get_by_role('button', name='Switch to light theme').click()
-        assert background(page) == 'rgb(250, 250, 246)'
+        assert background(page) == 'rgb(255, 255, 255)'
 
 
 def test_actual_http_verification_on_every_surface(local_site):
