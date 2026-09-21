@@ -1,8 +1,12 @@
 {
   "id": "king-for-all",
-  "name": "King for All",
+  "name": "King For All",
   "type": "series",
   "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains this one sermon: So That You May Know."
+    },
     {
       "source": "spoken_intro",
       "detail": "Josh says, So today, we begin a new series through Luke’s gospel called King for All, while reading Luke 1:1–4, and later restates, The title of this series is king for all."

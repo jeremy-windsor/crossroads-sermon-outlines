@@ -1,0 +1,39 @@
+{
+  "id": "glory-on-the-move",
+  "name": "Glory on the Move",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this upload. It appears only in Watch Messages. The Ezekiel : A New Heart playlist does not include it."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy said use the playlists. A sermon that is only in Watch Messages is Standalone Sunday."
+    },
+    {
+      "source": "youtube_title",
+      "detail": "The YouTube title is Glory on the Move, matching this single message rather than the playlist title Ezekiel : A New Heart."
+    }
+  ],
+  "scripture_spine": "Ezekiel 1",
+  "description": "Josh reads Ezekiel 1: the throne, the wheels, and glory on the move.",
+  "note": "Josh called this the opening week of a six-week Ezekiel run. The church playlist does not include it, so it is not a member of Ezekiel : A New Heart.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-01-12-glory-on-the-move",
+      "scripture": "Ezekiel 1:1-28",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The upload is titled Glory on the Move and the message reads Ezekiel 1."
+        },
+        {
+          "source": "youtube_playlist",
+          "detail": "Absent from Ezekiel : A New Heart. Present only in the Watch Messages dump."
+        }
+      ]
+    }
+  ]
+}

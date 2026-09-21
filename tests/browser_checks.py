@@ -201,7 +201,7 @@ def test_no_javascript_navigation_and_ledger(browser, local_site, theme):
         assert not page.locator('.theme-toggle').is_visible()
         assert background(page) == ('rgb(20, 29, 25)' if theme == 'dark' else 'rgb(250, 250, 246)')
         page.get_by_role('link', name='Series', exact=True).click()
-        page.get_by_role('link', name='Renew Me', exact=True).click()
+        page.get_by_role('link', name='Renew In Me', exact=True).click()
         assert page.url.endswith('series/renew-me.html')
         page.get_by_role('link', name='When Excuses Die', exact=True).click()
         assert page.url.endswith('sermons/2026-08-03-when-excuses-die.html')

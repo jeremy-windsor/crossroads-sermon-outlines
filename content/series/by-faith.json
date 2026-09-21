@@ -4,6 +4,10 @@
   "type": "series",
   "provenance": [
     {
+      "source": "youtube_playlist",
+      "detail": "Church playlist By Faith (PLSDa13_3L-B2ofuDkGhdjaQU6Z7RFsG7m) contains these same thirteen sermons."
+    },
+    {
       "source": "thumbnail_artwork",
       "detail": "All thirteen inspected sermon thumbnails display the By Faith series artwork; the immediately preceding channel upload, The Verdict Is In, uses different artwork."
     },

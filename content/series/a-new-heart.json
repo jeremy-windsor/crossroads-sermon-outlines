@@ -1,36 +1,26 @@
 {
   "id": "a-new-heart",
-  "name": "A New Heart",
+  "name": "Ezekiel : A New Heart",
   "type": "series",
   "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Ezekiel : A New Heart (PLSDa13_3L-B2h3aVODRjEVvU08YE1hdoh) contains From Exile to Emmanuel, Can These Bones Live?, From Neglect to Rescue, The Unseen Church, and The Watchman’s Diet. Glory on the Move is not in it."
+    },
     {
       "source": "spoken_intro",
       "detail": "Josh opens Glory on the Move as a six-week series in Ezekiel whose goal is to remind the church of the unseen, and later names the series aim as God changing hearts for his glory. In Can These Bones Live he reads Ezekiel 36 on a new heart and a heart of flesh."
     },
     {
       "source": "jeremy_direction",
-      "detail": "Jeremy named the gold Ezekiel block A New Heart: Glory on the Move through From Exile to Emmanuel."
+      "detail": "Jeremy first named this block A New Heart, including Glory on the Move. He later said the church playlists win, which drops Glory on the Move and renames the series to the playlist title."
     }
   ],
   "scripture_spine": "Ezekiel",
-  "description": "Six weeks in Ezekiel: glory on the move, a watchman’s diet, unseen worship, failed shepherds, dry bones, and a river from the temple.",
-  "note": "Josh frames six weeks through Ezekiel’s visions. The series name is not printed on the gold artwork. Week six lands on new hearts, a new shepherd, a new covenant, and new temples as glory comes home.",
+  "description": "Five weeks in Ezekiel: a watchman’s diet, unseen worship, failed shepherds, dry bones, and a river from the temple.",
+  "note": "The church playlist is the membership: five sermons, not six. Josh spoke of six weeks beginning with Glory on the Move. That sermon is not on this playlist, so it stands alone.",
   "anchor": null,
   "members": [
-    {
-      "slug": "2026-01-12-glory-on-the-move",
-      "scripture": "Ezekiel 1:1-28",
-      "provenance": [
-        {
-          "source": "spoken_intro",
-          "detail": "Josh names a six-week series in Ezekiel and reads the opening vision of glory."
-        },
-        {
-          "source": "jeremy_direction",
-          "detail": "Jeremy placed Glory on the Move as week one of A New Heart."
-        }
-      ]
-    },
     {
       "slug": "2026-01-20-the-watchmans-diet",
       "scripture": "Ezekiel 2:1-3:21",

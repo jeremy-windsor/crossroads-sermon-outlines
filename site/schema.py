@@ -16,7 +16,7 @@ SERIES_KEYS = set("id name type provenance scripture_spine description note anch
 SERIES_MEMBER_KEYS = {"slug", "scripture", "provenance"}
 SERIES_PROVENANCE_KEYS = {"source", "detail"}
 SERIES_TYPES = {"series", "standalone"}
-SERIES_SOURCES = {"spoken_intro", "captions", "youtube_title", "youtube_description", "thumbnail_artwork", "jeremy_direction"}
+SERIES_SOURCES = {"spoken_intro", "captions", "youtube_title", "youtube_description", "thumbnail_artwork", "youtube_playlist", "jeremy_direction"}
 RESERVED_IDS = {"main-content", "outline-heading", "scripture-ledger", "ledger-heading", "page-title"}
 
 

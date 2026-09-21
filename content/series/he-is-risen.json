@@ -4,6 +4,10 @@
   "type": "standalone",
   "provenance": [
     {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this upload. It appears only in Watch Messages, so it stays Standalone Sunday."
+    },
+    {
       "source": "youtube_title",
       "detail": "The YouTube title is He Is Risen!, matching the Easter message rather than a multi-week series name."
     },

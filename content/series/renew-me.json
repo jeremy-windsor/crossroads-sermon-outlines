@@ -1,8 +1,12 @@
 {
   "id": "renew-me",
-  "name": "Renew Me",
+  "name": "Renew In Me",
   "type": "series",
   "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Renew In Me (PLfwRr6uGVMe8) contains Renew US, Crushed Joy, Start With Me, Inside Out, Born Bent, and When Excuses Die."
+    },
     {
       "source": "thumbnail_artwork",
       "detail": "The inspected thumbnail artwork identifies the series as Renew Me."
@@ -18,7 +22,7 @@
   ],
   "scripture_spine": "Psalm 51",
   "description": "David’s psalm of repentance, opened a few verses at a time.",
-  "note": "The series name follows the cropped sermon artwork and editorial direction; it is not confirmed official channel metadata. Captions describe a six-week series through Psalm 51, now complete in this archive.",
+  "note": "Playlist title is Renew In Me. Thumbnail artwork says Renew Me. Playlist wins. Six sermons through Psalm 51, complete in this archive.",
   "anchor": null,
   "members": [
     {

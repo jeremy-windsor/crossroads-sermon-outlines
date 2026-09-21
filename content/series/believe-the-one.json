@@ -4,6 +4,10 @@
   "type": "standalone",
   "provenance": [
     {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this upload. It appears only in Watch Messages, so it stays Standalone Sunday."
+    },
+    {
       "source": "youtube_title",
       "detail": "The YouTube title is Believe the One, matching this single guest message rather than a multi-week series name."
     },
@@ -14,7 +18,7 @@
   ],
   "scripture_spine": "2 Kings 5",
   "description": "Brad Hinkle on Naaman, a servant girl, and being the one who speaks because you believe the One.",
-  "note": "New Year guest message from an elder. Unique thumbnail art. Not part of the Ezekiel series that begins the following week.",
+  "note": "New Year guest message from an elder. No named playlist. Not part of Ezekiel : A New Heart.",
   "anchor": null,
   "members": [
     {
