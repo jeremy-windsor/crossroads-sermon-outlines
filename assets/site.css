@@ -1,48 +1,48 @@
 /* Source of truth. site/render.py copies these exact bytes to assets/site.css. */
 :root {
   color-scheme: light dark;
-  --ink: #202d29;
-  --muted: #57655f;
-  --paper: #fafaf6;
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --paper: #ffffff;
   --panel: #ffffff;
-  --line: #ccd5cf;
-  --accent: #843d2e;
-  --accent-soft: #f5e7df;
-  --scripture: #24584b;
-  --scripture-soft: #e4f0e9;
-  --table-head: #edf1ed;
-  --target: #fff2cf;
-  --video: #111815;
-  --shadow: 0 .25rem .9rem rgb(25 45 35 / 5%);
+  --line: #e5e5e5;
+  --accent: #8b6914;
+  --accent-soft: #f5edd8;
+  --scripture: #7a5a10;
+  --scripture-soft: #f5edd8;
+  --table-head: #f4f4f2;
+  --target: #fff6dc;
+  --video: #111111;
+  --shadow: 0 .25rem .9rem rgb(0 0 0 / 6%);
   --video-shadow: 0 .4rem 1.4rem rgb(0 0 0 / 13%);
-  --focus: #006653;
+  --focus: #8b6914;
   --max: 76rem;
   --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --radius-plate: .3rem;
   --radius-card: .5rem;
-  --plate-ring: rgb(32 45 41 / 14%);
-  --plate-ring-hover: rgb(32 45 41 / 30%);
+  --plate-ring: rgb(26 26 26 / 14%);
+  --plate-ring-hover: rgb(26 26 26 / 30%);
   --plate-empty: var(--table-head);
   --grid-gap: 1.75rem;
   --series-ink: var(--scripture);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --ink: #e5eae5;
-    --muted: #b1beb6;
-    --paper: #141d19;
-    --panel: #1b2821;
-    --line: #43564a;
-    --accent: #f1b39b;
-    --accent-soft: #3d2d27;
-    --scripture: #add7c4;
-    --scripture-soft: #263f33;
-    --table-head: #25372c;
-    --target: #423d25;
-    --video: #090e0b;
+    --ink: #f2f0ea;
+    --muted: #a8a59c;
+    --paper: #0a0a0a;
+    --panel: #161616;
+    --line: #2e2e2e;
+    --accent: #d4b46a;
+    --accent-soft: #2a2418;
+    --scripture: #d4b46a;
+    --scripture-soft: #2a2418;
+    --table-head: #1c1c1c;
+    --target: #3a3420;
+    --video: #000000;
     --shadow: 0 .25rem .9rem rgb(0 0 0 / 15%);
     --video-shadow: 0 .4rem 1.4rem rgb(0 0 0 / 30%);
-    --focus: #ace5d0;
+    --focus: #e0c070;
     --plate-ring: rgb(255 255 255 / 14%);
     --plate-ring-hover: rgb(255 255 255 / 32%);
   }
@@ -52,21 +52,21 @@
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --ink: #e5eae5;
-  --muted: #b1beb6;
-  --paper: #141d19;
-  --panel: #1b2821;
-  --line: #43564a;
-  --accent: #f1b39b;
-  --accent-soft: #3d2d27;
-  --scripture: #add7c4;
-  --scripture-soft: #263f33;
-  --table-head: #25372c;
-  --target: #423d25;
-  --video: #090e0b;
+  --ink: #f2f0ea;
+  --muted: #a8a59c;
+  --paper: #0a0a0a;
+  --panel: #161616;
+  --line: #2e2e2e;
+  --accent: #d4b46a;
+  --accent-soft: #2a2418;
+  --scripture: #d4b46a;
+  --scripture-soft: #2a2418;
+  --table-head: #1c1c1c;
+  --target: #3a3420;
+  --video: #000000;
   --shadow: 0 .25rem .9rem rgb(0 0 0 / 15%);
   --video-shadow: 0 .4rem 1.4rem rgb(0 0 0 / 30%);
-  --focus: #ace5d0;
+  --focus: #e0c070;
   --plate-ring: rgb(255 255 255 / 14%);
   --plate-ring-hover: rgb(255 255 255 / 32%);
 }
@@ -95,7 +95,7 @@ button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accen
 .nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .nav-links { min-width: 0; max-width: 100%; }
 .nav-links a { padding-block: .6rem; }
-.nav-links [aria-current="page"] { color: var(--ink); font-weight: 750; }
+.nav-links [aria-current="page"] { color: var(--accent); font-weight: 750; }
 .site-search { display: flex; flex: 0 1 29rem; width: min(29rem, 100%); min-width: 12rem; margin-left: auto; }
 .site-search input { flex: 1 1 auto; min-width: 0; width: auto; min-height: 44px; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: .3rem 0 0 .3rem; color: var(--ink); background: var(--panel); font: 1rem/1.4 var(--sans); }
 .site-search button { border-left: 0; border-radius: 0 .3rem .3rem 0; }
