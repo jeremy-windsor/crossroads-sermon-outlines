@@ -1,0 +1,49 @@
+{
+  "id": "forging-faith",
+  "name": "Forging Faith",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "spoken_intro",
+      "detail": "Josh opens Unspeakable Joy by naming a two-week miniseries called Forging Faith through 1 Peter 1, and opens Ransomed for Holiness as the second half of that same two-part series."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy confirmed Forging Faith as Unspeakable Joy and Ransomed for Holiness even though the series name is not printed on the thumbnails."
+    }
+  ],
+  "scripture_spine": "1 Peter 1",
+  "description": "A two-week look at 1 Peter 1: faith purified in the fire, then holiness from ransom blood.",
+  "note": "Josh says they will probably return to 1 Peter later. Week one is living hope and unspeakable joy; week two is walking in holiness as ransomed living stones.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-02-23-unspeakable-joy",
+      "scripture": "1 Peter 1:1-12",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh names Forging Faith, reads 1 Peter 1:1-12, and gives eight situations where faith is forged."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed Unspeakable Joy as Forging Faith."
+        }
+      ]
+    },
+    {
+      "slug": "2026-03-02-ransomed-for-holiness",
+      "scripture": "1 Peter 1:13-25",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh calls Forging Faith a two-part series and covers the back half of 1 Peter 1, shifting from hope to holiness."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed Ransomed for Holiness as Forging Faith."
+        }
+      ]
+    }
+  ]
+}
