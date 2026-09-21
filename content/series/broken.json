@@ -1,0 +1,67 @@
+{
+  "id": "broken",
+  "name": "Broken",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "spoken_intro",
+      "detail": "Josh opens Transformed by His Power as week three of Broken and opens Pour it Out as the final week of Broken, walking Christ’s passion predictions toward Holy Week. On Easter he later says they had just finished a series called Broken."
+    },
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The inspected thumbnails for Cleaning God’s House, Transformed by His Power, and Pour it Out display shared Broken series artwork."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy confirmed Broken as March 16–30: Cleaning God’s House, Transformed by His Power, and Pour it Out, including George Shankool on week one."
+    }
+  ],
+  "scripture_spine": "The Passion of Christ",
+  "description": "Passion predictions and Holy Week scenes, from the temple to Gethsemane, preparing the church for Easter.",
+  "note": "Three weekly messages. George opens with the temple cleansing in John 2. Josh then takes Matthew 17 and Matthew 26 as the series moves toward the empty tomb.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-03-16-cleaning-gods-house",
+      "scripture": "John 2:13-22",
+      "provenance": [
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Cleaning God’s House thumbnail uses the Broken series artwork."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy included George Shankool’s Cleaning God’s House as week one of Broken."
+        }
+      ]
+    },
+    {
+      "slug": "2026-03-23-transformed-by-his-power",
+      "scripture": "Matthew 17:1-27",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh welcomes the church to week three of Broken and reads Matthew 17, naming this the second passion prediction in the series."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed Transformed by His Power as a Broken sermon."
+        }
+      ]
+    },
+    {
+      "slug": "2026-03-30-pour-it-out",
+      "scripture": "Matthew 26",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh welcomes the church to the final week of Broken and maps Matthew 26 into Bethany, the upper room, and Gethsemane."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed Pour it Out as the closing Broken sermon."
+        }
+      ]
+    }
+  ]
+}

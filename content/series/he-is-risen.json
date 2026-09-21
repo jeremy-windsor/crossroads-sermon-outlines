@@ -1,0 +1,39 @@
+{
+  "id": "he-is-risen",
+  "name": "He Is Risen",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_title",
+      "detail": "The YouTube title is He Is Risen!, matching the Easter message rather than a multi-week series name."
+    },
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The inspected thumbnail uses the Crossroads mark without a multi-week series badge."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy confirmed He Is Risen as a one-member standalone Easter series, not part of Born Again or Broken."
+    }
+  ],
+  "scripture_spine": "Matthew 28",
+  "description": "Easter Sunday from the empty tomb in Matthew 28.",
+  "note": "Josh reads Matthew 28, gives seven reasons the resurrection is history’s most significant moment, and sends the church to make disciples. Spoken as a single Easter gathering, not a multi-week series.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-04-06-he-is-risen",
+      "scripture": "Matthew 28:1-20",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The upload is titled He Is Risen! and the message opens by reading Matthew 28."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy assigned this Easter sermon as the sole member of He Is Risen."
+        }
+      ]
+    }
+  ]
+}
