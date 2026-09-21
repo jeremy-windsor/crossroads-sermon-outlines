@@ -109,7 +109,7 @@ def sermon_card(record, series_records, prefix="", heading=3, eager=False, curre
         series, part, total = info
         series_attribute = f' data-series="{e(series["id"])}"'
         if series["type"] == "standalone":
-            series_line = '<p class="card-series">Solo</p>'
+            series_line = '<p class="card-series">Standalone Sunday</p>'
         else:
             label = e(series["name"]) if current_series == series["id"] else link(prefix + "series/" + series["id"] + ".html", series["name"])
             series_line = f'<p class="card-series">{label} · {part} of {total}</p>'
@@ -179,8 +179,8 @@ def grouped_series_sections(records, series_records, prefix=""):
     sections = f'<section aria-labelledby="series-heading"><h2 id="series-heading">Series</h2>{series_listing(records, multi, prefix)}</section>'
     if solo:
         sections += (
-            '<section class="standalone" aria-labelledby="solo-heading">'
-            '<h2 id="solo-heading">Solo</h2>'
+            '<section class="standalone" aria-labelledby="standalone-sunday-heading">'
+            '<h2 id="standalone-sunday-heading">Standalone Sunday</h2>'
             '<p class="lede">Single messages that are not part of a multi-week series.</p>'
             f"{series_listing(records, solo, prefix, eager_count=0)}"
             "</section>"
@@ -229,7 +229,7 @@ def year_archive(year, records, series_records, scripts):
 
 
 def series_index(records, series_records, scripts):
-    header = '<p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Multi-week series first, then solo messages.</p>'
+    header = '<p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Multi-week series first, then Standalone Sunday.</p>'
     return layout("Series | Crossroads Sermons", "Browse Crossroads sermons by series.", "", header, grouped_series_sections(records, series_records), scripts, current="index.html")
 
 
@@ -244,7 +244,7 @@ def series_page(series, by_slug, series_records, scripts):
 <p class="subtitle">{e(series['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(series_period(series, by_slug))}</p>
 <p class="lede">{e(series['description'])}</p>
 </div>'''
-    section_heading = "Solo sermon" if series["type"] == "standalone" else "Sermons in this series"
+    section_heading = "Standalone Sunday" if series["type"] == "standalone" else "Sermons in this series"
     body = f'<section aria-labelledby="series-messages-heading"><h2 id="series-messages-heading">{section_heading}</h2>{sermon_grid(members, series_records, "../", current_series=series["id"])}</section>'
     return layout(f"{series['name']} | Crossroads Sermons", series["description"], "../", header, body, scripts, current="index.html")
 
