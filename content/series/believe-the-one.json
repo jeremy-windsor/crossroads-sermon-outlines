@@ -1,0 +1,35 @@
+{
+  "id": "believe-the-one",
+  "name": "Believe the One",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_title",
+      "detail": "The YouTube title is Believe the One, matching this single guest message rather than a multi-week series name."
+    },
+    {
+      "source": "jeremy_direction",
+      "detail": "Jeremy assigned Believe the One as a solo message with He Is Risen, grouped as standalone rather than folded into A New Heart."
+    }
+  ],
+  "scripture_spine": "2 Kings 5",
+  "description": "Brad Hinkle on Naaman, a servant girl, and being the one who speaks because you believe the One.",
+  "note": "New Year guest message from an elder. Unique thumbnail art. Not part of the Ezekiel series that begins the following week.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-01-05-believe-the-one",
+      "scripture": "2 Kings 5:1-14",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Brad reads Luke 4 then 2 Kings 5 as the body of the message and titles the charge believe the One, then be the one."
+        },
+        {
+          "source": "jeremy_direction",
+          "detail": "Jeremy confirmed this January 5 sermon as a standalone."
+        }
+      ]
+    }
+  ]
+}

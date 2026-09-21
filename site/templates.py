@@ -109,7 +109,7 @@ def sermon_card(record, series_records, prefix="", heading=3, eager=False, curre
         series, part, total = info
         series_attribute = f' data-series="{e(series["id"])}"'
         if series["type"] == "standalone":
-            series_line = '<p class="card-series">Standalone</p>'
+            series_line = '<p class="card-series">Solo</p>'
         else:
             label = e(series["name"]) if current_series == series["id"] else link(prefix + "series/" + series["id"] + ".html", series["name"])
             series_line = f'<p class="card-series">{label} · {part} of {total}</p>'
@@ -166,17 +166,31 @@ def series_card(series, by_slug, prefix="", heading=2, eager=False):
 </article>'''
 
 
-def series_listing(records, series_records, prefix=""):
+def series_listing(records, series_records, prefix="", eager_count=2):
     by_slug = {record["slug"]: record for record in records}
     return '<div class="series-list">' + "\n".join(
-        series_card(series, by_slug, prefix, eager=index < 2) for index, series in enumerate(series_records)
+        series_card(series, by_slug, prefix, eager=index < eager_count) for index, series in enumerate(series_records)
     ) + "</div>"
+
+
+def grouped_series_sections(records, series_records, prefix=""):
+    multi = [series for series in series_records if series["type"] != "standalone"]
+    solo = [series for series in series_records if series["type"] == "standalone"]
+    sections = f'<section aria-labelledby="series-heading"><h2 id="series-heading">Series</h2>{series_listing(records, multi, prefix)}</section>'
+    if solo:
+        sections += (
+            '<section class="standalone" aria-labelledby="solo-heading">'
+            '<h2 id="solo-heading">Solo</h2>'
+            '<p class="lede">Single messages that are not part of a multi-week series.</p>'
+            f"{series_listing(records, solo, prefix, eager_count=0)}"
+            "</section>"
+        )
+    return sections
 
 
 def home(records, series_records, scripts):
     header = '<p class="kicker">Series</p><h1>Crossroads Sermons</h1><p class="lede">Browse sermons by series, or use the Timeline to find a message by date.</p>'
-    body = f'<section aria-labelledby="series-heading"><h2 id="series-heading" class="visually-hidden">Sermon series</h2>{series_listing(records, series_records)}</section>'
-    return layout("Crossroads Sermons", "Browse Crossroads sermons by series, date, speaker, or Scripture reference.", "", header, body, scripts, current="index.html")
+    return layout("Crossroads Sermons", "Browse Crossroads sermons by series, date, speaker, or Scripture reference.", "", header, grouped_series_sections(records, series_records), scripts, current="index.html")
 
 
 def archive(records, scripts):
@@ -215,8 +229,8 @@ def year_archive(year, records, series_records, scripts):
 
 
 def series_index(records, series_records, scripts):
-    header = '<p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Browse sermon series and standalone messages.</p>'
-    return layout("Series | Crossroads Sermons", "Browse Crossroads sermons by series.", "", header, series_listing(records, series_records), scripts, current="index.html")
+    header = '<p class="kicker">Series</p><h1>Sermon series</h1><p class="lede">Multi-week series first, then solo messages.</p>'
+    return layout("Series | Crossroads Sermons", "Browse Crossroads sermons by series.", "", header, grouped_series_sections(records, series_records), scripts, current="index.html")
 
 
 def series_page(series, by_slug, series_records, scripts):
@@ -230,7 +244,7 @@ def series_page(series, by_slug, series_records, scripts):
 <p class="subtitle">{e(series['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(series_period(series, by_slug))}</p>
 <p class="lede">{e(series['description'])}</p>
 </div>'''
-    section_heading = "Standalone sermon" if series["type"] == "standalone" else "Sermons in this series"
+    section_heading = "Solo sermon" if series["type"] == "standalone" else "Sermons in this series"
     body = f'<section aria-labelledby="series-messages-heading"><h2 id="series-messages-heading">{section_heading}</h2>{sermon_grid(members, series_records, "../", current_series=series["id"])}</section>'
     return layout(f"{series['name']} | Crossroads Sermons", series["description"], "../", header, body, scripts, current="index.html")
 
