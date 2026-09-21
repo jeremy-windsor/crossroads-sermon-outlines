@@ -21,6 +21,8 @@ The homepage is the series index, sorted by each series’s newest sermon. Confi
 
 ## Published outlines
 
+- [So That You May Know — Josh Wyatt — September 14, 2026](sermons/2026-09-14-so-that-you-may-know.html)
+- [Renew US — Josh Wyatt — September 8, 2026](sermons/2026-09-08-renew-us.html)
 - [Crushed Joy — Josh Wyatt — August 31, 2026](sermons/2026-08-31-crushed-joy.html)
 - [Start With Me — Josh Wyatt — August 24, 2026](sermons/2026-08-24-start-with-me.html)
 - [Inside Out — Josh Wyatt — August 16, 2026](sermons/2026-08-16-inside-out.html)

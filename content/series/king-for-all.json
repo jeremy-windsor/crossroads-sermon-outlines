@@ -1,0 +1,35 @@
+{
+  "id": "king-for-all",
+  "name": "King for All",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "spoken_intro",
+      "detail": "Josh says, So today, we begin a new series through Luke’s gospel called King for All, while reading Luke 1:1–4, and later restates, The title of this series is king for all."
+    },
+    {
+      "source": "thumbnail_artwork",
+      "detail": "The inspected So That You May Know thumbnail displays KING FOR ALL / THE BOOK OF LUKE series branding."
+    }
+  ],
+  "scripture_spine": "Luke",
+  "description": "A series through Luke’s Gospel on the King who came to seek and save the lost.",
+  "note": "Spoken introduction frames twelve weeks with Luke 19:10 kept in front of the series. This first message covers the historical block of Luke’s preface; the next week is announced as the prophetic block.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2026-09-14-so-that-you-may-know",
+      "scripture": "Luke 1:1–4",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh names King for All as a new series through Luke’s gospel and reads Luke 1:1–4 as the opening text, keeping Luke 19:10 in front of the series."
+        },
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected So That You May Know thumbnail uses the King for All / The Book of Luke series artwork."
+        }
+      ]
+    }
+  ]
+}

@@ -10,11 +10,15 @@
     {
       "source": "jeremy_direction",
       "detail": "Jeremy confirmed Renew Me as the series identity for these sermons."
+    },
+    {
+      "source": "captions",
+      "detail": "Renew US captions close the series through Psalm 51 after six weeks, treating Psalm 51:18–19 as the final two verses."
     }
   ],
   "scripture_spine": "Psalm 51",
   "description": "David’s psalm of repentance, opened a few verses at a time.",
-  "note": "The series name follows the cropped sermon artwork and editorial direction; it is not confirmed official channel metadata. The messages describe a six-week series; five are in this archive.",
+  "note": "The series name follows the cropped sermon artwork and editorial direction; it is not confirmed official channel metadata. Captions describe a six-week series through Psalm 51, now complete in this archive.",
   "anchor": null,
   "members": [
     {
@@ -84,6 +88,20 @@
         {
           "source": "jeremy_direction",
           "detail": "Jeremy confirmed Crushed Joy as a Renew Me series member."
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-08-renew-us",
+      "scripture": "Psalm 51:18–19",
+      "provenance": [
+        {
+          "source": "captions",
+          "detail": "Josh says our series through Psalm 51 ends with two verses, names Psalm 51:18–19, and treats the message as the series close from restore me to restore us."
+        },
+        {
+          "source": "thumbnail_artwork",
+          "detail": "The inspected Renew US thumbnail uses the cropped Renew Me / Psalm 51 series artwork."
         }
       ]
     }
