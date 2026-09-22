@@ -1,0 +1,77 @@
+{
+  "id": "go-tell-it",
+  "name": "Go Tell It",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "The official Go Tell It playlist contains The Light, Powerful Believers, Glory in the Flesh, and The Birth of Jesus."
+    },
+    {
+      "source": "spoken_intro",
+      "detail": "In The Light, Josh says the Advent challenge is “Go tell it,” announces three weeks in the first half of John 1, and says the teaching will conclude on Christmas Eve with Luke 2."
+    },
+    {
+      "source": "captions",
+      "detail": "Glory in the Flesh explicitly refers to John 1:1 as the first verse of “this series” while joining it to John 1:14."
+    }
+  ],
+  "scripture_spine": "John 1; Luke 2",
+  "description": "Four Advent messages move from the eternal Word as life and light, through the authority of adoption and the glory of the incarnation, to Luke’s account of the Savior’s birth. The church first hears and beholds Christ, then follows the shepherds in going to tell what God has done.",
+  "note": "The official series playlist establishes the four-message membership. Growing Up Jesus and Born Again? appear only in Watch Messages and are separate Standalone Sunday messages.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-12-08-the-light",
+      "scripture": "John 1:1-5",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Go Tell It playlist includes The Light."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh names “Go tell it” as the Advent challenge and announces the John 1 teaching plan."
+        }
+      ]
+    },
+    {
+      "slug": "2025-12-16-powerful-believers",
+      "scripture": "John 1:9-13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Go Tell It playlist includes Powerful Believers."
+        }
+      ]
+    },
+    {
+      "slug": "2025-12-22-glory-in-the-flesh",
+      "scripture": "John 1:14-18",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Go Tell It playlist includes Glory in the Flesh."
+        },
+        {
+          "source": "captions",
+          "detail": "Josh refers to John 1:1 as the first verse of “this series” before reading John 1:14-18."
+        }
+      ]
+    },
+    {
+      "slug": "2025-12-24-the-birth-of-jesus",
+      "scripture": "Luke 2:1-20",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Go Tell It playlist includes The Birth of Jesus."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "The Light announces that the Advent teaching will conclude on Christmas Eve with the traditional Luke 2 account."
+        }
+      ]
+    }
+  ]
+}

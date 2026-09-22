@@ -1,0 +1,43 @@
+{
+  "id": "born-again-question",
+  "name": "Born Again?",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_title",
+      "detail": "The official video title is “Born Again? | Chris DeWald | Crossroads Church.”"
+    },
+    {
+      "source": "youtube_playlist",
+      "detail": "The video appears in Watch Messages and in none of the channel’s 64 named or topical playlists."
+    },
+    {
+      "source": "captions",
+      "detail": "Chris presents one self-contained message tracing Nicodemus from John 3 through John 7 and John 19; he does not identify a multi-week series."
+    }
+  ],
+  "scripture_spine": "John 3; John 7; John 19",
+  "description": "Chris DeWald traces Nicodemus from a nighttime question about new birth to public courage at Jesus’ cross. New birth is cleansing and renewal by the Spirit, not legalism or worldly wisdom.",
+  "note": "Standalone Sunday: the message appears only in the channel’s Watch Messages collection and has no named-series assignment.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-12-01-born-again",
+      "scripture": "John 3:1-15",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The official video title identifies the message as “Born Again?.”"
+        },
+        {
+          "source": "youtube_playlist",
+          "detail": "The video appears only in Watch Messages and in none of the channel’s named or topical series playlists."
+        },
+        {
+          "source": "captions",
+          "detail": "The sermon is self-contained and does not identify a multi-week series."
+        }
+      ]
+    }
+  ]
+}

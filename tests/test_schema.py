@@ -105,7 +105,8 @@ def test_all_series_records_validate_with_explicit_membership():
     assert [series['id'] for series in series_records] == [
         'king-for-all', 'renew-in-me', 'by-faith', 'born-again', 'he-is-risen',
         'broken-preparing-for-easter', 'forging-faith', 'ezekiel-a-new-heart',
-        'glory-on-the-move', 'believe-the-one',
+        'glory-on-the-move', 'believe-the-one', 'growing-up-jesus', 'go-tell-it',
+        'born-again-question',
     ]
     validate_series_collection(series_records, render.records())
 

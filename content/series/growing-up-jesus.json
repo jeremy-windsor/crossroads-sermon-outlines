@@ -1,0 +1,43 @@
+{
+  "id": "growing-up-jesus",
+  "name": "Growing Up Jesus",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_title",
+      "detail": "The official video title is “Growing Up Jesus | Chris DeWald | Crossroads Church.”"
+    },
+    {
+      "source": "youtube_playlist",
+      "detail": "The video appears in Watch Messages and in none of the channel’s 64 named or topical playlists, including Go Tell It."
+    },
+    {
+      "source": "captions",
+      "detail": "Chris presents one self-contained post-Christmas message about Jesus’ childhood, hidden years, sinlessness, and saving work; he does not identify a multi-week series."
+    }
+  ],
+  "scripture_spine": "Luke 2; Hebrews 4",
+  "description": "Chris DeWald follows Jesus from infancy through the temple at age twelve and carefully considers the unrecorded years before public ministry. The ordinary human life matters because Jesus faced real temptation without sin and became the high priest who saves and sympathizes.",
+  "note": "Standalone Sunday: the message is not part of Go Tell It and has no other named-series assignment.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-12-28-growing-up-jesus",
+      "scripture": "Luke 2:21-52; Hebrews 4:14-16",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The official video title identifies the message as “Growing Up Jesus.”"
+        },
+        {
+          "source": "youtube_playlist",
+          "detail": "The video appears only in Watch Messages and in none of the channel’s named or topical series playlists."
+        },
+        {
+          "source": "captions",
+          "detail": "The sermon is self-contained and does not identify a multi-week series."
+        }
+      ]
+    }
+  ]
+}
