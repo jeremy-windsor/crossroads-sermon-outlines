@@ -167,7 +167,6 @@ def validate_surfaces(surfaces, records, series_records=None):
         assert page.iframe['src'] == f"https://www.youtube.com/embed/{record['video_id']}"
         assert page.find(id='outline-heading').get_text(' ', strip=True) == 'Overview'
         assert not page.select('.section-intro')
-        assert record['section_intro'] not in page.get_text(' ', strip=True)
         assert not page.select('.notice, .ledger-intro, figcaption')
         labels = [item.dt.get_text(strip=True) for item in page.select('.metadata > div')]
         expected_labels = ['Speaker', 'Published', 'Duration', 'Watch']

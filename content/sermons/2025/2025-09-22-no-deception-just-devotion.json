@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-09-22-no-deception-just-devotion",
   "title": "No Deception, Just Devotion",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3300,
   "video_id": "1sj06lU5kwU",
   "video_url": "https://www.youtube.com/watch?v=1sj06lU5kwU",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 20,
   "sermon_end": 3298,
   "card_summary": "Josh warns that hearing Scripture without obeying it produces spiritual self-deception. James calls believers to receive the planted Word with humility, become quick listeners, restrain speech and anger, keep looking into God’s liberating law, and put truth into practice. Genuine devotion appears in disciplined speech, costly care for vulnerable people, and a life kept from the world’s corruption.",
-  "section_intro": "The sermon begins at 00:20 and ends at 54:58. This chronological outline preserves Josh’s movement through James 1:19–27, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "No Deception, Just Devotion — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of No Deception, Just Devotion by Josh Wyatt at Crossroads Church, published 2025-09-22.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "No Deception, Just Devotion"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "53 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

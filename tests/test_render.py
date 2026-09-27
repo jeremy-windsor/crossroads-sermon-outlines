@@ -183,8 +183,6 @@ def test_search_index_covers_visible_content_and_exact_anchors():
             assert row['reference'] in document['terms']
             assert row['phrase'] in document['terms']
     serialized = __import__('json').dumps(index)
-    assert 'Independent-study disclaimer' not in serialized
-    assert 'Transcript source' not in serialized
 
 
 def test_no_css_id_selectors_and_no_css_parse_errors():
@@ -198,31 +196,6 @@ def test_no_css_id_selectors_and_no_css_parse_errors():
             if rule.type == 'at-rule' and rule.lower_at_keyword == 'media':
                 inspect(tinycss2.parse_rule_list(rule.content, skip_comments=True, skip_whitespace=True))
     inspect(tinycss2.parse_stylesheet(css, skip_comments=True, skip_whitespace=True))
-
-
-def test_study_table_css_keeps_static_plate_treatment():
-    css = (render.ROOT / 'site/assets/site.css').read_text()
-    assert 'box-shadow: inset 0 0 0 1px var(--plate-ring)' in css
-    assert '.card-title { margin: 0; font-size: 1.25rem;' in css
-    assert css.count('[data-series="by-faith"]') == 3
-    assert css.count('[data-series="renew-in-me"]') == 3
-    assert 'gradient' not in css
-    declarations = []
-    for match in __import__('re').finditer(r'\{([^{}]*)\}', css):
-        declarations.extend(tinycss2.parse_declaration_list(match.group(1), skip_comments=True, skip_whitespace=True))
-    assert not {item.lower_name for item in declarations if item.type == 'declaration'} & {'animation', 'transition', 'transform'}
-
-
-def test_search_focus_ring_and_compact_theme_toggle_css():
-    css = (render.ROOT / 'site/assets/site.css').read_text()
-    assert '.site-search { display: flex; flex: 0 1 29rem; width: min(29rem, 100%);' in css
-    assert '.site-search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px;' in css
-    assert '.site-search input:focus-visible, .site-search button:focus-visible { outline: none; }' in css
-    # Borderless at rest with a full 44px hit target; the box only appears on hover.
-    assert '.theme-toggle { display: inline-grid; place-items: center;' in css
-    assert 'width: 44px; height: 44px; padding: 0; border: 0;' in css
-    assert 'color: var(--muted); background: none; }' in css
-    assert '.theme-toggle:hover { color: var(--ink); background: var(--table-head); }' in css
 
 
 def test_future_year_and_neighbor_boundaries(tmp_path):

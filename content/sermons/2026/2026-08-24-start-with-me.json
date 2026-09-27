@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-08-24-start-with-me",
   "title": "Start With Me",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2670,
   "video_id": "yu8_6IwQGNg",
   "video_url": "https://www.youtube.com/watch?v=yu8_6IwQGNg",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-04",
   "sermon_start": 39,
   "sermon_end": null,
   "card_summary": "Josh Wyatt traces David’s plea in Psalm 51 from forgiveness to inward re-creation: God must create a pure heart, renew a steadfast spirit, restore salvation’s joy, and then use the forgiven sinner. Following the new-creation theme from Genesis through Ezekiel, Jesus, Paul, and Revelation, Josh distinguishes spiritual transformation from behavior-only repair, warns about unnoticed drift, explains Psalm 51:11 in David’s old-covenant setting, and points David’s blood guilt and fear of lost presence to Jesus, the innocent King who suffered to bring the guilty to God.",
-  "section_intro": "The sermon begins after a brief music cue. Josh’s home-repair illustration introduces the governing contrast: Jesus did not come merely to renovate an old life but to give new life. The outline follows the sermon’s chronological movements—create, renew, restore, and use—and retains its closing communion emphasis, gospel appeal, prayer, and hope of Christ’s return.",
-  "page_title": "Start With Me — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Start With Me by Josh Wyatt at Crossroads Church, published August 24, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Start With Me"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 4, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "48 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "1",
@@ -345,7 +297,6 @@
             "SCR-017",
             "SCR-018",
             "SCR-019",
-            "SCR-020",
             "SCR-021"
           ],
           "bullets": [
@@ -600,8 +551,6 @@
           "start": 2594,
           "heading": "Come, Lord Jesus, and make all things new",
           "scripture_mentions": [
-            "SCR-044",
-            "SCR-045",
             "SCR-046"
           ],
           "bullets": [
@@ -615,7 +564,6 @@
           "start": 2628,
           "heading": "Trust his presence and remain steadfast until he comes",
           "scripture_mentions": [
-            "SCR-047",
             "SCR-048"
           ],
           "bullets": [
@@ -822,8 +770,8 @@
     },
     {
       "id": "SCR-017",
-      "reference": "1 Samuel 15:23",
-      "reference_query": "1+Samuel+15%3A23",
+      "reference": "1 Samuel 15:26",
+      "reference_query": "1%20Samuel%2015%3A26",
       "treatment": "read/quoted",
       "time": 1622,
       "phrase": "‘Because you have rejected the word of the Lord, he has rejected you as king.’",
@@ -851,18 +799,6 @@
       "treatment": "referenced",
       "time": 1664,
       "phrase": "David played music for Saul to calm him when he could not find peace.",
-      "anchor_node_id": "5.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-020",
-      "reference": "1 Samuel 10:10-12",
-      "reference_query": "1+Samuel+10%3A10-12",
-      "treatment": "referenced",
-      "time": 1664,
-      "phrase": "Saul had once been among the prophets of God.",
       "anchor_node_id": "5.2",
       "version": "NIV",
       "version_source": "default",
@@ -1061,24 +997,24 @@
       "reference_note": null
     },
     {
-      "id": "SCR-037",
-      "reference": "Psalm 51:11",
-      "reference_query": "Psalm+51%3A11",
-      "treatment": "read/quoted",
+      "id": "SCR-038",
+      "reference": "Matthew 27:46",
+      "reference_query": "Matthew+27%3A46",
+      "treatment": "referenced",
       "time": 2467,
-      "phrase": "David prayed, ‘Do not cast me from your presence.’",
+      "phrase": "Jesus cried from the cross, ‘My God, my God, why have you forsaken me?’",
       "anchor_node_id": "8.1",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
     },
     {
-      "id": "SCR-038",
-      "reference": "Matthew 27:46",
-      "reference_query": "Matthew+27%3A46",
+      "id": "SCR-037",
+      "reference": "Psalm 51:11",
+      "reference_query": "Psalm+51%3A11",
       "treatment": "read/quoted",
-      "time": 2467,
-      "phrase": "Jesus cried from the cross, ‘My God, my God, why have you forsaken me?’",
+      "time": 2468,
+      "phrase": "David prayed, ‘Do not cast me from your presence.’",
       "anchor_node_id": "8.1",
       "version": "NIV",
       "version_source": "default",
@@ -1089,7 +1025,7 @@
       "reference": "1 Peter 3:18",
       "reference_query": "1+Peter+3%3A18",
       "treatment": "read/quoted",
-      "time": 2467,
+      "time": 2478,
       "phrase": "‘Christ also suffered once for sins, the righteous for the unrighteous ... to bring you to God.’",
       "anchor_node_id": "8.1",
       "version": "NIV",
@@ -1145,30 +1081,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-044",
-      "reference": "Romans 8:11",
-      "reference_query": "Romans+8%3A11",
-      "treatment": "referenced",
-      "time": 2594,
-      "phrase": "The Spirit who raised Jesus from the dead still dwells in God’s people.",
-      "anchor_node_id": "8.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-045",
-      "reference": "Revelation 21:4-5",
-      "reference_query": "Revelation+21%3A4-5",
-      "treatment": "referenced",
-      "time": 2594,
-      "phrase": "‘Come wipe every tear. Come make all things new. Come destroy death for good.’",
-      "anchor_node_id": "8.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-046",
       "reference": "Revelation 22:20",
       "reference_query": "Revelation+22%3A20",
@@ -1176,18 +1088,6 @@
       "time": 2615,
       "phrase": "‘Come, Lord Jesus.’",
       "anchor_node_id": "8.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-047",
-      "reference": "Hebrews 12:1",
-      "reference_query": "Hebrews+12%3A1",
-      "treatment": "referenced",
-      "time": 2628,
-      "phrase": "‘I see a cloud of witnesses.’",
-      "anchor_node_id": "8.5",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null

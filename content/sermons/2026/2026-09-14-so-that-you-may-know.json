@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-09-14-so-that-you-may-know",
   "title": "So That You May Know",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2935,
   "video_id": "NYJ4uy_OTJg",
   "video_url": "https://www.youtube.com/watch?v=NYJ4uy_OTJg",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 17,
   "sermon_end": 2918,
   "card_summary": "Josh Wyatt opens a twelve-week series through Luke’s Gospel, King For All, from Luke 1:1–4. He starts at the end of Paul’s life—only Luke remained—then shows Luke as the careful physician and historian who investigated eyewitness testimony so Theophilus could have certainty. Christianity is breaking news that God has acted in history, not a private climb toward God. The Spirit used Luke’s mind and labor; different gifts can work in unity; honest skeptics are welcome; and the gift Luke offers is certainty in a trustworthy Christ who stayed when everyone else left.",
-  "section_intro": "The sermon begins at 00:17 with Josh’s greeting and introduction of Luke. The chronological outline keeps the series launch, the historical block of Luke’s preface, the gospel invitation, and the closing communion prayer.",
-  "page_title": "So That You May Know — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of So That You May Know by Josh Wyatt at Crossroads Church, published September 14, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "So That You May Know"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "30 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

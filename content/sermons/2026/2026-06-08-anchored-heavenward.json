@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-06-08-anchored-heavenward",
   "title": "Anchored Heavenward",
   "speaker": "Josh Wyatt",
@@ -8,53 +8,9 @@
   "duration_seconds": 2415,
   "video_id": "W8ILcQhoo-g",
   "video_url": "https://www.youtube.com/watch?v=W8ILcQhoo-g",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 26,
   "sermon_end": 2405,
   "card_summary": "Josh Wyatt follows Hebrews 6:13–20 from God’s sworn promise to Abraham to the hope anchored behind heaven’s curtain. Assurance rests on God’s character rather than a believer’s flawless performance, and the Spirit is the deposit guaranteeing the inheritance. Josh then traces Jesus’ superior, permanent priesthood through Melchizedek and Psalm 110. Because the risen King-Priest saves completely and continually intercedes, weary believers can draw near, confess sin, endure the storm, and hold fast to Jesus as the anchor already secured in heaven.",
-  "section_intro": "The sermon begins with Josh Wyatt’s greeting and anchor illustration at 00:26 and continues through the closing prayer’s amen at 40:05; the recording before the greeting and the final post-prayer seconds are excluded. Josh moves from the storm facing Hebrews’ first readers through Abraham’s long wait and God’s oath, then explains the heavenward anchor, Melchizedek’s superior order, and Jesus’ permanent intercession. The teaching closes with communion, a congregational rope-and-anchor confession, and prayer to draw near through Christ.",
-  "page_title": "Anchored Heavenward — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Anchored Heavenward by Josh Wyatt at Crossroads Church, published June 8, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Anchored Heavenward"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": "“Anchored Heavenward,” Josh Wyatt, Crossroads Church. Published June 8, 2026. Outline verified against the complete original-English YouTube automatic-caption track on September 6, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. Sermon content belongs to Crossroads Church and Josh Wyatt; linked Scripture text belongs to its publisher."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV because Josh did not name a translation. Ambiguous allusions are omitted.",
-  "ledger_caption": "60 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

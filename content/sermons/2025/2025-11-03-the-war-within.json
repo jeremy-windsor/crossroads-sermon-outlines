@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-11-03-the-war-within",
   "title": "The War Within",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2675,
   "video_id": "p6SbxK3sLJA",
   "video_url": "https://www.youtube.com/watch?v=p6SbxK3sLJA",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 8,
   "sermon_end": 2663,
   "card_summary": "Josh traces outward conflict back to disordered desires fighting within the heart. Entitlement distorts gratitude and prayer, friendship with the world becomes spiritual adultery, and slander puts people in God’s seat. James answers the war with greater grace: submit to God, resist the devil, wash and grieve over sin, humble yourself, and let Christ replace rivalry with strengthening love.",
-  "section_intro": "The sermon begins at 00:08 and ends at 44:23. This chronological outline preserves Josh’s movement through James 4:1–12, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "The War Within — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of The War Within by Josh Wyatt at Crossroads Church, published 2025-11-03.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "The War Within"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "60 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

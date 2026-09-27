@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-08-16-inside-out",
   "title": "Inside Out",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2960,
   "video_id": "FRWF0DDxCCs",
   "video_url": "https://www.youtube.com/watch?v=FRWF0DDxCCs",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-08-23",
   "sermon_start": 36,
   "sermon_end": null,
   "card_summary": "A chronological study outline of the message’s call to inward honesty, confession, cleansing, forgiveness, and a renewed heart.",
-  "section_intro": "The outline begins with communion, follows the sermon’s verse-by-verse movements through Psalm 51:6–9, and preserves the closing application and prayer. Scripture tags jump to the verified reference table.",
-  "page_title": "Inside Out — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Inside Out by Josh Wyatt at Crossroads Church, published August 16, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Inside Out | Josh Wyatt | Crossroads Church"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified August 23, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "37 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "OUT-01",
@@ -930,7 +882,7 @@
             "SCR-029"
           ],
           "bullets": [
-            "David’s prayer is paraphrased as “Annihilate my sin record.”",
+            "Josh puts David’s prayer in these words: “Annihilate my sin record.”",
             "Jesus’ last-breath declaration from the cross is invoked as finished, done, dead, dealt with, and paid."
           ],
           "children": []
@@ -1021,9 +973,7 @@
           "start": 2719,
           "heading": "The risen Christ reigns and will return",
           "scripture_mentions": [
-            "SCR-031",
-            "SCR-036",
-            "SCR-037"
+            "SCR-031"
           ],
           "bullets": [
             "The Savior is not on the cross or in the tomb: the stone is rolled away, death defeated, the grave conquered, and Jesus alive.",
@@ -1091,9 +1041,9 @@
       "id": "SCR-033",
       "reference": "Mark 10:45",
       "reference_query": "Mark%2010%3A45",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 294,
-      "phrase": "He did not come to be served, but to serve.",
+      "phrase": "He did not come to serve or to be served, but to serve.",
       "anchor_node_id": "OUT-01-05",
       "version": "NIV",
       "version_source": "default",
@@ -1103,7 +1053,7 @@
       "id": "SCR-034",
       "reference": "Hebrews 10:25",
       "reference_query": "Hebrews%2010%3A25",
-      "treatment": "exposited",
+      "treatment": "referenced",
       "time": 376,
       "phrase": "That’s why we shouldn’t forsake it. … We need to come in person.",
       "anchor_node_id": "OUT-01-05",
@@ -1185,24 +1135,12 @@
     },
     {
       "id": "SCR-008",
-      "reference": "Psalm 15:1-2",
-      "reference_query": "Psalm%2015%3A1-2",
+      "reference": "Psalm 15:1–2",
+      "reference_query": "Psalm%2015%3A1%E2%80%932",
       "treatment": "read/quoted",
       "time": 940,
       "phrase": "Who may dwell in your sanctuary? Who may live on your holy mountain?",
       "anchor_node_id": "OUT-03-01",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-009",
-      "reference": "2 Samuel 11:2-27",
-      "reference_query": "2%20Samuel%2011%3A2-27",
-      "treatment": "exposited",
-      "time": 984,
-      "phrase": "Go read 2 Samuel chapter 11. David sees Bathsheba. He wants her. She becomes pregnant.",
-      "anchor_node_id": "OUT-03-02",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1220,10 +1158,22 @@
       "reference_note": null
     },
     {
+      "id": "SCR-009",
+      "reference": "2 Samuel 11:2-27",
+      "reference_query": "2%20Samuel%2011%3A2-27",
+      "treatment": "exposited",
+      "time": 1082,
+      "phrase": "Go read 2 Samuel chapter 11. David sees Bathsheba. He wants her. She becomes pregnant.",
+      "anchor_node_id": "OUT-03-02",
+      "version": "NIV",
+      "version_source": "default",
+      "reference_note": null
+    },
+    {
       "id": "SCR-011",
       "reference": "James 2:19",
       "reference_query": "James%202%3A19",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 1338,
       "phrase": "The demons know the truth, and they tremble.",
       "anchor_node_id": "OUT-03-09",
@@ -1284,7 +1234,7 @@
       "reference": "Exodus 20:13-14, 17",
       "reference_query": "Exodus%2020%3A13-14%2C%2017",
       "treatment": "read/quoted",
-      "time": 1700,
+      "time": 1698,
       "phrase": "You shall not commit adultery. You shall not murder. You shall not covet your neighbor’s wife.",
       "anchor_node_id": "OUT-04-05",
       "version": "NIV",
@@ -1343,7 +1293,7 @@
       "id": "SCR-020",
       "reference": "John 19:29-30",
       "reference_query": "John%2019%3A29-30",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 1861,
       "phrase": "A jar of wine vinegar was there. So they soaked a sponge in it, put the sponge on a stalk of the hyssop plant.",
       "anchor_node_id": "OUT-05-04",
@@ -1355,7 +1305,7 @@
       "id": "SCR-021",
       "reference": "1 John 1:7",
       "reference_query": "1%20John%201%3A7",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 2087,
       "phrase": "The blood of Jesus cleanses us from all sin.",
       "anchor_node_id": "OUT-05-10",
@@ -1368,7 +1318,7 @@
       "reference": "1 Corinthians 6:11",
       "reference_query": "1%20Corinthians%206%3A11",
       "treatment": "exposited",
-      "time": 2129,
+      "time": 2134,
       "phrase": "Such were some of you. … But you were washed. You were sanctified. You were justified in the name of the Lord Jesus Christ.",
       "anchor_node_id": "OUT-05-11",
       "version": "NIV",
@@ -1440,7 +1390,7 @@
       "reference": "Proverbs 28:13-14",
       "reference_query": "Proverbs%2028%3A13-14",
       "treatment": "read/quoted",
-      "time": 2518,
+      "time": 2520,
       "phrase": "Those who conceal their sins do not prosper, but those who confess and renounce them find mercy.",
       "anchor_node_id": "OUT-07-03",
       "version": "NIV",
@@ -1451,7 +1401,7 @@
       "id": "SCR-029",
       "reference": "Colossians 2:13-14",
       "reference_query": "Colossians%202%3A13-14",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 2544,
       "phrase": "He forgave us all our sins, having cancelled the charge of our legal indebtedness which stood against us and condemned us.",
       "anchor_node_id": "OUT-07-04",
@@ -1463,7 +1413,7 @@
       "id": "SCR-030",
       "reference": "Romans 5:1",
       "reference_query": "Romans%205%3A1",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 2719,
       "phrase": "We have peace with God through our Lord and Savior Jesus Christ.",
       "anchor_node_id": "OUT-08-05",
@@ -1478,30 +1428,6 @@
       "treatment": "read/quoted",
       "time": 2736,
       "phrase": "Where, O death, is your sting? Where is your victory?",
-      "anchor_node_id": "OUT-08-06",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-036",
-      "reference": "Ephesians 1:20-22",
-      "reference_query": "Ephesians%201%3A20-22",
-      "treatment": "referenced",
-      "time": 2740,
-      "phrase": "He is seated at the right hand of the Father. He is ruling over every power.",
-      "anchor_node_id": "OUT-08-06",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-037",
-      "reference": "Romans 8:34",
-      "reference_query": "Romans%208%3A34",
-      "treatment": "referenced",
-      "time": 2740,
-      "phrase": "He is seated at the right hand of the Father … interceding for his people.",
       "anchor_node_id": "OUT-08-06",
       "version": "NIV",
       "version_source": "default",

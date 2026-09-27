@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-08-31-crushed-joy",
   "title": "Crushed Joy",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2940,
   "video_id": "wI99rPQIKyY",
   "video_url": "https://www.youtube.com/watch?v=wI99rPQIKyY",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-04",
   "sermon_start": 37,
   "sermon_end": null,
   "card_summary": "Josh Wyatt uses Psalm 51:15-17 to contrast the many ways a wrong spirit resists correction with the one right movement of repentance: breaking toward God. David cannot bargain for cleansing through sacrifice or past obedience; he needs the sacrifice God supplies in Jesus. That grace restores an opened mouth, surrendered usefulness, and ’crushed joy’—humble praise that remains honest about sin and confident in mercy.",
-  "section_intro": "The sermon begins at 00:37 after an uncaptioned opening. Josh frames relational difficulty as a problem of the inward spirit, directs listeners away from diagnosing other people, and returns to David’s first-person prayer for renewal. The chronological outline excludes non-material opening media and preserves the closing invitation and prayer.",
-  "page_title": "Crushed Joy — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Crushed Joy by Josh Wyatt at Crossroads Church, published August 31, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Crushed Joy"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 4, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "60 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -167,7 +119,7 @@
       "children": [
         {
           "id": "s3.1",
-          "start": 521,
+          "start": 509,
           "heading": "Sin silenced a gifted mouth",
           "scripture_mentions": [
             "SCR-008"
@@ -269,7 +221,7 @@
     },
     {
       "id": "s4",
-      "start": 1137,
+      "start": 1150,
       "heading": "2. A right spirit stops bargaining and starts surrendering",
       "scripture_mentions": [
         "SCR-019"
@@ -409,7 +361,7 @@
       "children": [
         {
           "id": "s5.1",
-          "start": 1816,
+          "start": 1832,
           "heading": "God receives the broken person",
           "scripture_mentions": [
             "SCR-035",
@@ -615,8 +567,7 @@
           "start": 2750,
           "heading": "Break toward God and rebuild",
           "scripture_mentions": [
-            "SCR-054",
-            "SCR-055"
+            "SCR-054"
           ],
           "bullets": [
             "A wrong spirit wants forgiveness without responsibility; a right spirit receives forgiveness and looks for ways to rebuild those around it.",
@@ -826,7 +777,7 @@
       "anchor_node_id": "s3.5",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "The automatic captions omit ’as’ from ’as some understand slowness.’"
+      "reference_note": null
     },
     {
       "id": "SCR-015",
@@ -898,7 +849,7 @@
       "anchor_node_id": "s4.2",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Automatic captions render ’fat of rams’ as ’fatter rams.’"
+      "reference_note": null
     },
     {
       "id": "SCR-021",
@@ -978,7 +929,7 @@
       "reference_query": "Micah+6%3A7",
       "treatment": "referenced",
       "time": 1389,
-      "phrase": "Thousands of bulls, rivers of oil—would that be enough?",
+      "phrase": "He could shed the blood of a thousand bulls ... offer rivers of oil.",
       "anchor_node_id": "s4.3",
       "version": "NIV",
       "version_source": "default",
@@ -1042,7 +993,7 @@
       "anchor_node_id": "s4.7",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "The divine name is normalized from the automatic caption spelling ’Jehovah Gyra.’"
+      "reference_note": null
     },
     {
       "id": "SCR-033",
@@ -1073,12 +1024,12 @@
       "reference": "Leviticus 22:20-25",
       "reference_query": "Leviticus+22%3A20-25",
       "treatment": "referenced",
-      "time": 1816,
-      "phrase": "You are not allowed to bring a blind, crippled, mutilated, or defective animal.",
+      "time": 1836,
+      "phrase": "Could not offer God a crippled, diseased, blind, mutilated, or defective animal.",
       "anchor_node_id": "s5.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "The law is materially paraphrased before Malachi 1:8 is quoted."
+      "reference_note": "The law is paraphrased before Malachi 1:8 is quoted."
     },
     {
       "id": "SCR-036",
@@ -1303,18 +1254,6 @@
       "treatment": "referenced",
       "time": 2771,
       "phrase": "Remain tender. Walk by the Spirit.",
-      "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-055",
-      "reference": "Psalm 51:17",
-      "reference_query": "Psalm+51%3A17",
-      "treatment": "referenced",
-      "time": 2792,
-      "phrase": "He doesn’t receive broken lambs, but he receives broken people.",
       "anchor_node_id": "s7.2",
       "version": "NIV",
       "version_source": "default",

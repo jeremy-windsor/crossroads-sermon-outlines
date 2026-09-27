@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-06-22-tetelestai",
   "title": "Tetelestai",
   "speaker": "Josh Wyatt",
@@ -8,53 +8,9 @@
   "duration_seconds": 2800,
   "video_id": "mkwTkgtf4JY",
   "video_url": "https://www.youtube.com/watch?v=mkwTkgtf4JY",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 38,
   "sermon_end": 2771,
   "card_summary": "Josh Wyatt follows Hebrews 9:16–10:18 from the new covenant’s comparison to a last will and testament through Scripture’s long trail of blood and sacrifice. Death activates an inheritance; Christ’s once-for-all death ratifies the covenant, his resurrection guarantees its promises, and his entrance into heaven secures imperishable salvation. Hebrews’ standing priests and repeated offerings give way to the seated Savior whose cry tetelestai means accomplished and paid in full. Josh applies that finished work to weary consciences: God treats forgiven sinners as forgiven, so Christian faithfulness lays down self-saving effort, rests in Christ, worships, and waits for his return.",
-  "section_intro": "The verified sermon begins with Josh Wyatt’s greeting at 00:38 and ends with the closing prayer’s amen at 46:11; the remaining video time is not part of the teaching. In chronological order, the outline preserves his opening explanation of biblical analogy, recap of the new covenant, exposition of Hebrews 9:16–10:18, biblical survey of sacrifice, comparison of the two covenants, treatment of tetelestai, standing-priest and seated-Savior imagery, prodigal-son application, invitations to believers and unbelievers, and final prayer before communion.",
-  "page_title": "Tetelestai — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Tetelestai by Josh Wyatt at Crossroads Church, published June 22, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Tetelestai"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": " “Tetelestai,” Josh Wyatt, Crossroads Church. Published June 22, 2026. Outline verified September 6, 2026 against the complete original-English YouTube automatic-caption track."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. It quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV because Josh did not name a translation. Ambiguous allusions are omitted.",
-  "ledger_caption": "84 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -83,8 +39,7 @@
           "start": 103,
           "heading": "Every Analogy Is a Spotlight, Not a Complete Portrait",
           "scripture_mentions": [
-            "SCR-002",
-            "SCR-003"
+            "SCR-002"
           ],
           "bullets": [
             "Josh explores apparently risky biblical comparisons: Jesus’ arrival carries a thief’s surprise without a thief’s character, while shepherd, slave, father, king, and husband imagery each illuminates one aspect of God and leaves others in shadow.",
@@ -151,7 +106,6 @@
           "heading": "An Imperishable Inheritance Kept in Heaven",
           "scripture_mentions": [
             "SCR-016",
-            "SCR-017",
             "SCR-018",
             "SCR-019",
             "SCR-020"
@@ -335,9 +289,7 @@
           "id": "s3.4",
           "start": 1036,
           "heading": "Only Those Who Come Through Christ Receive the Inheritance",
-          "scripture_mentions": [
-            "SCR-081"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh raises the recurring question of the heirs and answers that only those who come to God through Jesus Christ receive the imperishable inheritance.",
             "The controlling point remains simple: inheritance requires death, and God’s promised eternal inheritance required the death of his Son."
@@ -475,8 +427,7 @@
           "start": 1566,
           "heading": "John’s Eyewitness Record and the Meaning of Tetelestai",
           "scripture_mentions": [
-            "SCR-045",
-            "SCR-046"
+            "SCR-045"
           ],
           "bullets": [
             "Josh traces the phrase ‘the finished work of Christ’ to Jesus’ final word in John 19: after receiving the drink, he said, ‘It is finished,’ bowed his head, and gave up his spirit.",
@@ -748,7 +699,6 @@
           "start": 2323,
           "heading": "God Does Not Forgive the Way Humans Forgive",
           "scripture_mentions": [
-            "SCR-068",
             "SCR-069",
             "SCR-084"
           ],
@@ -764,7 +714,7 @@
           "start": 2382,
           "heading": "Stop Reopening Cases God Has Closed",
           "scripture_mentions": [
-            "SCR-046",
+            "SCR-045",
             "SCR-069"
           ],
           "bullets": [
@@ -804,7 +754,6 @@
           "heading": "Everything Needed Is Present in the Perfect Christ",
           "scripture_mentions": [
             "SCR-071",
-            "SCR-085",
             "SCR-072",
             "SCR-073"
           ],
@@ -901,9 +850,7 @@
           "id": "s9.2",
           "start": 2685,
           "heading": "Rest for the Weary and Freedom from Self-Discouragement",
-          "scripture_mentions": [
-            "SCR-076"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "He acknowledges weariness in the room and asks God to help people get out of their own heads.",
             "He prays that they would stop preaching discouragement to themselves and begin listening to God’s word."
@@ -926,7 +873,7 @@
         {
           "id": "s9.4",
           "start": 2736,
-          "heading": "Come, Lord Jesus; to Live Is Christ and to Die Is Gain",
+          "heading": "Come, Lord Jesus; to Live as Christ and to Die Is Gain",
           "scripture_mentions": [
             "SCR-078",
             "SCR-079",
@@ -934,9 +881,9 @@
           ],
           "bullets": [
             "Whatever happens here, the faithful church says ‘Come’ and waits for the Lord.",
-            "Josh confesses that to live is Christ and to die is gain, then entrusts the church’s lives to the God they love.",
+            "Josh confesses that to live as Christ and to die is gain, then entrusts the church’s lives to the God they love.",
             "He thanks the Father for Jesus and for the body’s communion and fellowship in the Savior’s blood and body, then prays that they remember and worship while they wait.",
-            "The prayer and verified sermon end with ‘Amen’ at 46:11."
+            "The prayer ends with ‘Amen’ at 46:11."
           ],
           "children": []
         }
@@ -963,18 +910,6 @@
       "treatment": "exposited",
       "time": 168,
       "phrase": "As we just read in Isaiah, God is unique. He is different. He is special.",
-      "anchor_node_id": "s1.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-003",
-      "reference": "John 3:16",
-      "reference_query": "John%203%3A16",
-      "treatment": "referenced",
-      "time": 184,
-      "phrase": "God so loved the world that he came down to our level",
       "anchor_node_id": "s1.2",
       "version": "NIV",
       "version_source": "default",
@@ -1009,7 +944,7 @@
       "reference": "Hebrews 8:6–12",
       "reference_query": "Hebrews%208%3A6%E2%80%9312",
       "treatment": "exposited",
-      "time": 310,
+      "time": 329,
       "phrase": "four better promises ... amazing grace, internal change, forgiveness of sins, and eternal inheritance",
       "anchor_node_id": "s1.3",
       "version": "NIV",
@@ -1131,18 +1066,6 @@
       "treatment": "read/quoted",
       "time": 462,
       "phrase": "new birth into a living hope ... an inheritance that can never perish, spoil, or fade",
-      "anchor_node_id": "s1.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-017",
-      "reference": "Hebrews 9:24",
-      "reference_query": "Hebrews%209%3A24",
-      "treatment": "referenced",
-      "time": 509,
-      "phrase": "the believer’s sanctuary is in heaven",
       "anchor_node_id": "s1.6",
       "version": "NIV",
       "version_source": "default",
@@ -1341,18 +1264,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-081",
-      "reference": "Hebrews 7:25",
-      "reference_query": "Hebrews%207%3A25",
-      "treatment": "referenced",
-      "time": 1053,
-      "phrase": "Only those who come to God through Jesus Christ receive the imperishable inheritance",
-      "anchor_node_id": "s3.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-034",
       "reference": "Hebrews 9:23–28",
       "reference_query": "Hebrews%209%3A23%E2%80%9328",
@@ -1514,19 +1425,7 @@
       "reference_query": "John%2019%3A30",
       "treatment": "read/quoted",
       "time": 1586,
-      "phrase": "When he had received the drink, Jesus said, ‘It is finished’",
-      "anchor_node_id": "s4.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-046",
-      "reference": "John 19:30",
-      "reference_query": "John%2019%3A30",
-      "treatment": "exposited",
-      "time": 1599,
-      "phrase": "tetelestai ... completed ... accomplished ... paid in full",
+      "phrase": "When he had received the drink, Jesus said, ‘It is finished.’ ... tetelestai ... paid in full.",
       "anchor_node_id": "s4.5",
       "version": "NIV",
       "version_source": "default",
@@ -1845,18 +1744,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-085",
-      "reference": "Hebrews 6:19",
-      "reference_query": "Hebrews%206%3A19",
-      "treatment": "referenced",
-      "time": 2485,
-      "phrase": "Every hope anchored",
-      "anchor_node_id": "s8.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-072",
       "reference": "Matthew 27:51",
       "reference_query": "Matthew%2027%3A51",
@@ -1893,18 +1780,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-076",
-      "reference": "Matthew 11:28",
-      "reference_query": "Matthew%2011%3A28",
-      "treatment": "referenced",
-      "time": 2685,
-      "phrase": "Lord, you offer rest to the weary",
-      "anchor_node_id": "s9.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-077",
       "reference": "Revelation 21:4–5",
       "reference_query": "Revelation%2021%3A4%E2%80%935",
@@ -1934,7 +1809,7 @@
       "reference_query": "Philippians%201%3A21",
       "treatment": "read/quoted",
       "time": 2744,
-      "phrase": "To live is Christ. To die is gain",
+      "phrase": "To live as Christ. To die is gain.",
       "anchor_node_id": "s9.4",
       "version": "NIV",
       "version_source": "default",

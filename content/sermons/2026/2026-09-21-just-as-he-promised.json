@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-09-21-just-as-he-promised",
   "title": "Just As He Promised",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3100,
   "video_id": "WLzvi79bgBU",
   "video_url": "https://www.youtube.com/watch?v=WLzvi79bgBU",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 36,
   "sermon_end": 3075,
   "card_summary": "Josh continues King For All through Luke 1. After four hundred silent years, with Herod on the throne and Rome in control, God remembers what he promised: Zechariah’s doubt, Mary’s yes, and every promise converging on Jesus. God confirms what he promised when John leaps and Elizabeth calls Mary the mother of her Lord. God overturns the world through his promised king, and the Magnificat becomes a call to lay down pride and magnify the Lord.",
-  "section_intro": "The sermon begins at 00:36 with Josh reconnecting to last week’s launch of the Luke series and ends at 51:15 with the closing prayer. The chronological outline follows his three points: God remembers what he promised, God confirms what he promised, and God overturns the world through his promised king.",
-  "page_title": "Just As He Promised — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Just As He Promised by Josh Wyatt at Crossroads Church, published September 21, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Just As He Promised"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "78 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

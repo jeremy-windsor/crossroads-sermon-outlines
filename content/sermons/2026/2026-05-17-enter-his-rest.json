@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-05-17-enter-his-rest",
   "title": "Enter His Rest",
   "speaker": "Josh Wyatt",
@@ -8,61 +8,13 @@
   "duration_seconds": 2715,
   "video_id": "_hVhKETklwA",
   "video_url": "https://www.youtube.com/watch?v=_hVhKETklwA",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
-  "sermon_start": 39,
+  "sermon_start": 44,
   "sermon_end": 2700,
   "card_summary": "Josh Wyatt traces Hebrews 3:1–4:11 from the call to fix believers’ thoughts on Jesus through the warning not to harden their hearts and miss God’s rest. Jesus is the apostle and great high priest, the Son over God’s house, and the greater mediator to whom Moses pointed. Israel’s wilderness refusal shows how unbelief resists God despite living inside his provision, while Hebrews’ warnings help preserve true believers by exposing sin’s gradual deceit. Josh closes by distinguishing creation rest, Canaan rest, and salvation rest, urging hearers to stop relying on their work and enter by faith the rest Jesus gives.",
-  "section_intro": "The sermon begins with Josh Wyatt’s greeting at 00:39, after the uncaptioned opening, and continues through the communion prayer ending at 45:00. The outline preserves his exposition of Hebrews 3:1–4:11, supporting biblical narratives, church and family illustrations, warnings about perseverance and hardening, explanation of rest, gospel invitation, and closing prayer; non-material opening and closing media are excluded.",
-  "page_title": "Enter His Rest — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Enter His Rest by Josh Wyatt at Crossroads Church, published May 17, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Enter His Rest"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 6, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "69 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
-      "start": 39,
+      "start": 44,
       "heading": "Fix your thoughts on Jesus, the believer’s confidence and calling",
       "scripture_mentions": [],
       "bullets": [
@@ -72,11 +24,9 @@
       "children": [
         {
           "id": "s1.1",
-          "start": 39,
+          "start": 44,
           "heading": "The warning that governs the message",
-          "scripture_mentions": [
-            "SCR-001"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "The warning ‘Do not harden your heart’ anticipates the Spirit’s repeated word later in Hebrews 3 and frames the whole sermon around entering Christ’s rest today.",
             "Josh presents Jesus’ revelation as God’s word to humanity and Jesus’ reconciling work as the opened way home to God."
@@ -148,8 +98,7 @@
           "scripture_mentions": [
             "SCR-009",
             "SCR-010",
-            "SCR-011",
-            "SCR-067"
+            "SCR-011"
           ],
           "bullets": [
             "Jesus can be considered in his person, work, and offices. As apostle—the one sent—he represents God to humanity; as high priest—the go-between—he represents humanity before God.",
@@ -267,7 +216,7 @@
           "scripture_mentions": [],
           "bullets": [
             "Josh asks whether Jesus would be pleased or grieved by the church—not its building, but the unity and life of his people. He asks whether peace decorates the house, obedience hangs on its walls, and love, holiness, and sacrifice fill it.",
-            "Madison’s Mother’s Day gift was mailed to the Wyatt family’s five-years-former address. When she approached that old home, being on the side of the door that knocks felt wrong.",
+            "Madison’s Mother’s Day gift was mailed to the family’s address from five years earlier. When she approached that old home, being on the side of the door that knocks felt wrong.",
             "The story becomes a church examination: how are believers treating one another and outsiders, loving God, answering their calling, and maintaining their confession? Josh asks those who love Crossroads to pray that it becomes a home that makes Jesus smile."
           ],
           "children": []
@@ -458,8 +407,7 @@
           "start": 1918,
           "heading": "The first layer of ice is one thing valued above Jesus",
           "scripture_mentions": [
-            "SCR-045",
-            "SCR-046"
+            "SCR-045"
           ],
           "bullets": [
             "Apostasy usually begins not with a dramatic farewell to Jesus but with one small thing becoming more important than him. Prayer is neglected; compromise, hidden sin, bitterness, unforgiveness, and ignored conviction accumulate; worship becomes mechanical and Christ’s riches seem ordinary.",
@@ -632,8 +580,7 @@
           "heading": "Christ’s once-for-all sacrifice saves and keeps believers",
           "scripture_mentions": [
             "SCR-057",
-            "SCR-058",
-            "SCR-069"
+            "SCR-058"
           ],
           "bullets": [
             "God gave his Son as the once-for-all sacrifice for sinners. Those who believe, rest, lean, depend, and call on him are forgiven, accepted, adopted, redeemed, and saved forever.",
@@ -687,9 +634,7 @@
           "start": 2598,
           "heading": "The communion prayer relinquishes exhausting effort",
           "scripture_mentions": [
-            "SCR-064",
-            "SCR-065",
-            "SCR-066"
+            "SCR-065"
           ],
           "bullets": [
             "Josh begins in amazement at God’s goodness, not wanting to take his eyes off him or stop speaking and hearing about him. He thanks God for new believers’ excitement and admits that longer faith can grow rusty.",
@@ -703,18 +648,6 @@
     }
   ],
   "ledger": [
-    {
-      "id": "SCR-001",
-      "reference": "Hebrews 3:7-11",
-      "reference_query": "Hebrews%203%3A7-11",
-      "treatment": "read/quoted",
-      "time": 56,
-      "phrase": "Do not harden your heart and miss out on the rest",
-      "anchor_node_id": "s1.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
     {
       "id": "SCR-002",
       "reference": "Hebrews 3:1",
@@ -791,22 +724,10 @@
       "id": "SCR-008",
       "reference": "Philippians 1:6",
       "reference_query": "Philippians%201%3A6",
-      "treatment": "referenced",
+      "treatment": "read/quoted",
       "time": 414,
       "phrase": "He who began a good work in you will bring it to completion",
       "anchor_node_id": "s1.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-067",
-      "reference": "John 1:1, 14; 14:6",
-      "reference_query": "John%201%3A1%2C%2014%3B%2014%3A6",
-      "treatment": "referenced",
-      "time": 473,
-      "phrase": "Jesus is the Word and he is the way",
-      "anchor_node_id": "s1.6",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -840,7 +761,7 @@
       "reference": "Hebrews 4:14",
       "reference_query": "Hebrews%204%3A14",
       "treatment": "referenced",
-      "time": 527,
+      "time": 532,
       "phrase": "We have a great high priest in Jesus",
       "anchor_node_id": "s1.6",
       "version": "NIV",
@@ -1176,7 +1097,7 @@
       "reference": "1 Samuel 17:45, 49",
       "reference_query": "1%20Samuel%2017%3A45%2C%2049",
       "treatment": "referenced",
-      "time": 1449,
+      "time": 1451,
       "phrase": "slinging a rock in the name of the Lord",
       "anchor_node_id": "s3.4",
       "version": "NIV",
@@ -1185,9 +1106,9 @@
     },
     {
       "id": "SCR-040",
-      "reference": "Exodus 16:4-15; Deuteronomy 1:27",
-      "reference_query": "Exodus%2016%3A4-15%3B%20Deuteronomy%201%3A27",
-      "treatment": "exposited",
+      "reference": "Exodus 16:4–15",
+      "reference_query": "Exodus%2016%3A4%E2%80%9315",
+      "treatment": "referenced",
       "time": 1492,
       "phrase": "They were eating bread from heaven and complaining that God hated them",
       "anchor_node_id": "s3.5",
@@ -1250,18 +1171,6 @@
       "treatment": "read/quoted",
       "time": 1962,
       "phrase": "If you hear his voice, do not harden your hearts",
-      "anchor_node_id": "s4.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-046",
-      "reference": "Hebrews 3:1",
-      "reference_query": "Hebrews%203%3A1",
-      "treatment": "referenced",
-      "time": 2027,
-      "phrase": "The very fact that you consider Christ",
       "anchor_node_id": "s4.6",
       "version": "NIV",
       "version_source": "default",
@@ -1367,7 +1276,7 @@
       "id": "SCR-054",
       "reference": "Hebrews 4:7",
       "reference_query": "Hebrews%204%3A7",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 2362,
       "phrase": "Today, if you hear his voice, do not harden your hearts",
       "anchor_node_id": "s6.5",
@@ -1412,23 +1321,11 @@
       "reference_note": null
     },
     {
-      "id": "SCR-069",
-      "reference": "John 10:28-29",
-      "reference_query": "John%2010%3A28-29",
-      "treatment": "referenced",
-      "time": 2480,
-      "phrase": "not because they’re strong enough to hold on to him, but because he’s strong enough to hold on to us",
-      "anchor_node_id": "s7.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-058",
       "reference": "Jude 24",
       "reference_query": "Jude%2024",
       "treatment": "referenced",
-      "time": 2490,
+      "time": 2495,
       "phrase": "until he presents us faultless before the Father with exceeding joy",
       "anchor_node_id": "s7.1",
       "version": "NIV",
@@ -1453,7 +1350,7 @@
       "reference_query": "Matthew%209%3A13%3B%20Mark%202%3A17%3B%20Luke%205%3A32",
       "treatment": "referenced",
       "time": 2557,
-      "phrase": "He came for sinners, for the weary",
+      "phrase": "He came for sinners.",
       "anchor_node_id": "s7.3",
       "version": "NIV",
       "version_source": "default",
@@ -1496,36 +1393,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-064",
-      "reference": "Hebrews 4:1",
-      "reference_query": "Hebrews%204%3A1",
-      "treatment": "referenced",
-      "time": 2670,
-      "phrase": "walk into the promise of rest",
-      "anchor_node_id": "s7.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-065",
       "reference": "Matthew 26:26-28; Luke 22:19-20; 1 Corinthians 11:23-25",
       "reference_query": "Matthew%2026%3A26-28%3B%20Luke%2022%3A19-20%3B%201%20Corinthians%2011%3A23-25",
       "treatment": "referenced",
       "time": 2674,
       "phrase": "the bread that represents your body torn for us ... the juice of your blood spilled",
-      "anchor_node_id": "s7.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-066",
-      "reference": "Hebrews 8:6, 13",
-      "reference_query": "Hebrews%208%3A6%2C%2013",
-      "treatment": "referenced",
-      "time": 2689,
-      "phrase": "this newer better and greater covenant in your blood",
       "anchor_node_id": "s7.5",
       "version": "NIV",
       "version_source": "default",

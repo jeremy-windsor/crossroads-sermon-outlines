@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-12-28-growing-up-jesus",
   "title": "Growing Up Jesus",
   "speaker": "Chris DeWald",
@@ -8,57 +8,9 @@
   "duration_seconds": 2345,
   "video_id": "fM70twoCiZU",
   "video_url": "https://www.youtube.com/watch?v=fM70twoCiZU",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-21",
   "sermon_start": 45,
   "sermon_end": 2273,
   "card_summary": "Chris DeWald asks what happened between the manger and Jesus’ ministry. Luke 2 shows a Jewish child raised under the law, aware of his true Father, obedient to earthly parents, and growing in ordinary life. The hidden years matter: Jesus lived, worked, faced real temptation without sin, and became the high priest who can save and sympathize.",
-  "section_intro": "The sermon begins at 00:45 after an isolated prayer fragment from earlier in the service. Chris traces Luke 2 from circumcision through the temple at age twelve, carefully marks conjecture about the hidden years, closes in prayer, and leads communion through 37:53.",
-  "page_title": "Growing Up Jesus — Chris DeWald | Sermon Outline",
-  "description": "A chronological study outline of Growing Up Jesus by Chris DeWald at Crossroads Church, preached December 28, 2025.",
-  "subtitle": "Chris DeWald · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Chris DeWald’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Growing Up Jesus"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 21, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV unless a spoken translation is named.",
-  "ledger_caption": "37 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

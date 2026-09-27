@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-01-12-glory-on-the-move",
   "title": "Glory on the Move",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2555,
   "video_id": "Kh_BCP4l9wQ",
   "video_url": "https://www.youtube.com/watch?v=Kh_BCP4l9wQ",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 51,
   "sermon_end": 2550,
   "card_summary": "Josh Wyatt opens a six-week series in Ezekiel from chapter 1. A church brat whose heart caught fire in a Durango gym wants the church to stop living only by what is visible. Ezekiel sees the likeness of the glory of the Lord: cherubim, wheels full of eyes, a vault, a throne, a rainbow like a laid-down war bow. God is still on the throne in exile. His glory is on the move. Jesus took the arrows. Fall face down and worship.",
-  "section_intro": "Captions begin at 00:51 already in Josh’s conversion story. He names a six-week series in Ezekiel, reads chapter 1, walks the images, and closes in worship. The chronological outline keeps the calling, the vision, cherubim and wheels, the bow, and the amen.",
-  "page_title": "Glory on the Move — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Glory on the Move by Josh Wyatt at Crossroads Church, published January 12, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Glory on the Move"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "36 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -68,7 +20,7 @@
         "SCR-001"
       ],
       "bullets": [
-        "One of the most significant moments of Josh’s life. Church brat, three generations of preachers in the Wyatt family; he swore he would never do it. Pew, piano, hypocrisy. He held rebellion until 23. Nothing the world offers comes close to what God made known in Christ.",
+        "One of the most significant moments of Josh’s life. Church brat, three generations of preachers in his family; he swore he would never do it. Pew, piano, hypocrisy. He held rebellion until 23. Nothing the world offers comes close to what God made known in Christ.",
         "2 Corinthians 4: God who said let light shine out of darkness made his light shine in our hearts. Knowledge of glory had been jammed into his mind—sermons, studies, baptism, songs—until light shone in the heart. Unshakable thirst to spread that knowledge. Gymnasium at Fort Lewis College in Durango. Man can shape or discourage; only God sets a heart on fire. If man convinced him into ministry, man would have convinced him out.",
         "The call is not the microphone, authorship, or notoriety. He will tell you what he thinks. He wants to handle the Word passionately and walk with humble transparency that comes with a new heart. Jesus washed the past, gives joy in the present, hope for the future. Subpar speaker who studies like a madman. Called to preach Christ crucified, holes in his body, walking out of a borrowed tomb. Restless for those who do not know the risen Christ reigns and will judge. Glorified wedding planner getting the bride ready."
       ],

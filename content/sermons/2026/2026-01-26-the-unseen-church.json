@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-01-26-the-unseen-church",
   "title": "The Unseen Church",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2460,
   "video_id": "hO36mmAmgNU",
   "video_url": "https://www.youtube.com/watch?v=hO36mmAmgNU",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 43,
   "sermon_end": 2438,
   "card_summary": "Josh Wyatt moves from belonging and gifts to Ezekiel 8. The real church is what heaven sees when no one is watching. Fourteen months after chapter 1, glory still stands in the temple beside an idol of jealousy. Elders incense crawling things in the dark, women mourn Tammuz, twenty-five men bow to the sun. Syncretism then and now. God is rightly jealous. Two marks in Revelation. Crush the idol. You are temples of the Spirit. God’s presence is comfort, not threat, because Jesus was torn down and raised.",
-  "section_intro": "The sermon begins at 00:43 after music with a call from attending to belonging. Josh reads Ezekiel 8, walks the hole in the wall, and closes at the table. The chronological outline keeps gifts, worship styles, the jealousy idol, syncretism, the three detestable scenes, and the amen.",
-  "page_title": "The Unseen Church — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of The Unseen Church by Josh Wyatt at Crossroads Church, published January 26, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "The Unseen Church"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "30 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

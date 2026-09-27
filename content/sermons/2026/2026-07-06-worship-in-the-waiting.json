@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-07-06-worship-in-the-waiting",
   "title": "Worship in the Waiting",
   "speaker": "Elijah Stanley",
@@ -8,53 +8,9 @@
   "duration_seconds": 2720,
   "video_id": "HS0wXY7CEDo",
   "video_url": "https://www.youtube.com/watch?v=HS0wXY7CEDo",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-05",
   "sermon_start": 41,
   "sermon_end": 2715,
   "card_summary": "Elijah Stanley presents Hebrews 11:1–7 as hope for ordinary believers living between promise and fulfillment. Faith receives the future Christ purchased, trusts unseen realities, rejects prosperity teaching’s attempt to control outcomes, and rests in Jesus when suffering remains. Abel shows worship from a surrendered heart rather than consumer preference; Enoch shows an ordinary daily walk whose reward is God himself; Noah shows century-long obedience before the first raindrop. Their witness calls the church to keep building, gathering, repenting, serving, and worshiping while it waits for Christ to make faith sight.",
-  "section_intro": "The sermon begins at 00:41 and continues through the closing prayer at 45:15. Elijah Stanley presents Hebrews 11:1–7 as hope for ordinary believers living between promise and fulfillment. Faith receives the future Christ purchased, trusts unseen realities, rejects prosperity teaching’s attempt to control outcomes, and rests in Jesus when suffering remains. Abel shows worship from a surrendered heart rather than consumer preference; Enoch shows an ordinary daily walk whose reward is God himself; Noah shows century-long obedience before the first raindrop. Their witness calls the church to keep building, gathering, repenting, serving, and worshiping while it waits for Christ to make faith sight.",
-  "page_title": "Worship in the Waiting — Elijah Stanley | Sermon Outline",
-  "description": "A chronological study outline of Worship in the Waiting by Elijah Stanley at Crossroads Church, published July 6, 2026.",
-  "subtitle": "Elijah Stanley · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Elijah Stanley’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Worship in the Waiting"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": "“Worship in the Waiting,” Elijah Stanley, Crossroads Church. Published July 6, 2026. Outline verified against the complete original-English YouTube automatic-caption track."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. Sermon content belongs to Crossroads Church and Elijah Stanley; linked Scripture text belongs to its publisher."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "52 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -1193,7 +1149,7 @@
       "id": "SCR-022",
       "reference": "Hebrews 11:3",
       "reference_query": "Hebrews%2011%3A3",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 1005,
       "phrase": "By faith, we understand that the universe was formed at God’s command",
       "anchor_node_id": "s4.1",
@@ -1319,7 +1275,7 @@
       "anchor_node_id": "s6.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Automatic captions say “could not not found”; the evident wording is “could not be found.”"
+      "reference_note": null
     },
     {
       "id": "SCR-033",

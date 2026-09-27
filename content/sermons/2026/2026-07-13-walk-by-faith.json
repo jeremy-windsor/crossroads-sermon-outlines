@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-07-13-walk-by-faith",
   "title": "Walk By Faith",
   "speaker": "Josh Wyatt",
@@ -8,53 +8,9 @@
   "duration_seconds": 2930,
   "video_id": "m3qqNNISXFE",
   "video_url": "https://www.youtube.com/watch?v=m3qqNNISXFE",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-05",
   "sermon_start": 35,
   "sermon_end": 2906,
-  "card_summary": "Josh Wyatt defines authentic faith as confident obedience to God’s word despite circumstances and consequences, then follows Hebrews 11 from Abel, Enoch, and Noah through Abraham, Joseph, Moses, Jericho, Rahab, the judges, and believers who suffered without earthly deliverance. Their different outcomes reveal victory both over suffering and through it. Every witness finally points to Jesus, the author and perfecter of faith, who calls his people to leave the old life, keep marching, pass God’s promises forward, and walk with him through suffering to glory.",
-  "section_intro": "The sermon begins at 00:35 and continues through the closing prayer at 48:26. Josh Wyatt defines authentic faith as confident obedience to God’s word despite circumstances and consequences. Walking through Hebrews 11, he presents Abel, Enoch, Noah, Abraham, Joseph, Moses, Israel at Jericho, Rahab, judges, prophets, delivered sufferers, and martyred believers as witnesses to one faithful God. Faith worships, walks, works, waits, leaves the old life, passes promises forward, fights false identity, keeps marching, receives outsiders by grace, and trusts God through unequal outcomes. Every witness finally points to Jesus, the author and perfecter of faith, so the church can walk with him through suffering to glory.",
-  "page_title": "Walk By Faith — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Walk By Faith by Josh Wyatt at Crossroads Church, published July 13, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Walk By Faith"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": "“Walk By Faith,” Josh Wyatt, Crossroads Church. Published July 13, 2026. Outline verified against the complete original-English YouTube automatic-caption track."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. Sermon content belongs to Crossroads Church and Josh Wyatt; linked Scripture text belongs to its publisher."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "58 confirmed Scripture units, in sermon order",
+  "card_summary": "Josh Wyatt defines authentic faith as confident obedience to God’s word despite circumstances and consequences, then follows Hebrews 11 from Abel, Enoch, and Noah through Abraham, Joseph, Moses, Jericho, Rahab, the judges, and believers who suffered without earthly deliverance. Their different outcomes reveal victory both over suffering and through it. Every witness finally points to Jesus, the author and perfecter of faith, who calls his people to leave the old life, keep marching, pass the torch, and walk with him through suffering to glory.",
   "movements": [
     {
       "id": "s1",
@@ -102,10 +58,7 @@
           "id": "s1.4",
           "start": 120,
           "heading": "Faith is only as good as its object",
-          "scripture_mentions": [
-            "SCR-001",
-            "SCR-002"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "The world misses that faith’s worth depends upon its object; for Christians, that object is Jesus Christ.",
             "Faith is the heart’s response to God’s revelation—not merely belief that God exists, but trust in God.",
@@ -180,14 +133,13 @@
           "heading": "Enoch walks and Noah works by faith",
           "scripture_mentions": [
             "SCR-006",
-            "SCR-007",
-            "SCR-008"
+            "SCR-007"
           ],
           "bullets": [
             "Enoch shows faith walking with God amid wickedness; prayer, meditation, fasting, Scripture, worship, serving others, and speaking God’s word all cultivate that walk.",
             "Abel died for faith while Enoch never died, showing that God gives different assignments to those who trust him; mature faith responds, “God, you know what you’re doing.”",
             "Noah shows faith working under social pressure: he picked up a hammer, obeyed, influenced his family, and prepared an ark.",
-            "Josh calls these earlier believers “the cloud of witnesses who went before us,” whose lives demonstrate faith in action.",
+            "Josh calls these earlier believers the cloud of witnesses who went before us, whose lives demonstrate faith in action.",
             "Jesus later used the flood to warn people about his return; Josh presents the cross as Christ’s blood-soaked ark and urges listeners to enter before the door closes."
           ],
           "children": []
@@ -290,8 +242,7 @@
           "start": 799,
           "heading": "Faith does not look back",
           "scripture_mentions": [
-            "SCR-016",
-            "SCR-017"
+            "SCR-016"
           ],
           "bullets": [
             "Josh points to Lot’s wife in Genesis 19 as a warning and declares that the faithful journey onward into the unknown.",
@@ -320,7 +271,7 @@
           ],
           "bullets": [
             "Hebrews says these witnesses were still living by faith when they died, having seen and welcomed promises they did not fully receive.",
-            "Josh recalls two lifelong promises: the faith in Christ he professed at age seven in Newburgh, Indiana, and his marriage vow to remain faithful to his wife.",
+            "Josh recalls two lifelong promises: the faith in Christ he proclaimed at seven, with his baptism at Sharelane in Newburgh, Indiana, and his marriage vow to remain faithful to his wife.",
             "Seeing himself as a foreigner on earth helps him reject momentary pleasure and temporary gain in favor of heaven and eternity."
           ],
           "children": []
@@ -468,12 +419,11 @@
           "start": 1440,
           "heading": "One divine Author joins Abraham’s hope to Christ",
           "scripture_mentions": [
-            "SCR-023",
-            "SCR-024"
+            "SCR-023"
           ],
           "bullets": [
             "Though Scripture came through many human authors, books, and settings, Josh stresses that divine Scripture has one nonhuman Author.",
-            "In John 8, Jesus says Abraham rejoiced at the prospect of seeing his day and “saw it and was glad.”",
+            "In John 8, Jesus says Abraham rejoiced at the thought of seeing my day and “saw it and was glad.”",
             "Josh connects Abraham’s expectation of Christ’s ministry—serving and humbling himself even to death on a cross—with believers’ confident expectation of Christ’s return."
           ],
           "children": []
@@ -519,10 +469,7 @@
           "id": "s3.14",
           "start": 1700,
           "heading": "“Let me go” becomes “Let his people go”",
-          "scripture_mentions": [
-            "SCR-025",
-            "SCR-026"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh first confronted his bondage with the cry, “In the name of Jesus, let me go.”",
             "Once free, he realized he needed to return for others and contend, “Let his people go.”",
@@ -547,8 +494,7 @@
           "start": 1757,
           "heading": "Forty years separate the Red Sea from Jericho",
           "scripture_mentions": [
-            "SCR-027",
-            "SCR-028"
+            "SCR-027"
           ],
           "bullets": [
             "Hebrews moves directly from Israel’s Red Sea crossing to Jericho, skipping a generation’s forty years of wilderness unbelief.",
@@ -610,13 +556,12 @@
           "start": 1979,
           "heading": "God’s mercy crosses every human barrier",
           "scripture_mentions": [
-            "SCR-031",
-            "SCR-032"
+            "SCR-031"
           ],
           "bullets": [
             "Rahab displays grace reaching beyond race, reputation, and past sin; God’s saving purpose was never limited to Israel.",
             "In Joshua 5:13, the commander of the Lord’s army answers “Neither” when asked whether he supports Israel or its enemies.",
-            "The battle was ultimately about who belonged to God, requiring Joshua, Rahab, and Achan alike to submit to divine authority."
+            "The battle was about who belonged to God—a battle for souls, not walls or gold— requiring Joshua, Rahab, and Achan alike to submit to divine authority."
           ],
           "children": []
         },
@@ -631,7 +576,7 @@
           "bullets": [
             "When Rahab believed Israel’s God, she immediately ceased to be God’s enemy and entered his covenant family.",
             "She married Salmon, became Boaz’s mother, entered David’s line, and was preserved in Matthew’s genealogy as an ancestor of Jesus.",
-            "Her movement from condemned prostitute to covenant daughter demonstrates the transforming reach of grace."
+            "Her movement from prostitute to prodigal demonstrates the transforming reach of grace."
           ],
           "children": []
         },
@@ -682,7 +627,6 @@
           "scripture_mentions": [
             "SCR-037",
             "SCR-038",
-            "SCR-039",
             "SCR-040"
           ],
           "bullets": [
@@ -722,10 +666,7 @@
           "id": "s5.5",
           "start": 2411,
           "heading": "Victory can come over suffering or through it",
-          "scripture_mentions": [
-            "SCR-042",
-            "SCR-043"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh argues that prosperity teaching cannot survive Hebrews 11 because victory belongs both to those who live by faith and those who die by faith.",
             "Victory over suffering occurs when God delivers, as with Daniel and the three Hebrews.",
@@ -795,7 +736,7 @@
           "bullets": [
             "Abel expected a better sacrifice; Noah believed judgment would not have the final word; Abraham awaited God’s city.",
             "Isaac blessed sons whose nationhood he would not see; Joseph expected God to bring Israel home; Moses valued Christ above Egypt.",
-            "Rahab trusted Israel’s King, David longed for an eternal King, the prophets announced a Savior, and sufferers anticipated a better resurrection."
+            "Rahab believed Israel’s God was the true king, enough to commit treason for it; David longed for an eternal King, the prophets announced a Savior, and sufferers anticipated a better resurrection."
           ],
           "children": []
         },
@@ -816,10 +757,7 @@
           "id": "s6.3",
           "start": 2678,
           "heading": "Jesus is the better Abel, Noah, and Abraham",
-          "scripture_mentions": [
-            "SCR-048",
-            "SCR-049"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Jesus is the better Abel, whose blood cries not for vengeance but mercy; Josh calls listeners to come and be cleansed.",
             "Jesus is the true Noah and the saving ark; listeners must enter before the door closes.",
@@ -831,12 +769,7 @@
           "id": "s6.4",
           "start": 2700,
           "heading": "Jesus fulfills the patriarchs, deliverers, kings, and sacrifices",
-          "scripture_mentions": [
-            "SCR-050",
-            "SCR-051",
-            "SCR-052",
-            "SCR-053"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "He is the greater Isaac who was not spared on the altar and the greater Joseph betrayed by his brothers so they could live.",
             "He is the greater Moses leading a greater exodus and the greater Joshua undertaking divine conquest.",
@@ -849,9 +782,7 @@
           "id": "s6.5",
           "start": 2730,
           "heading": "The risen King will make all things new",
-          "scripture_mentions": [
-            "SCR-054"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Jesus conquered Satan, sin, and death.",
             "He will return to judge heaven and earth and renew all things, prompting Josh to ask whether the congregation is ready for him."
@@ -863,12 +794,11 @@
           "start": 2744,
           "heading": "Fix your eyes on the author of faith",
           "scripture_mentions": [
-            "SCR-055",
-            "SCR-056"
+            "SCR-055"
           ],
           "bullets": [
             "Josh names Jesus as the author and perfecter of faith, Alpha and Omega, slain Lamb, Lion of Judah, and Savior of the world.",
-            "He asks what more Jesus could do to prove his love or deserve trust, obedience, and worship.",
+            "He asks what more Jesus could possibly do to prove his love, or to deserve their trust, their obedience, and their song.",
             "The sermon’s final charge is to fix their eyes on Jesus and walk by faith together."
           ],
           "children": []
@@ -898,9 +828,7 @@
           "id": "s7.2",
           "start": 2796,
           "heading": "Prayer that hearing becomes embodied response",
-          "scripture_mentions": [
-            "SCR-057"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "He asks that the word come alive through actions, homes, relationships, and the community.",
             "He prays for honesty in the room, urging people not to sing words they do not mean if they are not prepared to surrender fully."
@@ -922,9 +850,7 @@
           "id": "s7.4",
           "start": 2871,
           "heading": "Remembering the cross and embracing Christ’s path",
-          "scripture_mentions": [
-            "SCR-058"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Holding the communion elements, Josh recalls that Jesus acted on humanity’s behalf: bearing sin, washing it away with his blood, and giving his broken body.",
             "He remembers that Jesus rose three days later and conquered sin and death, securing his promise for those who trust him.",
@@ -936,30 +862,6 @@
     }
   ],
   "ledger": [
-    {
-      "id": "SCR-001",
-      "reference": "Genesis 1:3",
-      "reference_query": "Genesis%201%3A3",
-      "treatment": "referenced",
-      "time": 150,
-      "phrase": "God spoke light",
-      "anchor_node_id": "s1.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-002",
-      "reference": "John 1:14",
-      "reference_query": "John%201%3A14",
-      "treatment": "referenced",
-      "time": 153,
-      "phrase": "God took on flesh",
-      "anchor_node_id": "s1.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
     {
       "id": "SCR-003",
       "reference": "Genesis 1:3",
@@ -994,7 +896,7 @@
       "anchor_node_id": "s1.9",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh’s description of righteous Abel and Abel’s death identifies verse 35."
+      "reference_note": "Josh’s description of righteous Abel and Abel’s death identifies verse 35."
     },
     {
       "id": "SCR-006",
@@ -1021,18 +923,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-008",
-      "reference": "Hebrews 12:1",
-      "reference_query": "Hebrews%2012%3A1",
-      "treatment": "referenced",
-      "time": 433,
-      "phrase": "the cloud of witnesses who went before us",
-      "anchor_node_id": "s1.10",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-009",
       "reference": "Hebrews 11:8–12",
       "reference_query": "Hebrews%2011%3A8%E2%80%9312",
@@ -1042,7 +932,7 @@
       "anchor_node_id": "s2.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Automatic captions render ‘descendants’ incorrectly near 08:36; the spoken range and context identify Hebrews 11:8–12."
+      "reference_note": null
     },
     {
       "id": "SCR-010",
@@ -1066,7 +956,7 @@
       "anchor_node_id": "s2.3",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: The rock wording is in verse 1; Abraham is identified in verse 2."
+      "reference_note": "The rock wording is in verse 1; Abraham is identified in verse 2."
     },
     {
       "id": "SCR-012",
@@ -1114,7 +1004,7 @@
       "anchor_node_id": "s2.6",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh compresses ‘from my mother’s womb’ as ‘from birth.’"
+      "reference_note": "Josh compresses ‘from my mother’s womb’ as ‘from birth.’"
     },
     {
       "id": "SCR-016",
@@ -1123,18 +1013,6 @@
       "treatment": "referenced",
       "time": 803,
       "phrase": "Genesis 19 ... Lot’s wife looking back",
-      "anchor_node_id": "s2.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-017",
-      "reference": "Revelation 21:5",
-      "reference_query": "Revelation%2021%3A5",
-      "treatment": "referenced",
-      "time": 821,
-      "phrase": "he is making all things new",
       "anchor_node_id": "s2.7",
       "version": "NIV",
       "version_source": "default",
@@ -1150,7 +1028,7 @@
       "anchor_node_id": "s2.9",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh reads verse 13 and develops the better-country theme through verse 16."
+      "reference_note": "Josh reads verse 13 and develops the better-country theme through verse 16."
     },
     {
       "id": "SCR-019",
@@ -1162,7 +1040,7 @@
       "anchor_node_id": "s3.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh reads the range and develops its four-generation handoff."
+      "reference_note": "Josh reads the range and develops its four-generation handoff."
     },
     {
       "id": "SCR-020",
@@ -1174,7 +1052,7 @@
       "anchor_node_id": "s3.4",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh audibly self-corrects ‘Joshua’s’ to ‘Joseph’s.’"
+      "reference_note": "Josh audibly self-corrects ‘Joshua’s’ to ‘Joseph’s.’"
     },
     {
       "id": "SCR-021",
@@ -1186,7 +1064,7 @@
       "anchor_node_id": "s3.7",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh reads the range and develops Moses’ inherited and active faith."
+      "reference_note": "Josh reads the range and develops Moses’ inherited and active faith."
     },
     {
       "id": "SCR-022",
@@ -1198,7 +1076,7 @@
       "anchor_node_id": "s3.8",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: The drowning edict is in Exodus 1:22; Josh’s retelling continues through Exodus 2:10."
+      "reference_note": "The drowning edict is in Exodus 1:22; Josh’s retelling continues through Exodus 2:10."
     },
     {
       "id": "SCR-023",
@@ -1213,60 +1091,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-024",
-      "reference": "Philippians 2:8",
-      "reference_query": "Philippians%202%3A8",
-      "treatment": "referenced",
-      "time": 1488,
-      "phrase": "humbling himself even to death on a cross",
-      "anchor_node_id": "s3.10",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-025",
-      "reference": "Ephesians 6:12",
-      "reference_query": "Ephesians%206%3A12",
-      "treatment": "referenced",
-      "time": 1737,
-      "phrase": "face up to the spiritual forces of evil",
-      "anchor_node_id": "s3.14",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-026",
-      "reference": "Hebrews 11:16",
-      "reference_query": "Hebrews%2011%3A16",
-      "treatment": "referenced",
-      "time": 1752,
-      "phrase": "the unseen where a better country awaits",
-      "anchor_node_id": "s3.14",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-027",
       "reference": "Hebrews 11:30",
       "reference_query": "Hebrews%2011%3A30",
       "treatment": "exposited",
       "time": 1763,
       "phrase": "By faith, the walls of Jericho fell",
-      "anchor_node_id": "s4.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-028",
-      "reference": "Numbers 14:26–35",
-      "reference_query": "Numbers%2014%3A26%E2%80%9335",
-      "treatment": "referenced",
-      "time": 1797,
-      "phrase": "God judged the unbelieving older generation",
       "anchor_node_id": "s4.1",
       "version": "NIV",
       "version_source": "default",
@@ -1306,19 +1136,7 @@
       "anchor_node_id": "s4.6",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh says Joshua 5:13, but the commander’s answer begins in verse 14 and the submission scene continues through verse 15."
-    },
-    {
-      "id": "SCR-032",
-      "reference": "Joshua 7:1–26",
-      "reference_query": "Joshua%207%3A1%E2%80%9326",
-      "treatment": "referenced",
-      "time": 2036,
-      "phrase": "so should have Achan",
-      "anchor_node_id": "s4.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
+      "reference_note": "Josh says Joshua 5:13, but the commander’s answer begins in verse 14 and the submission scene continues through verse 15."
     },
     {
       "id": "SCR-033",
@@ -1366,7 +1184,7 @@
       "anchor_node_id": "s5.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Automatic captions render ‘foreign armies’ as ‘foreign enemies’ near 36:48."
+      "reference_note": null
     },
     {
       "id": "SCR-037",
@@ -1387,18 +1205,6 @@
       "treatment": "referenced",
       "time": 2284,
       "phrase": "Elijah ... the child of the widow of Zarephath",
-      "anchor_node_id": "s5.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-039",
-      "reference": "Matthew 13:58",
-      "reference_query": "Matthew%2013%3A58",
-      "treatment": "referenced",
-      "time": 2290,
-      "phrase": "Jesus wasn’t doing miracles because of the lack of faith",
       "anchor_node_id": "s5.2",
       "version": "NIV",
       "version_source": "default",
@@ -1426,31 +1232,7 @@
       "anchor_node_id": "s5.4",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Automatic captions render ‘sawed in two’ as ‘sawed into.’"
-    },
-    {
-      "id": "SCR-042",
-      "reference": "Daniel 6:16–23",
-      "reference_query": "Daniel%206%3A16%E2%80%9323",
-      "treatment": "referenced",
-      "time": 2437,
-      "phrase": "Daniel",
-      "anchor_node_id": "s5.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": "Caption check: Josh gives Daniel as an example of victory over suffering."
-    },
-    {
-      "id": "SCR-043",
-      "reference": "Daniel 3:16–27",
-      "reference_query": "Daniel%203%3A16%E2%80%9327",
-      "treatment": "referenced",
-      "time": 2437,
-      "phrase": "the three Hebrew boys",
-      "anchor_node_id": "s5.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": "Caption check: Josh gives the three Hebrews as a paired example of deliverance from suffering."
+      "reference_note": null
     },
     {
       "id": "SCR-044",
@@ -1486,7 +1268,7 @@
       "anchor_node_id": "s6.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh gives a rapid chapter-closing synthesis rather than separate new readings for each named witness."
+      "reference_note": "Josh gives a rapid chapter-closing synthesis rather than separate new readings for each named witness."
     },
     {
       "id": "SCR-047",
@@ -1496,90 +1278,6 @@
       "time": 2663,
       "phrase": "Today in the town of David a Savior has been born",
       "anchor_node_id": "s6.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-048",
-      "reference": "Hebrews 12:24",
-      "reference_query": "Hebrews%2012%3A24",
-      "treatment": "referenced",
-      "time": 2678,
-      "phrase": "the better Abel whose blood ... speaks mercy",
-      "anchor_node_id": "s6.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-049",
-      "reference": "Genesis 12:1–3",
-      "reference_query": "Genesis%2012%3A1%E2%80%933",
-      "treatment": "referenced",
-      "time": 2693,
-      "phrase": "the greater Abraham who left his Father’s home to bless every nation",
-      "anchor_node_id": "s6.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-050",
-      "reference": "Genesis 22:1–18",
-      "reference_query": "Genesis%2022%3A1%E2%80%9318",
-      "treatment": "referenced",
-      "time": 2700,
-      "phrase": "the greater Isaac who wasn’t spared on the altar",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-051",
-      "reference": "Genesis 45:4–8",
-      "reference_query": "Genesis%2045%3A4%E2%80%938",
-      "treatment": "referenced",
-      "time": 2703,
-      "phrase": "the greater Joseph who was betrayed by his brothers so they could live",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-052",
-      "reference": "Hebrews 7:23–25",
-      "reference_query": "Hebrews%207%3A23%E2%80%9325",
-      "treatment": "referenced",
-      "time": 2720,
-      "phrase": "the greater priest who never dies",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-053",
-      "reference": "Hebrews 10:10–14",
-      "reference_query": "Hebrews%2010%3A10%E2%80%9314",
-      "treatment": "referenced",
-      "time": 2722,
-      "phrase": "the perfect sacrifice offered once for all",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-054",
-      "reference": "Revelation 21:5",
-      "reference_query": "Revelation%2021%3A5",
-      "treatment": "referenced",
-      "time": 2735,
-      "phrase": "he will make all things new",
-      "anchor_node_id": "s6.5",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1595,42 +1293,6 @@
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
-    },
-    {
-      "id": "SCR-056",
-      "reference": "Revelation 5:5–6",
-      "reference_query": "Revelation%205%3A5%E2%80%936",
-      "treatment": "referenced",
-      "time": 2749,
-      "phrase": "the Lamb who was slain, the Lion of Judah",
-      "anchor_node_id": "s6.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-057",
-      "reference": "James 1:22",
-      "reference_query": "James%201%3A22",
-      "treatment": "referenced",
-      "time": 2805,
-      "phrase": "not just hear the word, but ... let it come to life in us, in our actions",
-      "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-058",
-      "reference": "1 Corinthians 11:23–26",
-      "reference_query": "1%20Corinthians%2011%3A23%E2%80%9326",
-      "treatment": "referenced",
-      "time": 2871,
-      "phrase": "Your body was broken for us",
-      "anchor_node_id": "s7.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": "Caption check: The communion setting securely identifies Paul’s institution narrative; Josh’s wording is compressed."
     }
   ]
 }

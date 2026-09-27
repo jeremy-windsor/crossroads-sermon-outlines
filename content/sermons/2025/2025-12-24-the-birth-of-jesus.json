@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-12-24-the-birth-of-jesus",
   "title": "The Birth of Jesus",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2215,
   "video_id": "nZCxWOMxcfs",
   "video_url": "https://www.youtube.com/watch?v=nZCxWOMxcfs",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-21",
   "sermon_start": 45,
   "sermon_end": 2208,
   "card_summary": "On Christmas Eve, Josh reads Luke 2 as history: God’s Light enters human darkness at the appointed time and place. The manger foreshadows the cross and empty tomb, angels announce peace through the Savior, and shepherds hear, believe, move, and tell. Behold Christ, ponder his work, and trust him with the future.",
-  "section_intro": "The sermon begins at 00:45 after opening music. Josh follows Luke 2 from the angelic announcement through Bethlehem, the shepherds, heaven’s song, Mary’s pondering, and resurrection foreshadowing, then closes in prayer at 36:48.",
-  "page_title": "The Birth of Jesus — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of The Birth of Jesus by Josh Wyatt at Crossroads Church, preached December 24, 2025.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "The Birth of Jesus"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 21, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV unless a spoken translation is named.",
-  "ledger_caption": "43 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

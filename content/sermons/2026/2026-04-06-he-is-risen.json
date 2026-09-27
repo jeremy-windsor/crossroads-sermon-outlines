@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-04-06-he-is-risen",
   "title": "He Is Risen!",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2735,
   "video_id": "T0omG1Rs4-o",
   "video_url": "https://www.youtube.com/watch?v=T0omG1Rs4-o",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 42,
   "sermon_end": 2726,
   "card_summary": "Josh Wyatt preaches Easter from Matthew 28. If the tomb is empty because God breathed life into a dead body, nothing is more urgent than believing it and surrendering. True faith produces visible fruit. Christianity is not advice but an announcement that God came to us, died, and rose. Josh gives believers seven reasons the resurrection is history’s most significant moment, answers the stolen-body cover-up, and sends the church to make disciples. Communion remembers Cana’s good wine: Jesus drank wrath so the church drinks joy.",
-  "section_intro": "The sermon begins at 00:42 with a reading of Matthew 28. Josh walks from the empty tomb through crucifixion, seven resurrection reasons, the guards’ lie, the Great Commission, baptism, and the table. The chronological outline keeps the opening Scripture, the builder question, the other-religion contrast, communion at Cana, and the closing prayer. Captions repeat the last minutes; the outline follows the first pass of the prayer.",
-  "page_title": "He Is Risen! — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of He Is Risen! by Josh Wyatt at Crossroads Church, published April 6, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "He Is Risen!"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "36 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

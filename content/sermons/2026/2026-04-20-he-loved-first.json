@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-04-20-he-loved-first",
   "title": "He Loved First!",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2810,
   "video_id": "pxYrDJMGDrE",
   "video_url": "https://www.youtube.com/watch?v=pxYrDJMGDrE",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 47,
   "sermon_end": 2795,
   "card_summary": "Josh Wyatt opens week two of Born Again from John 3:16. He contrasts shallow cultural love with God’s hesed and agape, then walks seven marks of that love: it springs from God himself, moves first, pursues through history, is holy, acts at the cross, transforms, and keeps covenant. Whoever believes is a wide-open line that still excludes unbelief. The Spirit in you starts a war; the fight is evidence of life. Jesus then demonstrates the verse in John 4 at the well: he loves the broken, thirsts on the cross so sinners can drink, and sends the woman back as a witness.",
-  "section_intro": "The sermon begins at 00:47 after seating. A congregant recites John 3:16, Josh names lazy definitions and lack of the full counsel of God as the two reasons the verse is misunderstood, and he closes in prayer. The chronological outline keeps the marriage testimony, the seven marks of God’s love, the saturation illustration, Romans 8 and 7, the Samaritan woman, and the closing prayer.",
-  "page_title": "He Loved First! — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of He Loved First! by Josh Wyatt at Crossroads Church, published April 20, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "He Loved First!"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "39 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

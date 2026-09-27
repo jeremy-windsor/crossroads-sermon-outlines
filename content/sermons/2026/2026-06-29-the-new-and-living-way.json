@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-06-29-the-new-and-living-way",
   "title": "The New and Living Way",
   "speaker": "Josh Wyatt",
@@ -8,53 +8,9 @@
   "duration_seconds": 2714,
   "video_id": "mCKxer8fmbk",
   "video_url": "https://www.youtube.com/watch?v=mCKxer8fmbk",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 3,
   "sermon_end": 2699,
   "card_summary": "Josh Wyatt presents Hebrews 10:19–39 as an open invitation secured by Jesus’ blood. Because Christ opened the new and living way, believers may draw near with cleansed consciences, hold unswervingly to hope in God’s faithfulness, and consider how to provoke one another toward love and good deeds. Josh applies those invitations to confession, baptism, perseverance, attentive congregational care, multigenerational example, and regular gathering. He then distinguishes stumbling believers from people who harden themselves against Christ, finding mercy inside Hebrews’ severe warning. The sermon closes by recalling Christians who shared suffering and lost property without surrendering confidence, urging the church not to shrink back or waste life on what will not last but to invest in Christ, his kingdom, his people, and service that outlives them.",
-  "section_intro": "The verified sermon begins at 00:03 with Josh Wyatt’s backstage-access illustration and continues through the closing prayer and amen at 44:59; the remaining video time contains no further captioned teaching. Moving chronologically through Hebrews 10:19–39, Josh explains Jesus’ new and living way, develops the three invitations to draw near, hold fast, and consider one another, delivers the chapter’s warning against deliberate rejection of Christ, and calls the church to persevere together and spend its life on what lasts.",
-  "page_title": "The New and Living Way — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of The New and Living Way by Josh Wyatt at Crossroads Church, published June 29, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "The New and Living Way"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": "“The New and Living Way,” Josh Wyatt, Crossroads Church. Published June 29, 2026. Outline verified against the complete original-English YouTube automatic-caption track."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. Sermon content belongs to Crossroads Church and Josh Wyatt; linked Scripture text belongs to its publisher."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the speaker-named version where one is stated and otherwise the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "56 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -335,7 +291,7 @@
           "bullets": [
             "Josh returns to the reason for hope: “he who promised is faithful.” Christian hope is stronger than optimism, which merely wishes that things will work out.",
             "Biblical hope says God has spoken and therefore the outcome is guaranteed. The one who spoke the universe into existence cannot lie, and his speaking accomplishes what he says.",
-            "Josh invokes Paul’s statement to Corinth that every divine promise is “Yes” in Christ. The captions omit part of his lead-in and closing clause, but the preserved quotation identifies 2 Corinthians 1:20."
+            "Josh invokes Paul’s word to the Corinthians: no matter how many promises God has made, they are “Yes” in Christ."
           ],
           "children": []
         },
@@ -823,7 +779,7 @@
       "id": "SCR-004",
       "reference": "John 10:7,9",
       "reference_query": "John%2010%3A7%2C9",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 361,
       "phrase": "He is the door",
       "anchor_node_id": "s1.4",
@@ -1171,7 +1127,7 @@
       "id": "SCR-032",
       "reference": "1 Timothy 3:15",
       "reference_query": "1%20Timothy%203%3A15",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 1605,
       "phrase": "The church is called the pillar of the truth",
       "anchor_node_id": "s4.8",

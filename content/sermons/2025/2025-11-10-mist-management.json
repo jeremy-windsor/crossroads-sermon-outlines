@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-11-10-mist-management",
   "title": "Mist Management",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3070,
   "video_id": "5fgD_gNG9KI",
   "video_url": "https://www.youtube.com/watch?v=5fgD_gNG9KI",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 18,
   "sermon_end": 3047,
   "card_summary": "Josh confronts planning that ignores God and obedience delayed after God’s will is known. Life is uncertain and brief—a mist—so time must be invested rather than wasted under an illusion of control. James calls believers away from arrogant boasting toward lifelong dependence: if the Lord wills, take the next faithful step, learn under Jesus, and do the good already placed before you.",
-  "section_intro": "The sermon begins at 00:18 and ends at 50:47. This chronological outline preserves Josh’s movement through James 4:13–17, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "Mist Management — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Mist Management by Josh Wyatt at Crossroads Church, published 2025-11-10.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Mist Management"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "50 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-10-20-divine-wisdom-vs-demonic-wisdom",
   "title": "Divine Wisdom vs. Demonic Wisdom",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2970,
   "video_id": "Ftqq3hsMJ0M",
   "video_url": "https://www.youtube.com/watch?v=Ftqq3hsMJ0M",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 21,
   "sermon_end": 2958,
   "card_summary": "Josh contrasts wisdom from above with wisdom that is earthly, unspiritual, and demonic. Knowledge alone is not wisdom; James tests wisdom by humble conduct and visible fruit. Envy and selfish ambition produce disorder, while heavenly wisdom is pure, peace-loving, considerate, submissive, merciful, fruitful, impartial, and sincere. The church is called to find wisdom in Christ and sow peace rather than rivalry.",
-  "section_intro": "The sermon begins at 00:21 and ends at 49:18. This chronological outline preserves Josh’s movement through James 3:13–18, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "Divine Wisdom vs. Demonic Wisdom — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Divine Wisdom vs. Demonic Wisdom by Josh Wyatt at Crossroads Church, published 2025-10-20.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Divine Wisdom vs. Demonic Wisdom"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "69 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -200,7 +152,7 @@
         "Josh counters it with Philippians 2:3–4: do nothing from selfish ambition or vain conceit, humbly value others, and attend to their interests. False wisdom cannot do this because it has not grasped how Jesus attended to sinners’ interests. True wisdom has no need to compare Christians because it looks at Christ; everyone has far to go beside him.",
         "The third false fruit is dishonesty, which follows a recognizable sequence. Envy wants what another has and assumes it is deserved. Selfish ambition resolves to obtain it, using other people as tools. Dishonesty lies when necessary to complete the campaign.",
         "Self-advertising cannot determine the final verdict. No one speaks at his own funeral, and a self-written “puff piece” will not stand on the day of the Lord. Josh quotes 1 Corinthians 4:5: wait for the Lord, who exposes darkness and heart motives and assigns praise. He notes from Matthew 7 that the final disclosure will not result in praise for everyone.",
-        "Pastoral encouragement to people wounded by false wisdom: Although schemers seem to escape consequences, they are not getting away with anything. Do not take revenge; “hold the line” and trust the Lord to repay. The captions render one occurrence as “repent,” but the surrounding quotation and command correspond to the Lord’s promise to repay in Romans 12:19. Overcome evil with good. Believers need one another because anger would rather overcome evil physically; the community restrains that impulse while waiting for the Lord.",
+        "Pastoral encouragement to people wounded by false wisdom: Although schemers seem to escape consequences, they are not getting away with anything. Do not take revenge; “hold the line” and trust the Lord to repay. Overcome evil with good. Believers need one another because anger would rather overcome evil physically; the community restrains that impulse while waiting for the Lord.",
         "Transition: Josh turns from the fruit of false wisdom to the fruit of true wisdom."
       ],
       "children": []
@@ -416,7 +368,7 @@
       "reference_query": "Ecclesiastes+1%3A2",
       "treatment": "read/quoted",
       "time": 928,
-      "phrase": "Materially repeated and expanded quotation: “Meaningless. Utterly meaningless. Everything is meaningless.”",
+      "phrase": "Repeated and expanded quotation: “Meaningless. Utterly meaningless. Everything is meaningless.”",
       "anchor_node_id": "s3",
       "version": "NIV",
       "version_source": "default",

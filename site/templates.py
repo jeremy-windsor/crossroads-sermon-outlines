@@ -327,7 +327,7 @@ def sermon(record, previous, following, scripts, series_records=()):
         count = planned if planned and planned > total else total
         series_value = link("../series/" + series["id"] + ".html", series["name"]) + f" · Part {part} of {count}"
         metadata.append(("Series", series_value))
-    header = f'<p class="kicker">{e(series_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
+    header = f'<p class="kicker">{e(series_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["speaker"])} · Crossroads Church</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
     body = f'''<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Overview')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
 <figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></figure>
 <section aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>

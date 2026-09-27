@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-12-01-born-again",
   "title": "Born Again?",
   "speaker": "Chris DeWald",
@@ -8,57 +8,9 @@
   "duration_seconds": 2540,
   "video_id": "4TH21JlNJeo",
   "video_url": "https://www.youtube.com/watch?v=4TH21JlNJeo",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-21",
   "sermon_start": 40,
   "sermon_end": 2422,
   "card_summary": "Chris DeWald follows Nicodemus from a nighttime question in John 3 to public courage at Jesus’ cross. New birth is not legalism or worldly wisdom; it is cleansing, rebirth, and renewal by the Holy Spirit. Ask the questions that keep you from Christ, then stop hiding your faith and live it out loud.",
-  "section_intro": "The sermon begins at 00:40 after opening music. Chris moves from Thanksgiving gratitude into John 3, traces Nicodemus through John 7 and John 19, leads communion, and closes in prayer. The outline preserves that sequence and every confirmed Scripture use.",
-  "page_title": "Born Again? — Chris DeWald | Sermon Outline",
-  "description": "A chronological study outline of Born Again? by Chris DeWald at Crossroads Church, published December 1, 2025.",
-  "subtitle": "Chris DeWald · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Chris DeWald’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Born Again?"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 21, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV unless a spoken translation is named.",
-  "ledger_caption": "43 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -722,7 +674,7 @@
       "anchor_node_id": "s10",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "The communion practice is materially paraphrased without a spoken citation."
+      "reference_note": null
     },
     {
       "id": "SCR-042",

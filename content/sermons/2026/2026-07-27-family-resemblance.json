@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-07-27-family-resemblance",
   "title": "Family Resemblance",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2930,
   "video_id": "f8QDIAy6Nh8",
   "video_url": "https://www.youtube.com/watch?v=f8QDIAy6Nh8",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-05",
   "sermon_start": 36,
   "sermon_end": 2900,
   "card_summary": "Josh presents Hebrews 13 as the family resemblance produced by the gospel, not an entrance fee for earning God’s favor. Because Jesus gives his people new hearts, the church is called to sustain brotherly love, welcome strangers, remember prisoners and the mistreated, honor marriage and sexual holiness, reject the love of money, imitate faithful leaders without idolizing them, submit to accountable shepherding, and bear Christ’s disgrace outside the camp. The sermon closes by locating every command in the unchanging Christ, inviting hearers to repent and trust the risen Shepherd, and praying for power to walk in his grace.",
-  "section_intro": "The sermon begins at 00:36 and continues through the closing prayer at 48:20. Josh presents Hebrews 13 as the family resemblance produced by the gospel, not an entrance fee for earning God’s favor. Because Jesus gives his people new hearts, the church is called to sustain brotherly love, welcome strangers, remember prisoners and the mistreated, honor marriage and sexual holiness, reject the love of money, imitate faithful leaders without idolizing them, submit to accountable shepherding, and bear Christ’s disgrace outside the camp. The sermon closes by locating every command in the unchanging Christ, inviting hearers to repent and trust the risen Shepherd, and praying for power to walk in his grace.",
-  "page_title": "Family Resemblance — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Family Resemblance by Josh Wyatt at Crossroads Church, published July 27, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Family Resemblance"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 5, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "53 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -73,10 +25,7 @@
           "id": "s1.1",
           "start": 36,
           "heading": "From an impossible rulebook to transformed desires",
-          "scripture_mentions": [
-            "SCR-001",
-            "SCR-002"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh opens with a common objection to Christianity: its commands can look like an exhausting list of prohibitions and an impossible demand for perfection. His rapid examples include \"Don’t have sex outside of marriage,\" \"Don’t love money,\" \"Love your enemies,\" \"Love strangers,\" and \"Honor marriage.\"",
             "The gospel is not merely that Christ teaches better behavior; Christ gives new hearts so that forgiven sinners begin to love what he loves, finding joy and freedom in obedience.",
@@ -141,15 +90,11 @@
           "heading": "Protect Philadelphia from the enemies of love",
           "scripture_mentions": [
             "SCR-006",
-            "SCR-007",
-            "SCR-008",
-            "SCR-009",
-            "SCR-010",
             "SCR-011"
           ],
           "bullets": [
             "Because believers must be told to keep loving, Josh reasons that congregational love can die and therefore must be protected.",
-            "Pride resists washing feet, bitterness keeps a record of wrongs, and selfishness asks what others can provide; busyness, envy, gossip, favoritism, unresolved conflict, fear, materialism, bad teaching, and bad shepherding also threaten love.",
+            "Pride resists washing feet, bitterness keeps a record of wrongs, and selfishness asks what others can provide; busyness, envy, gossip, favoritism, unresolved conflict, fear, worldliness, materialism, bad teaching, and bad shepherding also threaten love; love dies when cultural trends replace the gospel.",
             "For an attitude adjustment, Josh tells Christians to \"go read Philippians 2\" repeatedly until Christ’s humility confronts them.",
             "Christ is the one who \"came to serve, not be served,\" \"washed dirty feet,\" \"prayed for their forgiveness while they mocked him,\" and \"laid down his life for his friends.\"",
             "With eyes on Jesus, love is not manufactured; believers \"love because he first loved us.\" The preservation of this love for two thousand years displays God’s power."
@@ -214,7 +159,6 @@
           "start": 866,
           "heading": "The Mormon missionaries and Abraham’s unexpected guests",
           "scripture_mentions": [
-            "SCR-014",
             "SCR-015"
           ],
           "bullets": [
@@ -301,7 +245,7 @@
         },
         {
           "id": "s4.2",
-          "start": 1212,
+          "start": 1241,
           "heading": "Sex and money are gifts that make terrible gods",
           "scripture_mentions": [
             "SCR-019"
@@ -329,14 +273,11 @@
           "id": "s4.4",
           "start": 1340,
           "heading": "Protect the Creator’s definition and the gospel picture",
-          "scripture_mentions": [
-            "SCR-020",
-            "SCR-021"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Marriage is God’s gift, will be attacked, and is worth protecting. Josh states its definition as \"one man, one woman, one flesh for life.\"",
             "Believers honor this design not from mere traditionalism but as sons and daughters of the one who made it.",
-            "Josh explains the gospel picture: \"every husband who sacrificially loves his wife tells the story of Christ\" and \"every wife who gladly submits to her husband tells the story of the church.\"",
+            "In his own words, not a cited text: \"every husband who sacrificially loves his wife tells the story of Christ\" and \"every wife who gladly submits to her husband tells the story of the church.\"",
             "A kept covenant proclaims the goodness of the promise-keeping God; dishonoring marriage distorts the picture God intended to paint through it."
           ],
           "children": []
@@ -461,7 +402,7 @@
         },
         {
           "id": "s5.3",
-          "start": 1975,
+          "start": 1993,
           "heading": "Ask not how much you have, but how much it has you",
           "scripture_mentions": [
             "SCR-028"
@@ -477,8 +418,7 @@
           "start": 2026,
           "heading": "Give first fruits consistently and loosen the idol’s grip",
           "scripture_mentions": [
-            "SCR-029",
-            "SCR-030"
+            "SCR-029"
           ],
           "bullets": [
             "Josh and Kristen give ten percent of all income to the church’s general offering so the church can rely on a consistent gift and plan responsibly; other offerings and benevolence are additional rather than deductions from the tithe.",
@@ -534,7 +474,7 @@
           ],
           "bullets": [
             "Josh reads Hebrews 13:7–16, beginning, \"Remember your leaders who spoke the word of God to you,\" commanding imitation of their faith, and declaring that \"Jesus Christ is the same yesterday and today and forever.\"",
-            "The passage warns, \"Do [not] be carried away by all kinds of strange teachings,\" because hearts are strengthened by grace rather than ceremonial food.",
+            "The passage warns against being carried away by strange teachings; hearts are strengthened by grace, not ceremonial food.",
             "Jesus suffered outside the gate to make the people holy by his blood, so believers are to go to him outside the camp, bear his disgrace, seek the coming city, offer praise, do good, and share: \"with such sacrifices God is pleased.\""
           ],
           "children": []
@@ -570,8 +510,7 @@
           "start": 2324,
           "heading": "Do not build a life around any servant of God",
           "scripture_mentions": [
-            "SCR-036",
-            "SCR-037"
+            "SCR-036"
           ],
           "bullets": [
             "Josh warns that people attach themselves to pastors in unhealthy ways and that troubled shepherds may thrive on the attention; some listeners have seen or suffered this abuse.",
@@ -582,7 +521,7 @@
         },
         {
           "id": "s6.5",
-          "start": 2394,
+          "start": 2401,
           "heading": "The same Jesus still forgives, welcomes, convinces, and gives life",
           "scripture_mentions": [
             "SCR-038",
@@ -635,8 +574,7 @@
           "start": 2623,
           "heading": "Pray the Shepherd’s benediction over the shepherds",
           "scripture_mentions": [
-            "SCR-045",
-            "SCR-046"
+            "SCR-045"
           ],
           "bullets": [
             "Josh offers Hebrews 13:20–21 as a prayer: \"May the God of peace, who through the blood of the eternal covenant brought back from the dead our Lord Jesus, that great shepherd of the sheep, equip you with everything good for doing his will.\"",
@@ -661,14 +599,9 @@
           "id": "s6.10",
           "start": 2759,
           "heading": "Come home to the great Shepherd today",
-          "scripture_mentions": [
-            "SCR-047",
-            "SCR-048",
-            "SCR-049",
-            "SCR-050"
-          ],
+          "scripture_mentions": [],
           "bullets": [
-            "A shepherd’s greatest joy is \"carrying one of his sheep back home.\" Josh urges those delaying repentance: \"If you hear his voice today, surrender.\"",
+            "A shepherd’s greatest joy is \"carrying one of his sheep back home for him.\" Josh urges those delaying repentance: \"If you hear his voice today, surrender.\"",
             "He invites hearers to kneel or fall on their faces if needed and surrender the heart to Jesus, \"the great shepherd. He laid down his life for his sheep.\"",
             "Josh declares, \"His divine blood was poured out for the forgiveness of sins,\" God raised him from the dead, and \"he will receive every sinner who comes to him in faith.\"",
             "The invitation is to come, turn from sin, trust Christ, and walk in his power rather than leave without responding."
@@ -681,14 +614,13 @@
           "heading": "Closing prayer: thank Christ for the cross and ask for power",
           "scripture_mentions": [
             "SCR-051",
-            "SCR-052",
-            "SCR-053"
+            "SCR-052"
           ],
           "bullets": [
             "Josh thanks the Father for Scripture, Hebrews, and the supremacy of Jesus from beginning to end.",
             "He thanks Jesus for \"humbling yourself, taking our flesh,\" living the life sinners could not live, dying the death they deserved, and taking their place.",
             "Addressing the crucified King, he prays, \"All things were made through you and for you,\" yet the creation mocked its maker.",
-            "Josh recalls the mockery, \"You can save others. Why can’t you save yourself?\" and says Jesus stayed on the cross because he saw \"this joy\"—a redeemed family of faith called to trust, serve, love, and change the world.",
+            "Jesus stayed because he saw \"this joy\"—a redeemed family of faith called to trust, serve, love, and change the world.",
             "He asks the Lord for needed power, help to forgive others and themselves, and grace to walk faithfully; he closes by thanking God for the series, Jesus, and the cross, then prays in Jesus’ name, \"Amen.\""
           ],
           "children": []
@@ -697,30 +629,6 @@
     }
   ],
   "ledger": [
-    {
-      "id": "SCR-001",
-      "reference": "Ezekiel 36:26-27",
-      "reference_query": "Ezekiel%2036%3A26-27",
-      "treatment": "referenced",
-      "time": 149,
-      "phrase": "He puts his Spirit within them ... and he changes their desires.",
-      "anchor_node_id": "s1.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-002",
-      "reference": "Hebrews 8:10",
-      "reference_query": "Hebrews%208%3A10",
-      "treatment": "referenced",
-      "time": 160,
-      "phrase": "He writes his law on their hearts.",
-      "anchor_node_id": "s1.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
     {
       "id": "SCR-003",
       "reference": "Matthew 17:1-8",
@@ -731,13 +639,13 @@
       "anchor_node_id": "s1.3",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Captions preserve only ‘in … 17’; the Transfiguration details confirm Matthew 17."
+      "reference_note": "Josh says “the mountain of transfiguration in … 17” without naming the Gospel."
     },
     {
       "id": "SCR-004",
-      "reference": "Hebrews 12:22-29",
-      "reference_query": "Hebrews%2012%3A22-29",
-      "treatment": "exposited",
+      "reference": "Hebrews 12:22–24",
+      "reference_query": "Hebrews%2012%3A22%E2%80%9324",
+      "treatment": "referenced",
       "time": 245,
       "phrase": "Hebrews 12 ended with all God’s people rejoicing together on Mount Zion ... an unshakeable kingdom.",
       "anchor_node_id": "s1.3",
@@ -759,59 +667,11 @@
     },
     {
       "id": "SCR-006",
-      "reference": "Philippians 2:1-11",
-      "reference_query": "Philippians%202%3A1-11",
+      "reference": "Philippians 2",
+      "reference_query": "Philippians%202",
       "treatment": "referenced",
       "time": 398,
       "phrase": "if you need an attitude adjustment ... just go read Philippians 2",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-007",
-      "reference": "Matthew 20:28; Mark 10:45",
-      "reference_query": "Matthew%2020%3A28%3B%20Mark%2010%3A45",
-      "treatment": "read/quoted",
-      "time": 459,
-      "phrase": "the one who came to serve, not be served",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-008",
-      "reference": "John 13:4-15",
-      "reference_query": "John%2013%3A4-15",
-      "treatment": "referenced",
-      "time": 463,
-      "phrase": "the one who washed dirty feet",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-009",
-      "reference": "Luke 23:34",
-      "reference_query": "Luke%2023%3A34",
-      "treatment": "referenced",
-      "time": 465,
-      "phrase": "the one who forgave his enemies and prayed for them as he hung miserably on the cross",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-010",
-      "reference": "John 15:13",
-      "reference_query": "John%2015%3A13",
-      "treatment": "read/quoted",
-      "time": 473,
-      "phrase": "the one who laid down his life for his friends",
       "anchor_node_id": "s2.1",
       "version": "NIV",
       "version_source": "default",
@@ -849,18 +709,6 @@
       "time": 703,
       "phrase": "he told Zacchaeus, ’I’m coming to your house today.’",
       "anchor_node_id": "s2.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-014",
-      "reference": "Ephesians 2:8",
-      "reference_query": "Ephesians%202%3A8",
-      "treatment": "referenced",
-      "time": 909,
-      "phrase": "salvation is a gift from God",
-      "anchor_node_id": "s2.6",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -926,34 +774,10 @@
       "reference_note": null
     },
     {
-      "id": "SCR-020",
-      "reference": "Genesis 2:24; Matthew 19:4-6",
-      "reference_query": "Genesis%202%3A24%3B%20Matthew%2019%3A4-6",
-      "treatment": "referenced",
-      "time": 1362,
-      "phrase": "Marriage is one man, one woman, one flesh for life.",
-      "anchor_node_id": "s4.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-021",
-      "reference": "Ephesians 5:22-33",
-      "reference_query": "Ephesians%205%3A22-33",
-      "treatment": "referenced",
-      "time": 1386,
-      "phrase": "Every husband who sacrificially loves his wife tells the story of Christ. Every wife who gladly submits to her husband tells the story of the church.",
-      "anchor_node_id": "s4.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-022",
       "reference": "Matthew 16:24-26",
       "reference_query": "Matthew%2016%3A24-26",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 1536,
       "phrase": "Whoever wants to be my disciple must deny themselves, take up their cross and follow me ... gain the whole world, yet forfeit your soul?",
       "anchor_node_id": "s4.6",
@@ -1013,7 +837,7 @@
       "id": "SCR-027",
       "reference": "1 Timothy 6:10",
       "reference_query": "1%20Timothy%206%3A10",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 1938,
       "phrase": "Paul says ... ’the love of money is a root of all kinds of evil.’",
       "anchor_node_id": "s5.2",
@@ -1025,7 +849,7 @@
       "id": "SCR-028",
       "reference": "Psalm 24:1",
       "reference_query": "Psalm%2024%3A1",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 2021,
       "phrase": "Psalm 24:1, ’The earth is the Lord’s and everything in it, the world and all who live in it.’",
       "anchor_node_id": "s5.3",
@@ -1040,18 +864,6 @@
       "treatment": "read/quoted",
       "time": 2071,
       "phrase": "Jesus says, ’Seek first the kingdom of God.’",
-      "anchor_node_id": "s5.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-030",
-      "reference": "Matthew 6:21",
-      "reference_query": "Matthew%206%3A21",
-      "treatment": "referenced",
-      "time": 2077,
-      "phrase": "our treasure and our heart are connected",
       "anchor_node_id": "s5.4",
       "version": "NIV",
       "version_source": "default",
@@ -1091,7 +903,7 @@
       "anchor_node_id": "s6.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Captions dropped ‘not’ from ‘Do not be carried away’ in verse 9; wording and context confirm the correction."
+      "reference_note": null
     },
     {
       "id": "SCR-034",
@@ -1109,7 +921,7 @@
       "id": "SCR-035",
       "reference": "Hebrews 13:7",
       "reference_query": "Hebrews%2013%3A7",
-      "treatment": "exposited",
+      "treatment": "referenced",
       "time": 2262,
       "phrase": "think back to the first person who ever taught you the word of God ... thank God for them",
       "anchor_node_id": "s6.3",
@@ -1121,21 +933,9 @@
       "id": "SCR-036",
       "reference": "Hebrews 13:8",
       "reference_query": "Hebrews%2013%3A8",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 2356,
       "phrase": "Build your life on Jesus Christ. He never changes ... Jesus Christ is the same yesterday, today, and forever.",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-037",
-      "reference": "Ephesians 1:4-5",
-      "reference_query": "Ephesians%201%3A4-5",
-      "treatment": "referenced",
-      "time": 2369,
-      "phrase": "before Adam even took his first breath ... the Father chose a people to reconcile himself through his Son",
       "anchor_node_id": "s6.4",
       "version": "NIV",
       "version_source": "default",
@@ -1217,7 +1017,7 @@
       "id": "SCR-044",
       "reference": "Matthew 18:15-17",
       "reference_query": "Matthew%2018%3A15-17",
-      "treatment": "exposited",
+      "treatment": "referenced",
       "time": 2568,
       "phrase": "activate Matthew 18 and go directly to that person ... take a witness ... bring it to the elders",
       "anchor_node_id": "s6.7",
@@ -1233,66 +1033,6 @@
       "time": 2623,
       "phrase": "May the God of peace ... brought back from the dead our Lord Jesus, that great shepherd of the sheep, equip you with everything good for doing his will.",
       "anchor_node_id": "s6.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-046",
-      "reference": "Hebrews 13:21",
-      "reference_query": "Hebrews%2013%3A21",
-      "treatment": "referenced",
-      "time": 2666,
-      "phrase": "pray this over your leaders: ’May the God of peace equip you with everything good for doing his will.’",
-      "anchor_node_id": "s6.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-047",
-      "reference": "Hebrews 3:7-8, 15",
-      "reference_query": "Hebrews%203%3A7-8%2C%2015",
-      "treatment": "referenced",
-      "time": 2776,
-      "phrase": "If you hear his voice today, surrender.",
-      "anchor_node_id": "s6.10",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-048",
-      "reference": "John 10:11",
-      "reference_query": "John%2010%3A11",
-      "treatment": "referenced",
-      "time": 2784,
-      "phrase": "the great shepherd ... laid down his life for his sheep",
-      "anchor_node_id": "s6.10",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-049",
-      "reference": "Matthew 26:28",
-      "reference_query": "Matthew%2026%3A28",
-      "treatment": "referenced",
-      "time": 2788,
-      "phrase": "His divine blood was poured out for the forgiveness of sins.",
-      "anchor_node_id": "s6.10",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-050",
-      "reference": "John 6:37",
-      "reference_query": "John%206%3A37",
-      "treatment": "referenced",
-      "time": 2794,
-      "phrase": "he will receive every sinner who comes to him in faith",
-      "anchor_node_id": "s6.10",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1316,18 +1056,6 @@
       "treatment": "read/quoted",
       "time": 2852,
       "phrase": "You can save others. Why can’t you save yourself?",
-      "anchor_node_id": "s6.11",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-053",
-      "reference": "Hebrews 12:2",
-      "reference_query": "Hebrews%2012%3A2",
-      "treatment": "referenced",
-      "time": 2864,
-      "phrase": "But you stayed because you saw the picture. You saw this joy ... a family of faith, a future redeemed.",
       "anchor_node_id": "s6.11",
       "version": "NIV",
       "version_source": "default",

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-05-11-we-see-jesus",
   "title": "We See Jesus",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2820,
   "video_id": "Rz6-WO6qOo4",
   "video_url": "https://www.youtube.com/watch?v=Rz6-WO6qOo4",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 32,
   "sermon_end": null,
   "card_summary": "Josh Wyatt expounds Hebrews 2 as a warning against spiritual drift and a call to see the reigning Jesus. Believers must guard the salvation message, reject both active rebellion and subtle neglect, and use the Spirit’s gifts to build the church. Although humanity lost its God-given crown and dominion through Adam, the incarnate Son tasted death, defeated Satan’s accusing power, regained dominion, and is not ashamed to call the sanctified his family. As a merciful and faithful high priest, Jesus understands suffering, runs to the cry of the tempted, advocates for those who confess sin, and remains present with his people. The sermon closes at the Lord’s Table with the church’s united, present-tense confession: “We see Jesus.”",
-  "section_intro": "The sermon begins at 00:32 and continues into the closing prayer when the uploaded video ends at 47:00. Josh Wyatt follows Hebrews 2 from its warning against neglected salvation through the Spirit’s confirming witness and gifts, humanity’s lost dominion, the crowned Son’s suffering, the defeat of death and accusation, and Jesus’ continuing help as merciful high priest. Communion gathers the argument into the church’s united confession, “We see Jesus.” The upload ends before the prayer’s spoken conclusion, so no unverified ending is supplied.",
-  "page_title": "We See Jesus — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of We See Jesus by Josh Wyatt at Crossroads Church, published May 11, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "We See Jesus"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 6, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV or AMP text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links use NIV by default; the Amplified Bible is used only where Josh names it. Ambiguous allusions are omitted.",
-  "ledger_caption": "77 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -104,10 +56,7 @@
           "start": 171,
           "heading": "The warning addresses believers under attack and points them back to their anchor",
           "scripture_mentions": [
-            "SCR-005",
-            "SCR-006",
-            "SCR-007",
-            "SCR-008"
+            "SCR-005"
           ],
           "bullets": [
             "The warning can benefit skeptics, but Josh says it is directed to believers: a great truth has been heard, yet without the most careful attention surrounding currents can carry it away.",
@@ -148,8 +97,7 @@
           "start": 410,
           "heading": "Deuteronomy models careful attention through every part of life",
           "scripture_mentions": [
-            "SCR-011",
-            "SCR-012"
+            "SCR-011"
           ],
           "bullets": [
             "Josh reads Deuteronomy 6:1–9 in context: Israel must learn and obey God’s commands, fear the Lord across generations, love him with heart, soul, and strength, keep his words on their hearts, teach them to children, discuss them through daily rhythms, and place visible reminders around the home.",
@@ -162,9 +110,7 @@
           "id": "s1.7",
           "start": 561,
           "heading": "Blessing at the end does not promise an easy process",
-          "scripture_mentions": [
-            "SCR-012"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh rejects prosperity teaching: following Jesus does not guarantee present wealth, beauty, success, or freedom from struggle. Struggling and non-struggling people alike love Jesus.",
             "A cake illustration separates unpleasant ingredients from the finished result. Flour, raw eggs, yeast, and extract are undesirable alone, but together they become cake; likewise, the Christian may endure hard ingredients now while awaiting final blessing.",
@@ -179,7 +125,6 @@
           "scripture_mentions": [
             "SCR-013",
             "SCR-014",
-            "SCR-015",
             "SCR-016",
             "SCR-017",
             "SCR-018",
@@ -211,12 +156,8 @@
           "heading": "The Lord’s message was confirmed by witnesses and apostolic signs",
           "scripture_mentions": [
             "SCR-021",
-            "SCR-022",
             "SCR-023",
-            "SCR-024",
-            "SCR-025",
-            "SCR-026",
-            "SCR-027"
+            "SCR-024"
           ],
           "bullets": [
             "Hebrews 2:3–4 says the salvation first announced by the Lord was confirmed by those who heard him, while God testified through signs, wonders, miracles, and gifts distributed by the Holy Spirit according to his will.",
@@ -312,8 +253,7 @@
           "start": 1455,
           "heading": "Psalm 8 marvels at the glory and dominion God gave humanity",
           "scripture_mentions": [
-            "SCR-033",
-            "SCR-034"
+            "SCR-033"
           ],
           "bullets": [
             "Josh identifies Psalm 8 as the author’s source and adds it to the week’s homework. David marvels that God would share power and glory with mere mortals.",
@@ -340,8 +280,7 @@
           "start": 1573,
           "heading": "“But we do see Jesus” is God’s answer to Adam’s failure",
           "scripture_mentions": [
-            "SCR-036",
-            "SCR-037"
+            "SCR-036"
           ],
           "bullets": [
             "Josh identifies “but we do see Jesus” as the message-title phrase and the most beautiful conjunction in Scripture. Jesus became human to suffer and die for human sin and restore the dominion lost through sin.",
@@ -385,8 +324,7 @@
           "start": 1725,
           "heading": "The pioneer’s path reveals that following Jesus means suffering before glory",
           "scripture_mentions": [
-            "SCR-043",
-            "SCR-044"
+            "SCR-043"
           ],
           "bullets": [
             "Hebrews 2:10 brings the hearer into the picture: God fittingly made the pioneer or captain of salvation perfect through suffering while bringing many sons and daughters to glory.",
@@ -451,9 +389,7 @@
           "start": 1944,
           "heading": "Satan remains active but has been disarmed of accusation",
           "scripture_mentions": [
-            "SCR-048",
-            "SCR-049",
-            "SCR-050"
+            "SCR-048"
           ],
           "bullets": [
             "Satan is alive and busy, but Jesus broke his power and disarmed him. Josh identifies accusation through sin and death as the weapon.",
@@ -480,9 +416,7 @@
           "start": 2040,
           "heading": "Abraham’s descendants are the faith-defined people Christ intentionally redeems",
           "scripture_mentions": [
-            "SCR-052",
-            "SCR-053",
-            "SCR-054"
+            "SCR-052"
           ],
           "bullets": [
             "Josh returns to Hebrews 2:16: the Son did not come to help angels but Abraham’s descendants.",
@@ -538,8 +472,7 @@
           "scripture_mentions": [
             "SCR-057",
             "SCR-077",
-            "SCR-058",
-            "SCR-059"
+            "SCR-058"
           ],
           "bullets": [
             "Christian drift grows when people forget that Jesus is still helping. Because temptation never conquered him, he is both qualified and willing to help.",
@@ -579,9 +512,7 @@
           "start": 2375,
           "heading": "The crucified Son is enthroned, interceding, helping, and always present",
           "scripture_mentions": [
-            "SCR-061",
-            "SCR-062",
-            "SCR-063"
+            "SCR-062"
           ],
           "bullets": [
             "The crucified one is now enthroned at God’s right hand, ruling his church, interceding for his people, and running to their cry by the Spirit. He is a present Lord who sees, knows, and helps.",
@@ -595,8 +526,6 @@
           "start": 2510,
           "heading": "A clear sight of the wounded Christ kills sin and reforms relationships",
           "scripture_mentions": [
-            "SCR-064",
-            "SCR-065",
             "SCR-055"
           ],
           "bullets": [
@@ -611,8 +540,7 @@
           "heading": "Hebrews testifies in the present tense: “We see Jesus”",
           "scripture_mentions": [
             "SCR-066",
-            "SCR-067",
-            "SCR-068"
+            "SCR-067"
           ],
           "bullets": [
             "Josh says the passage does not merely claim that believers can see Jesus, have seen him, or will see him, though he affirms those truths. He voices the church’s future hope with “Maranatha” and “Come, Lord Jesus.”",
@@ -628,7 +556,7 @@
       "heading": "Communion becomes the family’s united confession: “We see Jesus”",
       "scripture_mentions": [],
       "bullets": [
-        "Josh leads believers to the Lord’s Table, gathers the sermon’s pictures of Christ into one confession, calls attention to the body and blood that purchased salvation, quotes Paul’s life-and-death confidence, and begins a prayer that continues until the uploaded video ends."
+        "Josh leads believers to the Lord’s Table, gathers the sermon’s pictures of Christ into one confession, calls attention to the body and blood that purchased salvation, quotes Paul’s life-and-death confidence, and begins a closing prayer; the recording ends before it does."
       ],
       "children": [
         {
@@ -637,8 +565,7 @@
           "heading": "The Lord’s Table belongs to believers who confess Christ together",
           "scripture_mentions": [
             "SCR-062",
-            "SCR-069",
-            "SCR-070"
+            "SCR-069"
           ],
           "bullets": [
             "Josh invites believers to prepare the communion elements and asks those who are not in Christ—not yet owning him as Lord and Savior—to pass, because the family meal belongs to believers.",
@@ -652,13 +579,12 @@
           "start": 2701,
           "heading": "The church sees Christ from creation through incarnation, suffering, and glory",
           "scripture_mentions": [
-            "SCR-071",
             "SCR-072",
             "SCR-073"
           ],
           "bullets": [
             "Josh sees Jesus at the beginning, before created things were visible, speaking light and life. He then pictures the extraordinary divine infant entering Elizabeth’s presence in Mary’s womb.",
-            "At Mary’s greeting, John leaped in Elizabeth’s womb—an early sign that the Savior had come.",
+            "At Mary’s greeting, John danced in Elizabeth’s womb—an early sign that the Savior had come.",
             "The confession gathers Hebrews 2 again: the church sees the suffering Savior, the Christ crowned with glory, and the brother unashamed to call his people family."
           ],
           "children": []
@@ -668,7 +594,6 @@
           "start": 2751,
           "heading": "The broken body and poured-out blood make death gain",
           "scripture_mentions": [
-            "SCR-074",
             "SCR-075"
           ],
           "bullets": [
@@ -681,12 +606,10 @@
           "id": "s8.4",
           "start": 2792,
           "heading": "The closing prayer thanks God for revealing Christ from the beginning",
-          "scripture_mentions": [
-            "SCR-076"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh begins the closing prayer by thanking the Father for self-revelation. He looks back to the light of creation, God’s majesty and goodness, and humanity’s brief enjoyment of dominion in the garden as a glimpse of what could be.",
-            "The uploaded video ends at 47:00 while the prayer is still in progress; no completion beyond the verified captions is supplied here."
+            "The recording ends while he is still praying."
           ],
           "children": []
         }
@@ -755,42 +678,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-006",
-      "reference": "1 Timothy 6:12",
-      "reference_query": "1%20Timothy%206%3A12",
-      "treatment": "read/quoted",
-      "time": 255,
-      "phrase": "fight the good fight",
-      "anchor_node_id": "s1.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-007",
-      "reference": "John 16:13",
-      "reference_query": "John%2016%3A13",
-      "treatment": "referenced",
-      "time": 257,
-      "phrase": "to guide us into the truth",
-      "anchor_node_id": "s1.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-008",
-      "reference": "Hebrews 6:19",
-      "reference_query": "Hebrews%206%3A19",
-      "treatment": "referenced",
-      "time": 262,
-      "phrase": "the illustration of an anchor ... confident ... in the promises of God",
-      "anchor_node_id": "s1.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-009",
       "reference": "Hebrews 2:1-3a",
       "reference_query": "Hebrews%202%3A1-3a",
@@ -806,7 +693,7 @@
       "id": "SCR-010",
       "reference": "Romans 5:1",
       "reference_query": "Romans%205%3A1",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 402,
       "phrase": "we have peace with God through our Lord Jesus Christ",
       "anchor_node_id": "s1.5",
@@ -827,18 +714,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-012",
-      "reference": "Deuteronomy 28",
-      "reference_query": "Deuteronomy%2028",
-      "treatment": "referenced",
-      "time": 481,
-      "phrase": "when discussing the law ... blessings and curses",
-      "anchor_node_id": "s1.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-013",
       "reference": "Hebrews 2:2-3a",
       "reference_query": "Hebrews%202%3A2-3a",
@@ -852,23 +727,11 @@
     },
     {
       "id": "SCR-014",
-      "reference": "Leviticus 19:18; Matthew 22:39; Mark 12:31",
-      "reference_query": "Leviticus%2019%3A18%3B%20Matthew%2022%3A39%3B%20Mark%2012%3A31",
-      "treatment": "read/quoted",
+      "reference": "Leviticus 19:18",
+      "reference_query": "Leviticus%2019%3A18",
+      "treatment": "referenced",
       "time": 754,
       "phrase": "do you love others as you love yourself?",
-      "anchor_node_id": "s1.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-015",
-      "reference": "Matthew 5:44; Luke 6:28",
-      "reference_query": "Matthew%205%3A44%3B%20Luke%206%3A28",
-      "treatment": "referenced",
-      "time": 767,
-      "phrase": "when have you prayed for your enemies?",
       "anchor_node_id": "s1.8",
       "version": "NIV",
       "version_source": "default",
@@ -926,7 +789,7 @@
       "id": "SCR-020",
       "reference": "Luke 12:48",
       "reference_query": "Luke%2012%3A48",
-      "treatment": "read/quoted",
+      "treatment": "referenced",
       "time": 848,
       "phrase": "to everyone who has been given much, much will be demanded",
       "anchor_node_id": "s1.8",
@@ -947,18 +810,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-022",
-      "reference": "Acts 2:1-4",
-      "reference_query": "Acts%202%3A1-4",
-      "treatment": "referenced",
-      "time": 906,
-      "phrase": "They come out of the room filled with the Holy Spirit.",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-023",
       "reference": "Acts 2:43",
       "reference_query": "Acts%202%3A43",
@@ -972,47 +823,11 @@
     },
     {
       "id": "SCR-024",
-      "reference": "1 Corinthians 15:3-6",
-      "reference_query": "1%20Corinthians%2015%3A3-6",
+      "reference": "1 Corinthians 15:6",
+      "reference_query": "1%20Corinthians%2015%3A6",
       "treatment": "referenced",
       "time": 926,
       "phrase": "Jesus died ... was raised ... appeared to over five hundred eyewitnesses at one time",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-025",
-      "reference": "Matthew 27:62-66; 28:1-7",
-      "reference_query": "Matthew%2027%3A62-66%3B%2028%3A1-7",
-      "treatment": "referenced",
-      "time": 931,
-      "phrase": "he walked out of a sealed tomb that was under Roman guard",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-026",
-      "reference": "Acts 1:3, 9",
-      "reference_query": "Acts%201%3A3%2C%209",
-      "treatment": "referenced",
-      "time": 931,
-      "phrase": "forty days after ... he ascended to heaven, which was also witnessed",
-      "anchor_node_id": "s2.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-027",
-      "reference": "Romans 8:34",
-      "reference_query": "Romans%208%3A34",
-      "treatment": "referenced",
-      "time": 939,
-      "phrase": "to sit next to God where he now reigns, rules and intercedes for his people",
       "anchor_node_id": "s2.1",
       "version": "NIV",
       "version_source": "default",
@@ -1091,18 +906,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-034",
-      "reference": "Genesis 1:26-28",
-      "reference_query": "Genesis%201%3A26-28",
-      "treatment": "referenced",
-      "time": 1468,
-      "phrase": "When God created the first man and woman, he gave them dominion over his creation.",
-      "anchor_node_id": "s3.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-035",
       "reference": "Genesis 2:19-23",
       "reference_query": "Genesis%202%3A19-23",
@@ -1121,18 +924,6 @@
       "treatment": "exposited",
       "time": 1573,
       "phrase": "But we do see Jesus ... everything is under his feet ... captain of our salvation.",
-      "anchor_node_id": "s3.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-037",
-      "reference": "Romans 5:12-19",
-      "reference_query": "Romans%205%3A12-19",
-      "treatment": "referenced",
-      "time": 1593,
-      "phrase": "Through Adam, our federal head, we lost dominion ... Jesus regained dominion.",
       "anchor_node_id": "s3.5",
       "version": "NIV",
       "version_source": "default",
@@ -1211,18 +1002,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-044",
-      "reference": "Matthew 16:24-25; Mark 8:34-35; Luke 9:23-24",
-      "reference_query": "Matthew%2016%3A24-25%3B%20Mark%208%3A34-35%3B%20Luke%209%3A23-24",
-      "treatment": "referenced",
-      "time": 1764,
-      "phrase": "deny yourself ... trust in him ... and it leads to glory",
-      "anchor_node_id": "s4.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-045",
       "reference": "Hebrews 2:10",
       "reference_query": "Hebrews%202%3A10",
@@ -1259,36 +1038,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-049",
-      "reference": "Revelation 12:10",
-      "reference_query": "Revelation%2012%3A10",
-      "treatment": "referenced",
-      "time": 1957,
-      "phrase": "Satan’s weapon was accusation.",
-      "anchor_node_id": "s5.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-048",
       "reference": "John 8:44",
       "reference_query": "John%208%3A44",
       "treatment": "referenced",
       "time": 1964,
       "phrase": "Jesus called Satan a murderer and a liar.",
-      "anchor_node_id": "s5.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-050",
-      "reference": "Colossians 1:13; 1 Peter 2:9",
-      "reference_query": "Colossians%201%3A13%3B%201%20Peter%202%3A9",
-      "treatment": "referenced",
-      "time": 1977,
-      "phrase": "delivered from Satan’s dominion of darkness into Christ’s marvelous kingdom of light",
       "anchor_node_id": "s5.2",
       "version": "NIV",
       "version_source": "default",
@@ -1313,30 +1068,6 @@
       "treatment": "exposited",
       "time": 2040,
       "phrase": "it is not angels he helps, but Abraham’s descendants",
-      "anchor_node_id": "s5.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-053",
-      "reference": "Galatians 3:7, 29",
-      "reference_query": "Galatians%203%3A7%2C%2029",
-      "treatment": "referenced",
-      "time": 2053,
-      "phrase": "a descendant ... his covenant people, those of faith",
-      "anchor_node_id": "s5.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-054",
-      "reference": "Ephesians 1:4-7",
-      "reference_query": "Ephesians%201%3A4-7",
-      "treatment": "referenced",
-      "time": 2064,
-      "phrase": "intentional, targeted, before the foundation of the world redemption",
       "anchor_node_id": "s5.4",
       "version": "NIV",
       "version_source": "default",
@@ -1403,18 +1134,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-059",
-      "reference": "1 John 1:9; 2:1",
-      "reference_query": "1%20John%201%3A9%3B%202%3A1",
-      "treatment": "referenced",
-      "time": 2331,
-      "phrase": "when we do sin, he represents us before the throne of God and forgives us when we sincerely confess",
-      "anchor_node_id": "s6.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-060",
       "reference": "Matthew 14:28-31",
       "reference_query": "Matthew%2014%3A28-31",
@@ -1427,18 +1146,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-061",
-      "reference": "Romans 8:34",
-      "reference_query": "Romans%208%3A34",
-      "treatment": "referenced",
-      "time": 2381,
-      "phrase": "seated at the right hand of God, ruling his church, interceding for his people",
-      "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-062",
       "reference": "Matthew 28:20",
       "reference_query": "Matthew%2028%3A20",
@@ -1446,42 +1153,6 @@
       "time": 2399,
       "phrase": "I’m with you always.",
       "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-063",
-      "reference": "John 8:2-11",
-      "reference_query": "John%208%3A2-11",
-      "treatment": "referenced",
-      "time": 2448,
-      "phrase": "the one who silenced accusers and hypocrites on behalf of sinners who needed grace",
-      "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-064",
-      "reference": "Matthew 27:26; Mark 15:15; John 19:1",
-      "reference_query": "Matthew%2027%3A26%3B%20Mark%2015%3A15%3B%20John%2019%3A1",
-      "treatment": "referenced",
-      "time": 2510,
-      "phrase": "the flesh of Christ torn off his back by Roman flogging",
-      "anchor_node_id": "s7.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-065",
-      "reference": "Romans 8:29; 12:2",
-      "reference_query": "Romans%208%3A29%3B%2012%3A2",
-      "treatment": "referenced",
-      "time": 2555,
-      "phrase": "conformed to the living Christ, not the pattern of this world",
-      "anchor_node_id": "s7.3",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1500,23 +1171,11 @@
     },
     {
       "id": "SCR-067",
-      "reference": "1 Corinthians 16:22; Revelation 22:20",
-      "reference_query": "1%20Corinthians%2016%3A22%3B%20Revelation%2022%3A20",
-      "treatment": "read/quoted",
+      "reference": "Revelation 22:20",
+      "reference_query": "Revelation%2022%3A20",
+      "treatment": "referenced",
       "time": 2589,
       "phrase": "Maranatha. Come, Lord Jesus, come.",
-      "anchor_node_id": "s7.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-068",
-      "reference": "Hebrews 2:9",
-      "reference_query": "Hebrews%202%3A9",
-      "treatment": "exposited",
-      "time": 2593,
-      "phrase": "No, the text says we see Jesus.",
       "anchor_node_id": "s7.4",
       "version": "NIV",
       "version_source": "default",
@@ -1530,30 +1189,6 @@
       "time": 2659,
       "phrase": "the one who is tempted in every way just as we are, yet he did not sin",
       "anchor_node_id": "s8.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-070",
-      "reference": "Hebrews 2:9, 14-15",
-      "reference_query": "Hebrews%202%3A9%2C%2014-15",
-      "treatment": "referenced",
-      "time": 2667,
-      "phrase": "the one who tasted death for us ... destroyed the accuser’s power over us",
-      "anchor_node_id": "s8.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-071",
-      "reference": "Genesis 1:3; John 1:1-5",
-      "reference_query": "Genesis%201%3A3%3B%20John%201%3A1-5",
-      "treatment": "referenced",
-      "time": 2701,
-      "phrase": "Before anything was seen, we see him speaking the light of life.",
-      "anchor_node_id": "s8.2",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1583,18 +1218,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-074",
-      "reference": "Matthew 26:26-28; 1 Corinthians 11:23-26",
-      "reference_query": "Matthew%2026%3A26-28%3B%201%20Corinthians%2011%3A23-26",
-      "treatment": "referenced",
-      "time": 2751,
-      "phrase": "His body was broken for us. His blood was poured out for the forgiveness of sins.",
-      "anchor_node_id": "s8.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-075",
       "reference": "Philippians 1:21",
       "reference_query": "Philippians%201%3A21",
@@ -1602,18 +1225,6 @@
       "time": 2778,
       "phrase": "For to me, to live is Christ and to die is gain.",
       "anchor_node_id": "s8.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-076",
-      "reference": "Genesis 1:3, 26-28; 2:8-25",
-      "reference_query": "Genesis%201%3A3%2C%2026-28%3B%202%3A8-25",
-      "treatment": "referenced",
-      "time": 2801,
-      "phrase": "from the very beginning ... creation ... that brief enjoyment of dominion ... in the garden",
-      "anchor_node_id": "s8.4",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-12-16-powerful-believers",
   "title": "Powerful Believers",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2655,
   "video_id": "hnbPrrJJEoo",
   "video_url": "https://www.youtube.com/watch?v=hnbPrrJJEoo",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-21",
   "sermon_start": 10,
   "sermon_end": 2620,
   "card_summary": "Josh reads John 1:9-13 and calls insecure, imperfect believers to walk in the authority of adoption. The world and religious insiders both missed the true Light, but those who receive Jesus become children born of God. Trust his person and work, tell what he has done, and live as powerful sons and daughters.",
-  "section_intro": "The sermon begins at 00:10 after the children’s Christmas presentation. Josh confesses insecurity, reads John 1:9-13, develops the Word, life, light, and adoption, leads communion, and closes in prayer at 43:40. The outline preserves that order and every confirmed Scripture use.",
-  "page_title": "Powerful Believers — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Powerful Believers by Josh Wyatt at Crossroads Church, published December 16, 2025.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Powerful Believers"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 21, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV unless a spoken translation is named.",
-  "ledger_caption": "82 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

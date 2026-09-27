@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-09-15-burdened-but-blessed",
   "title": "Burdened but Blessed",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2660,
   "video_id": "fZ9A6vc7sP4",
   "video_url": "https://www.youtube.com/watch?v=fZ9A6vc7sP4",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 16,
   "sermon_end": 2650,
   "card_summary": "Josh follows James from poverty and wealth into temptation, endurance, and the goodness of God. Circumstances do not define a believer’s standing, temptation grows from disordered desire rather than from God, and every good gift comes from the Father who does not change. The church is called to endure under pressure, refuse blame, and trust the God who gives new birth through his Word.",
-  "section_intro": "The sermon begins at 00:16 and ends at 44:10. This chronological outline preserves Josh’s movement through James 1:9–18, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "Burdened but Blessed — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Burdened but Blessed by Josh Wyatt at Crossroads Church, published 2025-09-15.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Burdened but Blessed"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "64 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -126,7 +78,7 @@
         "Josh introduces why he and Kristen give at least ten percent of all they earn to the local church, then delivers his central confrontation: “Stop giving God your scraps and calling it generosity.” In a 90/10 frame, God is the generous giver of the ninety; returning ten does not make the recipient generous. Humans enter and leave the world with nothing; everything belongs to God.",
         "He contrasts complaints that giving “hurts” with Christ’s sacrifice. Jesus endured nails, public condemnation, the curse, forsakenness, and the rupture required to reconcile sinners to God. Josh therefore refuses to treat a tithe as sacrifice on the scale of the cross.",
         "Congregational application: Given the visible resources of the church body, the church should not face chronic financial inability, the care-center shelves should not remain empty, and genuine needs among members should not go unmet. Help must retain wise structure and avoid enabling destructive patterns, but Jesus’ people follow him into sacrifice.",
-        "Josh gives seven ordered reasons that he and Kristen tithe: Without the tithe, the Lord’s house cannot function as the hope of the world. Tithing expresses trust that God will meet their needs. It renews the mind rather than allowing conformity to the world. It unifies them with the church’s mission and purpose. It gives their work eternal significance; Kristen’s bank career contributes to ministry just as Josh’s church work does. It breaks greed and self-reliance and moves wealth from temporary use to eternal purpose. It shows that God is first in the Wyatt home.",
+        "Josh gives seven ordered reasons that he and Kristen tithe: Without the tithe, the Lord’s house cannot function as the hope of the world. Tithing expresses trust that God will meet their needs. It renews the mind rather than allowing conformity to the world. It unifies them with the church’s mission and purpose. It gives their work eternal significance; Kristen’s bank career contributes to ministry just as Josh’s church work does. It breaks greed and self-reliance and moves wealth from temporary use to eternal purpose. It shows that God is first in their home.",
         "Returning to James 1:11, Josh states the unavoidable outcome: either a person loses wealth or wealth loses the person—one goes broke or dies. Kingdom investment outlives both outcomes. Buildings decay, but lives reached by the gospel are sealed forever in Christ.",
         "Transition: how believers view self and wealth matters; Josh turns next to eternal rewards."
       ],
@@ -315,7 +267,7 @@
       "reference_query": "Hebrews+12%3A6",
       "treatment": "exposited",
       "time": 324,
-      "phrase": "Materially paraphrases the Father who “disciplines those he loves.”",
+      "phrase": "Paraphrases the Father who “disciplines those he loves.”",
       "anchor_node_id": "s2",
       "version": "NIV",
       "version_source": "default",
@@ -375,7 +327,7 @@
       "reference_query": "1+Timothy+6%3A7",
       "treatment": "exposited",
       "time": 750,
-      "phrase": "Materially paraphrases bringing nothing into the world and taking nothing out.",
+      "phrase": "Paraphrases bringing nothing into the world and taking nothing out.",
       "anchor_node_id": "s4",
       "version": "NIV",
       "version_source": "default",
@@ -627,7 +579,7 @@
       "reference_query": "Galatians+6%3A1",
       "treatment": "referenced",
       "time": 1823,
-      "phrase": "Materially applies restoration by other believers when someone falls into sin.",
+      "phrase": "Applies restoration by other believers when someone falls into sin.",
       "anchor_node_id": "s7",
       "version": "NIV",
       "version_source": "default",
@@ -651,7 +603,7 @@
       "reference_query": "Matthew+5%3A28",
       "treatment": "read/quoted",
       "time": 1882,
-      "phrase": "Materially quotes Jesus on looking at a woman lustfully and explains the movement from noticing to chosen lust.",
+      "phrase": "Quotes Jesus on looking at a woman lustfully and explains the movement from noticing to chosen lust.",
       "anchor_node_id": "s8",
       "version": "NIV",
       "version_source": "default",
@@ -759,7 +711,7 @@
       "reference_query": "1+Peter+4%3A17",
       "treatment": "exposited",
       "time": 2332,
-      "phrase": "Materially paraphrases future judgment beginning with the church/household of God.",
+      "phrase": "Paraphrases future judgment beginning with the church/household of God.",
       "anchor_node_id": "s9",
       "version": "NIV",
       "version_source": "default",

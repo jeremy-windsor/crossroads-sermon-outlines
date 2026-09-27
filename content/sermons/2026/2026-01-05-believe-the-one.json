@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-01-05-believe-the-one",
   "title": "Believe the One",
   "speaker": "Brad Hinkle",
@@ -8,57 +8,9 @@
   "duration_seconds": 2260,
   "video_id": "Se3Kd0dU56g",
   "video_url": "https://www.youtube.com/watch?v=Se3Kd0dU56g",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-21",
   "sermon_start": 9,
   "sermon_end": 2226,
   "card_summary": "Brad Hinkle, an elder, opens 2026 from Luke 4 and 2 Kings 5. A captured Israelite girl and Naaman’s servants speak up so a Gentile enemy commander is washed in the Jordan. Believe the One, then be the one: Kevin’s seven absentees at a baptism, Ken praying on the 101, a six-year-old asking who Jesus is. Write two names. Your unique story qualifies you. God does not call the qualified; he qualifies the called.",
-  "section_intro": "The sermon begins at 00:09 after music with a New Year greeting. Brad answers the height questions, tells Kevin’s baptism, reads Luke 4 and 2 Kings 5, and closes in prayer. The chronological outline keeps Naaman, the girl, the servants, gospel application, and the amen.",
-  "page_title": "Believe the One — Brad Hinkle | Sermon Outline",
-  "description": "A chronological study outline of Believe the One by Brad Hinkle at Crossroads Church, published January 5, 2026.",
-  "subtitle": "Brad Hinkle · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Brad Hinkle’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Believe the One"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 21, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV unless a spoken translation is named.",
-  "ledger_caption": "20 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-08-10-born-bent",
   "title": "Born Bent",
   "speaker": "Elijah Stanley",
@@ -8,57 +8,9 @@
   "duration_seconds": 2625,
   "video_id": "2HZGv5rcrtk",
   "video_url": "https://www.youtube.com/watch?v=2HZGv5rcrtk",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-04",
   "sermon_start": 38,
   "sermon_end": null,
   "card_summary": "Elijah Stanley follows David’s confession in Psalm 51:3–5 from the collapse of self-defense, through the way tolerated compromise formed David’s later fall, to sin’s deepest character as rebellion against God and its reach into human nature. The sermon then turns to Jesus as the greater David: the sinless King bears judgment, creates clean hearts, preserves his people, and calls guilty sinners out of hiding into grace.",
-  "section_intro": "The sermon begins at 00:38 after opening non-sermon audio. Elijah uses social-media curation and a deceptively advertised dining table to expose the instinct to manage appearances, then reads Psalm 51:3–5. The resulting outline preserves his chronological movement from confession, through David’s earlier compromises and the doctrine of sin, to the cross, new birth, kingdom hope, invitation, and closing prayer.",
-  "page_title": "Born Bent — Elijah Stanley | Sermon Outline",
-  "description": "A chronological study outline of Born Bent by Elijah Stanley at Crossroads Church, published August 10, 2026.",
-  "subtitle": "Elijah Stanley · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Elijah Stanley’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Born Bent"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 4, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "55 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -103,7 +55,7 @@
             "SCR-003"
           ],
           "bullets": [
-            "Elijah connects to Pastor Josh’s prior message: Psalm 51 shows David after Nathan’s confrontation has stripped away his management of the Bathsheba scandal.",
+            "Elijah connects to Pastor Josh’s prior message: Psalm 51 shows David after Nathan’s confrontation has stripped away his excuses.",
             "Exposure is frightening but merciful; the more dangerous place is remaining convinced that there is nothing to confess.",
             "He reads Psalm 51:3–5 as the controlling text: David knows his transgressions, names his evil before God, vindicates God’s judgment, and admits sin reaches back to conception."
           ],
@@ -311,7 +263,7 @@
           "heading": "The offense is measured by the worth of the one offended",
           "scripture_mentions": [],
           "bullets": [
-            "Elijah argues that the seriousness of an offense rises with the dignity and authority of the one offended: killing an insect, striking a person, and attacking a judge or law-enforcement officer are not treated as morally identical acts.",
+            "Elijah argues that the seriousness of an offense rises with the dignity and authority of the one offended: crushing an insect, striking a person, and attacking a judge or law-enforcement officer are not treated as morally identical acts.",
             "Because sin is committed against the infinitely worthy Creator, its gravity cannot be measured only by the visible size of the act or its immediate human consequences.",
             "The rebellion is also irrational dependence: sinners borrow breath, heartbeat, strength, and life from God while using those gifts to resist his rule."
           ],
@@ -386,9 +338,7 @@
           "id": "s5.3",
           "start": 1714,
           "heading": "Holy wrath makes Calvary necessary",
-          "scripture_mentions": [
-            "SCR-033"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "God’s wrath is not love’s opposite but holy opposition to what destroys what he loves, analogous to righteous anger at trafficking or harm to a child.",
             "Divine wrath is settled, perfect justice rather than uncontrolled rage; Scripture, Jesus, and the apostles do not apologize for it.",
@@ -470,9 +420,7 @@
           "id": "s7.1",
           "start": 2210,
           "heading": "Where David failed, Christ prevailed",
-          "scripture_mentions": [
-            "SCR-041"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "David stole another man’s bride; Jesus gave himself for his bride. David killed an innocent man to cover his own sin; Jesus was killed by guilty people to cover theirs.",
             "David deserved judgment and pleaded for mercy; Jesus deserved glory and willingly took the place of those under judgment.",
@@ -487,7 +435,7 @@
           "scripture_mentions": [],
           "bullets": [
             "God’s holy wrath was neither ignored nor explained away but poured out on the sinless Son. At Calvary sin is punished and sinners are forgiven without conflict between justice and mercy.",
-            "The gospel does not save good people—there are none—but guilty rebels, adulterers, liars, idolaters, and the proud, including people like David, Elijah, and the congregation.",
+            "The gospel does not save good people—there are none—but guilty rebels, adulterers, liars, idolaters, and the prideful, including people like David, Elijah, and the congregation.",
             "Repentance does not earn favor; Christ has earned what sinners could not. The crushed are not beyond mercy, and the self-confident must compare themselves to Christ’s spotless holiness rather than to neighbors or notorious sinners."
           ],
           "children": []
@@ -498,8 +446,7 @@
           "heading": "The prayer for a clean heart becomes gospel hope",
           "scripture_mentions": [
             "SCR-042",
-            "SCR-043",
-            "SCR-044"
+            "SCR-043"
           ],
           "bullets": [
             "Elijah reads Psalm 51:10–12: create a pure heart, renew a steadfast spirit, preserve God’s presence and Spirit, and restore salvation’s joy with a willing spirit.",
@@ -538,8 +485,6 @@
           "start": 2424,
           "heading": "Christ’s kingdom, gospel, and church will not fail",
           "scripture_mentions": [
-            "SCR-048",
-            "SCR-049",
             "SCR-050"
           ],
           "bullets": [
@@ -573,8 +518,7 @@
       "start": 2509,
       "heading": "Closing prayer: create in us a clean heart",
       "scripture_mentions": [
-        "SCR-054",
-        "SCR-055"
+        "SCR-054"
       ],
       "bullets": [
         "Elijah thanks God for everlasting mercy and love toward sinners and asks that the church know and be known by him.",
@@ -674,7 +618,7 @@
       "reference": "1 Samuel 25:30-31",
       "reference_query": "1+Samuel+25%3A30-31",
       "treatment": "read/quoted",
-      "time": 548,
+      "time": 578,
       "phrase": "My lord will not have on his conscience the staggering burden of needless bloodshed or of having avenged himself.",
       "anchor_node_id": "s3.1",
       "version": "NIV",
@@ -703,7 +647,7 @@
       "anchor_node_id": "s3.2",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Auto-captions garble Ahinoam of Jezreel as ‘a henoim of Jezrael’; the canonical names are normalized here."
+      "reference_note": null
     },
     {
       "id": "SCR-011",
@@ -715,14 +659,14 @@
       "anchor_node_id": "s3.3",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Auto-captions render Hebron as ‘Hebrin’; the place name is normalized here."
+      "reference_note": null
     },
     {
       "id": "SCR-012",
       "reference": "Deuteronomy 17:17",
       "reference_query": "Deuteronomy+17%3A17",
       "treatment": "read/quoted",
-      "time": 656,
+      "time": 676,
       "phrase": "He shall not acquire many wives for himself, lest his heart turn away.",
       "anchor_node_id": "s3.3",
       "version": "NIV",
@@ -746,19 +690,19 @@
       "reference": "2 Samuel 11:3",
       "reference_query": "2+Samuel+11%3A3",
       "treatment": "read/quoted",
-      "time": 805,
-      "phrase": "She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.",
+      "time": 811,
+      "phrase": "She is Bathsheba ... and the wife of Uriah the Hittite.",
       "anchor_node_id": "s3.4",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Auto-captions garble Bathsheba, Eliam, and Hittite; the names are normalized from the identifiable verse."
+      "reference_note": null
     },
     {
       "id": "SCR-015",
       "reference": "2 Samuel 23:39",
       "reference_query": "2+Samuel+23%3A39",
       "treatment": "referenced",
-      "time": 805,
+      "time": 826,
       "phrase": "He’s one of David’s mighty men, a loyal servant, fighting David’s battles.",
       "anchor_node_id": "s3.4",
       "version": "NIV",
@@ -781,8 +725,8 @@
       "id": "SCR-017",
       "reference": "James 1:14-15",
       "reference_query": "James+1%3A14-15",
-      "treatment": "exposited",
-      "time": 994,
+      "treatment": "read/quoted",
+      "time": 1012,
       "phrase": "Each person is tempted when they are dragged away by their own evil desire and enticed ... sin, when it is full-grown, gives birth to death.",
       "anchor_node_id": "s3.5",
       "version": "NIV",
@@ -842,8 +786,8 @@
       "reference": "Matthew 5:23-24",
       "reference_query": "Matthew+5%3A23-24",
       "treatment": "referenced",
-      "time": 1164,
-      "phrase": "Now go make the phone call, knock on the door, confess the sin, own the damage.",
+      "time": 1168,
+      "phrase": "The cleansing of Psalm 51 without the obedience of Matthew 5.",
       "anchor_node_id": "s4.1",
       "version": "NIV",
       "version_source": "default",
@@ -865,8 +809,8 @@
       "id": "SCR-024",
       "reference": "Genesis 3:1-6",
       "reference_query": "Genesis+3%3A1-6",
-      "treatment": "exposited",
-      "time": 1229,
+      "treatment": "read/quoted",
+      "time": 1254,
       "phrase": "The temptation was the offer to be like God, knowing good and evil ... You can define it for yourself.",
       "anchor_node_id": "s4.2",
       "version": "NIV",
@@ -877,8 +821,8 @@
       "id": "SCR-025",
       "reference": "Romans 8:7",
       "reference_query": "Romans+8%3A7",
-      "treatment": "exposited",
-      "time": 1292,
+      "treatment": "read/quoted",
+      "time": 1310,
       "phrase": "The mind governed by the flesh is hostile to God. It does not submit to God’s law, nor can it do so.",
       "anchor_node_id": "s4.2",
       "version": "NIV",
@@ -913,8 +857,8 @@
       "id": "SCR-028",
       "reference": "Hebrews 4:13",
       "reference_query": "Hebrews+4%3A13",
-      "treatment": "exposited",
-      "time": 1503,
+      "treatment": "read/quoted",
+      "time": 1506,
       "phrase": "Nothing in all creation is hidden from God’s sight. Everything is uncovered and laid bare.",
       "anchor_node_id": "s4.3",
       "version": "NIV",
@@ -925,8 +869,8 @@
       "id": "SCR-029",
       "reference": "Psalm 51:4",
       "reference_query": "Psalm+51%3A4",
-      "treatment": "exposited",
-      "time": 1545,
+      "treatment": "referenced",
+      "time": 1564,
       "phrase": "Against you, O God, have I sinned.",
       "anchor_node_id": "s4.4",
       "version": "NIV",
@@ -937,8 +881,8 @@
       "id": "SCR-030",
       "reference": "Psalm 51:4",
       "reference_query": "Psalm+51%3A4",
-      "treatment": "exposited",
-      "time": 1566,
+      "treatment": "read/quoted",
+      "time": 1568,
       "phrase": "You are right in your verdict and justified when you judge.",
       "anchor_node_id": "s4.4",
       "version": "NIV",
@@ -949,8 +893,8 @@
       "id": "SCR-031",
       "reference": "Romans 1:18",
       "reference_query": "Romans+1%3A18",
-      "treatment": "exposited",
-      "time": 1672,
+      "treatment": "read/quoted",
+      "time": 1683,
       "phrase": "The wrath of God is being revealed from heaven against all the godlessness and wickedness of people.",
       "anchor_node_id": "s5.2",
       "version": "NIV",
@@ -962,21 +906,9 @@
       "reference": "Romans 6:23",
       "reference_query": "Romans+6%3A23",
       "treatment": "referenced",
-      "time": 1692,
-      "phrase": "Death is not natural. It is the wages of sin.",
+      "time": 1708,
+      "phrase": "The wages of sin.",
       "anchor_node_id": "s5.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-033",
-      "reference": "Genesis 18:25",
-      "reference_query": "Genesis+18%3A25",
-      "treatment": "referenced",
-      "time": 1757,
-      "phrase": "He is the holy judge of all the earth.",
-      "anchor_node_id": "s5.3",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1066,18 +998,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-041",
-      "reference": "Ephesians 5:25",
-      "reference_query": "Ephesians+5%3A25",
-      "treatment": "referenced",
-      "time": 2210,
-      "phrase": "Jesus is the King who gave his life for his bride.",
-      "anchor_node_id": "s7.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-042",
       "reference": "Psalm 51:10-12",
       "reference_query": "Psalm+51%3A10-12",
@@ -1102,23 +1022,11 @@
       "reference_note": null
     },
     {
-      "id": "SCR-044",
-      "reference": "Luke 1:32-33",
-      "reference_query": "Luke+1%3A32-33",
-      "treatment": "referenced",
-      "time": 2381,
-      "phrase": "The greater David now sits upon an everlasting throne ... over a kingdom that can never fail.",
-      "anchor_node_id": "s7.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-045",
       "reference": "Ezekiel 36:26",
       "reference_query": "Ezekiel+36%3A26",
       "treatment": "referenced",
-      "time": 2403,
+      "time": 2414,
       "phrase": "He is taking hearts of stone and replacing them with hearts of flesh.",
       "anchor_node_id": "s8.1",
       "version": "NIV",
@@ -1130,7 +1038,7 @@
       "reference": "John 10:27-29",
       "reference_query": "John+10%3A27-29",
       "treatment": "referenced",
-      "time": 2403,
+      "time": 2419,
       "phrase": "He calls and his sheep hear his voice.",
       "anchor_node_id": "s8.1",
       "version": "NIV",
@@ -1142,33 +1050,9 @@
       "reference": "John 6:39",
       "reference_query": "John+6%3A39",
       "treatment": "referenced",
-      "time": 2403,
+      "time": 2427,
       "phrase": "He will not lose a single one whom the Father has given him.",
       "anchor_node_id": "s8.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-048",
-      "reference": "Revelation 11:15",
-      "reference_query": "Revelation+11%3A15",
-      "treatment": "referenced",
-      "time": 2424,
-      "phrase": "The kingdoms of this world belong to him.",
-      "anchor_node_id": "s8.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-049",
-      "reference": "Isaiah 55:11",
-      "reference_query": "Isaiah+55%3A11",
-      "treatment": "referenced",
-      "time": 2424,
-      "phrase": "His gospel ... will accomplish everything for which he sent it.",
-      "anchor_node_id": "s8.2",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1228,18 +1112,6 @@
       "treatment": "read/quoted",
       "time": 2530,
       "phrase": "Would you create in us a clean heart? Would you renew a right spirit within us? Grant us your power to sustain us.",
-      "anchor_node_id": "s9",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-055",
-      "reference": "1 Corinthians 10:31",
-      "reference_query": "1+Corinthians+10%3A31",
-      "treatment": "referenced",
-      "time": 2572,
-      "phrase": "Everything we do, we want to do for your glory.",
       "anchor_node_id": "s9",
       "version": "NIV",
       "version_source": "default",

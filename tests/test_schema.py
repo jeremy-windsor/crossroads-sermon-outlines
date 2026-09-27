@@ -17,11 +17,39 @@ def series():
     return deepcopy(render.series_records()[0])
 
 
-def test_all_records_validate_and_keep_distinct_summaries():
+def test_all_records_validate():
     for record in render.records():
         validate(record)
-        assert record['card_summary'] != record['section_intro']
         assert isinstance(record['duration'], str)
+
+
+@pytest.mark.parametrize('bad', [
+    'Automatic captions render this as “repent.”',
+    'The transcript never names the verse.',
+    'The prayer continues until the uploaded video ends.',
+    'Materially paraphrases the Father who disciplines.',
+    'Caption check: Josh reads verse 13.',
+    'This row is omitted from the reference table.',
+    'The sermon begins after an uncaptioned opening.',
+])
+def test_reader_text_rejects_process_notes(record, bad):
+    node = record['movements'][0]
+    node['bullets'] = [bad]
+    with pytest.raises(InvalidRecord, match='process wording'):
+        validate(record)
+    record['movements'][0]['bullets'] = ['ok']
+    record['ledger'][0]['reference_note'] = bad
+    with pytest.raises(InvalidRecord, match='process wording'):
+        validate(record)
+
+
+def test_reader_text_rejects_speaker_surname_alone(record):
+    record['speaker'] = 'Josh Wyatt'
+    record['movements'][0]['bullets'] = ['God is first in the Wyatt home.']
+    with pytest.raises(InvalidRecord, match='first name'):
+        validate(record)
+    record['movements'][0]['bullets'] = ['Josh Wyatt tells the story; Josh closes in prayer.']
+    validate(record)
 
 
 @pytest.mark.parametrize('bad', ['<script>alert(1)</script>', 'x > y', '{color:red}', 'style="x"', 'assets/site.css', '../sermons/foo.html', 'color: red;'])
@@ -84,7 +112,7 @@ def test_duplicate_ids_and_disordered_timestamps(record):
 
 
 def test_rejects_duplicate_json_keys(record):
-    source = json.dumps(record).replace('"schema_version": 1', '"schema_version": 1, "schema_version": 1')
+    source = json.dumps(record).replace('"schema_version": 2', '"schema_version": 2, "schema_version": 2')
     with pytest.raises(InvalidRecord, match='Duplicate JSON key'):
         loads(source)
 

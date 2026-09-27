@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-03-30-pour-it-out",
   "title": "Pour it Out!",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2880,
   "video_id": "Lxy8tD88HdQ",
   "video_url": "https://www.youtube.com/watch?v=Lxy8tD88HdQ",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 30,
   "sermon_end": 2858,
   "card_summary": "Josh Wyatt closes Broken from Matthew 26 in three scenes: Bethany, the upper room, and Gethsemane. Mary pours out costly perfume; Judas calls it waste. Nothing done for Jesus in love is ever wasted. Jesus feeds Judas, then gives bread and cup. In the garden he drinks the cup of wrath so the church can drink a cup that does not perish. Pour it out: song, gift, mission, need. If Christ wins like Rahab walking out of Jericho, stop calculating and pour it all out.",
-  "section_intro": "The sermon begins at 00:30 with Josh naming this the final week of Broken. He maps Matthew 26 into three coordinate-and-conflict scenes, ends in Gethsemane prayer and circle communion, and tells the church a praying church is not a dying church. The chronological outline keeps Mary’s worship, the Judas warning, Philippians 3, the table, Gethsemane, and the Rahab picture.",
-  "page_title": "Pour it Out! — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Pour it Out! by Josh Wyatt at Crossroads Church, published March 30, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Pour it Out!"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "32 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

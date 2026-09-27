@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-09-08-pressure-that-produces",
   "title": "Pressure That Produces",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3155,
   "video_id": "hP3wYi6zOcs",
   "video_url": "https://www.youtube.com/watch?v=hP3wYi6zOcs",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 22,
   "sermon_end": 3143,
   "card_summary": "Josh opens James by showing that trials expose and form genuine faith. Pressure is not pointless when perseverance is allowed to finish its work, and believers who lack wisdom are told to ask God without treating him as a backup plan. The sermon calls the church to receive hardship as a place where mature, steadfast dependence on Christ can grow.",
-  "section_intro": "The sermon begins at 00:22 and ends at 52:23. This chronological outline preserves Josh’s movement through James 1:1–8, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "Pressure That Produces — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Pressure That Produces by Josh Wyatt at Crossroads Church, published 2025-09-08.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Pressure That Produces"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "60 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -615,7 +567,7 @@
       "reference_query": "Romans+5%3A3%E2%80%934",
       "treatment": "exposited",
       "time": 1485,
-      "phrase": "Perseverance means enduring hardship and produces character; identified as a Wyatt family memory passage.",
+      "phrase": "Perseverance means enduring hardship and produces character; Josh identifies it as a family memory passage.",
       "anchor_node_id": "s5",
       "version": "NIV",
       "version_source": "default",

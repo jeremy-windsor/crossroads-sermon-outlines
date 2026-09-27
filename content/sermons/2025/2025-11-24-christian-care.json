@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2025-11-24-christian-care",
   "title": "Christian Care",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2905,
   "video_id": "DrPqOfEqUaw",
   "video_url": "https://www.youtube.com/watch?v=DrPqOfEqUaw",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-27",
   "sermon_start": 16,
   "sermon_end": 2870,
   "card_summary": "Josh closes James with a shared life of prayer, praise, healing, confession, intercession, restoration, and service. Trouble calls for prayer, happiness for praise, and sickness for the elders’ spiritual and practical care. Faith trusts God’s will rather than techniques or personalities. The church must restore wanderers, pursue the lost, leave the spectator stands, and become active servants of one another.",
-  "section_intro": "The sermon begins at 00:16 and ends at 47:50. This chronological outline preserves Josh’s movement through James 5:13–20, including the series context, illustrations, applications, response, and closing prayer or communion where present.",
-  "page_title": "Christian Care — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Christian Care by Josh Wyatt at Crossroads Church, published 2025-11-24.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Christian Care"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 27, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full Bible text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the recorded translation.",
-  "ledger_caption": "65 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -463,7 +415,7 @@
       "reference_query": "John+19%3A30",
       "treatment": "read/quoted",
       "time": 461,
-      "phrase": "Quotes Jesus’ final declaration, “It is finished,” after giving the Greek term (captioned approximately as “Tatelsty”).",
+      "phrase": "Quotes Jesus’ final declaration, “It is finished,” after giving the Greek term.",
       "anchor_node_id": "s2",
       "version": "NIV",
       "version_source": "default",

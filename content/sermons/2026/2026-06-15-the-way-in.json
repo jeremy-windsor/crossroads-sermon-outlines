@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-06-15-the-way-in",
   "title": "The Way In",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2845,
   "video_id": "N4jGoqIisF4",
   "video_url": "https://www.youtube.com/watch?v=N4jGoqIisF4",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 10,
   "sermon_end": 2842,
   "card_summary": "Josh Wyatt opens Hebrews 8–9 by presenting Jesus as the fully divine and fully human mediator: the seated high priest who serves in heaven, mediates a better covenant, and fulfills God’s better promises. Jeremiah’s covenant promises create a covenant people, write God’s law on changed hearts, forgive sin completely, and secure eternal blessing. The tabernacle’s curtains, repeated sacrifices, and Day of Atonement once preached restricted access, but Christ entered the heavenly sanctuary with his own blood once for all, cleansing the conscience and bringing his people all the way into God’s presence.",
-  "section_intro": "The sermon begins with Josh Wyatt’s greeting at 00:10 and continues through his closing communion prayer and amen at 47:22; the opening music and final trailing seconds are excluded. Josh follows Hebrews 8:1–9:15 from Christ’s superior priesthood and covenant through Jeremiah’s promises, the earthly tabernacle, the Day of Atonement, and Jesus’ once-for-all entry into the heavenly sanctuary. Along the way he applies covenant faithfulness to church life, complete forgiveness to remembered failure, and Christ’s finished work to Christian rest, joyful obedience, and service.",
-  "page_title": "The Way In — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of The Way In by Josh Wyatt at Crossroads Church, published June 15, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "The Way In"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 6, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "78 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -410,7 +362,6 @@
           "heading": "God’s ‘I will’ meets Jesus’ ‘It is finished’",
           "scripture_mentions": [
             "SCR-039",
-            "SCR-040",
             "SCR-077"
           ],
           "bullets": [
@@ -452,10 +403,7 @@
           "start": 1642,
           "heading": "Remember the Savior’s mercy more than the failure",
           "scripture_mentions": [
-            "SCR-043",
-            "SCR-044",
-            "SCR-045",
-            "SCR-046"
+            "SCR-043"
           ],
           "bullets": [
             "Josh calls fixation on past failure an obstacle even for mature Christians and quotes Psalm 126: ‘The Lord has done great things for us, and we are filled with joy.’",
@@ -549,7 +497,7 @@
           ],
           "bullets": [
             "Josh asks listeners to remember the high priest’s week whenever airport security searches them. He describes isolation from home, protection from uncleanness, repeated washings, heart preparation, and a sleepless night of prayer and Scripture.",
-            "On Yom Kippur the priest washed, wore unstained white linen, and entered with blood for his own sins. Josh locates the ceremony in Leviticus 16 and says it involved three bulls and three successive entries—first for his own sins, then for the priests, and finally for all Israel—with a fresh full bath and new white linen between entries.",
+            "On Yom Kippur the priest washed, wore unstained white linen, and entered with blood for his own sins. Josh locates the ceremony in Leviticus 16 and says the priest offered three bulls, then describes three entries—for his own sins, for the priests, and for all the people—with a fresh full bath and new white linen between entries.",
             "The ephod’s tribal stones pictured the people carried on the priest’s heart as he represented them before God. The public watched because their sins hung in the balance."
           ],
           "children": []
@@ -761,7 +709,7 @@
           ],
           "bullets": [
             "As the church holds the elements representing Christ’s broken body and spilled blood, Josh asks them to picture Calvary—Golgotha, the place of the skull—and Jesus’ blood falling from his beaten body into the soil. He uses blood falling on the skull as a picture that humanity can be brought back to life.",
-            "He turns that image toward life from death: Christ is the firstfruits, and many will follow. Josh asks the Lord to bring his people wherever he goes and closes, ‘We love you forever. Amen.’"
+            "He turns that image toward life from death: Josh calls the Lord the firstfruits, and many will follow. Josh asks the Lord to bring his people wherever he goes and closes, ‘We love you forever. Amen.’"
           ],
           "children": []
         }
@@ -953,7 +901,7 @@
       "id": "SCR-016",
       "reference": "Psalm 110:1",
       "reference_query": "Psalm%20110%3A1",
-      "treatment": "exposited",
+      "treatment": "read/quoted",
       "time": 509,
       "phrase": "Sit at my right hand until I make your enemies a footstool",
       "anchor_node_id": "s2.3",
@@ -966,7 +914,7 @@
       "reference": "Psalm 110:4",
       "reference_query": "Psalm%20110%3A4",
       "treatment": "exposited",
-      "time": 517,
+      "time": 523,
       "phrase": "only a priest after the order of Melchizedek could be enthroned",
       "anchor_node_id": "s2.3",
       "version": "NIV",
@@ -1291,19 +1239,7 @@
       "reference_query": "John%2019%3A30",
       "treatment": "read/quoted",
       "time": 1459,
-      "phrase": "the new covenant says, “It is finished; believe and live”",
-      "anchor_node_id": "s4.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-040",
-      "reference": "John 19:30",
-      "reference_query": "John%2019%3A30",
-      "treatment": "read/quoted",
-      "time": 1472,
-      "phrase": "It is finished",
+      "phrase": "The new covenant says, “It is finished; believe and live.” ... Jesus says, “It is finished.”",
       "anchor_node_id": "s4.2",
       "version": "NIV",
       "version_source": "default",
@@ -1340,42 +1276,6 @@
       "treatment": "read/quoted",
       "time": 1655,
       "phrase": "The Lord has done great things for us, and we are filled with joy",
-      "anchor_node_id": "s4.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-044",
-      "reference": "Psalm 126:3",
-      "reference_query": "Psalm%20126%3A3",
-      "treatment": "exposited",
-      "time": 1702,
-      "phrase": "The Lord has done great things for me",
-      "anchor_node_id": "s4.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-045",
-      "reference": "Psalm 23:4",
-      "reference_query": "Psalm%2023%3A4",
-      "treatment": "referenced",
-      "time": 1711,
-      "phrase": "the shepherd who walked with us through it",
-      "anchor_node_id": "s4.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-046",
-      "reference": "Psalm 126:3",
-      "reference_query": "Psalm%20126%3A3",
-      "treatment": "read/quoted",
-      "time": 1786,
-      "phrase": "The Lord has done great things for us, and we’re filled with joy",
       "anchor_node_id": "s4.5",
       "version": "NIV",
       "version_source": "default",
@@ -1523,7 +1423,7 @@
       "anchor_node_id": "s6.4",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Automatic captions render ‘conscience’ as ‘consciousness’ during this reading."
+      "reference_note": null
     },
     {
       "id": "SCR-058",
@@ -1703,7 +1603,7 @@
       "anchor_node_id": "s7.4",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Automatic captions render the opening of this phrase as ‘you are but first fruits.’"
+      "reference_note": null
     }
   ]
 }

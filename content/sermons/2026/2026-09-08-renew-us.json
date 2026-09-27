@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-09-08-renew-us",
   "title": "Renew US",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3385,
   "video_id": "EPBm4nXknQQ",
   "video_url": "https://www.youtube.com/watch?v=EPBm4nXknQQ",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 41,
   "sermon_end": 3381,
-  "card_summary": "Josh Wyatt closes a six-week walk through Psalm 51 at verses 18–19, where David’s prayer turns from restore me to restore us. Sin is a load-bearing wall: private choices send cracks through marriage, church, and city. True repentance takes responsibility for what it can repair, entrusts to God what it cannot, protects the unity of Christ’s body, and offers worship that puts the worshiper on the altar. Grace rebuilds through a greater David—Jesus—who gathers living stones the gates of hell cannot overcome.",
-  "section_intro": "The sermon begins at 00:41 after an uncaptioned musical opening. Josh frames the finale of the Psalm 51 series with a load-bearing-wall illustration, reads Psalm 51:18–19, and keeps the closing invitation, elder ministry, and Lord’s Supper call. Non-material opening media is excluded.",
-  "page_title": "Renew US — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Renew US by Josh Wyatt at Crossroads Church, published September 8, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Renew US"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "41 confirmed Scripture units, in sermon order",
+  "card_summary": "Josh Wyatt closes the series through Psalm 51 at verses 18–19, where David’s prayer turns from restore me to restore us. Sin is a load-bearing wall: private choices send cracks through marriage, church, and city. True repentance takes responsibility for what it can repair, entrusts to God what it cannot, protects the unity of Christ’s body, and offers worship that puts the worshiper on the altar. Grace rebuilds through a greater David—Jesus—who gathers living stones the gates of hell cannot overcome.",
   "movements": [
     {
       "id": "s1",
@@ -75,9 +27,7 @@
           "id": "s1.1",
           "start": 159,
           "heading": "Sin works the same way",
-          "scripture_mentions": [
-            "SCR-001"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "David had swung a hammer in the privacy of his life. As Psalm 51 closes, he is no longer thinking only about his heart, joy, or restoration.",
             "He is thinking about the walls of Jerusalem, because when a Christian falls the damage rarely stays in the room where the sin happened."
@@ -243,7 +193,7 @@
     },
     {
       "id": "s4",
-      "start": 1011,
+      "start": 962,
       "heading": "Sin damages more than the sinner",
       "scripture_mentions": [
         "SCR-019"
@@ -310,7 +260,7 @@
       "children": [
         {
           "id": "s5.1",
-          "start": 1576,
+          "start": 1496,
           "heading": "Repentance is not a time-travel eraser",
           "scripture_mentions": [],
           "bullets": [
@@ -372,7 +322,7 @@
         },
         {
           "id": "s5.6",
-          "start": 2058,
+          "start": 2042,
           "heading": "Grace says brother; wisdom says not currently shepherd",
           "scripture_mentions": [],
           "bullets": [
@@ -422,7 +372,7 @@
         },
         {
           "id": "s6.2",
-          "start": 2502,
+          "start": 2422,
           "heading": "From riding lions to never setting foot here",
           "scripture_mentions": [
             "SCR-030"
@@ -506,9 +456,7 @@
       "id": "s8",
       "start": 3045,
       "heading": "A greater David is still building",
-      "scripture_mentions": [
-        "SCR-035"
-      ],
+      "scripture_mentions": [],
       "bullets": [
         "Jerusalem’s walls would fall, the kingdom divide, the people go into exile, the temple be destroyed, rebuilt, and destroyed again. If the hope of Psalm 51 rested on David, it would not be hopeful.",
         "God used David’s life to point to a greater David: a king who would not hurt the people he was called to protect, a priest who would bring lasting relief, a builder whose kingdom sin, death, hell, scandal, and unfaithfulness cannot bring down."
@@ -537,7 +485,6 @@
           "heading": "Stop hiding; bring the ruins",
           "scripture_mentions": [
             "SCR-040",
-            "SCR-041",
             "SCR-037"
           ],
           "bullets": [
@@ -563,18 +510,6 @@
     }
   ],
   "ledger": [
-    {
-      "id": "SCR-001",
-      "reference": "Psalm 51:18-19",
-      "reference_query": "Psalm+51%3A18-19",
-      "treatment": "referenced",
-      "time": 159,
-      "phrase": "As Psalm 51 closes, David is thinking about the walls of Jerusalem.",
-      "anchor_node_id": "s1.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
     {
       "id": "SCR-002",
       "reference": "Psalm 51:18-19",
@@ -784,7 +719,7 @@
       "reference": "2 Corinthians 7:10",
       "reference_query": "2+Corinthians+7%3A10",
       "treatment": "referenced",
-      "time": 1011,
+      "time": 1049,
       "phrase": "Godly sorrow that leads to repentance gives us our wide lens back.",
       "anchor_node_id": "s4",
       "version": "NIV",
@@ -972,18 +907,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-035",
-      "reference": "Psalm 51:18-19",
-      "reference_query": "Psalm+51%3A18-19",
-      "treatment": "referenced",
-      "time": 3045,
-      "phrase": "If the hope we found in Psalm 51 rested on David, then it doesn’t seem all that hopeful.",
-      "anchor_node_id": "s8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-036",
       "reference": "Matthew 1:21",
       "reference_query": "Matthew+1%3A21",
@@ -1038,18 +961,6 @@
       "treatment": "referenced",
       "time": 3213,
       "phrase": "He is gathering living stones from every tribe, language, people, and nation.",
-      "anchor_node_id": "s8.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-041",
-      "reference": "Ephesians 2:1-5",
-      "reference_query": "Ephesians+2%3A1-5",
-      "treatment": "referenced",
-      "time": 3213,
-      "phrase": "He is taking sinners who were dead and making them alive.",
       "anchor_node_id": "s8.2",
       "version": "NIV",
       "version_source": "default",

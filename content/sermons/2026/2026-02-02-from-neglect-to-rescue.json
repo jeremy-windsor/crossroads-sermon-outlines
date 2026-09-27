@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-02-02-from-neglect-to-rescue",
   "title": "From Neglect to Rescue",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2610,
   "video_id": "SEOXM0--SL4",
   "video_url": "https://www.youtube.com/watch?v=SEOXM0--SL4",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 45,
   "sermon_end": 2600,
   "card_summary": "Josh Wyatt takes Ezekiel 33–34. God takes no pleasure in the death of the wicked. Woe to shepherds who feed themselves. Parents, pastors, and politicians are shepherds; bad ones exploit. When they fail, God himself searches for the sheep and places one shepherd, his servant David—Jesus, the good shepherd who lays down his life. Love before power. Come through the gate.",
-  "section_intro": "The sermon begins at 00:45 with prayer. Josh frames covenant terms, reads Psalm 23 and Ezekiel 34, walks John 10, and closes Jehovah Shammah. The chronological outline keeps the shepherd metaphor, corrupt leaders, Wycliffe, spiritual-abuse care, and the amen.",
-  "page_title": "From Neglect to Rescue — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of From Neglect to Rescue by Josh Wyatt at Crossroads Church, published February 2, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "From Neglect to Rescue"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "28 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

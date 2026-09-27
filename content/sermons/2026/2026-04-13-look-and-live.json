@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-04-13-look-and-live",
   "title": "Look and Live",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 3200,
   "video_id": "pDGVeVrUg-E",
   "video_url": "https://www.youtube.com/watch?v=pDGVeVrUg-E",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 36,
   "sermon_end": 3188,
   "card_summary": "Josh Wyatt opens Born Again from John 3. The series exists so hearers can examine whether they are truly born again. Regeneration is not water on a forehead, not self-improvement, not family religion. It is the Spirit making the dead alive. Nicodemus, teacher of Israel, cannot enter by flesh. Legalism and license both miss the gospel. Heaven is a Person; an unrenewed heart would not even want it. As Moses lifted the serpent, the Son of Man must be lifted up. Look to Jesus and live.",
-  "section_intro": "The sermon begins at 00:36 with Josh’s greeting and the series aim. He uses a Six Flags X2 story to talk about false security, reads John 3:1 forward, and closes in prayer as the church prepares for the table. The chronological outline keeps the language of new birth, the Nicodemus conversation, the wind, Numbers 21, and the closing prayer.",
-  "page_title": "Look and Live — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Look and Live by Josh Wyatt at Crossroads Church, published April 13, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Look and Live"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "36 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-03-23-transformed-by-his-power",
   "title": "Transformed by His Power",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2875,
   "video_id": "iezIvA_HcTQ",
   "video_url": "https://www.youtube.com/watch?v=iezIvA_HcTQ",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-20",
   "sermon_start": 42,
   "sermon_end": 2872,
   "card_summary": "Josh Wyatt, week three of Broken, traces the Emmaus sermon he wishes we had: Moses and the prophets all point to a suffering Messiah who then enters glory. He takes the church from that road to the Mount of Transfiguration, down to a demonized boy in the valley, and to a temple-tax coin in a fish’s mouth. Humility is not weakness. Listen to him. Nothing is impossible for those who trust God’s power. He closes by announcing the executive pastor role will end May 31 and asking the church to pray, guard unity, and stay on mission.",
-  "section_intro": "The sermon begins at 00:42 after music, with Josh naming week three of Broken. He reconstructs a possible Emmaus lesson, reads Matthew 17, and ends in prayer for Chris Towald and the church. The chronological outline keeps the Old Testament trail, the mountain, the valley, the lake, the staffing announcement, and the amen.",
-  "page_title": "Transformed by His Power — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Transformed by His Power by Josh Wyatt at Crossroads Church, published March 23, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Transformed by His Power"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 20, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV.",
-  "ledger_caption": "35 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",

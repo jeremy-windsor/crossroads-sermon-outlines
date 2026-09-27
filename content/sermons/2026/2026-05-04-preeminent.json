@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-05-04-preeminent",
   "title": "Preeminent",
   "speaker": "Josh Wyatt",
@@ -8,53 +8,9 @@
   "duration_seconds": 2845,
   "video_id": "8S53C5iLzLo",
   "video_url": "https://www.youtube.com/watch?v=8S53C5iLzLo",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-06",
   "sermon_start": 55,
   "sermon_end": null,
   "card_summary": "Josh Wyatt opens Hebrews by contrasting fractured human communication with God’s final speech in his Son. He argues that Scripture is infallible while believers’ impressions are fallible, warns against prophecy that functions as new doctrine, and calls the church to test every claim by God’s word. He then unfolds Hebrews 1 through eight claims: Jesus is God’s prophetic voice, Son, heir, Creator, exact representation and sustainer, purifier of sins, superior to angels, and heaven’s champion. Because the preeminent Christ finished salvation and will make all things new, Josh calls believers to trust him and unbelievers to repent, be baptized, and listen.",
-  "section_intro": "The sermon begins at 00:55 after opening music and a brief correction about the student gathering. It runs to the video’s abrupt end at 47:25 during Josh Wyatt’s closing prayer. The outline follows his communication illustrations, introduction to Hebrews, extended warning about modern revelation, eight-part portrait of Jesus from Hebrews 1, explanation of Christ’s finished purification for sin, reading of the chapter’s testimony about the Son and angels, final hope of new creation, and invitation to trust the preeminent Christ.",
-  "page_title": "Preeminent — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Preeminent by Josh Wyatt at Crossroads Church, published May 4, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Preeminent"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "strong",
-        "text": "Source:"
-      },
-      {
-        "kind": "text",
-        "text": "“Preeminent,” Josh Wyatt, Crossroads Church. Published May 4, 2026. Outline verified against the complete original-English YouTube automatic-caption track, which reaches the video’s abrupt ending during the closing prayer."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This independent outline is for after-the-fact review and Bible study. Sermon content belongs to Crossroads Church and Josh Wyatt; linked Scripture text belongs to its publisher."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV because Josh does not name a translation. Ambiguous allusions are omitted.",
-  "ledger_caption": "67 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -168,9 +124,7 @@
           "id": "s2.2",
           "start": 589,
           "heading": "A continuationist position with a speed limit",
-          "scripture_mentions": [
-            "SCR-004"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh pauses the exposition to address Christian disagreements about prophecy, tongues, and healing—gifts named in the New Testament.",
             "Cessationists believe supernatural gifts have ceased; continuationists believe they continue. Josh identifies himself as a “continuationist with a speed limit.”",
@@ -182,9 +136,7 @@
           "id": "s2.3",
           "start": 646,
           "heading": "Fallible people must subordinate gifts to infallible Scripture",
-          "scripture_mentions": [
-            "SCR-005"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "A healthy expression of supernatural gifts is subordinate to Scripture. Josh calls God’s word infallible, without error, while the same gifts in believers’ hands are fallible because their human vessels can be wrong.",
             "The gift is not deficient, but flawed Christians make ministry messy.",
@@ -209,8 +161,7 @@
           "start": 779,
           "heading": "Word-of-faith ambition must be tested and the flock protected",
           "scripture_mentions": [
-            "SCR-006",
-            "SCR-007"
+            "SCR-006"
           ],
           "bullets": [
             "Josh also warns against word-of-faith and prosperity circles that claim to declare realities into existence with authority like Scripture; in such settings, God’s voice and personal ambition become difficult to distinguish.",
@@ -301,7 +252,6 @@
           "heading": "Christ fulfills the partial revelation that preceded him",
           "scripture_mentions": [
             "SCR-012",
-            "SCR-013",
             "SCR-014"
           ],
           "bullets": [
@@ -316,8 +266,7 @@
           "start": 1273,
           "heading": "The last days began with the Son’s arrival",
           "scripture_mentions": [
-            "SCR-015",
-            "SCR-016"
+            "SCR-015"
           ],
           "bullets": [
             "Josh reads Hebrews 1:1–2a again and identifies the period from the birth of God’s Son to the present as the last days.",
@@ -368,9 +317,7 @@
           "id": "s4.3",
           "start": 1434,
           "heading": "The Savior’s deity is the believer’s greatest comfort",
-          "scripture_mentions": [
-            "SCR-019"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh calls Christ’s divinity the greatest comfort of his life: the one sent to save sinners is divine, and the Creator cannot fail in saving.",
             "Because Jesus is omnipotent, no class, history, ethnicity, wealth, or sin places a person beyond his reach.",
@@ -395,7 +342,6 @@
           "heading": "The appointed heir possesses all things",
           "scripture_mentions": [
             "SCR-020",
-            "SCR-021",
             "SCR-022"
           ],
           "bullets": [
@@ -484,8 +430,7 @@
             "SCR-028",
             "SCR-029",
             "SCR-030",
-            "SCR-031",
-            "SCR-032"
+            "SCR-031"
           ],
           "bullets": [
             "Josh recalls Sinai burning with God’s glory, the glory filling the tabernacle, and God’s presence above the ark between the cherubim.",
@@ -500,8 +445,7 @@
           "heading": "Jesus does not wear holiness; he is God’s holiness in flesh",
           "scripture_mentions": [
             "SCR-033",
-            "SCR-035",
-            "SCR-067"
+            "SCR-035"
           ],
           "bullets": [
             "The high priest wore “Holy to the Lord” on his forehead as a symbol, but Josh says Jesus embodies rather than merely wears God’s holiness.",
@@ -579,8 +523,7 @@
           "start": 2098,
           "heading": "The cross displays justice against sin and mercy toward sinners",
           "scripture_mentions": [
-            "SCR-040",
-            "SCR-071"
+            "SCR-040"
           ],
           "bullets": [
             "The cross displays God’s justice against sin and God’s mercy toward sinners at the same time.",
@@ -594,9 +537,7 @@
           "id": "s7.5",
           "start": 2168,
           "heading": "In Christ, sins are dealt with rather than awaiting payment",
-          "scripture_mentions": [
-            "SCR-068"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "For those in Christ, past, present, and future sins are not being dealt with; they have been dealt with and purified.",
             "Josh acknowledges that this message is dangerous to self-righteousness, control, pride, boasting, and every attempt to earn access to God.",
@@ -664,8 +605,7 @@
             "SCR-045",
             "SCR-046",
             "SCR-047",
-            "SCR-048",
-            "SCR-070"
+            "SCR-048"
           ],
           "bullets": [
             "Humanity waits through history for a savior. Adam fails through passivity, but Josh presents Jesus as the greater Adam who answers Satan’s wilderness temptation with God’s word and credits his obedience to his people.",
@@ -798,9 +738,7 @@
           "heading": "The finished work leaves no sin for the believer to recover",
           "scripture_mentions": [
             "SCR-061",
-            "SCR-062",
-            "SCR-063",
-            "SCR-064"
+            "SCR-062"
           ],
           "bullets": [
             "Josh tells believers they may search for their sins but will not find them, because Christ removed them as far as east is from west.",
@@ -834,7 +772,7 @@
           "bullets": [
             "Josh welcomes the congregation to Hebrews and returns to the letter’s opening declaration that God has spoken in his Son.",
             "Because Christ is preeminent, the unresolved question is not whether he speaks but whether the hearer will listen.",
-            "Josh begins a prayer of love and thanks for God’s word and for the Father’s love of the Son; the uploaded video ends abruptly before the prayer’s conclusion."
+            "Josh prays, thanking God for his word and for the Father’s love of the Son. The recording ends while that prayer is still going."
           ],
           "children": []
         }
@@ -879,48 +817,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-004",
-      "reference": "1 Corinthians 12:9-10",
-      "reference_query": "1%20Corinthians%2012%3A9-10",
-      "treatment": "referenced",
-      "time": 597,
-      "phrase": "the gifts of the Spirit described in the New Testament ... prophecy, tongues, and healing",
-      "anchor_node_id": "s2.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-005",
-      "reference": "1 Corinthians 12:31; 14:3",
-      "reference_query": "1%20Corinthians%2012%3A31%3B%2014%3A3",
-      "treatment": "referenced",
-      "time": 695,
-      "phrase": "the greater gifts is meant for encouragement, not new doctrine",
-      "anchor_node_id": "s2.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-006",
       "reference": "1 John 4:1",
       "reference_query": "1%20John%204%3A1",
       "treatment": "read/quoted",
       "time": 820,
       "phrase": "We must test the spirits",
-      "anchor_node_id": "s2.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-007",
-      "reference": "1 Corinthians 16:13",
-      "reference_query": "1%20Corinthians%2016%3A13",
-      "treatment": "read/quoted",
-      "time": 822,
-      "phrase": "keep a watchful eye ... men need to act like men ... stand up for what’s right",
       "anchor_node_id": "s2.5",
       "version": "NIV",
       "version_source": "default",
@@ -987,18 +889,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-013",
-      "reference": "Matthew 5:17",
-      "reference_query": "Matthew%205%3A17",
-      "treatment": "referenced",
-      "time": 1185,
-      "phrase": "Christ does not break with the great Jewish past. He comes to bring it to fulfillment",
-      "anchor_node_id": "s3.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-014",
       "reference": "Matthew 17:1-5; Mark 9:2-7; Luke 9:28-35",
       "reference_query": "Matthew%2017%3A1-5%3B%20Mark%209%3A2-7%3B%20Luke%209%3A28-35",
@@ -1017,18 +907,6 @@
       "treatment": "read/quoted",
       "time": 1273,
       "phrase": "in these last days, he has spoken to us by his Son",
-      "anchor_node_id": "s3.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-016",
-      "reference": "Matthew 24:36; Mark 13:32",
-      "reference_query": "Matthew%2024%3A36%3B%20Mark%2013%3A32",
-      "treatment": "referenced",
-      "time": 1297,
-      "phrase": "only the Father knows how long those last days will actually last",
       "anchor_node_id": "s3.3",
       "version": "NIV",
       "version_source": "default",
@@ -1059,36 +937,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-019",
-      "reference": "Luke 2:13-14",
-      "reference_query": "Luke%202%3A13-14",
-      "treatment": "referenced",
-      "time": 1470,
-      "phrase": "the angels sing when Christ shows up",
-      "anchor_node_id": "s4.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-020",
       "reference": "Hebrews 1:1-2b",
       "reference_query": "Hebrews%201%3A1-2b",
       "treatment": "exposited",
       "time": 1481,
       "phrase": "his Son, whom he appointed heir of all things",
-      "anchor_node_id": "s5.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-021",
-      "reference": "Hebrews 2:8",
-      "reference_query": "Hebrews%202%3A8",
-      "treatment": "referenced",
-      "time": 1501,
-      "phrase": "we might not be able to see everything under his rule visibly",
       "anchor_node_id": "s5.1",
       "version": "NIV",
       "version_source": "default",
@@ -1215,18 +1069,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-032",
-      "reference": "Exodus 3:1-6",
-      "reference_query": "Exodus%203%3A1-6",
-      "treatment": "referenced",
-      "time": 1845,
-      "phrase": "Not in a cloud ... not in a bush, but in a person",
-      "anchor_node_id": "s6.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-033",
       "reference": "Exodus 28:36-38",
       "reference_query": "Exodus%2028%3A36-38",
@@ -1245,18 +1087,6 @@
       "treatment": "exposited",
       "time": 1897,
       "phrase": "the fullest and clearest ... display of God’s glory is Jesus Christ",
-      "anchor_node_id": "s6.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-067",
-      "reference": "Exodus 3:5",
-      "reference_query": "Exodus%203%3A5",
-      "treatment": "read/quoted",
-      "time": 1907,
-      "phrase": "we stand on holy ground, church",
       "anchor_node_id": "s6.3",
       "version": "NIV",
       "version_source": "default",
@@ -1290,7 +1120,7 @@
       "id": "SCR-038",
       "reference": "Revelation 12:10",
       "reference_query": "Revelation%2012%3A10",
-      "treatment": "exposited",
+      "treatment": "referenced",
       "time": 2032,
       "phrase": "when John is describing Satan, he calls him the accuser",
       "anchor_node_id": "s7.2",
@@ -1306,30 +1136,6 @@
       "time": 2120,
       "phrase": "When he had made purification for sins ... He sat down",
       "anchor_node_id": "s7.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-071",
-      "reference": "Leviticus 16:1-34",
-      "reference_query": "Leviticus%2016%3A1-34",
-      "treatment": "referenced",
-      "time": 2143,
-      "phrase": "No more ... getting ready for the Day of Atonement again next year",
-      "anchor_node_id": "s7.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-068",
-      "reference": "Ephesians 4:15",
-      "reference_query": "Ephesians%204%3A15",
-      "treatment": "read/quoted",
-      "time": 2225,
-      "phrase": "keep speaking truth and in love",
-      "anchor_node_id": "s7.5",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1389,18 +1195,6 @@
       "treatment": "referenced",
       "time": 2384,
       "phrase": "Jesus is the greater Isaac who instead of hearing heaven yell stop ... was sacrificed for us",
-      "anchor_node_id": "s8.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-070",
-      "reference": "2 Corinthians 5:21",
-      "reference_query": "2%20Corinthians%205%3A21",
-      "treatment": "referenced",
-      "time": 2390,
-      "phrase": "the humble vessel who became sin ... sacrificed for us",
       "anchor_node_id": "s8.3",
       "version": "NIV",
       "version_source": "default",
@@ -1593,30 +1387,6 @@
       "treatment": "read/quoted",
       "time": 2756,
       "phrase": "It is finished",
-      "anchor_node_id": "s9.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-063",
-      "reference": "1 Corinthians 15:4",
-      "reference_query": "1%20Corinthians%2015%3A4",
-      "treatment": "referenced",
-      "time": 2759,
-      "phrase": "He was raised three days later",
-      "anchor_node_id": "s9.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-064",
-      "reference": "Acts 1:3, 9; Hebrews 1:3d",
-      "reference_query": "Acts%201%3A3%2C%209%3B%20Hebrews%201%3A3d",
-      "treatment": "referenced",
-      "time": 2761,
-      "phrase": "forty days after that, he sat down in heaven",
       "anchor_node_id": "s9.3",
       "version": "NIV",
       "version_source": "default",

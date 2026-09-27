@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-07-20-keep-running",
   "title": "Keep Running!",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2860,
   "video_id": "F43D7jaMCqs",
   "video_url": "https://www.youtube.com/watch?v=F43D7jaMCqs",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-05",
   "sermon_start": 36,
   "sermon_end": 2851,
-  "card_summary": "Josh Wyatt presents Hebrews 12 as a word for weary Christians: the life of faith is an agonizing relay that must be run with eyes fixed on Jesus. The witnesses testify that God is faithful, unnecessary weights and entangling sin must be put away, and Christ’s cross and promised joy make endurance possible. Josh then distinguishes punishment, consequences, and a Father’s loving discipline; calls the church to pursue peace, holiness, grace, and mutual care; warns against bitterness and Esau’s short-sighted trade; and closes by contrasting Sinai with Zion. Believers can keep running because Jesus has crossed the finish line and is bringing them into an unshakeable kingdom.",
-  "section_intro": "The sermon begins at 00:36 and continues through the closing prayer at 47:31. Josh Wyatt presents Hebrews 12 as a word for weary Christians: the life of faith is an agonizing relay that must be run with eyes fixed on Jesus. The witnesses testify that God is faithful, unnecessary weights and entangling sin must be put away, and Christ’s cross and promised joy make endurance possible. Josh then distinguishes punishment, consequences, and a Father’s loving discipline; calls the church to pursue peace, holiness, grace, and mutual care; warns against bitterness and Esau’s short-sighted trade; and closes by contrasting Sinai with Zion. Believers can keep running because Jesus has crossed the finish line and is bringing them into an unshakeable kingdom.",
-  "page_title": "Keep Running! — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of Keep Running! by Josh Wyatt at Crossroads Church, published July 20, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "Keep Running!"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 5, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "65 confirmed Scripture units, in sermon order",
+  "card_summary": "Josh Wyatt presents Hebrews 12 as a word for weary Christians: the life of faith is the Christian relay, a race run in agony, that must be run with eyes fixed on Jesus. The witnesses testify that God is faithful, unnecessary weights and entangling sin must be put away, and Christ’s cross and promised joy make endurance possible. Josh then distinguishes punishment, consequences, and a Father’s loving discipline; calls the church to pursue peace, holiness, grace, and mutual care; warns against bitterness and Esau’s short-sighted trade; and closes by contrasting Sinai with Zion. Believers can keep running because Jesus has crossed the finish line and is bringing them into an unshakeable kingdom.",
   "movements": [
     {
       "id": "s1",
@@ -95,10 +47,7 @@
           "id": "s1.3",
           "start": 189,
           "heading": "Hebrews 11 passes the baton to Hebrews 12",
-          "scripture_mentions": [
-            "SCR-001",
-            "SCR-002"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Hebrews 11 displays people who finished by faith; Hebrews 12 passes the baton to those who follow. Noah, Abraham, Moses, Rahab, prophets, apostles, pastors, and teachers form a continuing Christian relay.",
             "The church is not called merely to cheer historic saints from the stands. ‘It’s our turn to run,’ and every believer belongs down on the track."
@@ -123,9 +72,7 @@
           "id": "s1.5",
           "start": 329,
           "heading": "The Spirit coaches the race in five ways",
-          "scripture_mentions": [
-            "SCR-004"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh previews five lessons in Hebrews 12: how to run while weary, what slows the runner, how to understand suffering, how to become assistant coaches who strengthen others, and why every painful step will be worth it.",
             "Josh identifies Paul as the human writer through whom the Holy Spirit speaks as a track coach, while the chapter later moves from athletic coaching into the family room of a loving Father."
@@ -150,9 +97,7 @@
           "start": 421,
           "heading": "The witnesses testify to God’s faithfulness; they are not spectators",
           "scripture_mentions": [
-            "SCR-006",
-            "SCR-007",
-            "SCR-008"
+            "SCR-006"
           ],
           "bullets": [
             "Some people of faith saw extraordinary earthly deliverance, while others died without earthly validation. The same faith and God can issue different marching orders, so earthly outcomes cannot be the runner’s fuel.",
@@ -252,7 +197,7 @@
           "heading": "A pornography struggler defended devices that were destroying his marriage",
           "scripture_mentions": [],
           "bullets": [
-            "Drawing on his own struggles and pastoral calling, Josh recounts advising a man with a pornography addiction to destroy the computer, router, and smartphone feeding it, buy a flip phone, and even change jobs if necessary.",
+            "Drawing on his own struggles and pastoral calling, Josh recounts advising a man with a pornography addiction to take the computer, router, and smartphone outside and shoot them all, then offered to buy him a flip phone.",
             "Each objection protected technology, work, or social media, but none protected the man’s marriage. Josh asks why anyone would defend what seeks to destroy.",
             "The extreme counsel matches extreme stakes: hell, divorce, a devastated spouse, children living with a lust-enslaved father, a hardened heart, and standing before Christ after preferring secret sin."
           ],
@@ -274,9 +219,7 @@
           "id": "s2.7",
           "start": 1061,
           "heading": "Christ died to free his people from sin’s grip",
-          "scripture_mentions": [
-            "SCR-012"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Christ’s death does not merely forgive guilt; it frees people from sin’s mastery. Josh’s final instruction is to let go of what Christ came to remove.",
             "Great faith runners travel light rather than carrying the very burden their Savior removed."
@@ -314,9 +257,7 @@
           "start": 1192,
           "heading": "Looking to Jesus both saves and sustains",
           "scripture_mentions": [
-            "SCR-015",
-            "SCR-016",
-            "SCR-017"
+            "SCR-016"
           ],
           "bullets": [
             "The Israelites bitten by snakes looked at the lifted bronze serpent and were healed; Jesus used that wilderness event while speaking to Nicodemus.",
@@ -329,10 +270,7 @@
           "id": "s3.3",
           "start": 1250,
           "heading": "Jesus lived the faith he teaches",
-          "scripture_mentions": [
-            "SCR-018",
-            "SCR-019"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Jesus did not merely teach prayer; Josh points to his repeated withdrawal for prayer as evidence of a vibrant life of dependence.",
             "He endured more than every hero in Hebrews 11 and is therefore both the flawless example and the one who brings faith to completion."
@@ -344,8 +282,7 @@
           "start": 1273,
           "heading": "The perfecter endured opposition, shame, and the cross",
           "scripture_mentions": [
-            "SCR-020",
-            "SCR-021"
+            "SCR-020"
           ],
           "bullets": [
             "Josh returns to Hebrews 12:2–3: for the joy set before him, Jesus endured the cross, scorned shame, took his seat at God’s right hand, and endured sinners’ opposition so his people would not grow weary.",
@@ -370,13 +307,9 @@
           "id": "s3.6",
           "start": 1340,
           "heading": "Love and the joy ahead held Jesus there",
-          "scripture_mentions": [
-            "SCR-023",
-            "SCR-024",
-            "SCR-025"
-          ],
+          "scripture_mentions": [],
           "bullets": [
-            "Josh names the joy of obeying and pleasing the Father, accomplishing redemption, rising from the grave, ascending, returning in glory, and bringing many sons and daughters to glory.",
+            "Josh names the joy of obeying and pleasing the Father, accomplishing redemption, walking out of the tomb, being exalted 40 days later, returning in glory, and bringing many sons and daughters to glory.",
             "Jesus looked beyond Friday to Sunday, beyond resurrection to ascension and return, beyond shame to the throne, and beyond the cross to the crown. That future victory enabled present endurance."
           ],
           "children": []
@@ -398,13 +331,11 @@
           "heading": "A direct word to the person considering quitting",
           "scripture_mentions": [
             "SCR-026",
-            "SCR-027",
-            "SCR-028",
-            "SCR-029"
+            "SCR-028"
           ],
           "bullets": [
             "Josh pauses the exposition for someone who may be contemplating surrender: ‘Don’t quit. Jesus already won the race. Keep running.’ The next morning’s prayer can simply give the Lord one’s steps and ask for courage.",
-            "He preaches Psalm 23’s confidence through the valley because God is present, then joins Paul’s claim that living is Christ and dying is gain with the assurance that life and death alike belong to Christ.",
+            "He preaches Psalm 23’s confidence through the valley because God is present, then joins Paul’s claim that living is Christ and dying is gain with his own line: “If I live, I belong to Christ. If I die, I still belong to Christ.”",
             "Every breath and day can glorify and serve Christ. Even if faithfulness finally costs life, grace makes that life available to him."
           ],
           "children": []
@@ -424,9 +355,7 @@
           "id": "s4.1",
           "start": 1510,
           "heading": "Believers praise God’s presence but often resent his parenting",
-          "scripture_mentions": [
-            "SCR-030"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh names a common hypocrisy: Christians want the Shepherd’s comfort while resisting the rod that confronts and corrects.",
             "The passage first humbles comfortable believers by noting that their struggle has not reached bloodshed and by comparing it with historic and present persecution."
@@ -441,7 +370,7 @@
             "SCR-031"
           ],
           "bullets": [
-            "Josh quotes Hebrews 12:4 and contrasts ordinary trials with what he describes as roughly 380 million Christians living under persecution and thousands killed each year, including in Nigeria, Congo, and Egypt.",
+            "Josh quotes Hebrews 12:4 and contrasts ordinary trials with the 380 million Christians living under persecution and thousands killed each year, including in Nigeria, Congo, and Egypt.",
             "The question ‘Have you bled for Christ?’ is meant to reset perspective when believers sweat small troubles."
           ],
           "children": []
@@ -477,7 +406,6 @@
           "start": 1682,
           "heading": "Suffering needs more than a coach’s demand for another gear",
           "scripture_mentions": [
-            "SCR-034",
             "SCR-035"
           ],
           "bullets": [
@@ -518,7 +446,7 @@
           "heading": "The heavenly Father never mishandles the rod",
           "scripture_mentions": [],
           "bullets": [
-            "Josh confesses that frustration, limited time, reluctance, emotion, and pride make his own discipline imperfect.",
+            "Josh says Noel and Madison can testify that frustration, limited time, reluctance, emotion, and pride make his discipline imperfect.",
             "God never loses control or disciplines in a temper. Every hardship he permits is measured by infinite wisdom, so hardship is not evidence that God has stopped loving his child.",
             "Satan wants sufferers to interpret pain as abandonment; Josh tells them not to buy that lie."
           ],
@@ -738,7 +666,7 @@
             "SCR-053"
           ],
           "bullets": [
-            "Josh says Abel’s blood cried out for justice, while the mediator’s blood announces, ‘Paid in full.’",
+            "Josh says Abel’s blood cried out for justice, while Christ’s blood cried out, ‘Paid in full.’",
             "The contrast makes Zion possible: Jesus’ covenant blood answers guilt with completed redemption rather than leaving sinners at a distance."
           ],
           "children": []
@@ -776,11 +704,7 @@
           "id": "s6.7",
           "start": 2701,
           "heading": "The consuming fire fell on the Son and now prepares his people",
-          "scripture_mentions": [
-            "SCR-058",
-            "SCR-059",
-            "SCR-060"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "Josh returns to ‘our God is a consuming fire.’ God’s holiness did not diminish at Zion; judgment fell on Christ, who stood where sinners deserved to stand.",
             "The holiness that would have consumed believers now prepares them. One day every rival will be consumed, every enemy put beneath Christ’s feet, every tear wiped away, and every knee and tongue acknowledge Jesus as Lord."
@@ -818,7 +742,6 @@
           "start": 2768,
           "heading": "Purify, cleanse, refocus, and use us",
           "scripture_mentions": [
-            "SCR-064",
             "SCR-065"
           ],
           "bullets": [
@@ -834,30 +757,6 @@
   ],
   "ledger": [
     {
-      "id": "SCR-001",
-      "reference": "Hebrews 11:1-40",
-      "reference_query": "Hebrews%2011%3A1-40",
-      "treatment": "referenced",
-      "time": 189,
-      "phrase": "Hebrews 11 showed us the great men and women of the faith",
-      "anchor_node_id": "s1.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-002",
-      "reference": "Hebrews 12:1-29",
-      "reference_query": "Hebrews%2012%3A1-29",
-      "treatment": "referenced",
-      "time": 195,
-      "phrase": "Hebrews 12 is when the baton is passed",
-      "anchor_node_id": "s1.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-003",
       "reference": "Hebrews 12:1",
       "reference_query": "Hebrews%2012%3A1",
@@ -870,21 +769,9 @@
       "reference_note": null
     },
     {
-      "id": "SCR-004",
-      "reference": "Hebrews 12:1-29",
-      "reference_query": "Hebrews%2012%3A1-29",
-      "treatment": "referenced",
-      "time": 342,
-      "phrase": "throughout this chapter, the Holy Spirit ... becomes somewhat of a racing coach",
-      "anchor_node_id": "s1.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-005",
-      "reference": "Hebrews 12:1-3",
-      "reference_query": "Hebrews%2012%3A1-3",
+      "reference": "Hebrews 12:1–3",
+      "reference_query": "Hebrews%2012%3A1%E2%80%933",
       "treatment": "read/quoted",
       "time": 385,
       "phrase": "Therefore, since we are surrounded by such a great cloud of witnesses",
@@ -895,35 +782,11 @@
     },
     {
       "id": "SCR-006",
-      "reference": "Hebrews 11:13, 32-40; 12:1a",
-      "reference_query": "Hebrews%2011%3A13%2C%2032-40%3B%2012%3A1a",
+      "reference": "Hebrews 12:1a",
+      "reference_query": "Hebrews%2012%3A1a",
       "treatment": "exposited",
       "time": 421,
       "phrase": "some witnesses ... saw God do these incredibly powerful things ... others died without receiving earthly validation",
-      "anchor_node_id": "s1.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-007",
-      "reference": "Hebrews 11:24-29",
-      "reference_query": "Hebrews%2011%3A24-29",
-      "treatment": "exposited",
-      "time": 492,
-      "phrase": "Moses ... lead his people out of captivity",
-      "anchor_node_id": "s1.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-008",
-      "reference": "Hebrews 11:7",
-      "reference_query": "Hebrews%2011%3A7",
-      "treatment": "exposited",
-      "time": 505,
-      "phrase": "Noah leaves a testimony ... something built with human hands to save",
       "anchor_node_id": "s1.7",
       "version": "NIV",
       "version_source": "default",
@@ -955,8 +818,8 @@
     },
     {
       "id": "SCR-011",
-      "reference": "Matthew 5:29-30",
-      "reference_query": "Matthew%205%3A29-30",
+      "reference": "Matthew 5:29–30",
+      "reference_query": "Matthew%205%3A29%E2%80%9330",
       "treatment": "read/quoted",
       "time": 848,
       "phrase": "If your right eye causes you to sin, tear it out ... right hand ... cut it off",
@@ -966,21 +829,9 @@
       "reference_note": null
     },
     {
-      "id": "SCR-012",
-      "reference": "Romans 6:6-7, 14",
-      "reference_query": "Romans%206%3A6-7%2C%2014",
-      "treatment": "referenced",
-      "time": 1061,
-      "phrase": "Christ did not die merely to forgive your sin. He died to free you from its grip",
-      "anchor_node_id": "s2.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-013",
-      "reference": "Hebrews 12:1b-2a",
-      "reference_query": "Hebrews%2012%3A1b-2a",
+      "reference": "Hebrews 12:1b–2a",
+      "reference_query": "Hebrews%2012%3A1b%E2%80%932a",
       "treatment": "read/quoted",
       "time": 1087,
       "phrase": "Let us run with perseverance the race ... fixing our eyes on Jesus",
@@ -1002,21 +853,9 @@
       "reference_note": null
     },
     {
-      "id": "SCR-015",
-      "reference": "Numbers 21:4-9",
-      "reference_query": "Numbers%2021%3A4-9",
-      "treatment": "referenced",
-      "time": 1205,
-      "phrase": "when the Jews were bitten by snakes ... they looked at the uplifted serpent",
-      "anchor_node_id": "s3.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-016",
-      "reference": "John 3:14-15",
-      "reference_query": "John%203%3A14-15",
+      "reference": "John 3:14–15",
+      "reference_query": "John%203%3A14%E2%80%9315",
       "treatment": "referenced",
       "time": 1225,
       "phrase": "Jesus actually uses it talking to Nicodemus in John 3",
@@ -1026,60 +865,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-017",
-      "reference": "Philippians 1:6",
-      "reference_query": "Philippians%201%3A6",
-      "treatment": "referenced",
-      "time": 1245,
-      "phrase": "Jesus is the one who started this process in us ... going to finish it",
-      "anchor_node_id": "s3.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-018",
-      "reference": "Luke 5:16",
-      "reference_query": "Luke%205%3A16",
-      "treatment": "referenced",
-      "time": 1250,
-      "phrase": "Jesus had a vibrant prayer life ... always pulling away alone to pray",
-      "anchor_node_id": "s3.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-019",
-      "reference": "Hebrews 11:1-40",
-      "reference_query": "Hebrews%2011%3A1-40",
-      "treatment": "referenced",
-      "time": 1261,
-      "phrase": "the heroes that we’ve talked about in Hebrews chapter 11",
-      "anchor_node_id": "s3.3",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-020",
-      "reference": "Hebrews 12:2b-3",
-      "reference_query": "Hebrews%2012%3A2b-3",
+      "reference": "Hebrews 12:2b–3",
+      "reference_query": "Hebrews%2012%3A2b%E2%80%933",
       "treatment": "read/quoted",
       "time": 1273,
       "phrase": "For the joy set before him, he endured the cross",
-      "anchor_node_id": "s3.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-021",
-      "reference": "Hebrews 12:2b-3",
-      "reference_query": "Hebrews%2012%3A2b-3",
-      "treatment": "exposited",
-      "time": 1287,
-      "phrase": "Paul says that Jesus endured the cross",
       "anchor_node_id": "s3.4",
       "version": "NIV",
       "version_source": "default",
@@ -1098,60 +889,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-023",
-      "reference": "Acts 1:3, 9",
-      "reference_query": "Acts%201%3A3%2C%209",
-      "treatment": "referenced",
-      "time": 1355,
-      "phrase": "the joy of being exalted 40 days later",
-      "anchor_node_id": "s3.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-024",
-      "reference": "Hebrews 2:10",
-      "reference_query": "Hebrews%202%3A10",
-      "treatment": "read/quoted",
-      "time": 1359,
-      "phrase": "bringing many sons and daughters like you and me to glory",
-      "anchor_node_id": "s3.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-025",
-      "reference": "Hebrews 12:2",
-      "reference_query": "Hebrews%2012%3A2",
-      "treatment": "read/quoted",
-      "time": 1364,
-      "phrase": "The joy set before him, he endured the cross",
-      "anchor_node_id": "s3.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-026",
       "reference": "Psalm 23:4",
       "reference_query": "Psalm%2023%3A4",
       "treatment": "read/quoted",
       "time": 1467,
       "phrase": "Though I walk through the valley of the shadow of death, I will fear no evil",
-      "anchor_node_id": "s3.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-027",
-      "reference": "John 1:5",
-      "reference_query": "John%201%3A5",
-      "treatment": "referenced",
-      "time": 1478,
-      "phrase": "no shadow that can overcome the light that has shined on us",
       "anchor_node_id": "s3.8",
       "version": "NIV",
       "version_source": "default",
@@ -1170,30 +913,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-029",
-      "reference": "Romans 14:8",
-      "reference_query": "Romans%2014%3A8",
-      "treatment": "referenced",
-      "time": 1483,
-      "phrase": "If I live, I belong to Christ. If I die, I still belong to Christ.",
-      "anchor_node_id": "s3.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-030",
-      "reference": "Psalm 23:4",
-      "reference_query": "Psalm%2023%3A4",
-      "treatment": "exposited",
-      "time": 1537,
-      "phrase": "we want our shepherd to comfort us ... resist him when he takes up the rod",
-      "anchor_node_id": "s4.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-031",
       "reference": "Hebrews 12:4",
       "reference_query": "Hebrews%2012%3A4",
@@ -1207,8 +926,8 @@
     },
     {
       "id": "SCR-032",
-      "reference": "Hebrews 12:5-11",
-      "reference_query": "Hebrews%2012%3A5-11",
+      "reference": "Hebrews 12:5–11",
+      "reference_query": "Hebrews%2012%3A5%E2%80%9311",
       "treatment": "read/quoted",
       "time": 1582,
       "phrase": "Have you completely forgotten this word of encouragement that addresses you as children?",
@@ -1219,27 +938,15 @@
     },
     {
       "id": "SCR-033",
-      "reference": "Proverbs 3:11-12",
-      "reference_query": "Proverbs%203%3A11-12",
+      "reference": "Proverbs 3:11–12",
+      "reference_query": "Proverbs%203%3A11%E2%80%9312",
       "treatment": "referenced",
       "time": 1636,
       "phrase": "the quote there is from Proverbs 3 verse 11",
       "anchor_node_id": "s4.3",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh says verse 11, while the wording read in Hebrews 12:5-6 draws from Proverbs 3:11-12."
-    },
-    {
-      "id": "SCR-034",
-      "reference": "Hebrews 12:1-2",
-      "reference_query": "Hebrews%2012%3A1-2",
-      "treatment": "exposited",
-      "time": 1682,
-      "phrase": "run with endurance, lay aside every weight, fix your eyes on Jesus",
-      "anchor_node_id": "s4.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
+      "reference_note": "Josh says verse 11, while the wording read in Hebrews 12:5-6 draws from Proverbs 3:11-12."
     },
     {
       "id": "SCR-035",
@@ -1255,8 +962,8 @@
     },
     {
       "id": "SCR-036",
-      "reference": "Hebrews 12:10-11",
-      "reference_query": "Hebrews%2012%3A10-11",
+      "reference": "Hebrews 12:10–11",
+      "reference_query": "Hebrews%2012%3A10%E2%80%9311",
       "treatment": "exposited",
       "time": 1792,
       "phrase": "In verse 10 God disciplines us for our good ... Verse 11 says it produces a harvest",
@@ -1287,7 +994,7 @@
       "anchor_node_id": "s4.9",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Captions paraphrase Peter’s statement that Christ bore our sins in his body on the cross."
+      "reference_note": null
     },
     {
       "id": "SCR-039",
@@ -1335,7 +1042,7 @@
       "anchor_node_id": "s4.10",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh adapts Joseph’s wording from human agents (‘you intended’) to ‘the devil.’"
+      "reference_note": "Josh adapts Joseph’s wording from human agents (‘you intended’) to ‘the devil.’"
     },
     {
       "id": "SCR-043",
@@ -1351,8 +1058,8 @@
     },
     {
       "id": "SCR-044",
-      "reference": "Hebrews 12:12-13",
-      "reference_query": "Hebrews%2012%3A12-13",
+      "reference": "Hebrews 12:12–13",
+      "reference_query": "Hebrews%2012%3A12%E2%80%9313",
       "treatment": "read/quoted",
       "time": 2209,
       "phrase": "strengthen your feeble arms and weak knees ... Make level paths for your feet",
@@ -1371,12 +1078,12 @@
       "anchor_node_id": "s5.1",
       "version": "NIV",
       "version_source": "default",
-      "reference_note": "Caption check: Josh names Isaiah and King Solomon without stating the references; Hebrews 12:12-13 echoes these passages."
+      "reference_note": "Josh names Isaiah and King Solomon without stating the references; Hebrews 12:12-13 echoes these passages."
     },
     {
       "id": "SCR-046",
-      "reference": "Hebrews 12:14-17",
-      "reference_query": "Hebrews%2012%3A14-17",
+      "reference": "Hebrews 12:14–17",
+      "reference_query": "Hebrews%2012%3A14%E2%80%9317",
       "treatment": "read/quoted",
       "time": 2236,
       "phrase": "Make every effort to live in peace with everyone and to be holy",
@@ -1399,8 +1106,8 @@
     },
     {
       "id": "SCR-048",
-      "reference": "Ephesians 4:31-32",
-      "reference_query": "Ephesians%204%3A31-32",
+      "reference": "Ephesians 4:31–32",
+      "reference_query": "Ephesians%204%3A31%E2%80%9332",
       "treatment": "read/quoted",
       "time": 2337,
       "phrase": "Get rid of all bitterness, rage, and anger ... forgiving each other",
@@ -1411,8 +1118,8 @@
     },
     {
       "id": "SCR-049",
-      "reference": "Genesis 25:29-34",
-      "reference_query": "Genesis%2025%3A29-34",
+      "reference": "Genesis 25:29–34",
+      "reference_query": "Genesis%2025%3A29%E2%80%9334",
       "treatment": "exposited",
       "time": 2352,
       "phrase": "you can get his story in Genesis 25 ... He was just hungry",
@@ -1423,8 +1130,8 @@
     },
     {
       "id": "SCR-050",
-      "reference": "Matthew 4:1-4; Luke 4:1-4",
-      "reference_query": "Matthew%204%3A1-4%3B%20Luke%204%3A1-4",
+      "reference": "Matthew 4:1–4; Luke 4:1–4",
+      "reference_query": "Matthew%204%3A1%E2%80%934%3B%20Luke%204%3A1%E2%80%934",
       "treatment": "referenced",
       "time": 2370,
       "phrase": "When did Satan tempt Jesus? When he was hungry",
@@ -1435,8 +1142,8 @@
     },
     {
       "id": "SCR-051",
-      "reference": "Hebrews 12:18-29",
-      "reference_query": "Hebrews%2012%3A18-29",
+      "reference": "Hebrews 12:18–29",
+      "reference_query": "Hebrews%2012%3A18%E2%80%9329",
       "treatment": "read/quoted",
       "time": 2441,
       "phrase": "You have not come to a mountain that can be touched and that is burning with fire",
@@ -1447,8 +1154,8 @@
     },
     {
       "id": "SCR-052",
-      "reference": "Exodus 19:10-25; 20:18-21; Hebrews 12:18-21",
-      "reference_query": "Exodus%2019%3A10-25%3B%2020%3A18-21%3B%20Hebrews%2012%3A18-21",
+      "reference": "Hebrews 12:18–21",
+      "reference_query": "Hebrews%2012%3A18%E2%80%9321",
       "treatment": "exposited",
       "time": 2568,
       "phrase": "He has taken us from one mountain to another ... Sinai was untouchable fire",
@@ -1459,8 +1166,8 @@
     },
     {
       "id": "SCR-053",
-      "reference": "Genesis 4:10; Hebrews 12:24",
-      "reference_query": "Genesis%204%3A10%3B%20Hebrews%2012%3A24",
+      "reference": "Hebrews 12:24",
+      "reference_query": "Hebrews%2012%3A24",
       "treatment": "exposited",
       "time": 2604,
       "phrase": "Abel’s blood cried out for justice, but Christ’s blood cried out, Paid in full",
@@ -1471,8 +1178,8 @@
     },
     {
       "id": "SCR-054",
-      "reference": "Hebrews 12:26-27",
-      "reference_query": "Hebrews%2012%3A26-27",
+      "reference": "Hebrews 12:26–27",
+      "reference_query": "Hebrews%2012%3A26%E2%80%9327",
       "treatment": "exposited",
       "time": 2630,
       "phrase": "This world will shake ... God promised it",
@@ -1483,8 +1190,8 @@
     },
     {
       "id": "SCR-055",
-      "reference": "Hebrews 12:22-24, 28",
-      "reference_query": "Hebrews%2012%3A22-24%2C%2028",
+      "reference": "Hebrews 12:22–24, 28",
+      "reference_query": "Hebrews%2012%3A22%E2%80%9324%2C%2028",
       "treatment": "exposited",
       "time": 2671,
       "phrase": "Christian, that’s your home ... you’re running because it’s unshakeable",
@@ -1507,48 +1214,12 @@
     },
     {
       "id": "SCR-057",
-      "reference": "Hebrews 12:10, 28-29",
-      "reference_query": "Hebrews%2012%3A10%2C%2028-29",
+      "reference": "Hebrews 12:10, 28–29",
+      "reference_query": "Hebrews%2012%3A10%2C%2028%E2%80%9329",
       "treatment": "exposited",
       "time": 2694,
       "phrase": "since we have received an unshakeable kingdom ... our God is a consuming fire ... holiness that’s preparing us",
       "anchor_node_id": "s6.6",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-058",
-      "reference": "1 Corinthians 15:25",
-      "reference_query": "1%20Corinthians%2015%3A25",
-      "treatment": "referenced",
-      "time": 2735,
-      "phrase": "Every enemy beneath his feet",
-      "anchor_node_id": "s6.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-059",
-      "reference": "Revelation 21:4",
-      "reference_query": "Revelation%2021%3A4",
-      "treatment": "read/quoted",
-      "time": 2738,
-      "phrase": "every tear wiped away",
-      "anchor_node_id": "s6.7",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-060",
-      "reference": "Philippians 2:10-11",
-      "reference_query": "Philippians%202%3A10-11",
-      "treatment": "read/quoted",
-      "time": 2741,
-      "phrase": "every knee bowed, every tongue confessing that Jesus Christ is Lord",
-      "anchor_node_id": "s6.7",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1579,24 +1250,12 @@
     },
     {
       "id": "SCR-063",
-      "reference": "Hebrews 12:22, 28-29",
-      "reference_query": "Hebrews%2012%3A22%2C%2028-29",
+      "reference": "Hebrews 12:22, 28–29",
+      "reference_query": "Hebrews%2012%3A22%2C%2028%E2%80%9329",
       "treatment": "exposited",
       "time": 2762,
       "phrase": "rejoice in Zion ... worship him together for our God is a consuming fire",
       "anchor_node_id": "s6.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-064",
-      "reference": "Hebrews 12:2",
-      "reference_query": "Hebrews%2012%3A2",
-      "treatment": "referenced",
-      "time": 2821,
-      "phrase": "fix them on you where they belong ... perfect our faith",
-      "anchor_node_id": "s7.1",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null

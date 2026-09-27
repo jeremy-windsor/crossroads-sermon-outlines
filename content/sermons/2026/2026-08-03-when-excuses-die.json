@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "2026-08-03-when-excuses-die",
   "title": "When Excuses Die",
   "speaker": "Josh Wyatt",
@@ -8,57 +8,9 @@
   "duration_seconds": 2605,
   "video_id": "dDcRPypYToc",
   "video_url": "https://www.youtube.com/watch?v=dDcRPypYToc",
-  "caption_source": "YouTube automatic captions (English original)",
-  "verified": "2026-09-05",
   "sermon_start": 10,
   "sermon_end": 2590,
   "card_summary": "Josh Wyatt opens Psalm 51 by contrasting curated highlights with David’s unfiltered confession, then reconstructs the Bathsheba cover-up and Nathan’s confrontation to argue that true repentance begins when excuses die. David brings no defense, résumé, or promise—only guilt—and reaches for God’s unfailing covenant love. Josh applies that responsibility to temptation, sexual integrity, confession, inward cleansing, daily mercy, and the testimony of people Jesus has washed.",
-  "section_intro": "The sermon begins at 00:10 and continues through the closing prayer at 43:10. Josh moves from curated photographs to David’s unfiltered confession in Psalm 51, reconstructs the cover-up and Nathan’s confrontation, argues that repentance begins when excuses die, applies responsibility to temptation and sexual integrity, grounds mercy in God’s covenant character and Christ’s cross, defines sin’s threefold vocabulary, and closes by calling hidden, self-punishing, unbelieving, and already-washed hearers toward mercy and testimony.",
-  "page_title": "When Excuses Die — Josh Wyatt | Sermon Outline",
-  "description": "A chronological study outline of When Excuses Die by Josh Wyatt at Crossroads Church, published August 3, 2026.",
-  "subtitle": "Josh Wyatt · Crossroads Church",
-  "kicker": "Chronological sermon outline",
-  "disclaimer": "Independent-study disclaimer: This page is an independently prepared listening and study aid, not an official Crossroads Church publication or a transcript. It follows the sermon’s sequence and links Scripture for verification; listen to the original sermon for Josh Wyatt’s complete wording and delivery.",
-  "figcaption": [
-    {
-      "kind": "text",
-      "text": "Original sermon:"
-    },
-    {
-      "kind": "source_link",
-      "text": "When Excuses Die"
-    },
-    {
-      "kind": "text",
-      "text": ". Timestamp links throughout open the relevant moment on YouTube."
-    }
-  ],
-  "footer_paragraphs": [
-    [
-      {
-        "kind": "text",
-        "text": "Source:"
-      },
-      {
-        "kind": "source_link",
-        "text": "official Crossroads Church YouTube video"
-      },
-      {
-        "kind": "text",
-        "text": ". Transcript basis: YouTube automatic captions (English original). Verified September 5, 2026."
-      }
-    ],
-    [
-      {
-        "kind": "text",
-        "text": "This outline quotes only brief identifying phrases and does not reproduce the full transcript or full NIV text."
-      }
-    ]
-  ],
-  "outline_heading": "Detailed chronological outline",
-  "ledger_heading": "Complete Scripture reference table",
-  "ledger_intro": "One row is provided for each confirmed spoken Scripture unit or range. Short phrases identify the use without reproducing the full biblical text. Bible links open the NIV. Ambiguous allusions are omitted.",
-  "ledger_caption": "54 confirmed Scripture units, in sermon order",
   "movements": [
     {
       "id": "s1",
@@ -116,7 +68,7 @@
             "SCR-005"
           ],
           "bullets": [
-            "First Kings 15:5 names Uriah as the dreadful exception within David’s otherwise faithful course. Psalm 51 is David’s confession after Nathan exposed that sin.",
+            "First Kings 15:5 names Uriah as the exception within David’s otherwise faithful course. Psalm 51 is David’s confession after Nathan exposed that sin.",
             "God did not preserve the adultery and murder to humiliate David. Josh argues that the page is finally about what God has done: testimony gives later sinners hope, healing, rescue, and purpose."
           ],
           "children": []
@@ -302,7 +254,6 @@
           "start": 1049,
           "heading": "After crossing the line, come into the light",
           "scripture_mentions": [
-            "SCR-019",
             "SCR-020"
           ],
           "bullets": [
@@ -368,8 +319,7 @@
           "start": 1223,
           "heading": "Hesed: steadfast covenant love that failure cannot exhaust",
           "scripture_mentions": [
-            "SCR-026",
-            "SCR-027"
+            "SCR-026"
           ],
           "bullets": [
             "Josh names the unfailing love as hesed: undeserved and unconditional love that is not earned and therefore cannot be un-earned.",
@@ -543,8 +493,7 @@
           "start": 1841,
           "heading": "Honesty and humility ask God to wash what cannot be undone",
           "scripture_mentions": [
-            "SCR-037",
-            "SCR-038"
+            "SCR-037"
           ],
           "bullets": [
             "True confession says: what I did cannot be undone, and what I need I cannot do. It brings only guilt and reaches only for grace.",
@@ -557,8 +506,7 @@
           "start": 1906,
           "heading": "Confess not only Saturday’s act but the need beneath it",
           "scripture_mentions": [
-            "SCR-039",
-            "SCR-040"
+            "SCR-039"
           ],
           "bullets": [
             "The song “Lord, I Need You” becomes an invitation for first-time and longtime hearers to confess general sinfulness, not just the weekend’s incident.",
@@ -576,7 +524,7 @@
           ],
           "bullets": [
             "The object of washing is iniquity—the crookedness inside—not simply the painful results. People avoid asking God to change them when they do not believe change is needed or wanted.",
-            "Priests, lepers, and worshipers washed under the old covenant because uncleanness could not be carried into God’s presence. David knows no physical soap can solve the heart; he asks God, not himself, to wash him."
+            "Priests, lepers, and worshipers washed under the old covenant because uncleanness could not be carried into God’s presence. David knows Dove has no soap for the heart; he asks God, not himself, to wash him."
           ],
           "children": []
         },
@@ -600,7 +548,6 @@
           "heading": "Nathan announces the gospel: the sin is taken away",
           "scripture_mentions": [
             "SCR-044",
-            "SCR-045",
             "SCR-046"
           ],
           "bullets": [
@@ -625,9 +572,7 @@
           "id": "s7.1",
           "start": 2146,
           "heading": "Move from heroic scenes into ordinary spiritual posture",
-          "scripture_mentions": [
-            "SCR-047"
-          ],
+          "scripture_mentions": [],
           "bullets": [
             "David’s endurance under Saul and courage before Goliath are easy to admire and imitate in imagination.",
             "Josh redirects the question from dramatic heroism to everyday life: which David currently resembles you?"
@@ -652,7 +597,6 @@
           "start": 2265,
           "heading": "The convicted believer: stop punishing what Christ has forgiven",
           "scripture_mentions": [
-            "SCR-049",
             "SCR-050"
           ],
           "bullets": [
@@ -715,8 +659,7 @@
       "start": 2500,
       "heading": "Closing prayer: put down the cover-up and trust the blood",
       "scripture_mentions": [
-        "SCR-053",
-        "SCR-054"
+        "SCR-053"
       ],
       "bullets": [
         "Josh confesses the humbling reality that God sees the heart and that cover-ups do not work.",
@@ -944,18 +887,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-019",
-      "reference": "1 John 1:7",
-      "reference_query": "1%20John%201%3A7",
-      "treatment": "referenced",
-      "time": 1057,
-      "phrase": "Come into the light. Christians operate in the light.",
-      "anchor_node_id": "s3.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-020",
       "reference": "2 Samuel 12:13",
       "reference_query": "2%20Samuel%2012%3A13",
@@ -1020,7 +951,7 @@
       "reference": "Psalm 51:7",
       "reference_query": "Psalm%2051%3A7",
       "treatment": "referenced",
-      "time": 1206,
+      "time": 1212,
       "phrase": "Purge me with hyssop.",
       "anchor_node_id": "s4.3",
       "version": "NIV",
@@ -1034,18 +965,6 @@
       "treatment": "exposited",
       "time": 1227,
       "phrase": "David cries out for hesed ... steadfast covenant love.",
-      "anchor_node_id": "s4.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-027",
-      "reference": "Ephesians 2:4",
-      "reference_query": "Ephesians%202%3A4",
-      "treatment": "referenced",
-      "time": 1255,
-      "phrase": "He is asking God, who is rich in mercy, to treat him according to his compassion.",
       "anchor_node_id": "s4.4",
       "version": "NIV",
       "version_source": "default",
@@ -1172,36 +1091,12 @@
       "reference_note": null
     },
     {
-      "id": "SCR-038",
-      "reference": "John 13:4-5",
-      "reference_query": "John%2013%3A4-5",
-      "treatment": "referenced",
-      "time": 1881,
-      "phrase": "Picture Jesus with a basin and a towel.",
-      "anchor_node_id": "s6.4",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-039",
       "reference": "Psalm 51:1-2",
       "reference_query": "Psalm%2051%3A1-2",
       "treatment": "exposited",
       "time": 1934,
       "phrase": "Set your eyes on his unfailing love and great compassion ... he will wash away all your sins.",
-      "anchor_node_id": "s6.5",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-040",
-      "reference": "Lamentations 3:22-23",
-      "reference_query": "Lamentations%203%3A22-23",
-      "treatment": "referenced",
-      "time": 1981,
-      "phrase": "Receive his gift of mercy. It’s new every morning.",
       "anchor_node_id": "s6.5",
       "version": "NIV",
       "version_source": "default",
@@ -1235,7 +1130,7 @@
       "id": "SCR-043",
       "reference": "Hebrews 9:14",
       "reference_query": "Hebrews%209%3A14",
-      "treatment": "exposited",
+      "treatment": "referenced",
       "time": 2057,
       "phrase": "The blood of Christ ... cleanses the conscience and removes our guilt before God.",
       "anchor_node_id": "s6.7",
@@ -1256,18 +1151,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-045",
-      "reference": "2 Corinthians 5:21",
-      "reference_query": "2%20Corinthians%205%3A21",
-      "treatment": "referenced",
-      "time": 2100,
-      "phrase": "David’s guilt would be counted to Christ and Christ’s righteousness counted to David.",
-      "anchor_node_id": "s6.8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-046",
       "reference": "Psalm 51:1-2",
       "reference_query": "Psalm%2051%3A1-2",
@@ -1280,18 +1163,6 @@
       "reference_note": null
     },
     {
-      "id": "SCR-047",
-      "reference": "1 Samuel 17:40-50",
-      "reference_query": "1%20Samuel%2017%3A40-50",
-      "treatment": "referenced",
-      "time": 2167,
-      "phrase": "We see the giants he faced ... “Where’s my sling?”",
-      "anchor_node_id": "s7.1",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
       "id": "SCR-048",
       "reference": "Psalm 51",
       "reference_query": "Psalm%2051",
@@ -1299,18 +1170,6 @@
       "time": 2244,
       "phrase": "God knew every sin David committed before David ever prayed Psalm 51.",
       "anchor_node_id": "s7.2",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-049",
-      "reference": "Lamentations 3:22-23",
-      "reference_query": "Lamentations%203%3A22-23",
-      "treatment": "referenced",
-      "time": 2276,
-      "phrase": "Walking in those fresh morning mercies.",
-      "anchor_node_id": "s7.3",
       "version": "NIV",
       "version_source": "default",
       "reference_note": null
@@ -1358,18 +1217,6 @@
       "treatment": "referenced",
       "time": 2556,
       "phrase": "Trust ... that the blood is sufficient, and just let you wash us today.",
-      "anchor_node_id": "s8",
-      "version": "NIV",
-      "version_source": "default",
-      "reference_note": null
-    },
-    {
-      "id": "SCR-054",
-      "reference": "Matthew 6:13",
-      "reference_query": "Matthew%206%3A13",
-      "treatment": "referenced",
-      "time": 2577,
-      "phrase": "Protect me from the evil one ... Protect us from temptation.",
       "anchor_node_id": "s8",
       "version": "NIV",
       "version_source": "default",
