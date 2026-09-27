@@ -154,7 +154,8 @@ def validate_surfaces(surfaces, records, series_records=None):
         index_card = series_index.select_one(f'.series-card[data-series="{series["id"]}"]')
         assert index_card.select_one('img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
         page = pages[f"series/{series['id']}.html"]
-        assert page.select_one('.series-lead img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
+        assert page.select_one('.sermon-card img')['src'] == f"https://i.ytimg.com/vi/{anchor['video_id']}/maxresdefault.jpg"
+        assert not page.select('.series-lead')
         assert [card['data-sermon'] for card in page.select('.sermon-card')] == [member['slug'] for member in series['members']]
         assert not page.select('.series-note')
         assert series['note'] not in page.get_text(' ', strip=True)
@@ -167,8 +168,7 @@ def validate_surfaces(surfaces, records, series_records=None):
         assert page.find(id='outline-heading').get_text(' ', strip=True) == 'Overview'
         assert not page.select('.section-intro')
         assert record['section_intro'] not in page.get_text(' ', strip=True)
-        assert not page.select('.notice, .ledger-intro')
-        assert page.figcaption.get_text(' ', strip=True) == 'Watch on YouTube'
+        assert not page.select('.notice, .ledger-intro, figcaption')
         labels = [item.dt.get_text(strip=True) for item in page.select('.metadata > div')]
         expected_labels = ['Speaker', 'Published', 'Duration', 'Watch']
         series, part, total = series_by_slug[record['slug']]
@@ -179,7 +179,7 @@ def validate_surfaces(surfaces, records, series_records=None):
         assert [n['id'] for n in page.select('.outline-node')] == [n['id'] for n in nodes]
         assert len(page.select('tbody tr')) == len(record['ledger'])
         for node, tag in zip(nodes, page.select('.outline-node')):
-            assert tag.select_one('.timestamp').text == timestamp(node['start'])
+            assert tag.select_one('.player-jump').text == timestamp(node['start'])
         expected_bible = Counter()
         for row in record['ledger']:
             expected_bible[scripture_url(row)] += 2
@@ -207,7 +207,7 @@ def validate_surfaces(surfaces, records, series_records=None):
         else:
             assert len(series_rows) == 1
             assert series_rows[0].a['href'] == f"../series/{series['id']}.html"
-            assert series_rows[0].dd.get_text(" ", strip=True) == f"{series['name']} · Part {part} of {total}"
+            assert series_rows[0].dd.get_text(" ", strip=True) == f"{series['name']} · Part {part} of {series['planned_length'] or total}"
 
     search_page = pages['search.html']
     assert search_page.select_one('#search-status[role="status"][aria-live="polite"]')

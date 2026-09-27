@@ -174,7 +174,7 @@ main { padding: 2rem 0 4rem; }
 .metadata dd { margin: .15rem 0 0; overflow-wrap: anywhere; font-size: .9375rem; }
 .notice { padding: 1rem 1.2rem; margin: 0 0 1.5rem; border-left: .25rem solid var(--accent); background: var(--accent-soft); font-size: 1rem; }
 .notice p { margin: 0; max-width: 105ch; }
-.video-block { max-width: 58rem; margin: 0 0 3rem; }
+.video-block { position: sticky; top: 0; z-index: 4; max-width: 46rem; margin: 0 0 3rem; background: var(--paper); }
 .video-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: .4rem; background: var(--video); box-shadow: var(--video-shadow); }
 .video-shell iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 figcaption { margin-top: .65rem; color: var(--muted); font: .875rem/1.6 var(--sans); }
@@ -189,10 +189,10 @@ figcaption { margin-top: .65rem; color: var(--muted); font: .875rem/1.6 var(--sa
 .outline-node h3 { font-size: 2rem; }
 .outline-node h4 { font-size: 1.25rem; }
 .outline-node h5 { font-size: 1.125rem; }
-.outline-node ul { max-width: 89ch; margin: .65rem 0 0; padding-left: 1.4rem; overflow-wrap: anywhere; }
+.outline-node ul { max-width: 72ch; margin: .65rem 0 0; padding-left: 1.4rem; overflow-wrap: anywhere; }
 .outline-node li + li { margin-top: .4rem; }
 .outline-node:target, .month-section:target > h2 { outline: .18rem solid var(--accent); outline-offset: .3rem; background: var(--target); }
-.timestamp { display: inline-block; margin-right: .3rem; padding: .15rem .4rem; border-radius: .25rem; background: var(--accent-soft); color: var(--accent); font: 750 .875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; text-decoration: none; white-space: nowrap; }
+a.player-jump { display: inline-block; margin-right: .3rem; padding: .15rem .4rem; border-radius: .25rem; background: var(--accent-soft); color: var(--accent); font: 750 .875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; text-decoration: none; white-space: nowrap; }
 .scripture-links { margin: .3rem 0 .7rem; font: .875rem/1.7 var(--sans); }
 .scripture-links > span { color: var(--muted); font-weight: 700; }
 .scripture-tag { display: inline-block; padding: .12rem .5rem; margin: .15rem .2rem .15rem 0; border-radius: 1rem; background: var(--scripture-soft); color: var(--scripture); text-decoration: none; }
@@ -269,7 +269,7 @@ footer p { max-width: 110ch; margin: .5rem 0; }
     --plate-ring: #000000; --plate-ring-hover: #000000; --series-ink: #000000;
   }
   body { font-size: 12pt; line-height: 1.42; }
-  .site-nav, .skip-link, .video-block, .page-sections, .sermon-navigation, .month-nav, .month-strip, .card-plate, .series-plate, .series-lead { display: none; }
+  .site-nav, .skip-link, .video-block, .page-sections, .sermon-navigation, .month-nav, .month-strip, .card-plate, .series-plate { display: none; }
   header, main, footer { width: 100%; }
   header { padding-top: 0; }
   h1 { font-size: 28pt; }
@@ -279,7 +279,7 @@ footer p { max-width: 110ch; margin: .5rem 0; }
   .series-card { display: block; margin-bottom: 1.5rem; }
   .outline-node, .sermon-card, .series-card { break-inside: avoid; }
   a { color: var(--ink); text-decoration: none; }
-  .timestamp, .scripture-tag { border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+  .timestamp, .scripture-tag, a.player-jump { border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
   .table-wrap { overflow: visible; border: 0; }
   table { min-width: 0; font-size: 8pt; }
   th, td { padding: .35rem; }

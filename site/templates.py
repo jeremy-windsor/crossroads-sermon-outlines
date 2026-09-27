@@ -9,6 +9,7 @@ from schema import flatten, timestamp
 CHURCH = "https://thecrossroads.church"
 CHANNEL = "https://www.youtube.com/@thecrossroadschurch"
 EXTERNAL = ' target="_blank" rel="noopener noreferrer"'
+PLAYER = ' class="player-jump"'
 LABELS = ("Reference", "Treatment", "Timestamp", "Spoken phrase", "Overview section", "YouTube", "BibleGateway")
 MONTHS = ("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 MONTH_ABBREVIATIONS = ("", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
@@ -33,7 +34,8 @@ def link(href, label, attributes=""):
 
 def watch(record, seconds, badge=True):
     url = record["video_url"] + f"&t={seconds}s"
-    attributes = f' class="timestamp" aria-label="Watch from {timestamp(seconds)}"' if badge else ""
+    # A timestamp badge seeks the embedded player. A plain watch link leaves the page.
+    attributes = f'{PLAYER} data-seek="{seconds}" aria-label="Play from {timestamp(seconds)}"' if badge else EXTERNAL
     return link(url, timestamp(seconds) if badge else "Watch", attributes)
 
 
@@ -49,13 +51,14 @@ def search_form(prefix):
     </form>'''
 
 
-def layout(title, description, prefix, header, body, scripts, current=None, extra_script=""):
+def layout(title, description, prefix, header, body, scripts, current=None, extra_script="", body_script=""):
     navigation = " ".join(
         link(prefix + path, label, ' aria-current="page"' if current == path else "")
         for path, label in (("index.html", "Series"), ("archive.html", "Timeline"))
     )
     footer = f'<nav aria-label="Related links">{link(CHURCH, "Crossroads Church", EXTERNAL)} {link(CHANNEL, "Crossroads Church on YouTube", EXTERNAL)}</nav>'
     search_script = f"\n  {extra_script}" if extra_script else ""
+    page_script = f"\n  <script>{body_script}</script>" if body_script else ""
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -78,7 +81,7 @@ def layout(title, description, prefix, header, body, scripts, current=None, extr
   <header>{header}</header>
   <main id="main-content" tabindex="-1">{body}</main>
   <footer>{footer}</footer>
-  <script>{scripts[1]}</script>{search_script}
+  <script>{scripts[1]}</script>{search_script}{page_script}
 </body>
 </html>
 '''
@@ -112,7 +115,9 @@ def sermon_card(record, series_records, prefix="", heading=3, eager=False, curre
             series_line = '<p class="card-series">Standalone Sunday</p>'
         else:
             label = e(series["name"]) if current_series == series["id"] else link(prefix + "series/" + series["id"] + ".html", series["name"])
-            series_line = f'<p class="card-series">{label} · {part} of {total}</p>'
+            planned = series["planned_length"]
+            count = planned if planned and planned > total else total
+            series_line = f'<p class="card-series">{label} · {part} of {count}</p>'
     title_href = prefix + "sermons/" + record["slug"] + ".html"
     watch_link = f'<a href="{e(record["video_url"])}" aria-label="Watch {e(record["title"])} on YouTube">Watch <span aria-hidden="true">↗</span></a>'
     return f'''<article class="sermon-card" data-sermon="{e(record['slug'])}"{series_attribute}>
@@ -142,6 +147,19 @@ def series_period(series, by_slug):
     if first.year == last.year:
         return f"{MONTHS[first.month]}–{MONTHS[last.month]} {first.year}"
     return f"{MONTHS[first.month]} {first.year}–{MONTHS[last.month]} {last.year}"
+
+
+# Seeks the embedded player without leaving the page. The href stays a real
+# YouTube link, so the timestamp still works with JavaScript disabled.
+PLAYER_SCRIPT = """document.addEventListener('click', function (event) {
+  var link = event.target.closest('a.player-jump');
+  var frame = document.querySelector('.video-shell iframe');
+  if (!link || !frame) return;
+  event.preventDefault();
+  var id = new URL(frame.src).pathname.split('/').pop();
+  frame.src = 'https://www.youtube.com/embed/' + id + '?start=' + link.dataset.seek + '&autoplay=1';
+  frame.closest('.video-block').scrollIntoView();
+});"""
 
 
 def series_destination(series, prefix=""):
@@ -235,13 +253,14 @@ def series_index(records, series_records, scripts):
 
 def series_page(series, by_slug, series_records, scripts):
     members = [by_slug[member["slug"]] for member in series["members"]]
-    anchor = series_anchor(series, by_slug)
     count = len(members)
+    count_label = f"{count} {'sermon' if count == 1 else 'sermons'}"
+    if series["planned_length"] and series["planned_length"] > count:
+        count_label += f" so far, of {series['planned_length']} planned"
     header = f'''<div data-series="{e(series['id'])}">
 <p class="kicker">{link("../index.html", "Series")}</p>
-{plate(anchor, "series-lead", True)}
 <h1>{e(series['name'])}</h1>
-<p class="subtitle">{e(series['scripture_spine'])} · {count} {"sermon" if count == 1 else "sermons"} · {e(series_period(series, by_slug))}</p>
+<p class="subtitle">{e(series['scripture_spine'])} · {count_label} · {e(series_period(series, by_slug))}</p>
 <p class="lede">{e(series['description'])}</p>
 </div>'''
     section_heading = "Standalone Sunday" if series["type"] == "standalone" else "Sermons in this series"
@@ -278,7 +297,7 @@ def sermon(record, previous, following, scripts, series_records=()):
     def outline(items, depth=1):
         rendered = []
         for node in items:
-            tags = " ".join(link('#ledger-' + sid, rows[sid]['reference'], f' class="scripture-tag" data-scripture-id="{e(sid)}"') for sid in node["scripture_mentions"])
+            tags = " ".join(link("#ledger-" + sid, rows[sid]["reference"], f' class="scripture-tag" data-scripture-id="{e(sid)}"') for sid in node["scripture_mentions"])
             tags = f'<p class="scripture-links"><span>Scripture:</span> {tags}</p>' if tags else ""
             bullets = "".join(f"<li>{e(bullet)}</li>" for bullet in node["bullets"])
             child = outline(node["children"], depth + 1) if node["children"] else ""
@@ -304,14 +323,16 @@ def sermon(record, previous, following, scripts, series_records=()):
     if series_info and series_info[0]["type"] == "series":
         series, part, total = series_info
         series_name = series["name"]
-        series_value = link("../series/" + series["id"] + ".html", series["name"]) + f" · Part {part} of {total}"
+        planned = series["planned_length"]
+        count = planned if planned and planned > total else total
+        series_value = link("../series/" + series["id"] + ".html", series["name"]) + f" · Part {part} of {count}"
         metadata.append(("Series", series_value))
     header = f'<p class="kicker">{e(series_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["subtitle"])}</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
     body = f'''<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Overview')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
-<figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>{link(record['video_url'], 'Watch on YouTube')}</figcaption></figure>
+<figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></figure>
 <section aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>
 <section id="scripture-ledger" class="scripture-ledger" aria-labelledby="ledger-heading"><h2 id="ledger-heading">Scripture ledger</h2>
 <div class="table-wrap"><table role="table" aria-label="Scripture ledger"><caption>Scripture references in sermon order</caption><thead role="rowgroup"><tr role="row">{''.join(f'<th scope="col" role="columnheader">{label}</th>' for label in LABELS)}</tr></thead><tbody role="rowgroup">{''.join(ledger)}</tbody></table></div></section>
 {neighbors(record, previous, following)}'''
     description = f"{record['title']} by {record['speaker']}, with a timestamped Overview and Scripture references."
-    return layout(f"{record['title']} | Crossroads Sermons", description, "../", header, body, scripts)
+    return layout(f"{record['title']} | Crossroads Sermons", description, "../", header, body, scripts, body_script=PLAYER_SCRIPT)

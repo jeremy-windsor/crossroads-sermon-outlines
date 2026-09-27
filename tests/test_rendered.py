@@ -134,7 +134,7 @@ def test_equivalent_target_and_print_layout():
     assert boxes(printed, lambda b: b.element_tag == 'thead')
     assert all(b.style['break_inside'] == 'avoid' for b in boxes(printed, lambda b: has_class(b, 'outline-node')))
     printed_series = rendered('series/renew-in-me.html', 1280, 'dark', 'print')
-    assert not boxes(printed_series, lambda b: has_class(b, 'card-plate') or has_class(b, 'series-lead'))
+    assert not boxes(printed_series, lambda b: has_class(b, 'card-plate'))
     printed_timeline = rendered('archive.html', 1280, 'dark', 'print')
     assert not boxes(printed_timeline, lambda b: has_class(b, 'month-strip'))
 

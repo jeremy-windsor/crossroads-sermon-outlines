@@ -281,7 +281,7 @@ def test_keyboard_numeric_anchor_print_and_large_text(browser, local_site):
         assert page.locator('.skip-link').bounding_box()['x'] >= 0
         page.keyboard.press('Enter')
         assert page.locator('main').evaluate('(el) => el === document.activeElement')
-        for selector in ('.timestamp', '.scripture-tag', '.month-return', '.theme-toggle'):
+        for selector in ('.player-jump', '.scripture-tag', '.month-return', '.theme-toggle'):
             element = page.locator(selector).first
             element.focus()
             assert element.evaluate('(el) => getComputedStyle(el).outlineStyle') == 'solid'

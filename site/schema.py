@@ -12,7 +12,7 @@ NODE_ID = r"[A-Za-z0-9][A-Za-z0-9_.-]*"
 RECORD_KEYS = set("schema_version slug title speaker published duration duration_seconds video_id video_url caption_source verified sermon_start sermon_end card_summary section_intro page_title description subtitle kicker disclaimer figcaption footer_paragraphs outline_heading ledger_heading ledger_intro ledger_caption movements ledger".split())
 NODE_KEYS = set("id start heading scripture_mentions bullets children".split())
 ROW_KEYS = set("id reference reference_query treatment time phrase anchor_node_id version version_source reference_note".split())
-SERIES_KEYS = set("id name type provenance scripture_spine description note anchor members".split())
+SERIES_KEYS = set("id name type provenance scripture_spine description note anchor members planned_length".split())
 SERIES_MEMBER_KEYS = {"slug", "scripture", "provenance"}
 SERIES_PROVENANCE_KEYS = {"source", "detail"}
 SERIES_TYPES = {"series", "standalone"}
@@ -177,6 +177,8 @@ def validate_series(series):
         require(bool(re.fullmatch(SLUG, member["slug"])), "Invalid series member slug")
         require(member["slug"] not in member_slugs, "Duplicate series member")
         member_slugs.append(member["slug"])
+    planned = series["planned_length"]
+    require(planned is None or (type(planned) is int and planned >= len(series["members"])), "Invalid planned series length")
     require(series["anchor"] is None or isinstance(series["anchor"], str), "Invalid series anchor")
     require(series["anchor"] is None or series["anchor"] in member_slugs, "Series anchor must be a member")
     require(series["type"] != "standalone" or len(member_slugs) == 1, "Standalone record must have exactly one sermon")
