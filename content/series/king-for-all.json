@@ -5,7 +5,7 @@
   "provenance": [
     {
       "source": "youtube_playlist",
-      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains this one sermon: So That You May Know."
+      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains So That You May Know and Just As He Promised."
     },
     {
       "source": "spoken_intro",
@@ -18,7 +18,7 @@
   ],
   "scripture_spine": "Luke",
   "description": "A series through Luke’s Gospel on the King who came to seek and save the lost.",
-  "note": "Spoken introduction frames twelve weeks with Luke 19:10 kept in front of the series. This first message covers the historical block of Luke’s preface; the next week is announced as the prophetic block.",
+  "note": "Josh frames twelve weeks through Luke with Luke 19:10 kept in front of the series. The first message establishes Luke’s historical credibility; the second traces the prophetic significance of Luke 1 and God’s promises fulfilled in Jesus.",
   "anchor": null,
   "members": [
     {
@@ -32,6 +32,20 @@
         {
           "source": "thumbnail_artwork",
           "detail": "The inspected So That You May Know thumbnail uses the King For All / The Book of Luke series artwork."
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-21-just-as-he-promised",
+      "scripture": "Luke 1:5–56",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official King For All playlist (PLMffTsVZzEyE) lists Just As He Promised as its newest member."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh identifies the sermon as week two of the Luke series, contrasts the prior historical block with this prophetic block, and says Jesus is king for all."
         }
       ]
     }

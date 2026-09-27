@@ -1,0 +1,131 @@
+{
+  "id": "james-a-faith-that-works",
+  "name": "James : A Faith That Works",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "The official Crossroads Church playlist James : A Faith That Works (PLSDa13_3L-B0Ol9Zc64SZjWvQt2mUkXYV) contains these eleven sermon uploads."
+    },
+    {
+      "source": "spoken_intro",
+      "detail": "Across the messages Josh identifies the church’s series through James; Christian Care explicitly concludes the series and describes it as a call to be doers of the Word."
+    }
+  ],
+  "scripture_spine": "James 1–5",
+  "description": "Eleven messages move through James from faith tested under pressure to a church that prays, restores wanderers, and actively cares for one another. James repeatedly tests Christian claims by visible obedience: perseverance, impartial mercy, living faith, disciplined speech, heavenly wisdom, humble dependence, patient waiting, and practical service.",
+  "note": "The official playlist contains eleven sermons in newest-first order. Members are authored here in chronological order from September 8 through November 24, 2025; no playlist sermon was added for the October 27 gap.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-09-08-pressure-that-produces",
+      "scripture": "James 1:1–8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Pressure That Produces."
+        }
+      ]
+    },
+    {
+      "slug": "2025-09-15-burdened-but-blessed",
+      "scripture": "James 1:9–18",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Burdened but Blessed."
+        }
+      ]
+    },
+    {
+      "slug": "2025-09-22-no-deception-just-devotion",
+      "scripture": "James 1:19–27",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes No Deception, Just Devotion."
+        }
+      ]
+    },
+    {
+      "slug": "2025-09-29-no-favorites",
+      "scripture": "James 2:1–13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes No Favorites."
+        }
+      ]
+    },
+    {
+      "slug": "2025-10-06-faith-that-works",
+      "scripture": "James 2:14–26",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Faith That Works."
+        }
+      ]
+    },
+    {
+      "slug": "2025-10-13-your-tongue-your-testimony",
+      "scripture": "James 3:1–12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Your Tongue, Your Testimony."
+        }
+      ]
+    },
+    {
+      "slug": "2025-10-20-divine-wisdom-vs-demonic-wisdom",
+      "scripture": "James 3:13–18",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Divine Wisdom vs. Demonic Wisdom."
+        }
+      ]
+    },
+    {
+      "slug": "2025-11-03-the-war-within",
+      "scripture": "James 4:1–12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes The War Within."
+        }
+      ]
+    },
+    {
+      "slug": "2025-11-10-mist-management",
+      "scripture": "James 4:13–17",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Mist Management."
+        }
+      ]
+    },
+    {
+      "slug": "2025-11-17-waiting-well",
+      "scripture": "James 5:1–12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Waiting Well."
+        }
+      ]
+    },
+    {
+      "slug": "2025-11-24-christian-care",
+      "scripture": "James 5:13–20",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official James : A Faith That Works playlist includes Christian Care."
+        }
+      ]
+    }
+  ]
+}

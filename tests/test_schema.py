@@ -9,7 +9,7 @@ from schema import InvalidRecord, flatten, loads, validate, validate_series, val
 
 @pytest.fixture
 def record():
-    return deepcopy(render.records()[0])
+    return deepcopy(next(record for record in render.records() if record['movements'][0]['children']))
 
 
 @pytest.fixture
@@ -106,7 +106,7 @@ def test_all_series_records_validate_with_explicit_membership():
         'king-for-all', 'renew-in-me', 'by-faith', 'born-again', 'he-is-risen',
         'broken-preparing-for-easter', 'forging-faith', 'ezekiel-a-new-heart',
         'glory-on-the-move', 'believe-the-one', 'growing-up-jesus', 'go-tell-it',
-        'born-again-question',
+        'born-again-question', 'james-a-faith-that-works',
     ]
     validate_series_collection(series_records, render.records())
 

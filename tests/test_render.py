@@ -109,7 +109,7 @@ def test_public_symlink_cannot_write_into_content(tmp_path):
 
 
 def test_renderer_escapes_speakers_and_supports_depth_three():
-    record = deepcopy(render.records()[0])
+    record = deepcopy(next(record for record in render.records() if record['movements'][0]['children']))
     record['speaker'] = 'Steve Coots & Students'
     child = deepcopy(record['movements'][0]['children'][0])
     child.update(id='3.1.1', scripture_mentions=[], children=[])
