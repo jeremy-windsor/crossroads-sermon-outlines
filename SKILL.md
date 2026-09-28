@@ -91,7 +91,9 @@ env -u PYTHONPATH make check                                               # the
 git add -A && git commit -m "Add <title>" && git push
 ```
 
-`make check` takes about a minute. Don’t run `make browser` unless Jeremy asks. After pushing, confirm `gh run list -L1` succeeds and the new page returns 200.
+`make check` takes several minutes (`tests/validate.py` alone is ~75s); run it with a long timeout or in the background. Don’t run `make browser` unless Jeremy asks.
+
+After any template/CSS change, screenshot the sermon page scrolled mid-Overview at desktop and mobile widths before pushing; `make check` does not catch overlap. After pushing, confirm `gh run list -L1` succeeds and the new page returns 200.
 
 Don’t change templates, CSS, or navigation from this skill; site design is separate work.
 
