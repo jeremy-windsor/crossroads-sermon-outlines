@@ -149,17 +149,73 @@ def series_period(series, by_slug):
     return f"{MONTHS[first.month]} {first.year}–{MONTHS[last.month]} {last.year}"
 
 
-# Seeks the embedded player without leaving the page. The href stays a real
-# YouTube link, so the timestamp still works with JavaScript disabled.
-PLAYER_SCRIPT = """document.addEventListener('click', function (event) {
-  var link = event.target.closest('a.player-jump');
-  var frame = document.querySelector('.video-shell iframe');
-  if (!link || !frame) return;
-  event.preventDefault();
-  var id = new URL(frame.src).pathname.split('/').pop();
-  frame.src = 'https://www.youtube.com/embed/' + id + '?start=' + link.dataset.seek + '&autoplay=1';
-  frame.closest('.video-block').scrollIntoView();
-});"""
+# The page ships a still poster; YouTube loads only when someone presses play or
+# a timestamp. Poster and timestamps are real YouTube links, so they still work
+# with JavaScript disabled. The rail marks the section currently on screen.
+PLAYER_SCRIPT = """(function () {
+  var block = document.querySelector('.video-block');
+  if (!block) return;
+  function play(seconds) {
+    var shell = block.querySelector('.video-shell');
+    var frame = shell.querySelector('iframe');
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.title = block.dataset.title;
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      shell.replaceChildren(frame);
+    }
+    frame.src = block.dataset.embed + '?autoplay=1&rel=0&start=' + (seconds || 0);
+  }
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a.player-jump, a.player-poster');
+    if (!link) return;
+    event.preventDefault();
+    play(link.dataset.seek);
+    var box = block.getBoundingClientRect();
+    if (box.top < 0 || box.bottom > innerHeight) block.scrollIntoView({block: 'start'});
+  });
+  var links = document.querySelectorAll('.chapters a[data-node]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (link) {
+        link.parentNode.classList.toggle('is-current', link.dataset.node === entry.target.id);
+      });
+    });
+  }, {rootMargin: '-30% 0px -65% 0px'});
+  links.forEach(function (link) {
+    var node = document.getElementById(link.dataset.node);
+    if (node) observer.observe(node);
+  });
+})();"""
+
+# Drawn as vector so it stays crisp at any pixel density. The control sits in
+# the lower-left corner: sermon artwork puts its title in the middle.
+PLAY_ICON = ('<svg class="play-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
+             '<circle class="play-disc" cx="20" cy="20" r="20"></circle>'
+             '<path class="play-glyph" d="M16 12.6v14.8a1.2 1.2 0 0 0 1.8 1l11.9-7.4a1.2 1.2 0 0 0 0-2L17.8 11.6a1.2 1.2 0 0 0-1.8 1Z"></path>'
+             '</svg>')
+
+
+def video_block(record):
+    start = record["sermon_start"]
+    title = f"{record['title']} by {record['speaker']} at Crossroads Church"
+    poster = f"https://i.ytimg.com/vi/{record['video_id']}/maxresdefault.jpg"
+    href = record["video_url"] + f"&t={start}s"
+    return (f'<figure class="video-block" data-embed="https://www.youtube.com/embed/{e(record["video_id"])}" data-title="{e(title)}">'
+            f'<div class="video-shell"><a class="player-poster" href="{e(href)}" data-seek="{start}" aria-label="Play {e(record["title"])} from {timestamp(start)}">'
+            f'<img src="{e(poster)}" alt="" width="1280" height="720" decoding="async" fetchpriority="high">'
+            f'<span class="play-pill">{PLAY_ICON}<span class="play-label">Play sermon</span><span class="play-time">{e(record["duration"])}</span></span></a></div></figure>')
+
+
+def chapter_nav(record):
+    items = "".join(
+        f'<li><a href="#{e(node["id"])}" data-node="{e(node["id"])}"><span class="chapter-time">{timestamp(node["start"])}</span><span class="chapter-name">{e(node["heading"])}</span></a></li>'
+        for node in record["movements"]
+    )
+    return f'<nav class="chapters" aria-label="Sermon sections"><p class="chapters-title">In this sermon</p><ol>{items}</ol></nav>'
 
 
 def series_destination(series, prefix=""):
@@ -329,8 +385,10 @@ def sermon(record, previous, following, scripts, series_records=()):
         metadata.append(("Series", series_value))
     header = f'<p class="kicker">{e(series_name)}</p><h1>{e(record["title"])}</h1><p class="subtitle">{e(record["speaker"])} · Crossroads Church</p><dl class="metadata">' + "".join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in metadata) + "</dl>"
     body = f'''<nav class="page-sections" aria-label="On this page">{link('#outline-heading', 'Overview')}{link('#scripture-ledger', 'Scripture ledger')}</nav>
-<figure class="video-block"><div class="video-shell"><iframe src="https://www.youtube.com/embed/{e(record['video_id'])}" title="{e(record['title'])} by {e(record['speaker'])} at Crossroads Church" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></figure>
-<section aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>
+<div class="sermon-layout">
+<aside class="sermon-rail" aria-label="Video and sections"><div class="rail-inner">{video_block(record)}{chapter_nav(record)}</div></aside>
+<section class="sermon-main" aria-labelledby="outline-heading"><h2 id="outline-heading">Overview</h2>{outline(record['movements'])}</section>
+</div>
 <section id="scripture-ledger" class="scripture-ledger" aria-labelledby="ledger-heading"><h2 id="ledger-heading">Scripture ledger</h2>
 <div class="table-wrap"><table role="table" aria-label="Scripture ledger"><caption>Scripture references in sermon order</caption><thead role="rowgroup"><tr role="row">{''.join(f'<th scope="col" role="columnheader">{label}</th>' for label in LABELS)}</tr></thead><tbody role="rowgroup">{''.join(ledger)}</tbody></table></div></section>
 {neighbors(record, previous, following)}'''

@@ -164,7 +164,10 @@ def validate_surfaces(surfaces, records, series_records=None):
     for i, record in enumerate(records):
         page = pages[f"sermons/{record['slug']}.html"]
         assert page.title.text == f"{record['title']} | Crossroads Sermons"
-        assert page.iframe['src'] == f"https://www.youtube.com/embed/{record['video_id']}"
+        assert not page.iframe  # YouTube loads only when the reader presses play
+        assert page.select_one('.video-block')['data-embed'] == f"https://www.youtube.com/embed/{record['video_id']}"
+        assert page.select_one('.player-poster')['data-seek'] == str(record['sermon_start'])
+        assert [a['href'] for a in page.select('.chapters a')] == ['#' + node['id'] for node in record['movements']]
         assert page.find(id='outline-heading').get_text(' ', strip=True) == 'Overview'
         assert not page.select('.section-intro')
         assert not page.select('.notice, .ledger-intro, figcaption')

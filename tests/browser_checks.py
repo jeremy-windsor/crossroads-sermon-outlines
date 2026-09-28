@@ -290,7 +290,7 @@ def test_keyboard_numeric_anchor_print_and_large_text(browser, local_site):
         page.emulate_media(media='print')
         assert background(page) == 'rgb(255, 255, 255)'
         assert page.locator('body').evaluate('(el) => getComputedStyle(el).fontSize') == '16px'
-        assert not page.locator('.video-block').is_visible()
+        assert not page.locator('.sermon-rail').is_visible()
         assert page.locator('thead').evaluate('(el) => getComputedStyle(el).display') == 'table-header-group'
         assert page.locator('.outline-node').first.evaluate('(el) => getComputedStyle(el).breakInside') == 'avoid'
         page.emulate_media(media='screen')

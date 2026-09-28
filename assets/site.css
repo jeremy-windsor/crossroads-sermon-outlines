@@ -174,9 +174,41 @@ main { padding: 2rem 0 4rem; }
 .metadata dd { margin: .15rem 0 0; overflow-wrap: anywhere; font-size: .9375rem; }
 .notice { padding: 1rem 1.2rem; margin: 0 0 1.5rem; border-left: .25rem solid var(--accent); background: var(--accent-soft); font-size: 1rem; }
 .notice p { margin: 0; max-width: 105ch; }
-.video-block { position: sticky; top: 0; z-index: 4; max-width: 46rem; margin: 0 0 3rem; background: var(--paper); }
-.video-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: .4rem; background: var(--video); box-shadow: var(--video-shadow); }
+/* Sermon page: on wide screens the video and section list share a rail beside
+   the Overview. The rail sticks inside .sermon-layout only, so it sits next to
+   the text, never on top of it, and it stops before the Scripture ledger. */
+.sermon-layout { display: grid; grid-template-columns: minmax(19rem, 25rem) minmax(0, 1fr); gap: 3rem; align-items: start; }
+.sermon-rail { position: sticky; top: 1rem; min-width: 0; }
+.rail-inner { max-height: calc(100vh - 2rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 0 .25rem .5rem 0; }
+.sermon-main { min-width: 0; }
+.sermon-main > h2 { margin-top: 0; }
+.video-block { margin: 0; }
+.video-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--radius-card); background: var(--video); box-shadow: var(--video-shadow), 0 0 0 1px var(--plate-ring); isolation: isolate; }
 .video-shell iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.player-poster { position: absolute; inset: 0; display: block; color: #ffffff; text-decoration: none; }
+.player-poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .5s cubic-bezier(.2, .7, .2, 1), filter .5s; }
+.player-poster::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(0 0 0 / 0%) 52%, rgb(0 0 0 / 62%)); }
+.play-pill { position: absolute; left: .75rem; bottom: .75rem; display: inline-flex; align-items: center; gap: .6rem; padding: .3rem .85rem .3rem .3rem; border-radius: 2rem; background: rgb(10 10 10 / 72%); box-shadow: 0 0 0 1px rgb(255 255 255 / 16%), 0 .4rem 1rem rgb(0 0 0 / 35%); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); font: 700 .8125rem/1 var(--sans); transition: box-shadow .2s, background .2s; }
+.play-icon { width: 2rem; height: 2rem; flex: none; transition: transform .25s cubic-bezier(.2, .7, .2, 1); }
+.play-disc { fill: #d4b46a; }
+.play-glyph { fill: #0a0a0a; }
+.play-label { letter-spacing: .06em; text-transform: uppercase; }
+.play-time { padding-left: .6rem; border-left: 1px solid rgb(255 255 255 / 28%); color: rgb(255 255 255 / 80%); font: 600 .8125rem/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.player-poster:hover img, .player-poster:focus-visible img { transform: scale(1.03); filter: brightness(1.08); }
+.player-poster:hover .play-pill, .player-poster:focus-visible .play-pill { background: rgb(10 10 10 / 85%); box-shadow: 0 0 0 1px #d4b46a, 0 .4rem 1rem rgb(0 0 0 / 40%); }
+.player-poster:hover .play-icon, .player-poster:focus-visible .play-icon { transform: scale(1.08); }
+.player-poster:focus-visible { outline-offset: -4px; border-radius: var(--radius-card); }
+.chapters { margin-top: 1.4rem; font: .875rem/1.4 var(--sans); }
+.chapters-title { margin: 0 0 .5rem; color: var(--muted); font: 700 .75rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; }
+.chapters ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.chapters li { position: relative; }
+.chapters li::before { content: ""; position: absolute; left: -1px; top: .35rem; bottom: .35rem; width: 2px; background: transparent; transition: background .2s; }
+.chapters a { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: .6rem; padding: .45rem .5rem .45rem .9rem; color: var(--muted); text-decoration: none; border-radius: 0 .3rem .3rem 0; }
+.chapters a:hover { color: var(--ink); background: var(--table-head); }
+.chapter-time { color: var(--accent); font: 700 .8125rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.chapter-name { overflow-wrap: anywhere; }
+.chapters .is-current::before { background: var(--accent); }
+.chapters .is-current a { color: var(--ink); font-weight: 650; }
 figcaption { margin-top: .65rem; color: var(--muted); font: .875rem/1.6 var(--sans); }
 .section-intro, .ledger-intro { max-width: 80ch; }
 .outline, .outline-children { list-style: none; margin: 0; padding: 0; }
@@ -191,6 +223,8 @@ figcaption { margin-top: .65rem; color: var(--muted); font: .875rem/1.6 var(--sa
 .outline-node h5 { font-size: 1.125rem; }
 .outline-node ul { max-width: 72ch; margin: .65rem 0 0; padding-left: 1.4rem; overflow-wrap: anywhere; }
 .outline-node li + li { margin-top: .4rem; }
+.outline-node ul { list-style: disc; }
+.outline-node ul > li::marker { color: var(--accent); }
 .outline-node:target, .month-section:target > h2 { outline: .18rem solid var(--accent); outline-offset: .3rem; background: var(--target); }
 a.player-jump { display: inline-block; margin-right: .3rem; padding: .15rem .4rem; border-radius: .25rem; background: var(--accent-soft); color: var(--accent); font: 750 .875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; text-decoration: none; white-space: nowrap; }
 .scripture-links { margin: .3rem 0 .7rem; font: .875rem/1.7 var(--sans); }
@@ -218,6 +252,11 @@ footer { padding: 1.75rem 0 2.5rem; border-top: 1px solid var(--line); color: va
 footer nav { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 1rem; }
 footer p { max-width: 110ch; margin: .5rem 0; }
 @media screen and (max-width: 60rem) {
+  .sermon-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .sermon-rail { position: static; }
+  .rail-inner { max-height: none; overflow: visible; padding: 0; }
+  .video-block { max-width: 46rem; }
+  .chapters { display: none; }
   .sermon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .series-grid { grid-template-columns: 1fr; }
   .table-wrap { border: 0; background: transparent; }
@@ -257,7 +296,7 @@ footer p { max-width: 110ch; margin: .5rem 0; }
   .metadata { grid-template-columns: 1fr; }
   tbody td { gap: .5rem; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .player-poster img, .play-icon, .play-pill, .chapters li::before { transition: none; } }
 @media print {
   @page { margin: .65in; }
   :root, :root[data-theme], :root:not([data-theme]) {
@@ -269,7 +308,7 @@ footer p { max-width: 110ch; margin: .5rem 0; }
     --plate-ring: #000000; --plate-ring-hover: #000000; --series-ink: #000000;
   }
   body { font-size: 12pt; line-height: 1.42; }
-  .site-nav, .skip-link, .video-block, .page-sections, .sermon-navigation, .month-nav, .month-strip, .card-plate, .series-plate { display: none; }
+  .site-nav, .skip-link, .sermon-rail, .page-sections, .sermon-navigation, .month-nav, .month-strip, .card-plate, .series-plate { display: none; }
   header, main, footer { width: 100%; }
   header { padding-top: 0; }
   h1 { font-size: 28pt; }
@@ -287,3 +326,4 @@ footer p { max-width: 110ch; margin: .5rem 0; }
   tr { break-inside: avoid; }
   .outline-node:target, tbody tr:target { outline: none; background: var(--paper); }
 }
+@media (max-width: 25rem) { .play-time { display: none; } }
