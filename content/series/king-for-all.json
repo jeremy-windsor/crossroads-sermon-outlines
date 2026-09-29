@@ -5,7 +5,7 @@
   "provenance": [
     {
       "source": "youtube_playlist",
-      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains So That You May Know and Just As He Promised."
+      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains So That You May Know, Just As He Promised, and Caught by the King."
     },
     {
       "source": "spoken_intro",
@@ -46,6 +46,20 @@
         {
           "source": "spoken_intro",
           "detail": "Josh identifies the sermon as week two of the Luke series, contrasts the prior historical block with this prophetic block, and says Jesus is king for all."
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-28-caught-by-the-king",
+      "scripture": "Luke 5:1–11",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official King For All playlist (PLMffTsVZzEyE) lists Caught by the King as its newest member."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, today marks our third week in a series called King for All, and recaps weeks one and two before opening Luke 5."
         }
       ]
     }
