@@ -12,7 +12,7 @@
       "detail": "The video appears in Watch Messages and in none of the channel’s 64 named or topical playlists, including Go Tell It."
     },
     {
-      "source": "captions",
+      "source": "transcript",
       "detail": "Chris presents one self-contained post-Christmas message about Jesus’ childhood, hidden years, sinlessness, and saving work; he does not identify a multi-week series."
     }
   ],
@@ -34,7 +34,7 @@
           "detail": "The video appears only in Watch Messages and in none of the channel’s named or topical series playlists."
         },
         {
-          "source": "captions",
+          "source": "transcript",
           "detail": "The sermon is self-contained and does not identify a multi-week series."
         }
       ]

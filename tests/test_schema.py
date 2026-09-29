@@ -1,4 +1,5 @@
 from copy import deepcopy
+from functools import lru_cache
 import json
 
 import pytest
@@ -6,19 +7,23 @@ import pytest
 import render
 from schema import InvalidRecord, flatten, loads, validate, validate_series, validate_series_collection
 
+# Load the 54 records once; reloading per test took 3 minutes.
+RECORDS = lru_cache(None)(render.records)
+SERIES = lru_cache(None)(render.series_records)
+
 
 @pytest.fixture
 def record():
-    return deepcopy(next(record for record in render.records() if record['movements'][0]['children']))
+    return deepcopy(next(record for record in RECORDS() if record['movements'][0]['children']))
 
 
 @pytest.fixture
 def series():
-    return deepcopy(render.series_records()[0])
+    return deepcopy(SERIES()[0])
 
 
 def test_all_records_validate():
-    for record in render.records():
+    for record in RECORDS():
         validate(record)
         assert isinstance(record['duration'], str)
 
@@ -129,14 +134,14 @@ def test_depth_three_and_free_text_speaker(record):
 
 
 def test_all_series_records_validate_with_explicit_membership():
-    series_records = render.series_records()
+    series_records = SERIES()
     assert [series['id'] for series in series_records] == [
         'king-for-all', 'renew-in-me', 'by-faith', 'born-again', 'he-is-risen',
         'broken-preparing-for-easter', 'forging-faith', 'ezekiel-a-new-heart',
         'glory-on-the-move', 'believe-the-one', 'growing-up-jesus', 'go-tell-it',
         'born-again-question', 'james-a-faith-that-works',
     ]
-    validate_series_collection(series_records, render.records())
+    validate_series_collection(series_records, RECORDS())
 
 
 @pytest.mark.parametrize('field,value', [
@@ -154,7 +159,7 @@ def test_invalid_series_fields(series, field, value):
 
 
 def test_series_records_reject_duplicate_and_dangling_membership(series):
-    records = render.records()
+    records = RECORDS()
     duplicate_member = deepcopy(series)
     duplicate_member['id'] = 'duplicate-series'
     with pytest.raises(InvalidRecord, match='more than one series'):
@@ -170,25 +175,25 @@ def test_series_rejects_duplicate_member_and_duplicate_id(series):
     series['members'].append(deepcopy(series['members'][0]))
     with pytest.raises(InvalidRecord, match='Duplicate series member'):
         validate_series(series)
-    first, second = deepcopy(render.series_records()[0]), deepcopy(render.series_records()[1])
+    first, second = deepcopy(SERIES()[0]), deepcopy(SERIES()[1])
     second['id'] = first['id']
     with pytest.raises(InvalidRecord, match='Duplicate series ID'):
-        validate_series_collection([first, second], render.records())
+        validate_series_collection([first, second], RECORDS())
 
 
 def test_series_records_require_every_sermon_exactly_once():
-    series_records = deepcopy(render.series_records())
+    series_records = deepcopy(SERIES())
     multi = next(series for series in series_records if len(series['members']) > 1)
     missing = multi['members'].pop()['slug']
     with pytest.raises(InvalidRecord, match='exactly one series record.*' + missing):
-        validate_series_collection(series_records, render.records())
+        validate_series_collection(series_records, RECORDS())
 
 
 def test_series_and_member_provenance_and_standalone_shape_are_closed(series):
     series['provenance'][0]['source'] = 'theological_inference'
     with pytest.raises(InvalidRecord, match='provenance source'):
         validate_series(series)
-    series = deepcopy(next(item for item in render.series_records() if len(item['members']) > 1))
+    series = deepcopy(next(item for item in SERIES() if len(item['members']) > 1))
     series['type'] = 'standalone'
     with pytest.raises(InvalidRecord, match='exactly one sermon'):
         validate_series(series)

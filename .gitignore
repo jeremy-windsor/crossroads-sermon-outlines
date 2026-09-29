@@ -1,4 +1,4 @@
-# Public-site allowlist: keep work files and captions out of Git.
+# Public-site allowlist: keep work files out of Git.
 *
 !.gitignore
 !.nojekyll
@@ -31,6 +31,5 @@
 !site/assets/*.js
 !tests/
 !tests/*.py
-!tests/*.json
 !requirements-test.txt
 !Makefile
