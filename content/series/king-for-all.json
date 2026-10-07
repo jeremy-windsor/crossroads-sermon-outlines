@@ -5,7 +5,7 @@
   "provenance": [
     {
       "source": "youtube_playlist",
-      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains So That You May Know, Just As He Promised, and Caught by the King."
+      "detail": "Church playlist King For All (PLMffTsVZzEyE) contains So That You May Know, Just As He Promised, Caught by the King, and Is He Enough?."
     },
     {
       "source": "spoken_intro",
@@ -60,6 +60,20 @@
         {
           "source": "spoken_intro",
           "detail": "Josh says, today marks our third week in a series called King for All, and recaps weeks one and two before opening Luke 5."
+        }
+      ]
+    },
+    {
+      "slug": "2026-10-05-is-he-enough",
+      "scripture": "Luke 6:17–26",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official King For All playlist (PLMffTsVZzEyE) lists Is He Enough? as its newest member."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh picks up from last week’s sermon on Peter’s boat and brings the church to Luke chapter 6."
         }
       ]
     }
