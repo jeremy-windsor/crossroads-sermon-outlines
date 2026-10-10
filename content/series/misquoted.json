@@ -1,0 +1,68 @@
+{
+  "id": "misquoted",
+  "name": "Misquoted",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Misquoted (PLSDa13_3L-B1pU8BeQvW_ohYAWajgHT9l)."
+    }
+  ],
+  "scripture_spine": "Matthew 7; Romans 12; 1 Corinthians 10; Matthew 5; John 14",
+  "description": "Five weeks on Bible verses people often quote out of context, read back in their setting.",
+  "note": "Josh calls it a five-week series called Misquoted.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-07-14-grab-a-mirror",
+      "scripture": "Matthew 7:1–6",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Misquoted playlist includes Grab a Mirror!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-07-21-therefore-this-is-who-i-am",
+      "scripture": "Romans 12:1–2",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Misquoted playlist includes Therefore, This is Who I Am!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-07-28-god-tests-satan-tempts-you-choose",
+      "scripture": "1 Corinthians 10:12–13; James 1:2–4",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says this is “week three of a five-week series called Misquoted.”"
+        }
+      ]
+    },
+    {
+      "slug": "2024-08-04-expectations",
+      "scripture": "Matthew 5:43–48",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Misquoted playlist includes Expectations."
+        }
+      ]
+    },
+    {
+      "slug": "2024-08-11-powerful-words",
+      "scripture": "John 14:1–15",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Misquoted playlist includes Powerful Words."
+        }
+      ]
+    }
+  ],
+  "planned_length": 5
+}

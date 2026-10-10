@@ -1,0 +1,78 @@
+{
+  "id": "the-invisible-enemy",
+  "name": "The Invisible Enemy",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist The Invisible Enemy (PLSDa13_3L-B0ImK5nV22pWFlT1bNkjHQd)."
+    }
+  ],
+  "scripture_spine": "1–2 Thessalonians",
+  "description": "A series through 1 and 2 Thessalonians on readiness for Christ’s return, life in the church family, and standing firm against the lawless one.",
+  "note": "The Work of Unity is not in the playlist, but Josh preaches 2 Thessalonians 3 as part of this series.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-09-29-are-you-ready",
+      "scripture": "1 Thessalonians 4:1–18",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Invisible Enemy playlist includes Are You Ready?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-10-06-walking-waiting",
+      "scripture": "1 Thessalonians 5:1–11",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Invisible Enemy playlist includes Walking & Waiting."
+        }
+      ]
+    },
+    {
+      "slug": "2024-10-13-community-on-fire",
+      "scripture": "1 Thessalonians 5:12–24",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Invisible Enemy playlist includes Community on 🔥."
+        }
+      ]
+    },
+    {
+      "slug": "2024-10-20-who-do-you-marvel-at",
+      "scripture": "2 Thessalonians 1:3–12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Invisible Enemy playlist includes Who Do You Marvel At?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-10-27-the-lawless-one",
+      "scripture": "2 Thessalonians 2:1–17",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Invisible Enemy playlist includes The Lawless One."
+        }
+      ]
+    },
+    {
+      "slug": "2024-11-03-the-work-of-unity",
+      "scripture": "2 Thessalonians 3:1–16",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh opens by saying the invisible enemy is at work and takes the church to 2 Thessalonians as he speaks of this series."
+        }
+      ]
+    }
+  ],
+  "planned_length": 6
+}

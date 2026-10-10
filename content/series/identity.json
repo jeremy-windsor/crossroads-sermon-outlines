@@ -1,0 +1,58 @@
+{
+  "id": "identity",
+  "name": "Identity",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Identity (PLSDa13_3L-B22ZiBRo4H4BO7tRqChJqqG)."
+    }
+  ],
+  "scripture_spine": "Ephesians 1–2",
+  "description": "A series in Ephesians on who Jesus says he is and who he says we are in him, closing with a teaching team panel answering the church’s questions.",
+  "note": "Four weeks in April 2024; the last week is a question-and-answer panel.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-04-07-who-does-he-say-he-is",
+      "scripture": "Ephesians 1:1–14",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Identity playlist includes Who Does He Say He Is?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-04-14-who-does-he-say-you-are",
+      "scripture": "Ephesians 1:15–23",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Identity playlist includes Who Does He Say You Are?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-04-21-alive-with-christ",
+      "scripture": "Ephesians 2:1–10",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Identity playlist includes Alive With Christ."
+        }
+      ]
+    },
+    {
+      "slug": "2024-04-28-identity",
+      "scripture": "No single passage (panel questions and answers)",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Identity playlist includes Identity."
+        }
+      ]
+    }
+  ],
+  "planned_length": 4
+}

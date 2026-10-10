@@ -1,0 +1,108 @@
+{
+  "id": "genesis",
+  "name": "Genesis",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Genesis (PLSDa13_3L-B2aNzDB7Goj2doaI9ITiicN)."
+    }
+  ],
+  "scripture_spine": "Genesis",
+  "description": "A series through Genesis, from God as Creator through the fall, the flood, and the promises to Abraham, Isaac, and Jacob, to Joseph and God’s providence.",
+  "note": "Messages from January through early March 2024.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-01-07-who-is-god",
+      "scripture": "Genesis 1:1–2:3",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Who is God?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-01-14-just-east-of-eden",
+      "scripture": "Genesis 3:1–4:16",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Just East of Eden."
+        }
+      ]
+    },
+    {
+      "slug": "2024-01-21-noah",
+      "scripture": "Genesis 5:1–7:16",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Noah."
+        }
+      ]
+    },
+    {
+      "slug": "2024-01-28-promise-keeper",
+      "scripture": "Genesis 15:1–17",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Promise Keeper."
+        }
+      ]
+    },
+    {
+      "slug": "2024-02-04-remember-lots-wife",
+      "scripture": "Genesis 19:1–26",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Remember Lot's Wife!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-02-11-here-i-am",
+      "scripture": "Genesis 22:1–14",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Here I Am!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-02-18-twenty-miles-short",
+      "scripture": "Genesis 25:21–28:22",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Twenty Miles Short."
+        }
+      ]
+    },
+    {
+      "slug": "2024-02-25-a-victim-of-complacency",
+      "scripture": "Genesis 34:1–31",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes A Victim of Complacency."
+        }
+      ]
+    },
+    {
+      "slug": "2024-03-03-providence",
+      "scripture": "Genesis 50:15–21",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Genesis playlist includes Providence."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

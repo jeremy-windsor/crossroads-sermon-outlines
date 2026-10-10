@@ -1,0 +1,28 @@
+{
+  "id": "this-way-to-life",
+  "name": "This Way to Life",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this message. It appears only in Watch Messages, so it stays Standalone Sunday."
+    }
+  ],
+  "scripture_spine": "John 11",
+  "description": "Easter Sunday: from the raising of Lazarus, Josh shows that Jesus is the resurrection and the way to life.",
+  "note": "An Easter message given between The Road to Redemption and Identity.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-03-31-this-way-to-life",
+      "scripture": "John 11:1–44",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The YouTube title is This Way to Life."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "the-road-to-redemption",
+  "name": "The Road to Redemption",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist The Road to Redemption (PLSDa13_3L-B1bXzMDpQeyY9JXxAacq_Aq)."
+    }
+  ],
+  "scripture_spine": "Matthew 26; Luke 22; John 21",
+  "description": "A series before Easter following Peter’s denial, the cross, and Jesus restoring Peter.",
+  "note": "Three messages leading toward Easter 2024.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-03-10-never-say-never",
+      "scripture": "Matthew 26:69–75",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Road to Redemption playlist includes Never Say Never?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-03-17-the-awful-look",
+      "scripture": "Luke 22:54–62",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Road to Redemption playlist includes The Awful Look."
+        }
+      ]
+    },
+    {
+      "slug": "2024-03-24-do-you-love-jesus",
+      "scripture": "John 21:1–19",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official The Road to Redemption playlist includes Do You Love Jesus?."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two weeks in 2 John on walking in love and in the truth, and protecting the church from false teaching.">
+  <meta name="color-scheme" content="light dark">
+  <title>Hold Fast | Crossroads Sermons</title>
+  <script>/* Runs before the stylesheet so a saved preference applies before first paint. */
+try {
+  const savedTheme = localStorage.getItem('crossroads-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    document.documentElement.dataset.theme = savedTheme;
+  }
+} catch (_) { /* Storage can be unavailable; the system palette remains readable. */ }
+</script>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="site-name">Crossroads Sermons</a>
+    <div class="nav-links"><a href="../index.html" aria-current="page">Series</a> <a href="../archive.html">Timeline</a></div>
+    <form class="site-search" role="search" action="../search.html" method="get">
+      <label class="visually-hidden" for="site-search-query">Search sermons</label>
+      <input id="site-search-query" name="q" type="search" autocomplete="off" placeholder="Search sermons or Scripture">
+      <button type="submit">Search</button>
+    </form>
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme" hidden><svg data-theme-icon="light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg><svg data-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
+  </nav>
+  <header><div data-series="hold-fast">
+<p class="kicker"><a href="../index.html">Series</a></p>
+<h1>Hold Fast</h1>
+<p class="subtitle">2 John · 2 sermons · May 2024</p>
+<p class="lede">Two weeks in 2 John on walking in love and in the truth, and protecting the church from false teaching.</p>
+</div></header>
+  <main id="main-content" tabindex="-1"><section aria-labelledby="series-messages-heading"><h2 id="series-messages-heading">Sermons in this series</h2><div class="sermon-grid"><article class="sermon-card" data-sermon="2024-05-12-love-in-the-truth" data-series="hold-fast">
+  <div class="card-plate"><img src="https://i.ytimg.com/vi/8E3tv0R-Dq4/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <p class="card-series">Hold Fast · 1 of 2</p>
+  <h3 class="card-title"><a href="../sermons/2024-05-12-love-in-the-truth.html">Love in the Truth</a></h3>
+  <p class="card-meta"><time datetime="2024-05-12">May 12, 2024</time> <span aria-hidden="true">·</span> <span>Josh Wyatt</span> <span aria-hidden="true">·</span> <span>45:35</span></p>
+  <p class="card-watch"><a href="https://www.youtube.com/watch?v=8E3tv0R-Dq4" aria-label="Watch Love in the Truth on YouTube">Watch <span aria-hidden="true">↗</span></a></p>
+</article>
+<article class="sermon-card" data-sermon="2024-05-19-protect-his-house" data-series="hold-fast">
+  <div class="card-plate"><img src="https://i.ytimg.com/vi/1TPzBR0sXqU/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async"></div>
+  <p class="card-series">Hold Fast · 2 of 2</p>
+  <h3 class="card-title"><a href="../sermons/2024-05-19-protect-his-house.html">Protect His House</a></h3>
+  <p class="card-meta"><time datetime="2024-05-19">May 19, 2024</time> <span aria-hidden="true">·</span> <span>Josh Wyatt</span> <span aria-hidden="true">·</span> <span>44:15</span></p>
+  <p class="card-watch"><a href="https://www.youtube.com/watch?v=1TPzBR0sXqU" aria-label="Watch Protect His House on YouTube">Watch <span aria-hidden="true">↗</span></a></p>
+</article></div></section></main>
+  <footer><nav aria-label="Related links"><a href="https://thecrossroads.church" target="_blank" rel="noopener noreferrer">Crossroads Church</a> <a href="https://www.youtube.com/@thecrossroadschurch" target="_blank" rel="noopener noreferrer">Crossroads Church on YouTube</a></nav></footer>
+  <script>(() => {
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-toggle');
+  const icons = Array.from(toggle.querySelectorAll('[data-theme-icon]'));
+  const system = window.matchMedia('(prefers-color-scheme: dark)');
+  const current = () => root.dataset.theme || (system.matches ? 'dark' : 'light');
+  const sync = () => {
+    const target = current() === 'dark' ? 'light' : 'dark';
+    const label = `Switch to ${target} theme`;
+    toggle.setAttribute('aria-label', label);
+    toggle.setAttribute('title', label);
+    for (const icon of icons) {
+      // SVG elements do not reflect the `hidden` IDL property, so set the attribute.
+      icon.toggleAttribute('hidden', icon.dataset.themeIcon !== target);
+    }
+  };
+  const apply = choice => {
+    root.dataset.theme = choice;
+    try { localStorage.setItem('crossroads-theme', choice); } catch (_) {}
+    sync();
+  };
+  toggle.hidden = false;
+  toggle.addEventListener('click', () => apply(current() === 'dark' ? 'light' : 'dark'));
+  system.addEventListener('change', sync);
+  sync();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "id": "hold-fast",
+  "name": "Hold Fast",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Hold Fast (PLSDa13_3L-B202v5UUoT0HVNIy6q5XHPa)."
+    }
+  ],
+  "scripture_spine": "2 John",
+  "description": "Two weeks in 2 John on walking in love and in the truth, and protecting the church from false teaching.",
+  "note": "Love in the Truth was posted on Tuesday, May 14, 2024, and is dated to the Sunday it was preached.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-05-12-love-in-the-truth",
+      "scripture": "2 John 1–6",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Hold Fast playlist includes Love in the Truth."
+        }
+      ]
+    },
+    {
+      "slug": "2024-05-19-protect-his-house",
+      "scripture": "2 John 7–13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Hold Fast playlist includes Protect His House."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says he will “continue our study in the book of second John.”"
+        }
+      ]
+    }
+  ],
+  "planned_length": 2
+}

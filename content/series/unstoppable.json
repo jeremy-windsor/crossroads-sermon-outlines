@@ -1,0 +1,78 @@
+{
+  "id": "unstoppable",
+  "name": "Unstoppable",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Unstoppable (PLSDa13_3L-B2oLcPbit_UYXbveFK0XbsD)."
+    }
+  ],
+  "scripture_spine": "Acts",
+  "description": "A series through Acts: the Spirit’s power, Pentecost, the healing at the Beautiful Gate, Stephen, Paul in Philippi, and Paul on Malta.",
+  "note": "Six messages from August and September 2024.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-08-18-powerful-witnesses",
+      "scripture": "Acts 1:1–8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes Powerful Witnesses."
+        }
+      ]
+    },
+    {
+      "slug": "2024-08-25-jesus-sent-him",
+      "scripture": "Acts 2:1–47",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes Jesus Sent Him."
+        }
+      ]
+    },
+    {
+      "slug": "2024-09-01-the-gate-called-beautiful",
+      "scripture": "Acts 3:1–4:12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes The Gate Called Beautiful."
+        }
+      ]
+    },
+    {
+      "slug": "2024-09-08-something-worth-dying-for",
+      "scripture": "Acts 6:1–8:4",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes Something Worth Dying For."
+        }
+      ]
+    },
+    {
+      "slug": "2024-09-15-the-cost-of-revival",
+      "scripture": "Acts 16:1–34",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes The Cost of Revival."
+        }
+      ]
+    },
+    {
+      "slug": "2024-09-22-the-islanders-teach",
+      "scripture": "Acts 28:1–10",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unstoppable playlist includes The Islanders Teach."
+        }
+      ]
+    }
+  ],
+  "planned_length": 6
+}

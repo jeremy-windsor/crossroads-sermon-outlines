@@ -1,0 +1,92 @@
+{
+  "id": "courage-over-fear",
+  "name": "Courage Over Fear",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Courage Over Fear (PLSDa13_3L-B35ZzCrpqyWhMqD1A2B-Jds)."
+    }
+  ],
+  "scripture_spine": "Joshua",
+  "description": "A series through Joshua: God’s promise of the land, faith in Canaan, Jericho, Achan’s sin, second chances at Ai, and the Gibeonite deception.",
+  "note": "Josh launches the series in Joshua 1 and ends it with Frenemy.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-05-26-grab-the-promise",
+      "scripture": "Joshua 1:1–18",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes Grab the Promise."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “Today we’re kicking off a new series called Courage Over Fear.”"
+        }
+      ]
+    },
+    {
+      "slug": "2024-06-02-faith-in-canaan",
+      "scripture": "Joshua 2:1–21",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes Faith in Canaan?."
+        }
+      ]
+    },
+    {
+      "slug": "2024-06-09-been-this-way",
+      "scripture": "Joshua 3:1–4:10",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes Been This Way."
+        }
+      ]
+    },
+    {
+      "slug": "2024-06-16-justice-in-jericho",
+      "scripture": "Joshua 6:1–21",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes Justice in Jericho."
+        }
+      ]
+    },
+    {
+      "slug": "2024-06-23-one-sin",
+      "scripture": "Joshua 7:1–26",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes One Sin."
+        }
+      ]
+    },
+    {
+      "slug": "2024-06-30-second-chances",
+      "scripture": "Joshua 8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Courage Over Fear playlist includes Second Chances."
+        }
+      ]
+    },
+    {
+      "slug": "2024-07-07-frenemy",
+      "scripture": "Joshua 9:1–10:14",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “today’s the final week of our series Courage Over Fear.”"
+        }
+      ]
+    }
+  ],
+  "planned_length": 7
+}

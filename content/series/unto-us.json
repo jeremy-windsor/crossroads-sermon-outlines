@@ -1,0 +1,58 @@
+{
+  "id": "unto-us",
+  "name": "Unto Us",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Unto Us (PLSDa13_3L-B3hX9bLErK6id8Ws4frYKgS)."
+    }
+  ],
+  "scripture_spine": "Isaiah",
+  "description": "An Advent series in Isaiah: the holy God who sends a cleansed messenger, the sign of Immanuel, the child who is the final King, and the suffering servant.",
+  "note": "Four messages leading to Christmas Eve 2024.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-12-01-scabby-lips",
+      "scripture": "Isaiah 6:1–8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unto Us playlist includes Scabby Lips."
+        }
+      ]
+    },
+    {
+      "slug": "2024-12-08-in-god-we-trust",
+      "scripture": "Isaiah 7:1–16",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unto Us playlist includes In God We Trust."
+        }
+      ]
+    },
+    {
+      "slug": "2024-12-15-the-final-king",
+      "scripture": "Isaiah 9:1–7",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unto Us playlist includes The Final King."
+        }
+      ]
+    },
+    {
+      "slug": "2024-12-24-portrait-of-jesus",
+      "scripture": "Isaiah 53:1–12",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Unto Us playlist includes Portrait of Jesus."
+        }
+      ]
+    }
+  ],
+  "planned_length": 4
+}

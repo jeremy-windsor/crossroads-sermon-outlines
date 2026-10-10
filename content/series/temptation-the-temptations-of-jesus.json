@@ -1,0 +1,48 @@
+{
+  "id": "temptation-the-temptations-of-jesus",
+  "name": "Temptation: The Temptations of Jesus",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Temptation: The Temptations of Jesus (PLSDa13_3L-B27ov49Q-SNW490Zhifsp3x)."
+    }
+  ],
+  "scripture_spine": "Luke 4:1–13",
+  "description": "Three weeks on Jesus’ temptations in the wilderness and how Scripture is his defense.",
+  "note": "Messages from November 2024.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-11-10-dont-bite-that-bait",
+      "scripture": "Luke 4:1–4",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Temptation: The Temptations of Jesus playlist includes Don't Bite That Bait!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-11-17-no-shortcuts",
+      "scripture": "Luke 4:5–8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Temptation: The Temptations of Jesus playlist includes No Shortcuts!."
+        }
+      ]
+    },
+    {
+      "slug": "2024-11-24-scripture-your-defense",
+      "scripture": "Luke 4:9–13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Temptation: The Temptations of Jesus playlist includes Scripture: Your Defense."
+        }
+      ]
+    }
+  ],
+  "planned_length": 3
+}

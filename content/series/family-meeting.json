@@ -1,0 +1,28 @@
+{
+  "id": "family-meeting",
+  "name": "Family Meeting",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this message. It appears only in Watch Messages, so it stays Standalone Sunday."
+    }
+  ],
+  "scripture_spine": "Ephesians 4",
+  "description": "Josh and Chris hold a family meeting with the church about who Crossroads is, where it is headed, and how every member builds up the body.",
+  "note": "Given the week after the Identity series ended.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2024-05-05-family-meeting",
+      "scripture": "Ephesians 4:11–16",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The YouTube title is Family Meeting."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

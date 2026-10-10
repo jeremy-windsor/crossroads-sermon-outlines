@@ -141,7 +141,10 @@ def test_all_series_records_validate_with_explicit_membership():
         'glory-on-the-move', 'believe-the-one', 'growing-up-jesus', 'go-tell-it',
         'born-again-question', 'james-a-faith-that-works', 'the-mindset-of-jesus',
         'gods-promises', 'without-a-king-the-book-of-judges', 'ephesians-from-death-to-life',
-        'made-new', 'reclaim-the-book-of-ezra', 'mark-come-follow-me', 'beware',
+        'made-new', 'reclaim-the-book-of-ezra', 'mark-come-follow-me', 'beware', 'unto-us',
+        'temptation-the-temptations-of-jesus', 'the-invisible-enemy', 'unstoppable',
+        'misquoted', 'courage-over-fear', 'hold-fast', 'family-meeting', 'identity',
+        'this-way-to-life', 'the-road-to-redemption', 'genesis',
     ]
     validate_series_collection(series_records, RECORDS())
 
