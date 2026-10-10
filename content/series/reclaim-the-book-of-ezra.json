@@ -1,0 +1,72 @@
+{
+  "id": "reclaim-the-book-of-ezra",
+  "name": "Reclaim: The Book of Ezra",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Reclaim: The Book of Ezra (PLSDa13_3L-B1AGbS8UwcYY2qgAMVlM3Wj)."
+    }
+  ],
+  "scripture_spine": "Ezra",
+  "description": "Five weeks through Ezra: God’s providence returns the exiles, rebuilds the altar and temple through opposition, and calls his people to worship and repentance.",
+  "note": "Steve describes the series as five weeks through the book of Ezra.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-03-17-providence",
+      "scripture": "Ezra 1:1–5",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Reclaim: The Book of Ezra playlist includes Providence."
+        }
+      ]
+    },
+    {
+      "slug": "2025-03-24-unlikely-but-used",
+      "scripture": "Ezra 1:6–2:70",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Reclaim: The Book of Ezra playlist includes Unlikely But Used."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “last week we launched Reclaim.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-04-01-true-worship",
+      "scripture": "Ezra 3:1–13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Reclaim: The Book of Ezra playlist includes True Worship."
+        }
+      ]
+    },
+    {
+      "slug": "2025-04-07-gods-faithfulness",
+      "scripture": "Ezra 4–6",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Reclaim: The Book of Ezra playlist includes God's Faithfulness."
+        }
+      ]
+    },
+    {
+      "slug": "2025-04-14-true-repentance",
+      "scripture": "Ezra 7–10",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Reclaim: The Book of Ezra playlist includes True Repentance."
+        }
+      ]
+    }
+  ],
+  "planned_length": 5
+}

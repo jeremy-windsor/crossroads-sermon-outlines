@@ -1,0 +1,28 @@
+{
+  "id": "made-new",
+  "name": "Made New",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this message. It appears only in Watch Messages, so it stays Standalone Sunday."
+    }
+  ],
+  "scripture_spine": "1 Corinthians 15",
+  "description": "Easter Sunday: Jesus lived, died, and rose, and with Paul in 1 Corinthians 15 Josh shows what the resurrection means for those made new in him.",
+  "note": "An Easter message given between the Ezra and Ephesians series.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-04-21-made-new",
+      "scripture": "1 Corinthians 15:12–22",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The YouTube title is Made New."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

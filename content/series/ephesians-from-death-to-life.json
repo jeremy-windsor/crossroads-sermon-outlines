@@ -1,0 +1,122 @@
+{
+  "id": "ephesians-from-death-to-life",
+  "name": "Ephesians : From Death to Life",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Ephesians : From Death to Life (PLSDa13_3L-B0AHyIufORH_VqT-_BC2v3z)."
+    }
+  ],
+  "scripture_spine": "Ephesians",
+  "description": "A twelve-week, verse-by-verse study of Paul’s letter to the Ephesians: our riches in Christ in the first half and our responsibilities in the second.",
+  "note": "Josh launches the letter as a twelve-week, verse-by-verse series.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-04-28-predestined-for-praise",
+      "scripture": "Ephesians 1:1–14",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes Predestined for Praise."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “Today, we’re going to launch a series examining Paul’s letter to the church in Ephesus.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-05-05-selfless-prayers",
+      "scripture": "Ephesians 1:15–23",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes Selfless Prayers."
+        }
+      ]
+    },
+    {
+      "slug": "2025-05-12-his-great-love",
+      "scripture": "Ephesians 2:1–10",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes His Great Love."
+        }
+      ]
+    },
+    {
+      "slug": "2025-05-19-peacemaker",
+      "scripture": "Ephesians 2:11–22",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes Peacemaker."
+        }
+      ]
+    },
+    {
+      "slug": "2025-05-27-the-unveiling",
+      "scripture": "Ephesians 3:1–13",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes The Unveiling."
+        }
+      ]
+    },
+    {
+      "slug": "2025-06-02-he-is-able",
+      "scripture": "Ephesians 3:14–21",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes He Is Able."
+        }
+      ]
+    },
+    {
+      "slug": "2025-06-09-walking-together",
+      "scripture": "Ephesians 4:1–16",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh preaches Ephesians 4:1–16 and says, “I told you this day was coming in this series.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-06-16-think-different",
+      "scripture": "Ephesians 4:17–32",
+      "provenance": [
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “We’ve been going through Ephesians and today we land in chapter 4:17.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-06-23-make-every-day-sunday",
+      "scripture": "Ephesians 5:1–20",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes Make Every Day Sunday!."
+        }
+      ]
+    },
+    {
+      "slug": "2025-06-30-submission",
+      "scripture": "Ephesians 5:21–33",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Ephesians : From Death to Life playlist includes Submission."
+        }
+      ]
+    }
+  ],
+  "planned_length": 12
+}

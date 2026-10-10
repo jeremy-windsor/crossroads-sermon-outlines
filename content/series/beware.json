@@ -1,0 +1,42 @@
+{
+  "id": "beware",
+  "name": "Beware",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Beware (PLSDa13_3L-B0ydwTDIL4syQ29DB9Cd2H5)."
+    }
+  ],
+  "scripture_spine": "Jude",
+  "description": "Two weeks in Jude: beware of knockoffs, contend for the faith once for all entrusted to the saints, and defend it with mercy.",
+  "note": "Josh opens the series by announcing two weeks in the book of Jude.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-01-05-fight-for-truth",
+      "scripture": "Jude 1–16",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Beware playlist includes Fight for Truth."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “over the next two weeks we’re going to be looking at the book of Jude.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-01-12-merciful-defenders",
+      "scripture": "Jude 17–25",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Beware playlist includes Merciful Defenders."
+        }
+      ]
+    }
+  ],
+  "planned_length": 2
+}

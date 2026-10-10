@@ -1,0 +1,32 @@
+{
+  "id": "gods-promises",
+  "name": "God's Promises",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this message. It appears only in Watch Messages, so it stays Standalone Sunday."
+    },
+    {
+      "source": "spoken_intro",
+      "detail": "Steve says, “This morning, I have what we call a standalone message for you.”"
+    }
+  ],
+  "scripture_spine": "2 Corinthians 1",
+  "description": "Steve shows that while people break their promises, God never does, and every promise of God is yes in Jesus Christ.",
+  "note": "Steve introduces this as a standalone message.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-09-02-gods-promises",
+      "scripture": "2 Corinthians 1:17–22",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The YouTube title is God's Promises."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}

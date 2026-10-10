@@ -1,0 +1,76 @@
+{
+  "id": "without-a-king-the-book-of-judges",
+  "name": "Without a King : The Book of Judges",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Without a King : The Book of Judges (PLSDa13_3L-B3H0gCurlYRIGZWH7Ibj_zK)."
+    }
+  ],
+  "scripture_spine": "Judges",
+  "description": "A series through Judges, where Israel’s cycle of sin and rescue shows what happens when everyone does what is right in his own eyes, and points to the need for a greater Savior.",
+  "note": "Josh calls the series Without a King.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-07-28-odd-but-obedient",
+      "scripture": "Judges 2:16–3:31",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Without a King : The Book of Judges playlist includes Odd But Obedient."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “last week we launched our current series, Without a King.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-08-04-women-storms-pegs",
+      "scripture": "Judges 4:1–24",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Without a King : The Book of Judges playlist includes Women, Storms & Pegs."
+        }
+      ]
+    },
+    {
+      "slug": "2025-08-11-trembling-to-triumph",
+      "scripture": "Judges 6:1–40",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Without a King : The Book of Judges playlist includes Trembling to Triumph."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “we’re in week four of our current series, Without a King.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-08-18-blinded-but-not-abandoned",
+      "scripture": "Judges 13–16",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Without a King : The Book of Judges playlist includes Blinded but not Abandoned."
+        }
+      ]
+    },
+    {
+      "slug": "2025-08-25-when-there-is-no-king",
+      "scripture": "Judges 19–21",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Without a King : The Book of Judges playlist includes When There is no King."
+        }
+      ]
+    }
+  ],
+  "planned_length": 6
+}

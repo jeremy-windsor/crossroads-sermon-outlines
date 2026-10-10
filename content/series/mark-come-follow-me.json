@@ -1,0 +1,106 @@
+{
+  "id": "mark-come-follow-me",
+  "name": "Mark : Come Follow Me",
+  "type": "series",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "Church playlist Mark : Come Follow Me (PLSDa13_3L-B1ZhgzSxChOJhuXX9W-g7vE)."
+    }
+  ],
+  "scripture_spine": "Mark",
+  "description": "Eight weeks through key themes in the gospel of Mark, following Jesus the servant king from his first call to repent and believe to the empty tomb.",
+  "note": "Josh opens with an eight-week plan through Mark and closes the series at the resurrection.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-01-19-repent-and-believe",
+      "scripture": "Mark 1:1–28",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Repent and Believe."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Josh says, “Over the next eight weeks we’re going to explore key themes in the gospel of Mark.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-01-26-3-gifts",
+      "scripture": "Mark 2:1–3:6",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes 3 Gifts."
+        }
+      ]
+    },
+    {
+      "slug": "2025-02-02-revealing-the-kingdom",
+      "scripture": "Mark 3:7–4:32",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Revealing the Kingdom."
+        }
+      ]
+    },
+    {
+      "slug": "2025-02-09-wake-up",
+      "scripture": "Mark 5:21–43",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Wake Up!."
+        }
+      ]
+    },
+    {
+      "slug": "2025-02-16-who-do-you-say",
+      "scripture": "Mark 8:22–38",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Who Do You Say."
+        },
+        {
+          "source": "spoken_intro",
+          "detail": "Steve says, “we are in week five of an 8-week series, Come Follow Me.”"
+        }
+      ]
+    },
+    {
+      "slug": "2025-02-23-childlike-vs-childish",
+      "scripture": "Mark 10:13–16, 35–45",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Childlike vs. Childish."
+        }
+      ]
+    },
+    {
+      "slug": "2025-03-02-have-faith-in-god",
+      "scripture": "Mark 11:1–25",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes Have Faith in God."
+        }
+      ]
+    },
+    {
+      "slug": "2025-03-10-he-has-risen",
+      "scripture": "Mark 16:1–8",
+      "provenance": [
+        {
+          "source": "youtube_playlist",
+          "detail": "The official Mark : Come Follow Me playlist includes He Has Risen!."
+        }
+      ]
+    }
+  ],
+  "planned_length": 8
+}

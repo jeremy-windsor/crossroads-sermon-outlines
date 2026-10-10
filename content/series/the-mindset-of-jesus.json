@@ -1,0 +1,28 @@
+{
+  "id": "the-mindset-of-jesus",
+  "name": "The Mindset of Jesus",
+  "type": "standalone",
+  "provenance": [
+    {
+      "source": "youtube_playlist",
+      "detail": "No named sermon playlist contains this message. It appears only in Watch Messages, so it stays Standalone Sunday."
+    }
+  ],
+  "scripture_spine": "Philippians 2",
+  "description": "Chris asks why we do what we do for others and answers from Philippians 2:1–11 with the humble mindset of Jesus.",
+  "note": "A single message from Chris given during the James series.",
+  "anchor": null,
+  "members": [
+    {
+      "slug": "2025-10-29-the-mindset-of-jesus",
+      "scripture": "Philippians 2:1–11",
+      "provenance": [
+        {
+          "source": "youtube_title",
+          "detail": "The YouTube title is The Mindset of Jesus."
+        }
+      ]
+    }
+  ],
+  "planned_length": null
+}
